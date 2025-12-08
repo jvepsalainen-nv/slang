@@ -14,8 +14,10 @@ This document describes:
 
 The `results/ISSUE_ANALYSIS.md` should provide:
 1. Executive summary of the Slang codebase quality
-2. Deep dive into 10 most critical areas requiring attention
-3. Data-driven recommendations for improving quality and reducing bugs
+2. Deep dive into top 10 most problematic areas
+3. Root cause analysis based on patterns extracted from issue data
+
+**Important:** This is a descriptive analysis, not prescriptive. The goal is to highlight WHERE problems are and WHAT the root causes appear to be based on data, not to make recommendations on how to fix them.
 
 ## Data Sources
 
@@ -75,12 +77,11 @@ Raw issue and PR data in `data/`:
 
 **Overall Assessment** (synthesize from data):
 - Overall quality trend (improving/stable/declining)
-- Top 5 risk areas (from priority score analysis)
+- Top 5 most problematic areas (from priority score analysis)
 - Top 5 areas in open issues and PRs (current status)
-- Key strengths (what's working well)
-- Immediate attention needed (critical findings)
+- Key patterns observed (what types of bugs are most common)
 
-### 2. Top 10 Critical Areas for Improvement
+### 2. Top 10 Most Problematic Areas
 
 Each area should include:
 
@@ -91,41 +92,34 @@ Each area should include:
 **Severity:** Critical/High/Medium
 **Impact:** [Scope of impact - crashes, correctness, performance, etc.]
 
-### Current State
-- Bug frequency: X fixes per 1000 LOC
+### Metrics
+- Bug fix frequency: X fixes per 1000 LOC
 - Total bug fixes: X PRs
 - Critical issues: X crashes/ICEs
-- Test coverage: X%
+- Test coverage: X% (if available)
 
-### Root Causes
-1. [Primary cause with evidence]
-2. [Secondary cause with evidence]
-3. [Contributing factors]
+### Root Causes (from issue data)
+Extract these from actual issue titles, descriptions, and patterns:
+1. [Primary cause - quote/reference specific issues]
+2. [Secondary cause - show pattern across multiple issues]
+3. [Contributing factors - observed from PR fix patterns]
+
+**Important:** Root causes should be extracted from issue/PR text, not assumed by the LLM.
+Look for:
+- Recurring keywords in issue titles
+- Common error messages in issue bodies
+- Similar fix patterns in PRs
+- User-reported symptoms
 
 ### Evidence
 - File: [filename] - X fixes, Y LOC, Z fix frequency
-- Issues: #[number], #[number] (examples)
-- Patterns: [observed patterns from analysis]
-
-### Recommendations
-
-Prioritize recommendations into short-term and long-term actions (no specific timelines).
-Order by priority within each category.
-
-**Short-term priorities:**
-1. Action 1 with expected impact (highest priority quick win)
-2. Action 2 with expected impact
-3. Action 3 with expected impact
-
-**Long-term priorities:**
-1. Strategic improvement 1 (highest priority long-term)
-2. Strategic improvement 2
-3. Architectural or process change
-
-### Success Metrics
-- Reduce bug fix frequency to < X per 1000 LOC
-- Reduce critical issues by X%
-- Achieve X% test coverage
+- Example issues:
+  - #[number]: [title] - [key symptom/error]
+  - #[number]: [title] - [key symptom/error]
+  - #[number]: [title] - [key symptom/error]
+- Patterns observed:
+  - [Pattern 1 with frequency count]
+  - [Pattern 2 with frequency count]
 ```
 
 ## Discovering Critical Areas (No Assumptions)
@@ -343,56 +337,117 @@ Rank the 10 areas by:
 2. **Frequency**: Bug fix rate normalized by LOC
 3. **Trend**: Use issue `created_at` dates to see if problems increasing/decreasing
 4. **Blast radius**: How many users/features affected (check issue comment count, labels)
-5. **Fix difficulty**: Average PR size, time to merge for fixes
 
-#### Step 8: Recommendation Development
+#### Step 8: Extract Root Causes from Data
 
-For each area, use evidence to develop prioritized recommendations.
-Order by priority (most impactful first) within each category.
+For each area, analyze issue descriptions and PR patterns to identify root causes.
 
-**Short-term priorities:**
-- Based on quick wins from PR patterns
-- Focus on high-frequency, similar bugs
-- High impact/effort ratio
-- Can be implemented with existing architecture
-- Example: "Add validation for X based on 15 similar crashes"
+**From Issue Titles/Bodies:**
+```python
+# Example: Identify common error patterns
+error_patterns = {}
+for issue in area_issues:
+    title = issue['title'].lower()
+    body = (issue.get('body') or '').lower()
 
-**Long-term priorities:**
-- Based on architectural issues seen in multiple PRs
-- Requires significant refactoring or redesign
-- Addresses fundamental design issues
-- Higher effort but prevents entire classes of bugs
-- Examples:
-  - "Refactor Y to reduce complexity (seen in 45 bug fixes)"
-  - "Redesign Z architecture (root cause of 30% of crashes)"
+    # Extract error keywords
+    for pattern in ['assertion', 'crash', 'segfault', 'null pointer',
+                   'validation error', 'compilation failed']:
+        if pattern in title or pattern in body:
+            error_patterns[pattern] = error_patterns.get(pattern, 0) + 1
+
+    # Extract specific error messages (look for quotes or code blocks)
+    # Count recurring phrases
+```
+
+**From PR Fix Patterns:**
+- What files are most commonly changed together?
+- What types of changes are most common? (validation, null checks, type fixes)
+- Are fixes concentrated in specific functions/areas?
+- Look for PR titles like "Fix crash when..." to understand failure modes
+
+**Document Root Causes:**
+- State the pattern (e.g., "15 crashes related to null pointer in IR optimization")
+- Provide 3-5 specific issue numbers as evidence
+- Quote actual error messages or symptoms from issues
+- DO NOT speculate beyond what the data shows
 
 ### Step 9: Validate with Data
 
-For each recommendation:
+For each identified root cause:
 - Show specific issue/PR numbers as evidence
-- Calculate expected impact (e.g., "Could prevent 20% of IR crashes")
-- Reference specific patterns from the data
+- Provide frequency counts (e.g., "20 of 45 issues mention this pattern")
+- Quote actual issue text to support the claim
+- Do not make assumptions about why the root cause exists
 
 ## Output Format
 
 The final `results/ISSUE_ANALYSIS.md` should include:
 - Clear structure with table of contents
 - Executive summary (1 page)
-- Top 10 critical areas (detailed analysis)
+- Top 10 most problematic areas (detailed analysis)
 - Appendices with supporting data
 - No emojis
 - Professional, data-driven tone
-- Actionable recommendations with expected impact
+- Root causes extracted from actual issue data
+
+### HTML Generation
+
+Always generate an HTML version alongside the markdown for better readability:
+
+**Markdown Best Practices for HTML Conversion:**
+1. **Lists require blank lines:** Add blank line before bullet/numbered lists
+   ```markdown
+   **Key findings:**
+
+   - First item
+   - Second item
+   ```
+
+2. **Escape issue numbers:** Use `\#` to prevent markdown from treating `#8882` as heading
+   ```markdown
+   - \#8882 (crash): "Description"
+   ```
+
+3. **Consistent spacing:** Maintain consistent spacing around headings and sections
+
+**HTML Generation Script:**
+
+Use the provided `generate_html.py` script which:
+- Loads PR data to distinguish PRs from issues
+- Creates correct URLs: `/pull/` for PRs, `/issues/` for issues
+- Applies professional styling
+- Opens links in new tab
+
+```bash
+python3 generate_html.py
+```
+
+**Key features:**
+```python
+# Loads PR numbers to distinguish from issues
+pr_numbers = load_pr_numbers()  # Set of PR numbers from data/pull_requests.json
+
+# Converts #1234 to correct GitHub URL
+def replace_number(match):
+    number = int(match.group(1))
+    url_type = 'pull' if number in pr_numbers else 'issues'
+    return f'<a href="https://github.com/shader-slang/slang/{url_type}/{number}"...>#{number}</a>'
+```
+
+This ensures:
+- `#7758` (issue) → `https://github.com/shader-slang/slang/issues/7758`
+- `#5432` (PR) → `https://github.com/shader-slang/slang/pull/5432`
 
 ## Success Criteria
 
 The final analysis should:
-- Be immediately actionable
-- Provide clear prioritization (by priority order, not timelines)
-- Include quantifiable metrics
-- Show evidence-based reasoning
-- Separate short-term and long-term priorities
-- Define success criteria for each recommendation
+- Clearly identify WHERE problems are (quantifiable metrics)
+- Extract WHAT is happening (patterns, symptoms, error types)
+- Document root causes using evidence from issue/PR data
+- Show all reasoning with specific issue/PR references
+- Avoid speculation or assumptions beyond the data
+- NOT make recommendations on how to fix problems
 
 ## How to Use This Guide
 
@@ -414,6 +469,11 @@ The final analysis should:
    python3 analyze_issues.py > results/general-analysis.txt
    python3 analyze_critical_issues.py > results/critical-analysis.txt
    python3 analyze_bugfix_files.py > results/bugfix-files-analysis.txt
+   ```
+
+4. **Generate HTML after creating the analysis:**
+   ```bash
+   python3 generate_html.py  # Creates results/ISSUE_ANALYSIS.html with GitHub links
    ```
 
 ### Creating the Analysis
@@ -440,14 +500,16 @@ The final analysis should:
 
 **Phase 4: Validate**
 - Ensure all 10 areas have concrete evidence
-- Verify recommendations are actionable
-- Check that success metrics are quantifiable
+- Verify root causes are extracted from actual issue/PR data
+- Check that all claims reference specific issues/PRs
 - Confirm the analysis meets all success criteria
 - **Verify data-driven approach**: Every claim must reference specific data
   - No assumptions about which components are problematic
   - Priority scores calculated from actual metrics
   - Issue/PR numbers cited for all examples
   - Patterns backed by frequency counts from raw data
+  - Root causes quoted from actual issue descriptions
+- **No recommendations**: Analysis should describe problems, not prescribe solutions
 
 ### Tools for Deep-Dive Analysis
 
@@ -504,16 +566,17 @@ jq '[.[] | .labels[].name] | group_by(.) | map({label: .[0], count: length})' da
 - Quote actual issue descriptions and error messages
 - Link metrics to real-world impact
 
-### 4. Vague Recommendations
+### 4. Speculation Beyond Data
 **Don't:**
-- Say "improve testing" without specifics
-- Suggest "refactor component X" without identifying what to refactor
-- Give recommendations without success metrics
+- Assume root causes without evidence from issue text
+- Speculate about "why" something is happening
+- Make recommendations on how to fix problems
 
 **Do:**
-- Specify what to test (e.g., "Add validation tests for IR inlining edge cases")
-- Identify specific code patterns to refactor
-- Define measurable success criteria for each recommendation
+- Extract root causes from actual issue descriptions and error messages
+- Stick to observable patterns in the data
+- Focus on WHAT is happening, not WHY or HOW TO FIX
+- Quote specific issue text as evidence for claimed patterns
 
 ### 5. Analysis Staleness
 **Don't:**

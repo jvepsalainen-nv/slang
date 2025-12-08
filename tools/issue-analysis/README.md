@@ -52,6 +52,15 @@ File-level bug fix analysis.
 - Bug fix frequency by file type
 - Top files per component
 
+### 5. `generate_html.py`
+Generates HTML version of analysis reports with clickable GitHub links.
+
+**Features:**
+- Converts markdown to professionally styled HTML
+- Adds clickable links to all GitHub issue/PR references
+- Proper typography and spacing for readability
+- Opens issues/PRs in new tab when clicked
+
 ## Quick Start
 
 ### Step 1: Fetch Data
@@ -75,14 +84,34 @@ python3 fetch_github_issues.py --incremental
 
 ```bash
 # General analysis (bugs, components, files, coverage)
-python3 analyze_issues.py
+python3 analyze_issues.py > results/general-analysis.txt
 
 # Critical issues (crashes, ICEs, validation errors)
-python3 analyze_critical_issues.py
+python3 analyze_critical_issues.py > results/critical-analysis.txt
 
 # Bug-fix file hotspots
-python3 analyze_bugfix_files.py
+python3 analyze_bugfix_files.py > results/bugfix-files-analysis.txt
 ```
+
+### Step 3: Generate HTML Report (Optional)
+
+After creating `results/ISSUE_ANALYSIS.md`, generate a browser-viewable version:
+
+```bash
+# Generate HTML with clickable GitHub links
+python3 generate_html.py
+
+# Open in browser
+open results/ISSUE_ANALYSIS.html  # macOS
+# or
+xdg-open results/ISSUE_ANALYSIS.html  # Linux
+```
+
+The HTML version includes:
+- Professional styling for easy reading
+- Clickable links to all GitHub issues/PRs
+- Proper formatting of lists and tables
+- Consistent typography
 
 ## Data Format
 
