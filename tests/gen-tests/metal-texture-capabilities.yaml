@@ -1,0 +1,142 @@
+# Metal Texture Capability Tests
+# Tests various texture types on Metal backend (metallib 2.3)
+# Demonstrates: Different texture types, samplers, disabled tests
+
+test_config:
+  name: metal-textures
+  shader_template: "./metal-texture-test-shader.slang"
+  output_dir: "tests/gen-tests/capability/texture-types"  # Relative to Slang repository root
+  output_pattern: "gen-texture-types-metal-{variant_name}.slang"
+  generation_comment: "Generated from examples/metal-texture-capabilities.yaml"
+  
+  # Default patterns inherited by all variants
+  default_filecheck_patterns:
+    POSITIVE:
+      - "POSITIVE: result code = 0"
+    POSITIVE_RESULT:
+      - "POSITIVE_RESULT: 12345"
+  
+  # Default directives used by variants that don't specify their own
+  default_directives:
+    - type: SIMPLE
+      flags: "-entry fragMain -stage fragment -target metal -profile metallib_2_3"
+      filecheck: POSITIVE
+    - type: COMPARE_COMPUTE
+      flags: "-slang -shaderobj -mtl"
+      filecheck: POSITIVE_RESULT
+  
+  # Default template variables
+  global_template_vars:
+    LABEL_NAME: main
+
+variants:
+  # Texture1D - supported since Metal 1.0
+  texture1d:
+    description: "Metal Texture1D capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture1D(size=4, content=zero):name texHandle
+        Texture1D<float4> texHandle;
+      TEXTURE_OP: "ret = int((texHandle.Load(int2(0, 0))).x);"
+  
+  # Texture2D - supported since Metal 1.0
+  texture2d:
+    description: "Metal Texture2D capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture2D(size=4, content=zero):name texHandle
+        Texture2D<float4> texHandle;
+      TEXTURE_OP: "ret = int((texHandle.Load(int3(0, 0, 0))).x);"
+  
+  # Texture3D - supported since Metal 1.0
+  texture3d:
+    description: "Metal Texture3D capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture3D(size=4, content=zero):name texHandle
+        Texture3D<float4> texHandle;
+      TEXTURE_OP: "ret = int((texHandle.Load(int4(0, 0, 0, 0))).x);"
+  
+  # TextureCube - supported since Metal 1.0, uses sampler
+  texturecube:
+    description: "Metal TextureCube capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: TextureCube(size=4, content=zero):name texHandle
+        TextureCube<float4> texHandle;
+        //TEST_INPUT: Sampler(filteringMode=point):name samplerState
+        SamplerState samplerState;
+      TEXTURE_OP: "ret = int((texHandle.SampleLevel(samplerState, float3(0, 0, 0), float(0))).x);"
+  
+  # RWTexture2D - supported since Metal 1.0
+  rwtexture2d:
+    description: "Metal RWTexture2D capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: RWTexture2D(size=4, content=zero):name texHandle
+        RWTexture2D<float4> texHandle;
+      TEXTURE_OP: "ret = int((texHandle.Load(int2(0, 0))).x);"
+  
+  # DepthTexture2D - supported since Metal 1.0, uses comparison sampler
+  depthtexture2d:
+    description: "Metal DepthTexture2D capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture2D(format=D32Float, size=4, content=zero):name texHandle
+        DepthTexture2D texHandle;
+        //TEST_INPUT: Sampler(depthCompare):name samplerComparisonState
+        SamplerComparisonState samplerComparisonState;
+      TEXTURE_OP: "ret = int((texHandle.SampleCmpLevelZero(samplerComparisonState, float2(0, 0), float(0))).x);"
+  
+  # Texture2DMS - has known issues (8457)
+  texture2dms:
+    description: "Metal Texture2DMS capability test (disabled due to bug)"
+    
+    directives:
+      - type: SIMPLE
+        flags: "-entry fragMain -stage fragment -target metal -profile metallib_2_3"
+        filecheck: POSITIVE
+        enabled: false
+        disable_reason: 8457
+      - type: COMPARE_COMPUTE
+        flags: "-mtl"
+        filecheck: POSITIVE_RESULT
+        enabled: false
+        disable_reason: 8457
+    
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture2D(size=4, content=zero, sampleCount=two):name texHandle
+        Texture2DMS<float4> texHandle;
+      TEXTURE_OP: "ret = int((texHandle.Load(int3(0, 0, 0))).x);"
+  
+  # RasterizerOrderedTexture2D - supported since Metal 2.0
+  # Note: Fragment shader atomics not fully supported
+  rasterizer_ordered_texture2d:
+    description: "Metal RasterizerOrderedTexture2D capability test"
+    
+    directives:
+      - type: SIMPLE
+        flags: "-entry fragMain -stage fragment -target metal -profile metallib_2_3"
+        filecheck: POSITIVE
+      - type: COMPARE_COMPUTE
+        flags: "-mtl"
+        filecheck: POSITIVE_RESULT
+        enabled: false
+        disable_reason: 8787
+    
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: Texture2D(size=4, content=zero):name texHandle
+        RasterizerOrderedTexture2D<float4> texHandle;
+      TEXTURE_OP: "texHandle.Store(int2(0, 0), float4(0, 0, 0, 0));\n    ret = 0;"
+  
+  # WTexture2D - write-only texture, supported since Metal 1.0
+  wtexture2d:
+    description: "Metal WTexture2D (write-only) capability test"
+    template_vars:
+      TEXTURE_INPUT: |
+        //TEST_INPUT: RWTexture2D(size=4, content=zero):name texHandle
+        WTexture2D<float4> texHandle;
+      TEXTURE_OP: "texHandle.Store(int2(0, 0), float4(0, 0, 0, 0));\n    ret = 0;"
+

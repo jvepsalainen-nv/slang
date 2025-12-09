@@ -1,0 +1,36 @@
+# Simple Multi-Backend Compute Test
+# Tests basic buffer writes across multiple backends
+# Demonstrates: Multi-backend compute shader testing with CPU, CUDA, Metal, and Vulkan
+
+test_config:
+  name: multi-backend-compute
+  shader_template: "./multi-backend-compute-shader.slang"
+  output_dir: "tests/gen-tests/compute"
+  output_pattern: "gen-compute-{variant_name}.slang"
+  generation_comment: "Generated from tests/gen-tests/multi-backend-compute.yaml"
+
+  # Default FileCheck patterns - each thread writes (index + 1)
+  default_filecheck_patterns:
+    RESULT:
+      - "RESULT: 1"
+      - "RESULT: 2"
+      - "RESULT: 3"
+      - "RESULT: 4"
+
+variants:
+  cpu:
+    directives:
+      - {type: COMPARE_COMPUTE, flags: "-cpu -output-using-type", filecheck: RESULT}
+
+  cuda:
+    directives:
+      - {type: COMPARE_COMPUTE, flags: "-cuda -output-using-type", filecheck: RESULT}
+
+  metal:
+    directives:
+      - {type: COMPARE_COMPUTE, flags: "-mtl -output-using-type", filecheck: RESULT}
+
+  vulkan:
+    directives:
+      - {type: COMPARE_COMPUTE, flags: "-vk -output-using-type", filecheck: RESULT}
+
