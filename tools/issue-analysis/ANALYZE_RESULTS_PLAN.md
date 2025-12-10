@@ -23,7 +23,7 @@ The `results/ISSUE_ANALYSIS.md` should provide:
 
 ### Phase 1: Analysis Outputs (Identify Problem Areas)
 
-Three complementary reports in `results/`:
+Four complementary reports in `results/`:
 
 1. **general-analysis.txt** - Overall PR and issue trends
    - Total issues: 3,573
@@ -40,6 +40,12 @@ Three complementary reports in `results/`:
    - Analyzes all 1,417 bug-fix PRs
    - Provides: Component-level metrics (fixes, changes, LOC)
    - File-level bug fix frequencies
+
+4. **ISSUE_SOURCES.md** - Downstream projects and infrastructure analysis
+   - Identifies which projects report issues
+   - Tracks both repository URLs and keyword mentions
+   - Coverage: 17.7% of issues mention specific projects/infrastructure
+   - Provides: Downstream project statistics, open issue counts, bug rates per project
 
 ### Phase 2: Raw Data (Deep-Dive for Evidence)
 
@@ -74,6 +80,13 @@ Raw issue and PR data in `data/`:
 - Critical issue trend over time
 - PR velocity trend
 - Test coverage trend
+
+**Issue Sources** (from `ISSUE_SOURCES.md`):
+- Top downstream projects reporting issues (Falcor, OptiX, WGPU, etc.)
+- Infrastructure references (DXC, SPIRV-Tools, glslang)
+- Percentage of issues with project attribution
+- Which downstream projects have most open issues
+- Which downstream projects have highest bug rates
 
 **Overall Assessment** (synthesize from data):
 - Overall quality trend (improving/stable/declining)

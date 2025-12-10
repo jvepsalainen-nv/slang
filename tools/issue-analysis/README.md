@@ -52,7 +52,17 @@ File-level bug fix analysis.
 - Bug fix frequency by file type
 - Top files per component
 
-### 5. `generate_html.py`
+### 5. `analyze_issue_sources.py`
+Analyzes downstream projects and infrastructure referenced in issues.
+
+**Reports on:**
+- Downstream projects using Slang (via repository URLs and keywords)
+- Related infrastructure (DXC, SPIRV-Tools, glslang, etc.)
+- Issue counts by project (total, open, closed, bugs)
+- Top projects reporting issues (Falcor, OptiX, WGPU, etc.)
+- Open issues breakdown by downstream project
+
+### 6. `generate_html.py`
 Generates HTML version of analysis reports with clickable GitHub links.
 
 **Features:**
@@ -91,6 +101,9 @@ python3 analyze_critical_issues.py > results/critical-analysis.txt
 
 # Bug-fix file hotspots
 python3 analyze_bugfix_files.py > results/bugfix-files-analysis.txt
+
+# Issue source analysis (who files issues, downstream projects)
+python3 analyze_issue_sources.py
 ```
 
 ### Step 3: Generate HTML Report (Optional)
