@@ -882,6 +882,69 @@ struct UntaggedUnionLoweringContext : public InstPassBase
         return builder->getAnyValueType(size);
     }
 
+    // Check whether a type (and all its nested fields) can be marshalled
+    // to/from an AnyValue by the packing/unpacking code. This mirrors the
+    // type switch in AnyValueMarshallingContext::emitMarshallingCode so that
+    // we reject unsupported types with a diagnostic instead of hitting
+    // SLANG_UNIMPLEMENTED_X at marshalling time.
+    bool canTypeBeMarshalledToAnyValue(IRType* type)
+    {
+        switch (type->getOp())
+        {
+        case kIROp_IntType:
+        case kIROp_FloatType:
+        case kIROp_UIntType:
+        case kIROp_UInt64Type:
+        case kIROp_Int64Type:
+        case kIROp_DoubleType:
+        case kIROp_Int8Type:
+        case kIROp_Int16Type:
+        case kIROp_UInt8Type:
+        case kIROp_UInt16Type:
+        case kIROp_HalfType:
+        case kIROp_BoolType:
+        case kIROp_IntPtrType:
+        case kIROp_UIntPtrType:
+        case kIROp_PtrType:
+        case kIROp_FloatE4M3Type:
+        case kIROp_FloatE5M2Type:
+        case kIROp_BFloat16Type:
+        case kIROp_AnyValueType:
+        case kIROp_DescriptorHandleType:
+            return true;
+
+        case kIROp_EnumType:
+            return true;
+
+        case kIROp_VectorType:
+        case kIROp_MatrixType:
+            return true;
+
+        case kIROp_StructType:
+        {
+            auto structType = cast<IRStructType>(type);
+            for (auto field : structType->getFields())
+            {
+                if (!canTypeBeMarshalledToAnyValue(field->getFieldType()))
+                    return false;
+            }
+            return true;
+        }
+
+        case kIROp_ArrayType:
+        {
+            auto arrayType = cast<IRArrayType>(type);
+            return canTypeBeMarshalledToAnyValue(
+                (IRType*)arrayType->getElementType());
+        }
+
+        default:
+            if (isResourceType(type))
+                return true;
+            return false;
+        }
+    }
+
     bool canTypeBeStored(IRType* concreteType)
     {
         if (!areResourceTypesBindlessOnTarget(targetProgram->getTargetReq()))
@@ -900,6 +963,9 @@ struct UntaggedUnionLoweringContext : public InstPassBase
             &sizeAndAlignment);
 
         if (SLANG_FAILED(result))
+            return false;
+
+        if (!canTypeBeMarshalledToAnyValue(concreteType))
             return false;
 
         return true;
