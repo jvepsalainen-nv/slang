@@ -921,22 +921,21 @@ struct UntaggedUnionLoweringContext : public InstPassBase
             return true;
 
         case kIROp_StructType:
-        {
-            auto structType = cast<IRStructType>(type);
-            for (auto field : structType->getFields())
             {
-                if (!canTypeBeMarshalledToAnyValue(field->getFieldType()))
-                    return false;
+                auto structType = cast<IRStructType>(type);
+                for (auto field : structType->getFields())
+                {
+                    if (!canTypeBeMarshalledToAnyValue(field->getFieldType()))
+                        return false;
+                }
+                return true;
             }
-            return true;
-        }
 
         case kIROp_ArrayType:
-        {
-            auto arrayType = cast<IRArrayType>(type);
-            return canTypeBeMarshalledToAnyValue(
-                (IRType*)arrayType->getElementType());
-        }
+            {
+                auto arrayType = cast<IRArrayType>(type);
+                return canTypeBeMarshalledToAnyValue((IRType*)arrayType->getElementType());
+            }
 
         default:
             if (isResourceType(type))
