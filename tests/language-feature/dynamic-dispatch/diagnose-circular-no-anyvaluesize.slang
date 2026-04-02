@@ -12,6 +12,12 @@
 // diagnostic is emitted.
 
 //DISABLE_TEST:SIMPLE(filecheck=CHECK): -target spirv
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target hlsl -stage compute -entry computeMain
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target glsl -stage compute -entry computeMain
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target cuda -stage compute -entry computeMain
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target metal -stage compute -entry computeMain
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target wgsl -stage compute -entry computeMain
+//DISABLE_TEST:SIMPLE(filecheck=CHECK): -target cpp -stage compute -entry computeMain
 
 // When fixed, uncomment and adjust the error check:
 // CHECK: error {{[0-9]+}}

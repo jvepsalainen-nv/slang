@@ -6,6 +6,12 @@
 // either from having a finite packed size.
 
 //TEST:SIMPLE(filecheck=CHECK): -target spirv
+//TEST:SIMPLE(filecheck=CHECK): -target hlsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target glsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target cuda -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target metal -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target wgsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target cpp -stage compute -entry computeMain
 
 [anyValueSize(32)]
 interface IFoo

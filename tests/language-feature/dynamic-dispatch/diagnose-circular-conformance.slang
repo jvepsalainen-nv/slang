@@ -11,6 +11,12 @@
 // (41011), but ideally would be a specific circular dependency diagnostic.
 
 //TEST:SIMPLE(filecheck=CHECK): -target spirv
+//TEST:SIMPLE(filecheck=CHECK): -target hlsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target glsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target cuda -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target metal -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target wgsl -stage compute -entry computeMain
+//TEST:SIMPLE(filecheck=CHECK): -target cpp -stage compute -entry computeMain
 
 // Direct circular dependency: struct contains the interface it implements
 [anyValueSize(32)]
