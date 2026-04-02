@@ -242,8 +242,7 @@ private:
 
             for (auto impl : mapInterfaceToImplementations[interfaceType])
             {
-                auto dependencies =
-                    findDependenciesOfTypeInSet((IRType*)impl, interfaceTypes);
+                auto dependencies = findDependenciesOfTypeInSet((IRType*)impl, interfaceTypes);
                 bool hasSelfReference = false;
                 for (auto dependency : dependencies)
                 {
@@ -280,19 +279,14 @@ private:
         {
             for (auto impl : nonSelfReferentialImpls[interfaceType])
             {
-                auto deps =
-                    findDependenciesOfTypeInSet((IRType*)impl, interfaceTypes);
+                auto deps = findDependenciesOfTypeInSet((IRType*)impl, interfaceTypes);
                 for (auto dep : deps)
                 {
                     if (dep == interfaceType)
                         continue;
 
                     HashSet<IRInterfaceType*> visited;
-                    if (hasDependencyPath(
-                            dep,
-                            interfaceType,
-                            interfaceDependencyMap,
-                            visited))
+                    if (hasDependencyPath(dep, interfaceType, interfaceDependencyMap, visited))
                     {
                         cyclicImpls.add(impl);
                         break;
