@@ -554,6 +554,19 @@ bool isConcreteType(IRInst* inst)
             }
             return true;
         }
+    case kIROp_StructType:
+        {
+            // Struct is concrete only if all field types are concrete.
+            // A struct containing an interface-typed field is non-concrete
+            // and needs type-flow specialization.
+            auto structType = cast<IRStructType>(inst);
+            for (auto field : structType->getFields())
+            {
+                if (!isConcreteType(field->getFieldType()))
+                    return false;
+            }
+            return true;
+        }
     default:
         break;
     }
@@ -4934,7 +4947,7 @@ struct TypeFlowSpecializationContext
 
             for (auto inst : workList)
             {
-                if (inst->getDataType())
+                if (inst->getDataType() && isGlobalInst(inst->getDataType()))
                     translationContext.resolveInst(inst->getDataType());
             }
 
@@ -6268,9 +6281,17 @@ struct TypeFlowSpecializationContext
         if (auto setTag = as<IRSetTagType>(callee->getDataType()))
         {
             // Expect a callee-set to be associated with call.
-            auto calleeSet =
-                cast<IRElementOfSetType>(this->callSiteInfo[InstWithContext(context, inst)])
-                    ->getSet();
+            // If no callSiteInfo was recorded (e.g. the call passes a struct with
+            // an interface-typed field that the info-propagation phase did not fully
+            // trace), bail out instead of crashing.
+            auto callSiteInfoPtr =
+                this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
+            if (!callSiteInfoPtr || !*callSiteInfoPtr)
+            {
+                module->getContainerPool().free(&callArgs);
+                return false;
+            }
+            auto calleeSet = cast<IRElementOfSetType>(*callSiteInfoPtr)->getSet();
             if (!calleeSet->isSingleton() && !calleeSet->isEmpty())
             {
                 // Multiple callees case:
@@ -6395,9 +6416,14 @@ struct TypeFlowSpecializationContext
         }
         else if (isGlobalInst(callee))
         {
-            auto calleeSet =
-                as<IRElementOfSetType>(this->callSiteInfo[InstWithContext(context, inst)])
-                    ->getSet();
+            auto callSiteInfoPtr2 =
+                this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
+            if (!callSiteInfoPtr2 || !*callSiteInfoPtr2)
+            {
+                module->getContainerPool().free(&callArgs);
+                return false;
+            }
+            auto calleeSet = as<IRElementOfSetType>(*callSiteInfoPtr2)->getSet();
             SLANG_ASSERT(calleeSet->isSingleton());
 
             if (isIntrinsic(callee))
