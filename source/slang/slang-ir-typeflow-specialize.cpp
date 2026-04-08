@@ -4947,7 +4947,7 @@ struct TypeFlowSpecializationContext
 
             for (auto inst : workList)
             {
-                if (inst->getDataType() && isGlobalInst(inst->getDataType()))
+                if (inst->getDataType())
                     translationContext.resolveInst(inst->getDataType());
             }
 
@@ -6284,8 +6284,7 @@ struct TypeFlowSpecializationContext
             // If no callSiteInfo was recorded (e.g. the call passes a struct with
             // an interface-typed field that the info-propagation phase did not fully
             // trace), bail out instead of crashing.
-            auto callSiteInfoPtr =
-                this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
+            auto callSiteInfoPtr = this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
             if (!callSiteInfoPtr || !*callSiteInfoPtr)
             {
                 module->getContainerPool().free(&callArgs);
@@ -6416,8 +6415,7 @@ struct TypeFlowSpecializationContext
         }
         else if (isGlobalInst(callee))
         {
-            auto callSiteInfoPtr2 =
-                this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
+            auto callSiteInfoPtr2 = this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
             if (!callSiteInfoPtr2 || !*callSiteInfoPtr2)
             {
                 module->getContainerPool().free(&callArgs);

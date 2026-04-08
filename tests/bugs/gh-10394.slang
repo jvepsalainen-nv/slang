@@ -36,4 +36,5 @@ void computeMain()
     outputBuffer[0] = dispatch(gParams);
 }
 
+// CHECK: getValue
 // CHECK: computeMain
