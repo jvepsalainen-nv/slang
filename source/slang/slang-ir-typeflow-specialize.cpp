@@ -6287,9 +6287,9 @@ struct TypeFlowSpecializationContext
         if (auto setTag = as<IRSetTagType>(callee->getDataType()))
         {
             // Expect a callee-set to be associated with call.
-            // If no callSiteInfo was recorded (e.g. the call passes a struct with
-            // an interface-typed field that the info-propagation phase did not fully
-            // trace), bail out instead of crashing.
+            // The info-propagation phase may not record this call site when a
+            // struct with an existential field is passed by value — bail out
+            // gracefully instead of crashing on a missing dictionary entry.
             auto callSiteInfoPtr = this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
             if (!callSiteInfoPtr || !*callSiteInfoPtr)
             {
@@ -6421,13 +6421,13 @@ struct TypeFlowSpecializationContext
         }
         else if (isGlobalInst(callee))
         {
-            auto callSiteInfoPtr2 = this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
-            if (!callSiteInfoPtr2 || !*callSiteInfoPtr2)
+            auto callSiteInfoPtr = this->callSiteInfo.tryGetValue(InstWithContext(context, inst));
+            if (!callSiteInfoPtr || !*callSiteInfoPtr)
             {
                 module->getContainerPool().free(&callArgs);
                 return false;
             }
-            auto calleeSet = as<IRElementOfSetType>(*callSiteInfoPtr2)->getSet();
+            auto calleeSet = as<IRElementOfSetType>(*callSiteInfoPtr)->getSet();
             SLANG_ASSERT(calleeSet->isSingleton());
 
             if (isIntrinsic(callee))

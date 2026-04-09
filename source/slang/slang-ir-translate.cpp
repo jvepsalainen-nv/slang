@@ -365,10 +365,7 @@ IRInst* _resolveInstRec(TranslationContext* ctx, IRInst* inst)
     // If we still have something that's not in the global scope, then something went wrong.
     // since all operations after this point require this.
     //
-    // If the inst is not at module scope, it cannot be resolved further.
-    // This can happen for types local to a function in edge cases.
-    if (!as<IRModuleInst>(instWithCanonicalOperands->getParent()))
-        return instWithCanonicalOperands;
+    SLANG_ASSERT(as<IRModuleInst>(instWithCanonicalOperands->getParent()));
 
     // TODO: Group these.
     if (as<IRTranslateBase>(instWithCanonicalOperands) ||
