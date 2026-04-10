@@ -554,25 +554,6 @@ bool isConcreteType(IRInst* inst)
             }
             return true;
         }
-    case kIROp_StructType:
-        {
-            // Struct is concrete only if all non-pointer field types are concrete.
-            // A struct containing an interface-typed field is non-concrete
-            // and needs type-flow specialization.
-            // Pointer-type fields are skipped to avoid infinite recursion with
-            // self-referential structs (e.g. linked lists). Pointers don't carry
-            // existential data inline, so they're concrete for propagation.
-            auto structType = cast<IRStructType>(inst);
-            for (auto field : structType->getFields())
-            {
-                auto fieldType = field->getFieldType();
-                if (as<IRPtrTypeBase>(fieldType))
-                    continue;
-                if (!isConcreteType(fieldType))
-                    return false;
-            }
-            return true;
-        }
     default:
         break;
     }

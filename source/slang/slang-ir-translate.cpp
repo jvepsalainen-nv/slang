@@ -368,10 +368,12 @@ IRInst* _resolveInstRec(TranslationContext* ctx, IRInst* inst)
     // At this point, we've resolved anything that can be translated & not in the global scope (i.e.
     // things like arithmetic operations)
     //
-    // If we still have something that's not in the global scope, then something went wrong.
-    // since all operations after this point require this.
+    // If the instruction is still not at module scope, it is a function-scoped
+    // value (e.g. extractExistentialType on a struct field with an interface
+    // type). We can't resolve it further in this context, so return it as-is.
     //
-    SLANG_ASSERT(as<IRModuleInst>(instWithCanonicalOperands->getParent()));
+    if (!as<IRModuleInst>(instWithCanonicalOperands->getParent()))
+        return instWithCanonicalOperands;
 
     // TODO: Group these.
     if (as<IRTranslateBase>(instWithCanonicalOperands) ||
