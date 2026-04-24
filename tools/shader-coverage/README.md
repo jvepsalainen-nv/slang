@@ -3,8 +3,9 @@
 A gcov-style coverage facility for shaders compiled by Slang. Instruments
 a `.slang` shader so that each executed source statement increments a
 counter at runtime; the counter buffer is read back by the host and
-converted to LCOV `.info` for rendering by `genhtml`, Codecov, VS
-Code Coverage Gutters, or any other LCOV consumer.
+converted to LCOV `.info` for rendering by `slang-coverage-html`
+(the in-tree Python renderer at `tools/coverage-html/`), `genhtml`,
+Codecov, VS Code Coverage Gutters, or any other LCOV consumer.
 
 For the maintainer-facing architectural rationale behind the current
 design, including why AST-time synthesis is paired with post-emit
@@ -46,29 +47,30 @@ Enable with `-trace-coverage` on the `slangc` CLI.
      ops on the same source line get distinct slots, which keeps the
      door open for branch/function coverage later).
    - Rewrites each op as `AtomicAdd(__slang_coverage[slot], 1,
-     Relaxed)`.
+Relaxed)`.
    - Records `(slot → file, line)` plus the buffer's binding on the
      artifact's `ICoverageTracingMetadata` (see next section). Some
      slots may remain unattributable if they do not correspond to a
      real source file/line.
 
 AST synthesis and `ICoverageTracingMetadata` serve different roles:
+
 - AST synthesis is the binding/discoverability mechanism. It makes the
   coverage buffer reflection-visible so reflection-driven hosts can bind it.
 - `ICoverageTracingMetadata` is the reporting mechanism. It tells the host
   which slot maps to which source location and what binding was chosen.
 
-They are complementary, not alternatives.
-4. **Emission.** Each backend already handles `kIROp_AtomicAdd` on
-   `RWStructuredBuffer<uint>`:
-   - HLSL/DXIL → `InterlockedAdd`
-   - SPIR-V → `OpAtomicIAdd`
-   - GLSL → `atomicAdd`
-   - Metal → Metal atomic builtins
-   - WGSL → `atomicAdd`
-   - CUDA → `atomicAdd`
-   - CPU → `_slang_atomic_add_u32` prelude helper (GCC/Clang
-     `__atomic_fetch_add`, MSVC `_InterlockedExchangeAdd`)
+They are complementary, not alternatives. 4. **Emission.** Each backend already handles `kIROp_AtomicAdd` on
+`RWStructuredBuffer<uint>`:
+
+- HLSL/DXIL → `InterlockedAdd`
+- SPIR-V → `OpAtomicIAdd`
+- GLSL → `atomicAdd`
+- Metal → Metal atomic builtins
+- WGSL → `atomicAdd`
+- CUDA → `atomicAdd`
+- CPU → `_slang_atomic_add_u32` prelude helper (GCC/Clang
+  `__atomic_fetch_add`, MSVC `_InterlockedExchangeAdd`)
 
 The `IncrementCoverageCounter` op is side-effectful by default in
 the DCE analysis, so it survives optimizations untouched until the
@@ -150,7 +152,7 @@ line number are skipped instead of being written as synthetic `SF:` /
                                              └─────────────┘
                                                    │
                                                    ▼
-                                    genhtml, Codecov, VS Code, ...
+                          slang-coverage-html, genhtml, Codecov, ...
 ```
 
 The host binds the coverage buffer by its reflected name / binding
@@ -161,8 +163,8 @@ dispatch.
 
 ## CLI reference
 
-| Flag | Effect |
-|---|---|
+| Flag              | Effect                                                                                                                                                                                   |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-trace-coverage` | Enables the feature. Synthesizes `__slang_coverage` at AST-check time; rewrites counter ops to atomic increments; emits `<output>.coverage-mapping.json` sidecar when writing to a file. |
 
 ---
@@ -170,7 +172,7 @@ dispatch.
 ## Counter buffer format
 
 `uint32_t counters[N]` — flat little-endian array, no header. Indexed
-by slot. Saturates at ~4 × 10⁹ hits per slot (see *Current scope*).
+by slot. Saturates at ~4 × 10⁹ hits per slot (see _Current scope_).
 
 ---
 
@@ -223,18 +225,18 @@ coverage semantics.
 
 ## Related files in the Slang tree
 
-| Path | Role |
-|---|---|
-| `source/slang/slang-check-synthesize-coverage.{h,cpp}` | Injects `__slang_coverage` `VarDecl` during semantic check |
-| `source/slang/slang-check-decl.cpp` | Hook that invokes the synthesizer from `checkModule` |
-| `source/slang/slang-ir-coverage-instrument.{h,cpp}` | IR pass — rewrites counter ops, writes metadata |
-| `source/slang/slang-ir-insts.lua` | Declares the `IncrementCoverageCounter` IR op |
-| `source/slang/slang-lower-to-ir.cpp` | Emits counter ops during AST lowering |
-| `source/slang/slang-emit.cpp` | Integrates the pass into the pipeline + allocates metadata |
-| `source/slang/slang-options.cpp` | Registers the `-trace-coverage` CLI flag |
-| `source/slang/slang-end-to-end-request.cpp` | Writes the `.coverage-mapping.json` sidecar from slangc |
-| `include/slang.h` | `slang::ICoverageTracingMetadata` public interface |
-| `source/compiler-core/slang-artifact-associated-impl.{h,cpp}` | `ArtifactPostEmitMetadata` implements the interface |
-| `prelude/slang-cpp-prelude.h` | CPU-target atomic helpers (`_slang_atomic_add_u32/i32`) |
-| `source/slang/slang-emit-cpp.cpp` | CPU emitter's `kIROp_AtomicAdd` handling |
-| `tests/language-feature/coverage/` | End-to-end tests |
+| Path                                                          | Role                                                       |
+| ------------------------------------------------------------- | ---------------------------------------------------------- |
+| `source/slang/slang-check-synthesize-coverage.{h,cpp}`        | Injects `__slang_coverage` `VarDecl` during semantic check |
+| `source/slang/slang-check-decl.cpp`                           | Hook that invokes the synthesizer from `checkModule`       |
+| `source/slang/slang-ir-coverage-instrument.{h,cpp}`           | IR pass — rewrites counter ops, writes metadata            |
+| `source/slang/slang-ir-insts.lua`                             | Declares the `IncrementCoverageCounter` IR op              |
+| `source/slang/slang-lower-to-ir.cpp`                          | Emits counter ops during AST lowering                      |
+| `source/slang/slang-emit.cpp`                                 | Integrates the pass into the pipeline + allocates metadata |
+| `source/slang/slang-options.cpp`                              | Registers the `-trace-coverage` CLI flag                   |
+| `source/slang/slang-end-to-end-request.cpp`                   | Writes the `.coverage-mapping.json` sidecar from slangc    |
+| `include/slang.h`                                             | `slang::ICoverageTracingMetadata` public interface         |
+| `source/compiler-core/slang-artifact-associated-impl.{h,cpp}` | `ArtifactPostEmitMetadata` implements the interface        |
+| `prelude/slang-cpp-prelude.h`                                 | CPU-target atomic helpers (`_slang_atomic_add_u32/i32`)    |
+| `source/slang/slang-emit-cpp.cpp`                             | CPU emitter's `kIROp_AtomicAdd` handling                   |
+| `tests/language-feature/coverage/`                            | End-to-end tests                                           |

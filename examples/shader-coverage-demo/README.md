@@ -20,8 +20,8 @@ host-side helper library `slang-coverage-rt`. Runs in three modes:
 - **`--mode=dispatch`** — Full compile → bind → dispatch → readback →
   LCOV pipeline via slang-rhi. Works end-to-end on CPU, Vulkan, D3D12
   and CUDA, producing byte-identical LCOV across all four backends.
-  Metal runs but has pre-existing slang-rhi quirks (see *Backend
-  status matrix*).
+  Metal runs but has pre-existing slang-rhi quirks (see _Backend
+  status matrix_).
 
 ## Usage
 
@@ -69,9 +69,27 @@ requires an NVIDIA CUDA runtime.
 ### Rendering the report
 
 `coverage.lcov` is the industry-standard LCOV format, consumable by
-several tools. Pick the instructions for your platform; the result is
-a `coverage-html/` directory with `index.html` you can open in any
+several tools. Pick the instructions below; the result is a
+`coverage-html/` directory with `index.html` you can open in any
 browser.
+
+#### Zero-install (all platforms)
+
+Slang ships a small Python-only renderer at
+`tools/coverage-html/slang-coverage-html.py`. No `pip`, no Perl,
+no .NET — just Python 3 (shipped with every supported OS):
+
+```bash
+python3 ../../tools/coverage-html/slang-coverage-html.py coverage.lcov
+open coverage-html/index.html       # macOS
+xdg-open coverage-html/index.html   # Linux
+start coverage-html\index.html      # Windows
+```
+
+This is the recommended option if you don't already have a
+coverage-rendering tool installed. See
+`tools/coverage-html/README.md` for flags (source-root resolution,
+filter globs, etc.).
 
 #### Linux
 
@@ -101,11 +119,12 @@ start coverage-html\index.html
 
 #### Other renderer options
 
-| Tool | Platforms | When to use |
-|---|---|---|
-| `reportgenerator` (.NET tool) | Linux, macOS, Windows | Cross-platform alternative to `genhtml`; no Perl required |
-| VS Code Coverage Gutters | Any (in-editor) | Per-developer view; inline line-level coverage in the editor, no HTML needed |
-| Codecov / Coveralls | SaaS | Team-wide dashboards and PR annotations |
+| Tool                                      | Platforms             | When to use                                                                  |
+| ----------------------------------------- | --------------------- | ---------------------------------------------------------------------------- |
+| `slang-coverage-html` (Python 3, in-tree) | Linux, macOS, Windows | Zero-install option; identical output on every platform                      |
+| `reportgenerator` (.NET tool)             | Linux, macOS, Windows | Cross-platform alternative to `genhtml`; no Perl required                    |
+| VS Code Coverage Gutters                  | Any (in-editor)       | Per-developer view; inline line-level coverage in the editor, no HTML needed |
+| Codecov / Coveralls                       | SaaS                  | Team-wide dashboards and PR annotations                                      |
 
 #### What the report shows
 
@@ -146,13 +165,13 @@ The uncovered lines all live in the intentionally-unreachable
 
 ## Backend status matrix
 
-| Backend | `--mode=compile` | `--mode=dispatch` |
-|---|---|---|
-| `cpu` | ✅ Works | ✅ **Fully working** — clean non-zero counter values, complete LCOV report, dead-code detection verified |
-| `vulkan` (incl. SPIR-V) | ✅ Works | ✅ **Fully working** — validated on macOS (MoltenVK) and desktop Windows with NVIDIA drivers; byte-identical LCOV to CPU |
-| `d3d12` | ✅ Works | ✅ **Fully working** — validated on desktop Windows; byte-identical LCOV to CPU/Vulkan |
-| `cuda` | ✅ Works | ✅ **Fully working** — validated on desktop Windows with NVIDIA CUDA runtime; byte-identical LCOV to CPU/Vulkan/D3D12 |
-| `metal` | ✅ Works (with benign unused-variable warnings from Metal's compiler) | ⚠️ Pipeline builds; dispatch runs; but counter values are unreliable — most slots are zero while others show overflow-like values. **Not a coverage-feature issue** — a pre-existing slang-rhi Metal binding / initialization quirk. To be filed against slang-rhi. |
+| Backend                 | `--mode=compile`                                                      | `--mode=dispatch`                                                                                                                                                                                                                                                   |
+| ----------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cpu`                   | ✅ Works                                                              | ✅ **Fully working** — clean non-zero counter values, complete LCOV report, dead-code detection verified                                                                                                                                                            |
+| `vulkan` (incl. SPIR-V) | ✅ Works                                                              | ✅ **Fully working** — validated on macOS (MoltenVK) and desktop Windows with NVIDIA drivers; byte-identical LCOV to CPU                                                                                                                                            |
+| `d3d12`                 | ✅ Works                                                              | ✅ **Fully working** — validated on desktop Windows; byte-identical LCOV to CPU/Vulkan                                                                                                                                                                              |
+| `cuda`                  | ✅ Works                                                              | ✅ **Fully working** — validated on desktop Windows with NVIDIA CUDA runtime; byte-identical LCOV to CPU/Vulkan/D3D12                                                                                                                                               |
+| `metal`                 | ✅ Works (with benign unused-variable warnings from Metal's compiler) | ⚠️ Pipeline builds; dispatch runs; but counter values are unreliable — most slots are zero while others show overflow-like values. **Not a coverage-feature issue** — a pre-existing slang-rhi Metal binding / initialization quirk. To be filed against slang-rhi. |
 
 ## SPIR-V integration (Vulkan, custom engines)
 
@@ -161,13 +180,13 @@ codegen is validated end-to-end by
 `--mode=dispatch --backend=vulkan`. The compiled shader has all the
 properties a Vulkan host needs:
 
-| Property | Verified in the generated SPIR-V |
-|---|---|
-| `spirv-val` spec compliance | ✅ Passes cleanly |
-| Native atomic instructions for counters | ✅ One `OpAtomicIAdd` per counter op |
-| Coverage buffer exposed in entry-point interface | ✅ `OpEntryPoint GLCompute %computeMain "main" %Params %particles %...InvocationID %__slang_coverage` |
-| Source-level debug info | ✅ `OpSource Slang 1` preserved (for debug tooling) |
-| Reflection visibility | ✅ `__slang_coverage` appears in `slangc -reflection-json` and resolves via standard `ShaderCursor["__slang_coverage"]` |
+| Property                                         | Verified in the generated SPIR-V                                                                                        |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| `spirv-val` spec compliance                      | ✅ Passes cleanly                                                                                                       |
+| Native atomic instructions for counters          | ✅ One `OpAtomicIAdd` per counter op                                                                                    |
+| Coverage buffer exposed in entry-point interface | ✅ `OpEntryPoint GLCompute %computeMain "main" %Params %particles %...InvocationID %__slang_coverage`                   |
+| Source-level debug info                          | ✅ `OpSource Slang 1` preserved (for debug tooling)                                                                     |
+| Reflection visibility                            | ✅ `__slang_coverage` appears in `slangc -reflection-json` and resolves via standard `ShaderCursor["__slang_coverage"]` |
 
 ### For engines that don't use slang-rhi
 
@@ -175,6 +194,7 @@ Any Vulkan host can integrate shader coverage without depending on
 slang-rhi. The integration surface is small:
 
 1. **Compile the shader** via `slangc`:
+
    ```bash
    slangc shader.slang \
        -target spirv \
@@ -182,12 +202,14 @@ slang-rhi. The integration surface is small:
        -trace-coverage \
        -o shader.spv
    ```
+
    slangc writes `shader.spv` plus `shader.spv.coverage-mapping.json`
    next to it. The manifest reports the counter count, the assigned
    descriptor-set/binding, and the `slot → (file, line)` mapping.
 
 2. **Parse the manifest via `slang-coverage-rt`** to size the
    counter buffer and learn where to bind it:
+
    ```c
    SlangCoverageContext* ctx;
    slang_coverage_create("shader.spv.coverage-mapping.json", &ctx);
@@ -197,6 +219,7 @@ slang-rhi. The integration surface is small:
    ```
 
 3. **Allocate + bind the SSBO** using standard Vulkan calls:
+
    ```c
    VkBufferCreateInfo bufInfo = { .size = N * 4,
        .usage = VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_SRC_BIT, ... };
@@ -207,6 +230,7 @@ slang-rhi. The integration surface is small:
 
 4. **Dispatch normally**, then barrier + copy-to-staging + map to
    read counters back:
+
    ```c
    vkCmdDispatch(cmd, groupsX, groupsY, groupsZ);
    vkCmdPipelineBarrier(/* COMPUTE_SHADER → TRANSFER */);
@@ -265,5 +289,5 @@ the `=` form; reuse that pattern.
 
 A follow-up will add `--scenario=fluid-only|mixed|edge-cases` so the
 demo generates distinct particle inputs and shows a gcov-style story
-of *coverage percentages rising as the test suite expands*. Straight-
+of _coverage percentages rising as the test suite expands_. Straight-
 forward extension now that dispatch works on CPU and Vulkan.
