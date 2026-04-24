@@ -539,6 +539,15 @@ void initCommandOptions(CommandOptions& options)
          nullptr,
          "Reports information about checkpoint contexts used for reverse-mode automatic "
          "differentiation."},
+        {OptionKind::TraceCoverage,
+         "-trace-coverage",
+         nullptr,
+         "Prototype: instrument the shader with per-statement execution counters. "
+         "Emits IncrementCoverageCounter ops at AST lowering that a later IR "
+         "pass rewrites into counter writes on the synthesized "
+         "`RWStructuredBuffer<uint> __slang_coverage` parameter. "
+         "When writing compiled output to a file, slangc also emits "
+         "`<output>.coverage-mapping.json` to map counters back to source positions."},
         {OptionKind::ReportDynamicDispatchSites,
          "-report-dynamic-dispatch-sites",
          nullptr,
@@ -2382,6 +2391,7 @@ SlangResult OptionsParser::_parse(int argc, char const* const* argv)
         case OptionKind::ReportPerfBenchmark:
         case OptionKind::ReportCheckpointIntermediates:
         case OptionKind::ReportDynamicDispatchSites:
+        case OptionKind::TraceCoverage:
         case OptionKind::SkipSPIRVValidation:
         case OptionKind::DisableSpecialization:
         case OptionKind::DisableDynamicDispatch:
@@ -3679,6 +3689,21 @@ SlangResult OptionsParser::_parse(int argc, char const* const* argv)
                         .impliedStage = getStageName(rawTranslationUnit.impliedStage)});
                 }
             }
+        }
+
+        // `-trace-coverage` instruments at the Slang IR level and has
+        // no meaning when the user asks for pass-through codegen
+        // (where the downstream compiler sees the original source
+        // directly). Reject the combination rather than silently
+        // producing an uninstrumented shader.
+        if (m_requestImpl->m_passThrough != PassThroughMode::None &&
+            linkage->m_optionSet.getBoolOption(CompilerOptionName::TraceCoverage))
+        {
+            m_sink->diagnoseRaw(
+                Severity::Error,
+                UnownedStringSlice("-trace-coverage cannot be combined with -pass-through; "
+                                   "pass-through bypasses the Slang IR pipeline and cannot "
+                                   "emit coverage instrumentation."));
         }
 
         // If the user is requesting code generation via pass-through,

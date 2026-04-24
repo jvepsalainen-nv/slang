@@ -614,6 +614,12 @@ struct IRGenContext
 
     DebugInfoLevel debugInfoLevel = DebugInfoLevel::None;
 
+    // Shader-coverage instrumentation. When true, each lowered
+    // statement is preceded by an IncrementCoverageCounter op, which a
+    // later IR pass rewrites into an atomic counter write on a
+    // synthesized buffer.
+    bool traceCoverage = false;
+
     // The element index if we are inside an `expand` expression.
     IRInst* expandIndex = nullptr;
 
@@ -8990,6 +8996,31 @@ void lowerStmt(IRGenContext* context, Stmt* stmt)
     try
     {
         maybeEmitDebugLine(context, &visitor, stmt, stmt->loc);
+
+        // Emit a coverage-counter op before lowering the statement.
+        // The IRBuilderSourceLocRAII above sets the builder's current
+        // source location to `stmt->loc`, so the emitted instruction
+        // inherits that as its `sourceLoc` — no separate decoration
+        // needed. The pass in slang-ir-coverage-instrument.cpp later
+        // rewrites these ops into counter writes, assigning one slot
+        // per op in traversal order. The host-side LCOV conversion
+        // layer aggregates slots back to `(file, line)` as needed.
+        //
+        // Empty statements are skipped because they have no observable
+        // execution.
+        //
+        // `startBlockIfNeeded` is required because `maybeEmitDebugLine`
+        // may have returned early (e.g. under `-g0`) without opening a
+        // fresh block after a terminator. Without it, a statement that
+        // follows a `break` / `return` could get its coverage counter
+        // inserted into the already-terminated predecessor block,
+        // corrupting the IR.
+        if (context->traceCoverage && stmt->loc.isValid() && !as<EmptyStmt>(stmt))
+        {
+            visitor.startBlockIfNeeded(stmt);
+            context->irBuilder->emitIncrementCoverageCounter();
+        }
+
         visitor.dispatch(stmt);
     }
     // Don't emit any context message for an explicit `AbortCompilationException`
@@ -14215,6 +14246,8 @@ RefPtr<IRModule> generateIRForTranslationUnit(
 
     context->irBuilder = builder;
     context->debugInfoLevel = compileRequest->getLinkage()->m_optionSet.getDebugInfoLevel();
+    context->traceCoverage =
+        compileRequest->getLinkage()->m_optionSet.getBoolOption(CompilerOptionName::TraceCoverage);
 
     if (translationUnit->getModuleDecl()->findModifier<ExperimentalModuleAttribute>())
     {
