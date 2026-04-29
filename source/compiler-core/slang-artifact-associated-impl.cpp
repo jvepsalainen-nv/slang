@@ -289,6 +289,10 @@ void* ArtifactPostEmitMetadata::getInterface(const Guid& guid)
     }
     if (guid == slang::IMetadata::getTypeGuid())
         return static_cast<slang::IMetadata*>(this);
+    if (guid == slang::ICoverageTracingMetadata::getTypeGuid())
+    {
+        return static_cast<slang::ICoverageTracingMetadata*>(this);
+    }
     if (guid == slang::ICooperativeTypesMetadata::getTypeGuid())
         return static_cast<slang::ICooperativeTypesMetadata*>(this);
     return nullptr;
@@ -346,6 +350,35 @@ SlangResult ArtifactPostEmitMetadata::isParameterLocationUsed(
 const char* ArtifactPostEmitMetadata::getDebugBuildIdentifier()
 {
     return m_debugBuildIdentifier.getBuffer();
+}
+
+uint32_t ArtifactPostEmitMetadata::getCounterCount()
+{
+    return (uint32_t)m_coverageEntries.getCount();
+}
+
+const char* ArtifactPostEmitMetadata::getEntryFile(uint32_t index)
+{
+    if (index >= (uint32_t)m_coverageEntries.getCount())
+        return nullptr;
+    return m_coverageEntries[index].file.getBuffer();
+}
+
+uint32_t ArtifactPostEmitMetadata::getEntryLine(uint32_t index)
+{
+    if (index >= (uint32_t)m_coverageEntries.getCount())
+        return 0;
+    return m_coverageEntries[index].line;
+}
+
+int32_t ArtifactPostEmitMetadata::getBufferSpace()
+{
+    return m_coverageBufferSpace;
+}
+
+int32_t ArtifactPostEmitMetadata::getBufferBinding()
+{
+    return m_coverageBufferBinding;
 }
 
 SlangUInt ArtifactPostEmitMetadata::getCooperativeMatrixTypeCount()
