@@ -58,6 +58,57 @@ integration are:
   inline LCOV emission. It uses only `slang.h` (plus the standard
   `tools/coverage-html/slang-coverage-html.py` rendering step).
 
+## Memory-footprint optimizations (added 2026-05-05)
+
+Two compiler-internal optimizations targeting the IR-RAM problem
+reported on the previous preview when compiling a large batch of
+generic-heavy RT shaders:
+
+- **Thunk-based instrumentation.** Each `IncrementCoverageCounter`
+  op is now lowered to a single `Call` to a synthesized
+  `[ForceInline]` helper (`__slang_coverage_hit`) instead of an
+  inline 3-inst `IntLit + GEP + AtomicAdd` chain. After generic
+  specialization clones a function body for each instantiation,
+  only the `Call` (1 inst) duplicates per clone. Net effect: ~3×
+  reduction in coverage-related IR insts in the linked module.
+  `[ForceInline]` ensures backends fold the helper back into a
+  per-site atomic at emit time, so final compiled output (HLSL /
+  SPIR-V / etc.) is shape-equivalent to the prior implementation.
+- **Same-line slot dedup.** Multiple `IncrementCoverageCounter`
+  ops resolving to the same `(file, line)` now share a counter
+  slot instead of getting one per op. Each statement still
+  triggers its own atomic-add at runtime (per-statement firing
+  preserved), but the buffer holds one slot per source line —
+  30-50% smaller counter buffer + metadata on shaders with multi-
+  statement source lines.
+
+Both changes are transparent to host integration:
+- Public C++ API is unchanged.
+- Buffer name, type, layout, binding logic are unchanged.
+- JSON sidecar / LCOV format are unchanged.
+- Runtime counter semantics are unchanged — every executed
+  specialization still increments its slot, every executed line
+  still triggers an atomic-add, lines never executed still read 0.
+
+The only visible change for hosts that auto-size their counter
+buffer from `getBufferInfo().elementCount`: smaller allocations on
+shaders with multi-statement lines (the intended outcome).
+
+For the customer's representative 50-spec × 1000-statement RT
+shader, we expect:
+- Coverage IR insts: ~150,000 → ~50,005 (~3× reduction)
+- Counter buffer slots: ~10,000 → ~4,000-7,000 (depending on
+  multi-stmt density)
+- Per-shader IR memory: ~20 MB lower
+- 434-shader session-total: ~8.5 GB lower IR + ~10 MB lower
+  buffer/metadata
+
+If you observe coverage data that doesn't match what you saw on
+the prior preview — counts off, slots missing, lines reading 0
+that should be ≥1 — please flag it. The thunk inlining is the
+load-bearing assumption; if a backend stops honoring
+`[ForceInline]` we want to know early.
+
 ## What this branch is for
 
 This is a **preview for customer integration testing** while the
