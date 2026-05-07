@@ -20,8 +20,13 @@ using namespace rhi;
 namespace
 {
 
+// The demo reserves one explicit slot for the hidden coverage buffer.
+// Slang injects the resource during instrumentation, but the host still
+// decides where that hidden resource should bind.
 constexpr uint32_t kCoverageBinding = 11;
 constexpr uint32_t kCoverageSpace = 3;
+
+// Normal shader output: the compute shader writes one uint per dispatch.
 constexpr uint32_t kDispatchCount = 64;
 
 enum class DemoBackend
@@ -65,10 +70,20 @@ void diagnoseIfNeeded(slang::IBlob* diagnostics)
 
 struct SyntheticCoverageProgram
 {
+    // Normal runtime object used to create pipelines and shader objects.
     ComPtr<IShaderProgram> program;
+
+    // Coverage-specific metadata returned by Slang for the linked entry point.
     ComPtr<slang::IMetadata> metadata;
+
+    // Coverage semantics: counter count, slot-to-source mapping, manifest data.
     slang::ICoverageTracingMetadata* coverageMetadata = nullptr;
+
+    // Hidden resource binding contract: where the synthesized coverage buffer
+    // must be bound for the selected backend.
     slang::ISyntheticResourceMetadata* syntheticMetadata = nullptr;
+
+    // `slang-rhi` view of the hidden resources copied from Slang metadata.
     std::vector<SyntheticResourceBindingDesc> syntheticResources;
 };
 
@@ -154,6 +169,9 @@ ComPtr<IDevice> createDeviceForBackend(DemoBackend backend, ComPtr<slang::IGloba
     std::vector<slang::CompilerOptionEntry> compilerOptions;
     const char* searchPaths[] = {getDemoSearchPath().c_str()};
 
+    // Coverage instrumentation starts here. These options do not affect the
+    // shader's functional output; they tell Slang to inject hidden counters
+    // and to report how the host should bind the hidden counter buffer.
     slang::CompilerOptionEntry traceCoverage = {};
     traceCoverage.name = slang::CompilerOptionName::TraceCoverage;
     traceCoverage.value.kind = slang::CompilerOptionValueKind::Int;
@@ -169,6 +187,8 @@ ComPtr<IDevice> createDeviceForBackend(DemoBackend backend, ComPtr<slang::IGloba
 
     if (backend == DemoBackend::Vulkan)
     {
+        // This is backend setup, not coverage logic. Vulkan in this demo uses
+        // the direct SPIR-V path to match the `slang-rhi` Vulkan integration.
         slang::CompilerOptionEntry emitSpirvDirectly = {};
         emitSpirvDirectly.name = slang::CompilerOptionName::EmitSpirvDirectly;
         emitSpirvDirectly.value.kind = slang::CompilerOptionValueKind::Int;
@@ -197,6 +217,8 @@ SyntheticCoverageProgram createCoverageProgram(
 {
     SyntheticCoverageProgram result;
 
+    // Normal target selection. Coverage uses the same shader source and entry
+    // point as a non-instrumented build; only the compiler options differ.
     slang::TargetDesc targetDesc = {};
     switch (backend)
     {
@@ -214,6 +236,8 @@ SyntheticCoverageProgram createCoverageProgram(
 
     std::vector<slang::CompilerOptionEntry> compilerOptions;
 
+    // Coverage instrumentation is enabled again at session/compile time so the
+    // linked program carries both counter semantics and hidden binding metadata.
     slang::CompilerOptionEntry traceCoverage = {};
     traceCoverage.name = slang::CompilerOptionName::TraceCoverage;
     traceCoverage.value.kind = slang::CompilerOptionValueKind::Int;
@@ -236,6 +260,9 @@ SyntheticCoverageProgram createCoverageProgram(
     ComPtr<slang::ISession> slangSession;
     checkSlang(globalSession->createSession(sessionDesc, slangSession.writeRef()), "createSession");
 
+    // Normal Slang module loading and linking. The demo uses three `.slang`
+    // files, but from the host point of view this is the same flow as any
+    // ordinary multi-file program.
     ComPtr<slang::IBlob> diagnostics;
     const std::string appPath = (getDemoDirectory() / "app.slang").string();
     slang::IModule* loadedModule = slangSession->loadModule(appPath.c_str(), diagnostics.writeRef());
@@ -283,6 +310,9 @@ SyntheticCoverageProgram createCoverageProgram(
     checkSlang(linkedProgram->getEntryPointMetadata(0, 0, result.metadata.writeRef(), diagnostics.writeRef()), "getEntryPointMetadata");
     diagnoseIfNeeded(diagnostics);
 
+    // Coverage-specific metadata query:
+    // - `ICoverageTracingMetadata` tells us what each counter means.
+    // - `ISyntheticResourceMetadata` tells us how to bind the hidden buffer.
     result.coverageMetadata = (slang::ICoverageTracingMetadata*)result.metadata->castAs(
         slang::ICoverageTracingMetadata::getTypeGuid());
     result.syntheticMetadata = (slang::ISyntheticResourceMetadata*)result.metadata->castAs(
@@ -297,6 +327,9 @@ SyntheticCoverageProgram createCoverageProgram(
         slang::SyntheticResourceInfo info = {};
         checkSlang(result.syntheticMetadata->getResourceInfo(i, &info), "getResourceInfo");
 
+        // This translation step is the bridge between Slang and `slang-rhi`.
+        // Slang describes the hidden resource; `slang-rhi` consumes the same
+        // description through `ShaderProgramSyntheticResourcesDesc`.
         SyntheticResourceBindingDesc desc = {};
         desc.id = info.id;
         desc.bindingType = info.bindingType;
@@ -318,6 +351,9 @@ SyntheticCoverageProgram createCoverageProgram(
 
     ShaderProgramDesc programDesc = {};
     programDesc.slangGlobalScope = linkedProgram;
+
+    // Coverage-specific extension point: ordinary shader programs would omit
+    // `next` here and just pass the linked Slang program.
     programDesc.next = &syntheticDesc;
 
     diagnostics.setNull();
@@ -352,6 +388,8 @@ int writeLcovReport(
     const std::vector<uint32_t>& hits,
     const std::filesystem::path& outputPath)
 {
+    // Coverage-only reporting helper. This is not needed to execute the shader;
+    // it exists solely to turn raw counter values into line-oriented output.
     const uint32_t counterCount = coverage->getCounterCount();
     if (hits.size() != counterCount)
         return -1;
@@ -450,6 +488,8 @@ RunResult runDemoForBackend(DemoBackend backend)
     if (program.syntheticResources.size() != 1)
         fail("expected exactly one synthetic resource");
 
+    // Coverage-specific: the hidden buffer is represented like any other
+    // `slang-rhi` resource, but it is not declared in the user-authored source.
     const auto& coverageResource = program.syntheticResources[0];
     std::cout << "synthetic coverage resource: id=" << coverageResource.id
               << " set=" << coverageResource.space
@@ -459,6 +499,8 @@ RunResult runDemoForBackend(DemoBackend backend)
 
     if (backend == DemoBackend::Vulkan)
     {
+        // Vulkan/direct-host style query: ask Slang for descriptor-facing
+        // `(space, binding)` information for the hidden resource.
         slang::SyntheticResourceDescriptorRange descriptorRange = {};
         checkSlang(
             slang::findSyntheticResourceDescriptorRangeByID(
@@ -471,6 +513,9 @@ RunResult runDemoForBackend(DemoBackend backend)
     }
     else if (backend == DemoBackend::CUDA)
     {
+        // CUDA/CPU style query: ask Slang for uniform marshaling layout instead
+        // of descriptor coordinates. This is the key difference between the two
+        // host families that the new interface needs to support.
         uint32_t coverageIndex = 0;
         checkSlang(
             program.syntheticMetadata->findResourceIndexByID(coverageResource.id, &coverageIndex),
@@ -519,7 +564,12 @@ RunResult runDemoForBackend(DemoBackend backend)
         ResourceState::UnorderedAccess,
         zeroOutput.data());
 
+    // Normal shader binding: `outBuffer` is declared in the user shader and is
+    // bound through ordinary reflection-driven shader object access.
     ShaderCursor(rootObject.get())["outBuffer"].setBinding(outputBuffer);
+
+    // Coverage-specific binding: the hidden counter buffer is bound through the
+    // synthetic resource helper rather than through normal reflection.
     check(
         bindSyntheticResource(
             program.program.get(),
@@ -528,6 +578,9 @@ RunResult runDemoForBackend(DemoBackend backend)
             Binding(coverageBuffer)),
         "bindSyntheticResource");
 
+    // Normal dispatch path. Coverage does not require a separate execution API;
+    // once the hidden buffer is bound, instrumentation runs as part of the
+    // ordinary dispatch.
     auto queue = device->getQueue(QueueType::Graphics);
     auto encoder = queue->createCommandEncoder();
     auto pass = encoder->beginComputePass();
@@ -546,6 +599,7 @@ RunResult runDemoForBackend(DemoBackend backend)
     }
     std::cout << "output buffer verified for " << kDispatchCount << " dispatches\n";
 
+    // Coverage-specific readback and interpretation.
     const auto coverageValues = readUintBuffer(device.get(), coverageBuffer.get(), counterCount);
     uint64_t totalHits = 0;
     uint32_t coveredLineCount = 0;
@@ -599,6 +653,7 @@ RunResult runDemoForBackend(DemoBackend backend)
               << (sawMath ? "math" : "") << "\n";
 
     {
+        // Manifest JSON is the structured coverage artifact produced by Slang.
         ComPtr<ISlangBlob> manifestBlob;
         checkSlang(
             slang_writeCoverageManifestJson(program.coverageMetadata, manifestBlob.writeRef()),
@@ -608,6 +663,7 @@ RunResult runDemoForBackend(DemoBackend backend)
             static_cast<const char*>(manifestBlob->getBufferPointer()),
             (std::streamsize)manifestBlob->getBufferSize());
     }
+    // LCOV is a convenience export layered on top of the same counter data.
     if (writeLcovReport(
             program.coverageMetadata,
             coverageValues,
@@ -626,6 +682,9 @@ RunResult runDemoForBackend(DemoBackend backend)
 
 int main(int argc, char** argv)
 {
+    // The same demo can exercise both backend families:
+    // - Vulkan: hidden resource queried as descriptor coordinates
+    // - CUDA: hidden resource queried as uniform marshaling offsets
     auto backends = parseRequestedBackends(argc, argv);
     size_t ranCount = 0;
     for (auto backend : backends)
