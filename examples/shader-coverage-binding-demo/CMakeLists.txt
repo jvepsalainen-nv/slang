@@ -12,6 +12,17 @@ set(SLANG_BUILD_DIR "${SLANG_REPO}/build/Debug" CACHE PATH "Path to the built Sl
 set(SLANG_RHI_BUILD_DIR "" CACHE PATH "Path to the built slang-rhi tree")
 set(SLANG_RHI_GENERATED_INCLUDE_DIR "" CACHE PATH "Path to generated slang-rhi headers")
 
+set(_SLANG_RHI_LIBRARY_DIR_HINTS
+    "${SLANG_RHI_BUILD_DIR}"
+    "${SLANG_RHI_BUILD_DIR}/lib"
+    "${SLANG_RHI_BUILD_DIR}/bin"
+)
+set(_SLANG_LIBRARY_DIR_HINTS
+    "${SLANG_BUILD_DIR}"
+    "${SLANG_BUILD_DIR}/lib"
+    "${SLANG_BUILD_DIR}/bin"
+)
+
 if(NOT SLANG_RHI_REPO)
     message(FATAL_ERROR "Set SLANG_RHI_REPO to a slang-rhi checkout containing the synthetic resource binding changes.")
 endif()
@@ -25,9 +36,9 @@ if(NOT SLANG_RHI_GENERATED_INCLUDE_DIR)
     set(SLANG_RHI_GENERATED_INCLUDE_DIR "${_slang_rhi_build_root}/include")
 endif()
 
-find_library(SLANG_RHI_LIB slang-rhi PATHS "${SLANG_RHI_BUILD_DIR}" NO_DEFAULT_PATH REQUIRED)
-find_library(SLANG_RHI_RESOURCES_LIB slang-rhi-resources PATHS "${SLANG_RHI_BUILD_DIR}" NO_DEFAULT_PATH REQUIRED)
-find_library(SLANG_COMPILER_LIB slang-compiler PATHS "${SLANG_BUILD_DIR}/lib" "${SLANG_BUILD_DIR}/bin" NO_DEFAULT_PATH REQUIRED)
+find_library(SLANG_RHI_LIB slang-rhi PATHS ${_SLANG_RHI_LIBRARY_DIR_HINTS} NO_DEFAULT_PATH REQUIRED)
+find_library(SLANG_RHI_RESOURCES_LIB slang-rhi-resources PATHS ${_SLANG_RHI_LIBRARY_DIR_HINTS} NO_DEFAULT_PATH REQUIRED)
+find_library(SLANG_COMPILER_LIB slang-compiler PATHS ${_SLANG_LIBRARY_DIR_HINTS} NO_DEFAULT_PATH REQUIRED)
 
 add_executable(shader-coverage-binding-demo
     main.cpp
@@ -62,6 +73,41 @@ if(APPLE)
         "-Wl,-rpath,${SLANG_BUILD_DIR}/bin"
         "-Wl,-rpath,${SLANG_RHI_BUILD_DIR}"
     )
+endif()
+
+if(WIN32)
+    # The standalone demo is built outside the companion trees, so copy the
+    # most likely runtime DLLs next to the executable when they exist.
+    set(_DEMO_RUNTIME_DLL_DIR_HINTS
+        ${_SLANG_RHI_LIBRARY_DIR_HINTS}
+        ${_SLANG_LIBRARY_DIR_HINTS}
+    )
+    set(_DEMO_RUNTIME_DLLS
+        slang-rhi.dll
+        slang-compiler.dll
+        slang.dll
+        slang-glslang.dll
+        slang-glsl-module.dll
+        slang-llvm.dll
+    )
+    foreach(_demo_runtime_dll IN LISTS _DEMO_RUNTIME_DLLS)
+        find_file(_demo_runtime_dll_path
+            NAMES "${_demo_runtime_dll}"
+            PATHS ${_DEMO_RUNTIME_DLL_DIR_HINTS}
+            NO_DEFAULT_PATH
+        )
+        if(_demo_runtime_dll_path)
+            add_custom_command(
+                TARGET shader-coverage-binding-demo
+                POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                    "${_demo_runtime_dll_path}"
+                    "$<TARGET_FILE_DIR:shader-coverage-binding-demo>"
+            )
+        endif()
+        unset(_demo_runtime_dll_path CACHE)
+        unset(_demo_runtime_dll_path)
+    endforeach()
 endif()
 
 if(BUILD_TESTING)

@@ -44,6 +44,15 @@ You need:
 - a built Slang tree
 - a built `slang-rhi` tree that is using the matching Slang branch
 
+The example is expected to work on Windows as well, but that path has
+not been validated in this preview branch. The standalone CMake now
+handles the likely Windows issues by:
+
+- searching `bin/` and `lib/` sibling output directories for the Slang
+  and `slang-rhi` libraries
+- copying the expected Slang runtime DLLs next to the demo executable
+  when they are found
+
 ## Configure
 
 From the Slang repo root:
