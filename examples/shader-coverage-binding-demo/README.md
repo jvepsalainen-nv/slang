@@ -1,4 +1,4 @@
-# `slang-rhi` Shader Coverage Demo
+# Shader Coverage Binding Demo
 
 This example is a standalone end-to-end demo for the helper-based
 shader coverage binding path.
@@ -49,8 +49,8 @@ You need:
 From the Slang repo root:
 
 ```bash
-cmake -S examples/shader-coverage-slang-rhi-demo \
-      -B examples/shader-coverage-slang-rhi-demo/build \
+cmake -S examples/shader-coverage-binding-demo \
+      -B examples/shader-coverage-binding-demo/build \
       -DSLANG_RHI_REPO=/path/to/slang-rhi \
       -DSLANG_BUILD_DIR=/path/to/slang/build/Debug \
       -DSLANG_RHI_BUILD_DIR=/path/to/slang-rhi/build-local-slang/Debug
@@ -66,13 +66,13 @@ Notes:
 ## Build
 
 ```bash
-cmake --build examples/shader-coverage-slang-rhi-demo/build -j8
+cmake --build examples/shader-coverage-binding-demo/build -j8
 ```
 
 ## Run
 
 ```bash
-examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo
+examples/shader-coverage-binding-demo/build/shader-coverage-binding-demo
 ```
 
 By default the demo attempts both backends:
@@ -83,16 +83,16 @@ By default the demo attempts both backends:
 You can select one explicitly:
 
 ```bash
-examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo --device=vulkan
-examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo --device=cuda
+examples/shader-coverage-binding-demo/build/shader-coverage-binding-demo --device=vulkan
+examples/shader-coverage-binding-demo/build/shader-coverage-binding-demo --device=cuda
 ```
 
 The demo writes its outputs to the current working directory:
 
-- `slang-rhi-coverage-demo-vulkan.coverage-mapping.json`
-- `slang-rhi-coverage-demo-vulkan.lcov`
-- `slang-rhi-coverage-demo-cuda.coverage-mapping.json`
-- `slang-rhi-coverage-demo-cuda.lcov`
+- `shader-coverage-binding-demo-vulkan.coverage-mapping.json`
+- `shader-coverage-binding-demo-vulkan.lcov`
+- `shader-coverage-binding-demo-cuda.coverage-mapping.json`
+- `shader-coverage-binding-demo-cuda.lcov`
 
 If a requested backend is not available, the demo prints a `skipped:`
 message and exits successfully. This is intentional so the standalone
@@ -102,13 +102,13 @@ tests can be present on machines that only have one of the backends.
 
 This example registers two standalone `ctest` entries:
 
-- `slang-rhi-coverage-demo-vulkan`
-- `slang-rhi-coverage-demo-cuda`
+- `shader-coverage-binding-demo-vulkan`
+- `shader-coverage-binding-demo-cuda`
 
 Run them with:
 
 ```bash
-ctest --test-dir examples/shader-coverage-slang-rhi-demo/build --output-on-failure
+ctest --test-dir examples/shader-coverage-binding-demo/build --output-on-failure
 ```
 
 ## Expected result

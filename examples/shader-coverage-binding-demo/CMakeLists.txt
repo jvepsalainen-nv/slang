@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(slang_rhi_coverage_demo LANGUAGES CXX)
+project(shader_coverage_binding_demo LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,24 +29,24 @@ find_library(SLANG_RHI_LIB slang-rhi PATHS "${SLANG_RHI_BUILD_DIR}" NO_DEFAULT_P
 find_library(SLANG_RHI_RESOURCES_LIB slang-rhi-resources PATHS "${SLANG_RHI_BUILD_DIR}" NO_DEFAULT_PATH REQUIRED)
 find_library(SLANG_COMPILER_LIB slang-compiler PATHS "${SLANG_BUILD_DIR}/lib" "${SLANG_BUILD_DIR}/bin" NO_DEFAULT_PATH REQUIRED)
 
-add_executable(slang-rhi-coverage-demo
+add_executable(shader-coverage-binding-demo
     main.cpp
 )
 
-target_include_directories(slang-rhi-coverage-demo PRIVATE
+target_include_directories(shader-coverage-binding-demo PRIVATE
     "${SLANG_REPO}/include"
     "${SLANG_RHI_REPO}/include"
     "${SLANG_RHI_GENERATED_INCLUDE_DIR}"
 )
 
-target_link_libraries(slang-rhi-coverage-demo PRIVATE
+target_link_libraries(shader-coverage-binding-demo PRIVATE
     "${SLANG_RHI_LIB}"
     "${SLANG_RHI_RESOURCES_LIB}"
     "${SLANG_COMPILER_LIB}"
 )
 
 if(APPLE)
-    target_link_libraries(slang-rhi-coverage-demo PRIVATE
+    target_link_libraries(shader-coverage-binding-demo PRIVATE
         "-framework Foundation"
         "-framework Metal"
         "-framework Cocoa"
@@ -57,7 +57,7 @@ if(APPLE)
 endif()
 
 if(APPLE)
-    target_link_options(slang-rhi-coverage-demo PRIVATE
+    target_link_options(shader-coverage-binding-demo PRIVATE
         "-Wl,-rpath,${SLANG_BUILD_DIR}/lib"
         "-Wl,-rpath,${SLANG_BUILD_DIR}/bin"
         "-Wl,-rpath,${SLANG_RHI_BUILD_DIR}"
@@ -66,11 +66,11 @@ endif()
 
 if(BUILD_TESTING)
     add_test(
-        NAME slang-rhi-coverage-demo-vulkan
-        COMMAND slang-rhi-coverage-demo --device=vulkan
+        NAME shader-coverage-binding-demo-vulkan
+        COMMAND shader-coverage-binding-demo --device=vulkan
     )
     add_test(
-        NAME slang-rhi-coverage-demo-cuda
-        COMMAND slang-rhi-coverage-demo --device=cuda
+        NAME shader-coverage-binding-demo-cuda
+        COMMAND shader-coverage-binding-demo --device=cuda
     )
 endif()

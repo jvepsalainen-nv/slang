@@ -38,7 +38,7 @@ The upstream PRs establish the two implementation halves:
 
 This preview branch adds a concrete customer-facing example:
 
-- [`examples/shader-coverage-slang-rhi-demo`](examples/shader-coverage-slang-rhi-demo)
+- [`examples/shader-coverage-binding-demo`](examples/shader-coverage-binding-demo)
 
 The demo shows:
 
@@ -61,16 +61,16 @@ The demo shows:
 
 The preview demo lives in:
 
-- [`examples/shader-coverage-slang-rhi-demo`](examples/shader-coverage-slang-rhi-demo)
+- [`examples/shader-coverage-binding-demo`](examples/shader-coverage-binding-demo)
 
 Key files:
 
-- [README.md](examples/shader-coverage-slang-rhi-demo/README.md)
-- [CMakeLists.txt](examples/shader-coverage-slang-rhi-demo/CMakeLists.txt)
-- [main.cpp](examples/shader-coverage-slang-rhi-demo/main.cpp)
-- [app.slang](examples/shader-coverage-slang-rhi-demo/app.slang)
-- [physics.slang](examples/shader-coverage-slang-rhi-demo/physics.slang)
-- [math.slang](examples/shader-coverage-slang-rhi-demo/math.slang)
+- [README.md](examples/shader-coverage-binding-demo/README.md)
+- [CMakeLists.txt](examples/shader-coverage-binding-demo/CMakeLists.txt)
+- [main.cpp](examples/shader-coverage-binding-demo/main.cpp)
+- [app.slang](examples/shader-coverage-binding-demo/app.slang)
+- [physics.slang](examples/shader-coverage-binding-demo/physics.slang)
+- [math.slang](examples/shader-coverage-binding-demo/math.slang)
 
 ## How to use this preview
 
@@ -89,7 +89,7 @@ Key files:
 ```text
 preview/shader-coverage-2026-05-07  (this branch)
 ├── PREVIEW.md
-├── examples/shader-coverage-slang-rhi-demo/
+├── examples/shader-coverage-binding-demo/
 └── feature/coverage-synthetic-resource-metadata
     ├── shader-slang/slang#11080
     └── shader-slang/slang-rhi#739  (companion repo / branch)

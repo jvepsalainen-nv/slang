@@ -409,7 +409,7 @@ int writeLcovReport(
     if (!file)
         return -1;
 
-    file << "TN:slang-rhi-coverage-demo\n";
+    file << "TN:shader-coverage-binding-demo\n";
     for (const auto& filePair : byFile)
     {
         file << "SF:" << filePair.first << "\n";
@@ -461,7 +461,7 @@ std::vector<DemoBackend> parseRequestedBackends(int argc, char** argv)
 
         if (arg == "--help" || arg == "-h")
         {
-            std::cout << "usage: slang-rhi-coverage-demo [--device=vulkan|cuda|all]\n";
+            std::cout << "usage: shader-coverage-binding-demo [--device=vulkan|cuda|all]\n";
             std::exit(0);
         }
 
@@ -547,7 +547,7 @@ RunResult runDemoForBackend(DemoBackend backend)
         fail("createRootShaderObject returned null");
 
     const auto outputDir = getOutputDirectory();
-    const std::string outputPrefix = "slang-rhi-coverage-demo-" + backendName;
+    const std::string outputPrefix = "shader-coverage-binding-demo-" + backendName;
     std::vector<uint32_t> zeroCoverage(counterCount, 0u);
     std::vector<uint32_t> zeroOutput(kDispatchCount, 0u);
 
