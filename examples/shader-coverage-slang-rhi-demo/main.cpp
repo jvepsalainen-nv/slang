@@ -10,6 +10,7 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -22,6 +23,18 @@ namespace
 constexpr uint32_t kCoverageBinding = 11;
 constexpr uint32_t kCoverageSpace = 3;
 constexpr uint32_t kDispatchCount = 64;
+
+enum class DemoBackend
+{
+    Vulkan,
+    CUDA,
+};
+
+enum class RunResult
+{
+    Succeeded,
+    Skipped,
+};
 
 [[noreturn]] void fail(const std::string& message)
 {
@@ -75,6 +88,37 @@ std::filesystem::path getOutputDirectory()
     return std::filesystem::current_path();
 }
 
+const char* getBackendName(DemoBackend backend)
+{
+    switch (backend)
+    {
+    case DemoBackend::Vulkan:
+        return "vulkan";
+    case DemoBackend::CUDA:
+        return "cuda";
+    default:
+        fail("unhandled backend");
+    }
+}
+
+DeviceType getDeviceType(DemoBackend backend)
+{
+    switch (backend)
+    {
+    case DemoBackend::Vulkan:
+        return DeviceType::Vulkan;
+    case DemoBackend::CUDA:
+        return DeviceType::CUDA;
+    default:
+        fail("unhandled backend");
+    }
+}
+
+bool isBackendAvailable(DemoBackend backend)
+{
+    return getRHI()->getAdapters(getDeviceType(backend)).getCount() != 0;
+}
+
 SyntheticResourceScope mapScope(slang::SyntheticResourceScope scope)
 {
     switch (scope)
@@ -103,7 +147,7 @@ SyntheticResourceAccess mapAccess(slang::SyntheticResourceAccess access)
     }
 }
 
-ComPtr<IDevice> createVulkanDevice(ComPtr<slang::IGlobalSession>& outGlobalSession)
+ComPtr<IDevice> createDeviceForBackend(DemoBackend backend, ComPtr<slang::IGlobalSession>& outGlobalSession)
 {
     checkSlang(slang::createGlobalSession(outGlobalSession.writeRef()), "createGlobalSession");
 
@@ -123,14 +167,17 @@ ComPtr<IDevice> createVulkanDevice(ComPtr<slang::IGlobalSession>& outGlobalSessi
     traceCoverageBinding.value.intValue1 = kCoverageSpace;
     compilerOptions.push_back(traceCoverageBinding);
 
-    slang::CompilerOptionEntry emitSpirvDirectly = {};
-    emitSpirvDirectly.name = slang::CompilerOptionName::EmitSpirvDirectly;
-    emitSpirvDirectly.value.kind = slang::CompilerOptionValueKind::Int;
-    emitSpirvDirectly.value.intValue0 = 1;
-    compilerOptions.push_back(emitSpirvDirectly);
+    if (backend == DemoBackend::Vulkan)
+    {
+        slang::CompilerOptionEntry emitSpirvDirectly = {};
+        emitSpirvDirectly.name = slang::CompilerOptionName::EmitSpirvDirectly;
+        emitSpirvDirectly.value.kind = slang::CompilerOptionValueKind::Int;
+        emitSpirvDirectly.value.intValue0 = 1;
+        compilerOptions.push_back(emitSpirvDirectly);
+    }
 
     DeviceDesc desc = {};
-    desc.deviceType = DeviceType::Vulkan;
+    desc.deviceType = getDeviceType(backend);
     desc.slang.slangGlobalSession = outGlobalSession;
     desc.slang.searchPaths = searchPaths;
     desc.slang.searchPathCount = 1;
@@ -138,17 +185,32 @@ ComPtr<IDevice> createVulkanDevice(ComPtr<slang::IGlobalSession>& outGlobalSessi
     desc.slang.compilerOptionEntryCount = (uint32_t)compilerOptions.size();
 
     ComPtr<IDevice> device;
-    check(getRHI()->createDevice(desc, device.writeRef()), "createDevice(Vulkan)");
+    const std::string createLabel = std::string("createDevice(") + getBackendName(backend) + ")";
+    check(getRHI()->createDevice(desc, device.writeRef()), createLabel.c_str());
     return device;
 }
 
-SyntheticCoverageProgram createCoverageProgram(IDevice* device, slang::IGlobalSession* globalSession)
+SyntheticCoverageProgram createCoverageProgram(
+    IDevice* device,
+    slang::IGlobalSession* globalSession,
+    DemoBackend backend)
 {
     SyntheticCoverageProgram result;
 
     slang::TargetDesc targetDesc = {};
-    targetDesc.format = SLANG_SPIRV;
-    targetDesc.profile = globalSession->findProfile("spirv_1_5");
+    switch (backend)
+    {
+    case DemoBackend::Vulkan:
+        targetDesc.format = SLANG_SPIRV;
+        targetDesc.profile = globalSession->findProfile("spirv_1_5");
+        break;
+    case DemoBackend::CUDA:
+        targetDesc.format = SLANG_PTX;
+        targetDesc.profile = globalSession->findProfile("sm_5_0");
+        break;
+    default:
+        fail("unhandled backend");
+    }
 
     std::vector<slang::CompilerOptionEntry> compilerOptions;
 
@@ -328,16 +390,63 @@ std::vector<uint32_t> readUintBuffer(IDevice* device, IBuffer* buffer, size_t co
     return std::vector<uint32_t>(ptr, ptr + count);
 }
 
-} // namespace
-
-int main()
+std::optional<DemoBackend> parseBackendArg(const std::string& value)
 {
-    std::cout << "creating Vulkan device\n";
-    ComPtr<slang::IGlobalSession> globalSession;
-    auto device = createVulkanDevice(globalSession);
+    if (value == "vulkan")
+        return DemoBackend::Vulkan;
+    if (value == "cuda")
+        return DemoBackend::CUDA;
+    return std::nullopt;
+}
 
-    std::cout << "compiling coverage-enabled shader through slang-rhi\n";
-    auto program = createCoverageProgram(device.get(), globalSession.get());
+std::vector<DemoBackend> parseRequestedBackends(int argc, char** argv)
+{
+    std::vector<DemoBackend> backends = {DemoBackend::Vulkan, DemoBackend::CUDA};
+    for (int i = 1; i < argc; ++i)
+    {
+        const std::string arg = argv[i];
+        if (arg.rfind("--device=", 0) == 0)
+        {
+            const std::string value = arg.substr(std::string("--device=").size());
+            if (value == "all")
+            {
+                backends = {DemoBackend::Vulkan, DemoBackend::CUDA};
+                continue;
+            }
+
+            auto backend = parseBackendArg(value);
+            if (!backend)
+                fail("unsupported --device value");
+            backends = {*backend};
+            continue;
+        }
+
+        if (arg == "--help" || arg == "-h")
+        {
+            std::cout << "usage: slang-rhi-coverage-demo [--device=vulkan|cuda|all]\n";
+            std::exit(0);
+        }
+
+        fail("unknown argument: " + arg);
+    }
+    return backends;
+}
+
+RunResult runDemoForBackend(DemoBackend backend)
+{
+    const std::string backendName = getBackendName(backend);
+    if (!isBackendAvailable(backend))
+    {
+        std::cout << "skipped: " << backendName << " device not available\n";
+        return RunResult::Skipped;
+    }
+
+    std::cout << "creating " << backendName << " device\n";
+    ComPtr<slang::IGlobalSession> globalSession;
+    auto device = createDeviceForBackend(backend, globalSession);
+
+    std::cout << "compiling coverage-enabled shader through slang-rhi for " << backendName << "\n";
+    auto program = createCoverageProgram(device.get(), globalSession.get(), backend);
     if (program.syntheticResources.size() != 1)
         fail("expected exactly one synthetic resource");
 
@@ -348,15 +457,31 @@ int main()
               << " uniformOffset=" << coverageResource.uniformOffset
               << " uniformStride=" << coverageResource.uniformStride << "\n";
 
-    slang::SyntheticResourceDescriptorRange descriptorRange = {};
-    checkSlang(
-        slang::findSyntheticResourceDescriptorRangeByID(
-            program.syntheticMetadata,
-            coverageResource.id,
-            &descriptorRange),
-        "findSyntheticResourceDescriptorRangeByID");
-    if (descriptorRange.space != (int32_t)kCoverageSpace || descriptorRange.binding != (int32_t)kCoverageBinding)
-        fail("descriptor helper reported unexpected binding");
+    if (backend == DemoBackend::Vulkan)
+    {
+        slang::SyntheticResourceDescriptorRange descriptorRange = {};
+        checkSlang(
+            slang::findSyntheticResourceDescriptorRangeByID(
+                program.syntheticMetadata,
+                coverageResource.id,
+                &descriptorRange),
+            "findSyntheticResourceDescriptorRangeByID");
+        if (descriptorRange.space != (int32_t)kCoverageSpace || descriptorRange.binding != (int32_t)kCoverageBinding)
+            fail("descriptor helper reported unexpected binding");
+    }
+    else if (backend == DemoBackend::CUDA)
+    {
+        uint32_t coverageIndex = 0;
+        checkSlang(
+            program.syntheticMetadata->findResourceIndexByID(coverageResource.id, &coverageIndex),
+            "findResourceIndexByID");
+        slang::SyntheticResourceUniformBindingInfo uniformInfo = {};
+        checkSlang(
+            program.syntheticMetadata->getResourceUniformBindingInfo(coverageIndex, &uniformInfo),
+            "getResourceUniformBindingInfo");
+        if (uniformInfo.uniformOffset < 0 || uniformInfo.uniformStride <= 0)
+            fail("uniform binding info unavailable for CUDA");
+    }
 
     slang::CoverageBufferInfo bufferInfo = {};
     checkSlang(program.coverageMetadata->getBufferInfo(&bufferInfo), "getBufferInfo");
@@ -377,6 +502,7 @@ int main()
         fail("createRootShaderObject returned null");
 
     const auto outputDir = getOutputDirectory();
+    const std::string outputPrefix = "slang-rhi-coverage-demo-" + backendName;
     std::vector<uint32_t> zeroCoverage(counterCount, 0u);
     std::vector<uint32_t> zeroOutput(kDispatchCount, 0u);
 
@@ -477,7 +603,7 @@ int main()
         checkSlang(
             slang_writeCoverageManifestJson(program.coverageMetadata, manifestBlob.writeRef()),
             "slang_writeCoverageManifestJson");
-        std::ofstream manifest(outputDir / "slang-rhi-coverage-demo.coverage-mapping.json", std::ios::binary);
+        std::ofstream manifest(outputDir / (outputPrefix + ".coverage-mapping.json"), std::ios::binary);
         manifest.write(
             static_cast<const char*>(manifestBlob->getBufferPointer()),
             (std::streamsize)manifestBlob->getBufferSize());
@@ -485,14 +611,29 @@ int main()
     if (writeLcovReport(
             program.coverageMetadata,
             coverageValues,
-            outputDir / "slang-rhi-coverage-demo.lcov") != 0)
+            outputDir / (outputPrefix + ".lcov")) != 0)
     {
         fail("writeLcovReport failed");
     }
 
-    std::cout << "wrote "
-              << (outputDir / "slang-rhi-coverage-demo.coverage-mapping.json") << "\n";
-    std::cout << "wrote " << (outputDir / "slang-rhi-coverage-demo.lcov") << "\n";
-    std::cout << "demo completed successfully\n";
+    std::cout << "wrote " << (outputDir / (outputPrefix + ".coverage-mapping.json")) << "\n";
+    std::cout << "wrote " << (outputDir / (outputPrefix + ".lcov")) << "\n";
+    std::cout << backendName << " demo completed successfully\n";
+    return RunResult::Succeeded;
+}
+
+} // namespace
+
+int main(int argc, char** argv)
+{
+    auto backends = parseRequestedBackends(argc, argv);
+    size_t ranCount = 0;
+    for (auto backend : backends)
+    {
+        if (runDemoForBackend(backend) == RunResult::Succeeded)
+            ++ranCount;
+    }
+    if (ranCount == 0)
+        std::cout << "no requested backend was available\n";
     return 0;
 }

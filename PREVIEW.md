@@ -19,6 +19,7 @@ Snapshot of:
 - this preview branch
   - a standalone end-to-end demo using the new reflection-binding
     helper functions and `slang-rhi`
+  - standalone Vulkan and CUDA demo tests
 
 Related to Slang issue #10794.
 
@@ -46,12 +47,15 @@ The demo shows:
 - metadata queries through:
   - `ICoverageTracingMetadata`
   - `ISyntheticResourceMetadata`
-- descriptor helper usage:
+- Vulkan descriptor helper usage:
   - `findSyntheticResourceDescriptorRangeByID(...)`
+- CUDA uniform binding query usage:
+  - `getResourceUniformBindingInfo(...)`
 - `slang-rhi` program creation using synthetic resource descriptors
 - helper-based binding with:
   - `bindSyntheticResource(...)`
-- Vulkan dispatch, readback, manifest write, and LCOV write
+- Vulkan and CUDA dispatch, readback, manifest write, and LCOV write
+- standalone `ctest` entries for the Vulkan and CUDA demo paths
 
 ## Demo layout
 

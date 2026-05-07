@@ -21,13 +21,15 @@ walkthrough.
 - hidden coverage binding queries through:
   - `slang::ICoverageTracingMetadata`
   - `slang::ISyntheticResourceMetadata`
-- descriptor helper usage:
+- Vulkan descriptor helper usage:
   - `slang::findSyntheticResourceDescriptorRangeByID(...)`
+- CUDA uniform binding query usage:
+  - `getResourceUniformBindingInfo(...)`
 - `slang-rhi` synthetic resource descriptors passed into
   `createShaderProgram()`
 - helper-based runtime binding with:
   - `bindSyntheticResource(...)`
-- Vulkan dispatch, readback, manifest JSON output, and LCOV output
+- Vulkan and CUDA dispatch, readback, manifest JSON output, and LCOV output
 
 ## Build prerequisites
 
@@ -73,14 +75,45 @@ cmake --build examples/shader-coverage-slang-rhi-demo/build -j8
 examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo
 ```
 
+By default the demo attempts both backends:
+
+- `--device=vulkan`
+- `--device=cuda`
+
+You can select one explicitly:
+
+```bash
+examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo --device=vulkan
+examples/shader-coverage-slang-rhi-demo/build/slang-rhi-coverage-demo --device=cuda
+```
+
 The demo writes its outputs to the current working directory:
 
-- `slang-rhi-coverage-demo.coverage-mapping.json`
-- `slang-rhi-coverage-demo.lcov`
+- `slang-rhi-coverage-demo-vulkan.coverage-mapping.json`
+- `slang-rhi-coverage-demo-vulkan.lcov`
+- `slang-rhi-coverage-demo-cuda.coverage-mapping.json`
+- `slang-rhi-coverage-demo-cuda.lcov`
+
+If a requested backend is not available, the demo prints a `skipped:`
+message and exits successfully. This is intentional so the standalone
+tests can be present on machines that only have one of the backends.
+
+## Standalone tests
+
+This example registers two standalone `ctest` entries:
+
+- `slang-rhi-coverage-demo-vulkan`
+- `slang-rhi-coverage-demo-cuda`
+
+Run them with:
+
+```bash
+ctest --test-dir examples/shader-coverage-slang-rhi-demo/build --output-on-failure
+```
 
 ## Expected result
 
-Observed result on this machine:
+Observed Vulkan result on this machine:
 
 - output buffer verified for `64` dispatches
 - multi-file attribution across:
@@ -92,6 +125,9 @@ Observed result on this machine:
 - covered lines: `12`
 - uncovered lines: `3`
 
+Observed CUDA result depends on CUDA availability. On machines without a
+CUDA device the CUDA demo/test is skipped.
+
 ## Why this example exists
 
 This demo is the concrete proof point for the current integration
@@ -102,3 +138,5 @@ story:
 2. `slang-rhi` consumes that metadata as synthetic resource descriptors.
 3. the host binds the hidden buffer through helper-based binding rather
    than raw descriptor plumbing in the application.
+4. the same shader program structure can be exercised through both the
+   Vulkan descriptor-backed path and the CUDA uniform-marshaling path.

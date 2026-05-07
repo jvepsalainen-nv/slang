@@ -3,6 +3,7 @@ project(slang_rhi_coverage_demo LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include(CTest)
 
 get_filename_component(_slang_repo_default "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
 set(SLANG_REPO "${_slang_repo_default}" CACHE PATH "Path to the Slang repository checkout")
@@ -60,5 +61,16 @@ if(APPLE)
         "-Wl,-rpath,${SLANG_BUILD_DIR}/lib"
         "-Wl,-rpath,${SLANG_BUILD_DIR}/bin"
         "-Wl,-rpath,${SLANG_RHI_BUILD_DIR}"
+    )
+endif()
+
+if(BUILD_TESTING)
+    add_test(
+        NAME slang-rhi-coverage-demo-vulkan
+        COMMAND slang-rhi-coverage-demo --device=vulkan
+    )
+    add_test(
+        NAME slang-rhi-coverage-demo-cuda
+        COMMAND slang-rhi-coverage-demo --device=cuda
     )
 endif()
