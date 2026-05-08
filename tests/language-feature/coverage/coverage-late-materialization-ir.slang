@@ -35,5 +35,9 @@ void computeMain(uint3 tid : SV_DispatchThreadID)
 
 // MAT_CPP: atomicAdd
 // MAT_CPP: rwstructuredBufferGetElementPtr
+// MAT_CPP: rwstructuredBufferGetElementPtr({{.*}}, 5 : Int)
+// MAT_CPP: rwstructuredBufferGetElementPtr({{.*}}, 6 : Int)
 // MAT_SPV: atomicAdd
 // MAT_SPV: rwstructuredBufferGetElementPtr
+// MAT_SPV: OpAccessChain {{.*}} %int_5
+// MAT_SPV: OpAccessChain {{.*}} %int_6

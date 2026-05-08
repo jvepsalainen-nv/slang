@@ -830,5 +830,6 @@ return {
 	["DebugCompilationUnit"] = 854,
 	["IncrementCoverageCounter"] = 855,
 	["Decoration.CoverageSlotDecoration"] = 856,
-	["Decoration.CoverageBufferDecoration"] = 857
+	["Decoration.CoverageBufferDecoration"] = 857,
+	["Decoration.CoverageKeepAliveDecoration"] = 858
 }

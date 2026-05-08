@@ -660,10 +660,15 @@ struct CoverageMaterializer
         return bufferReference.wrapperFieldKey;
     }
 
-    static void removeKeepAliveDecorations(IRInst* value)
+    static void addCoverageKeepAliveDecoration(IRBuilder& builder, IRInst* value)
     {
-        while (auto keepAlive = value->findDecoration<IRKeepAliveDecoration>())
-            keepAlive->removeAndDeallocate();
+        builder.addDecoration(value, kIROp_CoverageKeepAliveDecoration);
+    }
+
+    static void removeCoverageKeepAliveDecorations(IRInst* value)
+    {
+        while (auto coverageKeepAlive = value->findDecoration<IRCoverageKeepAliveDecoration>())
+            coverageKeepAlive->removeAndDeallocate();
     }
 
     IRInst* emitCoverageBufferValue(IRBuilder& builder)
@@ -692,11 +697,6 @@ struct CoverageMaterializer
     {
         auto slotDecoration = counterOp->findDecoration<IRCoverageSlotDecoration>();
         SLANG_RELEASE_ASSERT(slotDecoration);
-        if (!slotDecoration)
-        {
-            counterOp->removeAndDeallocate();
-            return;
-        }
 
         UInt slot = (UInt)slotDecoration->getSlotValue();
 
@@ -1153,9 +1153,15 @@ void preserveCoverageBindingForMaterialization(IRModule* module, bool enabled)
 
     IRBuilder builder(module);
     if (keepAliveTarget && !keepAliveTarget->findDecoration<IRKeepAliveDecoration>())
+    {
         builder.addKeepAliveDecoration(keepAliveTarget);
+        CoverageMaterializer::addCoverageKeepAliveDecoration(builder, keepAliveTarget);
+    }
     if (fieldKeepAliveTarget && !fieldKeepAliveTarget->findDecoration<IRKeepAliveDecoration>())
+    {
         builder.addKeepAliveDecoration(fieldKeepAliveTarget);
+        CoverageMaterializer::addCoverageKeepAliveDecoration(builder, fieldKeepAliveTarget);
+    }
 }
 
 void materializeCoverageInstrumentation(IRModule* module, DiagnosticSink* sink, bool enabled)
@@ -1182,9 +1188,9 @@ void materializeCoverageInstrumentation(IRModule* module, DiagnosticSink* sink, 
     }
 
     if (auto keepAliveTarget = CoverageMaterializer::getOwningGlobalForKeepAlive(bufferReference))
-        CoverageMaterializer::removeKeepAliveDecorations(keepAliveTarget);
+        CoverageMaterializer::removeCoverageKeepAliveDecorations(keepAliveTarget);
     if (auto fieldKeepAliveTarget = CoverageMaterializer::getFieldKeyForKeepAlive(bufferReference))
-        CoverageMaterializer::removeKeepAliveDecorations(fieldKeepAliveTarget);
+        CoverageMaterializer::removeCoverageKeepAliveDecorations(fieldKeepAliveTarget);
 
     CoverageMaterializer materializer(module, bufferReference);
     materializer.run(counterOps);

@@ -2255,6 +2255,16 @@ local insts = {
 					struct_name = "CoverageBufferDecoration",
 				},
 			},
+			{
+				CoverageKeepAliveDecoration = {
+					-- Internal marker recording that shader coverage attached
+					-- `KeepAlive` to preserve the hidden coverage binding until
+					-- late materialization. Used so coverage can reason about
+					-- its own preservation state without removing feature-
+					-- agnostic `KeepAlive` decorations added by other passes.
+					struct_name = "CoverageKeepAliveDecoration",
+				},
+			},
 			{ RequireSPIRVDescriptorIndexingExtensionDecoration = {} },
 			{
 				spirvOpDecoration = {

@@ -402,6 +402,7 @@ SLANG_UNIT_TEST(coverageTracingMetadata)
         SLANG_CHECK(
             slang::findSyntheticResourceDescriptorRangeByID(nullptr, 1, &descriptorRange) ==
             SLANG_E_INVALID_ARG);
+        descriptorRange.structSize = sizeof(descriptorRange);
         SLANG_CHECK(
             slang::findSyntheticResourceDescriptorRangeByID(
                 syntheticResources,
