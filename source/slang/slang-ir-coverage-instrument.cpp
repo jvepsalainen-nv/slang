@@ -22,6 +22,9 @@ namespace
 static const char kCoverageBufferName[] = "__slang_coverage";
 static const char kGlobalParamsName[] = "globalParams";
 static const char kCoverageFeatureTag[] = "coverage";
+// Synthetic resource ids are stable, non-zero feature-local
+// constants. Additional synthetic instrumentation resources should
+// claim their own ids alongside this one.
 static const uint32_t kCoverageSyntheticResourceID = 1;
 
 static bool hasNameHint(IRInst* inst, UnownedTerminatedStringSlice expectedName)
@@ -1166,6 +1169,8 @@ void preserveCoverageBindingForMaterialization(IRModule* module, bool enabled)
 
 void materializeCoverageInstrumentation(IRModule* module, DiagnosticSink* sink, bool enabled)
 {
+    // Reserved for future recoverable diagnostics if this pass grows
+    // a non-fatal error path.
     SLANG_UNUSED(sink);
 
     List<IRInst*> counterOps;
