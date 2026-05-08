@@ -1732,10 +1732,7 @@ Result linkAndOptimizeIR(
     // less retained coverage-related IR state.
     if (requiredLoweringPassSet.coverageTracing)
     {
-    SLANG_PASS(
-        materializeCoverageInstrumentation,
-        sink,
-        codeGenContext->shouldTraceCoverage());
+        SLANG_PASS(materializeCoverageInstrumentation, sink, codeGenContext->shouldTraceCoverage());
         validateIRModuleIfEnabled(codeGenContext, irModule);
     }
 

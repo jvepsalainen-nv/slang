@@ -4696,9 +4696,11 @@ struct SyntheticResourceInfo
 {
     size_t structSize = sizeof(SyntheticResourceInfo);
 
-    /// Stable synthetic resource identifier within the compiled
-    /// program. Hosts should use this to correlate metadata and
-    /// runtime binding helpers.
+    /// Stable, opaque, non-zero synthetic resource identifier within
+    /// the compiled program. `0` is reserved as the default
+    /// "unassigned" sentinel; `findResourceIndexByID(0, ...)` always
+    /// returns `SLANG_E_NOT_FOUND`. Hosts should use this to
+    /// correlate metadata and runtime binding helpers.
     uint32_t id = 0;
 
     /// The Slang binding kind represented by this synthetic
@@ -4727,7 +4729,10 @@ struct SyntheticResourceInfo
 
     /// CPU/CUDA-style marshaling location in generated uniform /
     /// wrapper parameter data, in bytes, or `-1` if unavailable for
-    /// the target.
+    /// the target. `0` is a valid value and means "the first byte of
+    /// the marshaled uniform region," regardless of whether that
+    /// region is a standalone global parameter or the first field of
+    /// a wrapper aggregate.
     int32_t uniformOffset = -1;
 
     /// Byte stride between adjacent logical elements when
@@ -5755,6 +5760,8 @@ struct SyntheticResourceDescriptorRange
 {
     size_t structSize = sizeof(SyntheticResourceDescriptorRange);
 
+    /// Stable, opaque, non-zero synthetic resource identifier copied
+    /// from `SyntheticResourceInfo::id`.
     uint32_t id = 0;
     SyntheticResourceDescriptorClass descriptorClass =
         SyntheticResourceDescriptorClass::Unsupported;
@@ -5832,7 +5839,9 @@ inline bool getSyntheticResourceDescriptorClass(
    This helper is layered on top of `ISyntheticResourceMetadata`. It is
    intended for descriptor-backed hosts that want a ready-to-use
    descriptor classification plus `(space, binding)` without duplicating
-   `BindingType -> descriptor class` mapping logic.
+   `BindingType -> descriptor class` mapping logic. Some descriptor-
+   backed targets may not use a descriptor-space concept; in that case
+   the helper still succeeds and reports `space == -1`.
 
    Returns:
      - `SLANG_OK` on success
@@ -5892,6 +5901,8 @@ inline SlangResult findSyntheticResourceDescriptorRangeByID(
 {
     if (!metadata || !outRange)
         return SLANG_E_INVALID_ARG;
+    if (outRange->structSize < sizeof(SyntheticResourceDescriptorRange))
+        return SLANG_E_INVALID_ARG;
 
     uint32_t index = 0;
     {
@@ -5906,7 +5917,8 @@ inline SlangResult findSyntheticResourceDescriptorRangeByID(
    representable synthetic resources in `metadata`.
 
    Resources for which `getSyntheticResourceDescriptorRange(...)`
-   returns `SLANG_E_NOT_AVAILABLE` are skipped.
+   returns `SLANG_E_NOT_AVAILABLE`, or which report `space == -1`, are
+   skipped.
 */
 inline SlangResult getSyntheticResourceDescriptorSpaceSpan(
     ISyntheticResourceMetadata* metadata,
@@ -5932,6 +5944,9 @@ inline SlangResult getSyntheticResourceDescriptorSpaceSpan(
         if (SLANG_FAILED(result))
             return result;
 
+        if (descriptorRange.space < 0)
+            continue;
+
         if (outSpan->descriptorResourceCount == 0)
         {
             outSpan->minSpace = descriptorRange.space;
@@ -5953,7 +5968,8 @@ inline SlangResult getSyntheticResourceDescriptorSpaceSpan(
 /* Count descriptor-representable synthetic resources in one space.
 
    Resources for which `getSyntheticResourceDescriptorRange(...)`
-   returns `SLANG_E_NOT_AVAILABLE` are skipped.
+   returns `SLANG_E_NOT_AVAILABLE`, or which report `space == -1`, are
+   skipped.
 */
 inline SlangResult getSyntheticResourceDescriptorRangeCountForSpace(
     ISyntheticResourceMetadata* metadata,
@@ -5974,7 +5990,7 @@ inline SlangResult getSyntheticResourceDescriptorRangeCountForSpace(
             continue;
         if (SLANG_FAILED(result))
             return result;
-        if (descriptorRange.space == int32_t(space))
+        if (descriptorRange.space >= 0 && descriptorRange.space == int32_t(space))
             count++;
     }
 
@@ -5996,7 +6012,8 @@ inline SlangResult getSyntheticResourceDescriptorRangeCountForSpace(
      - `SLANG_E_INVALID_ARG` for null `metadata` or `ioCount`
 
    Resources for which `getSyntheticResourceDescriptorRange(...)`
-   returns `SLANG_E_NOT_AVAILABLE` are skipped.
+   returns `SLANG_E_NOT_AVAILABLE`, or which report `space == -1`, are
+   skipped.
 */
 inline SlangResult getSyntheticResourceDescriptorRangesForSpace(
     ISyntheticResourceMetadata* metadata,
@@ -6019,7 +6036,7 @@ inline SlangResult getSyntheticResourceDescriptorRangesForSpace(
             continue;
         if (SLANG_FAILED(result))
             return result;
-        if (descriptorRange.space != int32_t(space))
+        if (descriptorRange.space < 0 || descriptorRange.space != int32_t(space))
             continue;
 
         if (outRanges && count < capacity)

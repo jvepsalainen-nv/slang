@@ -46,7 +46,7 @@ static SyntheticResourceRecord* findSyntheticResourceRecordById(
 static SyntheticResourceRecord& getOrAddCoverageSyntheticResourceRecord(
     ArtifactPostEmitMetadata& metadata)
 {
-    SLANG_ASSERT(!metadata.m_syntheticResourcesPublished);
+    SLANG_RELEASE_ASSERT(!metadata.m_syntheticResourcesPublished);
     if (auto existing = findSyntheticResourceRecordById(metadata, kCoverageSyntheticResourceID))
         return *existing;
 
