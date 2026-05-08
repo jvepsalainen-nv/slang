@@ -103,6 +103,41 @@ The demo writes its outputs to the current working directory:
 - `shader-coverage-binding-demo-cuda.coverage-mapping.json`
 - `shader-coverage-binding-demo-cuda.lcov`
 
+## Render HTML
+
+Use Slang's HTML coverage renderer on the generated LCOV output:
+
+```bash
+python3 tools/coverage-html/slang-coverage-html.py \
+    shader-coverage-binding-demo-vulkan.lcov \
+    --output-dir shader-coverage-binding-demo-vulkan-html \
+    --title "Shader Coverage Binding Demo (Vulkan)"
+```
+
+Then open:
+
+- `shader-coverage-binding-demo-vulkan-html/index.html`
+
+Do the same for CUDA when a CUDA LCOV file is available:
+
+```bash
+python3 tools/coverage-html/slang-coverage-html.py \
+    shader-coverage-binding-demo-cuda.lcov \
+    --output-dir shader-coverage-binding-demo-cuda-html \
+    --title "Shader Coverage Binding Demo (CUDA)"
+```
+
+The generated `.lcov` files are standard LCOV outputs, so other
+renderers also work. For example, with `genhtml`:
+
+```bash
+genhtml shader-coverage-binding-demo-vulkan.lcov \
+    --output-directory shader-coverage-binding-demo-vulkan-genhtml
+```
+
+You can also feed the LCOV files to other LCOV consumers such as
+Codecov or editor plugins that understand LCOV.
+
 If a requested backend is not available, the demo prints a `skipped:`
 message and exits successfully. This is intentional so the standalone
 tests can be present on machines that only have one of the backends.
@@ -124,15 +159,18 @@ ctest --test-dir examples/shader-coverage-binding-demo/build --output-on-failure
 
 Observed Vulkan result on this machine:
 
-- output buffer verified for `64` dispatches
+- output buffer verified for `100000` items
 - multi-file attribution across:
   - `app.slang`
   - `physics.slang`
   - `math.slang`
-- `15` counter slots
-- aggregate hits: `768`
-- covered lines: `12`
-- uncovered lines: `3`
+- `59` counter slots
+- aggregate hits: `4027172`
+- covered lines: `57`
+- uncovered lines: `2`
+- distinct positive hit counts: `22`
+- representative hit histogram:
+  - `32`, `7693`, `9091`, `10000`, `12500`, `20000`, `50000`, `100000`, `200000`
 
 Observed CUDA result depends on CUDA availability. On machines without a
 CUDA device the CUDA demo/test is skipped.

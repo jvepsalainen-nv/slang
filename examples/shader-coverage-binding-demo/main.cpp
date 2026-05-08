@@ -26,8 +26,9 @@ namespace
 constexpr uint32_t kCoverageBinding = 11;
 constexpr uint32_t kCoverageSpace = 3;
 
-// Normal shader output: the compute shader writes one uint per dispatch.
-constexpr uint32_t kDispatchCount = 64;
+// Normal shader output: the compute shader writes one uint per input item.
+constexpr uint32_t kItemCount = 100000;
+constexpr uint32_t kThreadsPerGroup = 64;
 
 enum class DemoBackend
 {
@@ -66,6 +67,103 @@ void diagnoseIfNeeded(slang::IBlob* diagnostics)
         std::cerr.write(reinterpret_cast<const char*>(diagnostics->getBufferPointer()), diagnostics->getBufferSize());
         std::cerr << "\n";
     }
+}
+
+uint32_t scaleByFactorHost(uint32_t value, uint32_t factor)
+{
+    if (factor == 0)
+        return 0;
+    return value * factor;
+}
+
+uint32_t clampToRangeHost(uint32_t value, uint32_t maxValue)
+{
+    return value > maxValue ? maxValue : value;
+}
+
+uint32_t softenBurstHost(uint32_t value, uint32_t lane)
+{
+    uint32_t softened = value;
+    const uint32_t burstBucket = lane % 4u;
+
+    if (burstBucket == 0u)
+        softened += 13u;
+    else if (burstBucket == 1u)
+        softened += 3u;
+    else if (burstBucket == 2u)
+        softened += lane % 9u;
+    else
+        softened += lane % 5u;
+
+    if ((lane % 13u) == 0u)
+        softened += 29u;
+
+    return softened;
+}
+
+uint32_t integrateMotionHost(uint32_t x, uint32_t frame)
+{
+    const uint32_t scaled = scaleByFactorHost(x + 1u, (frame % 5u) + 1u);
+    uint32_t adjusted = scaled;
+
+    if ((x % 11u) == 0u)
+        adjusted += 19u;
+    else if ((x % 7u) == 0u)
+        adjusted += 7u;
+    else if ((x % 3u) == 0u)
+        adjusted += 3u;
+
+    return softenBurstHost(adjusted, x);
+}
+
+uint32_t applyMaterialHost(uint32_t value, uint32_t lane)
+{
+    uint32_t shaded = value;
+
+    if ((lane & 1u) == 0u)
+        shaded += 2u;
+    else
+        shaded += 1u;
+
+    const uint32_t materialBucket = lane % 5u;
+    if (materialBucket == 0u)
+        shaded /= 2u + (lane % 3u);
+    else if (materialBucket == 1u)
+        shaded += 5u;
+    else if (materialBucket == 2u)
+        shaded += 11u;
+    else if (materialBucket == 3u)
+        shaded += 17u;
+    else
+        shaded += 23u;
+
+    return clampToRangeHost(shaded, 400000u);
+}
+
+uint32_t finalizeEnergyHost(uint32_t value, uint32_t lane)
+{
+    uint32_t finalized = value;
+
+    if ((lane % 8u) == 0u)
+        finalized += 31u;
+    else if ((lane % 8u) < 3u)
+        finalized += 9u;
+    else
+        finalized += 4u;
+
+    if ((lane % 10u) == 0u)
+        finalized /= 2u;
+    else if ((lane % 9u) == 0u)
+        finalized += 27u;
+
+    return clampToRangeHost(finalized, 500000u);
+}
+
+uint32_t computeExpectedOutput(uint32_t itemIndex)
+{
+    const uint32_t integrated = integrateMotionHost(itemIndex, 17u);
+    const uint32_t material = applyMaterialHost(integrated, itemIndex);
+    return finalizeEnergyHost(material, itemIndex);
 }
 
 struct SyntheticCoverageProgram
@@ -549,7 +647,7 @@ RunResult runDemoForBackend(DemoBackend backend)
     const auto outputDir = getOutputDirectory();
     const std::string outputPrefix = "shader-coverage-binding-demo-" + backendName;
     std::vector<uint32_t> zeroCoverage(counterCount, 0u);
-    std::vector<uint32_t> zeroOutput(kDispatchCount, 0u);
+    std::vector<uint32_t> zeroOutput(kItemCount, 0u);
 
     auto coverageBuffer = createBuffer(
         device.get(),
@@ -585,29 +683,32 @@ RunResult runDemoForBackend(DemoBackend backend)
     auto encoder = queue->createCommandEncoder();
     auto pass = encoder->beginComputePass();
     pass->bindPipeline(pipeline, rootObject);
-    pass->dispatchCompute(kDispatchCount, 1, 1);
+    pass->dispatchCompute((kItemCount + kThreadsPerGroup - 1) / kThreadsPerGroup, 1, 1);
     pass->end();
     check(queue->submit(encoder->finish()), "queue->submit");
     check(queue->waitOnHost(), "queue->waitOnHost");
 
-    const auto outputValues = readUintBuffer(device.get(), outputBuffer.get(), kDispatchCount);
-    for (uint32_t i = 0; i < kDispatchCount; ++i)
+    const auto outputValues = readUintBuffer(device.get(), outputBuffer.get(), kItemCount);
+    for (uint32_t i = 0; i < kItemCount; ++i)
     {
-        const uint32_t expectedValue = i * 3u;
+        const uint32_t expectedValue = computeExpectedOutput(i);
         if (outputValues[i] != expectedValue)
             fail("unexpected compute result");
     }
-    std::cout << "output buffer verified for " << kDispatchCount << " dispatches\n";
+    std::cout << "output buffer verified for " << kItemCount << " items\n";
 
     // Coverage-specific readback and interpretation.
     const auto coverageValues = readUintBuffer(device.get(), coverageBuffer.get(), counterCount);
     uint64_t totalHits = 0;
     uint32_t coveredLineCount = 0;
     uint32_t uncoveredLineCount = 0;
+    std::map<uint32_t, uint32_t> hitHistogram;
     std::map<std::string, std::map<uint32_t, uint64_t>> byFile;
     for (uint32_t i = 0; i < counterCount; ++i)
     {
         totalHits += coverageValues[i];
+        if (coverageValues[i] > 0)
+            hitHistogram[coverageValues[i]]++;
 
         slang::CoverageEntryInfo entry = {};
         checkSlang(program.coverageMetadata->getEntryInfo(i, &entry), "getEntryInfo");
@@ -639,18 +740,32 @@ RunResult runDemoForBackend(DemoBackend backend)
         }
     }
 
+    uint32_t distinctPositiveHitCounts = 0;
+    for (const auto& hitPair : hitHistogram)
+    {
+        if (hitPair.first > 0)
+            ++distinctPositiveHitCounts;
+    }
+
     if (totalHits == 0 || coveredLineCount == 0 || uncoveredLineCount == 0)
         fail("coverage counters do not show both covered and uncovered lines");
     if (!(sawApp && sawPhysics && sawMath))
         fail("coverage metadata did not attribute lines across all demo modules");
+    if (distinctPositiveHitCounts < 5)
+        fail("coverage counters do not show a rich enough hit distribution");
 
     std::cout << "aggregate coverage hits = " << totalHits << "\n";
     std::cout << "covered lines = " << coveredLineCount
               << ", uncovered lines = " << uncoveredLineCount << "\n";
+    std::cout << "distinct positive hit counts = " << distinctPositiveHitCounts << "\n";
     std::cout << "attributed files: "
               << (sawApp ? "app " : "")
               << (sawPhysics ? "physics " : "")
               << (sawMath ? "math" : "") << "\n";
+    std::cout << "coverage hit histogram:";
+    for (const auto& hitPair : hitHistogram)
+        std::cout << " [" << hitPair.first << " -> " << hitPair.second << "]";
+    std::cout << "\n";
 
     {
         // Manifest JSON is the structured coverage artifact produced by Slang.

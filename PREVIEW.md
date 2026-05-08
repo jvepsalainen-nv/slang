@@ -43,6 +43,7 @@ This preview branch adds a concrete customer-facing example:
 The demo shows:
 
 - multi-file Slang program structure
+- a larger compute workload (`100000` items) with nontrivial path distribution
 - coverage-enabled compile through the C++ API
 - metadata queries through:
   - `ICoverageTracingMetadata`

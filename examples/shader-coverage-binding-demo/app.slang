@@ -3,12 +3,17 @@ import physics;
 
 RWStructuredBuffer<uint> outBuffer;
 
+static const uint kItemCount = 100000u;
+
 [shader("compute")]
-[numthreads(1, 1, 1)]
+[numthreads(64, 1, 1)]
 void computeMain(uint3 tid : SV_DispatchThreadID)
 {
     uint i = tid.x;
-    uint stepped = computeStep(i, 5);
-    uint damped = applyDamping(stepped, 2);
-    outBuffer[i] = damped;
+    if (i >= kItemCount)
+        return;
+
+    uint integrated = integrateMotion(i, 17u);
+    uint material = applyMaterial(integrated, i);
+    outBuffer[i] = finalizeEnergy(material, i);
 }

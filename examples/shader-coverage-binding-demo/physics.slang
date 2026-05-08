@@ -1,16 +1,56 @@
 import math;
 
-public uint computeStep(uint x, uint frame)
+public uint integrateMotion(uint x, uint frame)
 {
-    uint accelerated = scaleByFactor(x, frame + 1);
-    if (accelerated > 1000)
+    uint scaled = scaleByFactor(x + 1u, (frame % 5u) + 1u);
+    uint adjusted = scaled;
+
+    if ((x % 11u) == 0u)
     {
-        return 1000;
+        adjusted += 19u;
     }
-    return accelerated;
+    else if ((x % 7u) == 0u)
+    {
+        adjusted += 7u;
+    }
+    else if ((x % 3u) == 0u)
+    {
+        adjusted += 3u;
+    }
+
+    return softenBurst(adjusted, x);
 }
 
-public uint applyDamping(uint value, uint factor)
+public uint applyMaterial(uint value, uint lane)
 {
-    return clampToRange(value / factor, 500);
+    uint shaded = value;
+
+    if ((lane & 1u) == 0u)
+        shaded += 2u;
+    else
+        shaded += 1u;
+
+    uint materialBucket = lane % 5u;
+    if (materialBucket == 0u)
+    {
+        shaded /= 2u + (lane % 3u);
+    }
+    else if (materialBucket == 1u)
+    {
+        shaded += 5u;
+    }
+    else if (materialBucket == 2u)
+    {
+        shaded += 11u;
+    }
+    else if (materialBucket == 3u)
+    {
+        shaded += 17u;
+    }
+    else
+    {
+        shaded += 23u;
+    }
+
+    return clampToRange(shaded, 400000u);
 }
