@@ -127,19 +127,12 @@ auto* syntheticResources = (slang::ISyntheticResourceMetadata*)metadata->castAs(
 uint32_t n = coverage->getCounterCount();
 SLANG_CHECK(syntheticResources != nullptr);
 
-uint32_t coverageResourceIndex = ~0u;
-for (uint32_t i = 0; i < syntheticResources->getResourceCount(); ++i)
-{
-    slang::SyntheticResourceInfo info = {};
-    info.structSize = sizeof(info);
-    SLANG_CHECK(syntheticResources->getResourceInfo(i, &info) == SLANG_OK);
-    if (info.featureTag && !strcmp(info.featureTag, "coverage"))
-    {
-        coverageResourceIndex = i;
-        break;
-    }
-}
-SLANG_CHECK(coverageResourceIndex != ~0u);
+// The current coverage implementation emits one synthetic resource:
+// the hidden counter buffer. Coverage semantics still come from
+// ICoverageTracingMetadata; ISyntheticResourceMetadata only describes
+// how to bind that hidden resource.
+SLANG_CHECK(syntheticResources->getResourceCount() == 1);
+uint32_t coverageResourceIndex = 0;
 
 slang::SyntheticResourceDescriptorBindingInfo descriptorInfo = {};
 if (SLANG_SUCCEEDED(

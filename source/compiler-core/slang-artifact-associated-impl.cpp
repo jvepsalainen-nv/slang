@@ -377,7 +377,7 @@ static constexpr size_t kCoverageEntryInfoV1MinSize =
 static constexpr size_t kCoverageBufferInfoV1MinSize =
     offsetof(slang::CoverageBufferInfo, binding) + sizeof(int32_t);
 static constexpr size_t kSyntheticResourceInfoV1MinSize =
-    offsetof(slang::SyntheticResourceInfo, featureTag) + sizeof(const char*);
+    offsetof(slang::SyntheticResourceInfo, debugName) + sizeof(const char*);
 static constexpr size_t kSyntheticResourceDescriptorBindingInfoV1MinSize =
     offsetof(slang::SyntheticResourceDescriptorBindingInfo, binding) + sizeof(int32_t);
 static constexpr size_t kSyntheticResourceUniformBindingInfoV1MinSize =
@@ -462,7 +462,6 @@ SlangResult ArtifactPostEmitMetadata::getResourceInfo(
     outInfo->uniformOffset = record.uniformOffset;
     outInfo->uniformStride = record.uniformStride;
     outInfo->debugName = record.debugName.getLength() ? record.debugName.getBuffer() : nullptr;
-    outInfo->featureTag = record.featureTag.getLength() ? record.featureTag.getBuffer() : nullptr;
     return SLANG_OK;
 }
 

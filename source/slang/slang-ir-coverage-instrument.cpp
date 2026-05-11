@@ -21,7 +21,6 @@ namespace
 // matches the manifest / sidecar key that hosts read.
 static const char kCoverageBufferName[] = "__slang_coverage";
 static const char kGlobalParamsName[] = "globalParams";
-static const char kCoverageFeatureTag[] = "coverage";
 // Synthetic resource ids are stable, non-zero feature-local
 // constants. Additional synthetic instrumentation resources should
 // claim their own ids alongside this one.
@@ -61,7 +60,6 @@ static SyntheticResourceRecord& getOrAddCoverageSyntheticResourceRecord(
     record.access = slang::SyntheticResourceAccess::ReadWrite;
     record.entryPointIndex = -1;
     record.debugName = kCoverageBufferName;
-    record.featureTag = kCoverageFeatureTag;
     metadata.m_syntheticResources.add(record);
     return metadata.m_syntheticResources.getLast();
 }

@@ -4743,12 +4743,6 @@ struct SyntheticResourceInfo
     /// returned pointer is valid for the lifetime of the metadata
     /// object.
     const char* debugName = nullptr;
-
-    /// Optional feature tag (for example `"coverage"`) identifying
-    /// the instrumentation system that introduced the resource. The
-    /// returned pointer is valid for the lifetime of the metadata
-    /// object.
-    const char* featureTag = nullptr;
 };
 
 struct SyntheticResourceDescriptorBindingInfo
@@ -5773,7 +5767,6 @@ struct SyntheticResourceDescriptorRange
     int32_t space = -1;
     int32_t binding = -1;
     const char* debugName = nullptr;
-    const char* featureTag = nullptr;
 };
 
 struct SyntheticResourceDescriptorSpaceSpan
@@ -5885,7 +5878,6 @@ inline SlangResult getSyntheticResourceDescriptorRange(
     outRange->space = info.space;
     outRange->binding = info.binding;
     outRange->debugName = info.debugName;
-    outRange->featureTag = info.featureTag;
     return SLANG_OK;
 }
 

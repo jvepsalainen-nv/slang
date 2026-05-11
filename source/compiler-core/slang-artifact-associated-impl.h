@@ -195,7 +195,6 @@ struct SyntheticResourceRecord
     int32_t uniformOffset = -1;
     int32_t uniformStride = 0;
     String debugName;
-    String featureTag;
 };
 
 class ArtifactPostEmitMetadata : public ComBaseObject,
