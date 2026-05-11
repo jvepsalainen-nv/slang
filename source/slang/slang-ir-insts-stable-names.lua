@@ -829,7 +829,8 @@ return {
 	["assumeAddress"] = 853,
 	["DebugCompilationUnit"] = 854,
 	["IncrementCoverageCounter"] = 855,
-	["Decoration.CoverageSlotDecoration"] = 856,
-	["Decoration.CoverageBufferDecoration"] = 857,
-	["Decoration.CoverageKeepAliveDecoration"] = 858
+	["SubpassLoad"] = 856,
+	["Decoration.CoverageSlotDecoration"] = 857,
+	["Decoration.CoverageBufferDecoration"] = 858,
+	["Decoration.CoverageKeepAliveDecoration"] = 859
 }
