@@ -639,8 +639,9 @@ RunResult runDemoForBackend(DemoBackend backend)
             fail("uniform binding fields unavailable for CUDA");
     }
 
-    slang::CoverageBufferInfo bufferInfo = {};
-    checkSlang(program.coverageMetadata->getBufferInfo(&bufferInfo), "getBufferInfo");
+    // Coverage-specific attribution: once the hidden resource binding is
+    // resolved through `ISyntheticResourceMetadata`, `ICoverageTracingMetadata`
+    // supplies the counter count and slot-to-source mapping.
     const uint32_t counterCount = program.coverageMetadata->getCounterCount();
     if (counterCount == 0)
         fail("counterCount is zero");
