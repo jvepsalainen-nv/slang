@@ -1,8 +1,3 @@
-#include <slang-rhi.h>
-#include <slang-rhi/shader-cursor.h>
-#include <slang-com-ptr.h>
-#include <slang.h>
-
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
@@ -11,6 +6,10 @@
 #include <iostream>
 #include <map>
 #include <optional>
+#include <slang-com-ptr.h>
+#include <slang-rhi.h>
+#include <slang-rhi/shader-cursor.h>
+#include <slang.h>
 #include <string>
 #include <vector>
 
@@ -64,7 +63,9 @@ void diagnoseIfNeeded(slang::IBlob* diagnostics)
 {
     if (diagnostics && diagnostics->getBufferSize())
     {
-        std::cerr.write(reinterpret_cast<const char*>(diagnostics->getBufferPointer()), diagnostics->getBufferSize());
+        std::cerr.write(
+            reinterpret_cast<const char*>(diagnostics->getBufferPointer()),
+            diagnostics->getBufferSize());
         std::cerr << "\n";
     }
 }
@@ -260,7 +261,9 @@ SyntheticResourceAccess mapAccess(slang::SyntheticResourceAccess access)
     }
 }
 
-ComPtr<IDevice> createDeviceForBackend(DemoBackend backend, ComPtr<slang::IGlobalSession>& outGlobalSession)
+ComPtr<IDevice> createDeviceForBackend(
+    DemoBackend backend,
+    ComPtr<slang::IGlobalSession>& outGlobalSession)
 {
     checkSlang(slang::createGlobalSession(outGlobalSession.writeRef()), "createGlobalSession");
 
@@ -363,7 +366,8 @@ SyntheticCoverageProgram createCoverageProgram(
     // ordinary multi-file program.
     ComPtr<slang::IBlob> diagnostics;
     const std::string appPath = (getDemoDirectory() / "app.slang").string();
-    slang::IModule* loadedModule = slangSession->loadModule(appPath.c_str(), diagnostics.writeRef());
+    slang::IModule* loadedModule =
+        slangSession->loadModule(appPath.c_str(), diagnostics.writeRef());
     diagnoseIfNeeded(diagnostics);
     if (!loadedModule)
         fail("loadModule(app.slang) returned null");
@@ -373,7 +377,9 @@ SyntheticCoverageProgram createCoverageProgram(
     components.push_back(ComPtr<slang::IComponentType>(module.get()));
 
     ComPtr<slang::IEntryPoint> entryPoint;
-    checkSlang(module->findEntryPointByName("computeMain", entryPoint.writeRef()), "findEntryPointByName");
+    checkSlang(
+        module->findEntryPointByName("computeMain", entryPoint.writeRef()),
+        "findEntryPointByName");
     if (!entryPoint)
         fail("entry point computeMain not found");
     components.push_back(ComPtr<slang::IComponentType>(entryPoint.get()));
@@ -401,11 +407,16 @@ SyntheticCoverageProgram createCoverageProgram(
 
     diagnostics.setNull();
     ComPtr<slang::IBlob> entryPointCode;
-    checkSlang(linkedProgram->getEntryPointCode(0, 0, entryPointCode.writeRef(), diagnostics.writeRef()), "getEntryPointCode");
+    checkSlang(
+        linkedProgram->getEntryPointCode(0, 0, entryPointCode.writeRef(), diagnostics.writeRef()),
+        "getEntryPointCode");
     diagnoseIfNeeded(diagnostics);
 
     diagnostics.setNull();
-    checkSlang(linkedProgram->getEntryPointMetadata(0, 0, result.metadata.writeRef(), diagnostics.writeRef()), "getEntryPointMetadata");
+    checkSlang(
+        linkedProgram
+            ->getEntryPointMetadata(0, 0, result.metadata.writeRef(), diagnostics.writeRef()),
+        "getEntryPointMetadata");
     diagnoseIfNeeded(diagnostics);
 
     // Coverage-specific metadata query:
@@ -455,7 +466,9 @@ SyntheticCoverageProgram createCoverageProgram(
     programDesc.next = &syntheticDesc;
 
     diagnostics.setNull();
-    check(device->createShaderProgram(programDesc, result.program.writeRef(), diagnostics.writeRef()), "createShaderProgram");
+    check(
+        device->createShaderProgram(programDesc, result.program.writeRef(), diagnostics.writeRef()),
+        "createShaderProgram");
     diagnoseIfNeeded(diagnostics);
 
     return result;
@@ -590,8 +603,7 @@ RunResult runDemoForBackend(DemoBackend backend)
     // `slang-rhi` resource, but it is not declared in the user-authored source.
     const auto& coverageResource = program.syntheticResources[0];
     std::cout << "synthetic coverage resource: id=" << coverageResource.id
-              << " set=" << coverageResource.space
-              << " binding=" << coverageResource.binding
+              << " set=" << coverageResource.space << " binding=" << coverageResource.binding
               << " uniformOffset=" << coverageResource.uniformOffset
               << " uniformStride=" << coverageResource.uniformStride << "\n";
 
@@ -606,7 +618,8 @@ RunResult runDemoForBackend(DemoBackend backend)
                 coverageResource.id,
                 &descriptorRange),
             "findSyntheticResourceDescriptorRangeByID");
-        if (descriptorRange.space != (int32_t)kCoverageSpace || descriptorRange.binding != (int32_t)kCoverageBinding)
+        if (descriptorRange.space != (int32_t)kCoverageSpace ||
+            descriptorRange.binding != (int32_t)kCoverageBinding)
             fail("descriptor helper reported unexpected binding");
     }
     else if (backend == DemoBackend::CUDA)
@@ -618,12 +631,12 @@ RunResult runDemoForBackend(DemoBackend backend)
         checkSlang(
             program.syntheticMetadata->findResourceIndexByID(coverageResource.id, &coverageIndex),
             "findResourceIndexByID");
-        slang::SyntheticResourceUniformBindingInfo uniformInfo = {};
+        slang::SyntheticResourceInfo resourceInfo = {};
         checkSlang(
-            program.syntheticMetadata->getResourceUniformBindingInfo(coverageIndex, &uniformInfo),
-            "getResourceUniformBindingInfo");
-        if (uniformInfo.uniformOffset < 0 || uniformInfo.uniformStride <= 0)
-            fail("uniform binding info unavailable for CUDA");
+            program.syntheticMetadata->getResourceInfo(coverageIndex, &resourceInfo),
+            "getResourceInfo");
+        if (resourceInfo.uniformOffset < 0 || resourceInfo.uniformStride <= 0)
+            fail("uniform binding fields unavailable for CUDA");
     }
 
     slang::CoverageBufferInfo bufferInfo = {};
@@ -652,13 +665,15 @@ RunResult runDemoForBackend(DemoBackend backend)
     auto coverageBuffer = createBuffer(
         device.get(),
         zeroCoverage.size() * sizeof(uint32_t),
-        BufferUsage::ShaderResource | BufferUsage::UnorderedAccess | BufferUsage::CopySource | BufferUsage::CopyDestination,
+        BufferUsage::ShaderResource | BufferUsage::UnorderedAccess | BufferUsage::CopySource |
+            BufferUsage::CopyDestination,
         ResourceState::UnorderedAccess,
         zeroCoverage.data());
     auto outputBuffer = createBuffer(
         device.get(),
         zeroOutput.size() * sizeof(uint32_t),
-        BufferUsage::ShaderResource | BufferUsage::UnorderedAccess | BufferUsage::CopySource | BufferUsage::CopyDestination,
+        BufferUsage::ShaderResource | BufferUsage::UnorderedAccess | BufferUsage::CopySource |
+            BufferUsage::CopyDestination,
         ResourceState::UnorderedAccess,
         zeroOutput.data());
 
@@ -758,9 +773,7 @@ RunResult runDemoForBackend(DemoBackend backend)
     std::cout << "covered lines = " << coveredLineCount
               << ", uncovered lines = " << uncoveredLineCount << "\n";
     std::cout << "distinct positive hit counts = " << distinctPositiveHitCounts << "\n";
-    std::cout << "attributed files: "
-              << (sawApp ? "app " : "")
-              << (sawPhysics ? "physics " : "")
+    std::cout << "attributed files: " << (sawApp ? "app " : "") << (sawPhysics ? "physics " : "")
               << (sawMath ? "math" : "") << "\n";
     std::cout << "coverage hit histogram:";
     for (const auto& hitPair : hitHistogram)
@@ -773,7 +786,9 @@ RunResult runDemoForBackend(DemoBackend backend)
         checkSlang(
             slang_writeCoverageManifestJson(program.coverageMetadata, manifestBlob.writeRef()),
             "slang_writeCoverageManifestJson");
-        std::ofstream manifest(outputDir / (outputPrefix + ".coverage-mapping.json"), std::ios::binary);
+        std::ofstream manifest(
+            outputDir / (outputPrefix + ".coverage-mapping.json"),
+            std::ios::binary);
         manifest.write(
             static_cast<const char*>(manifestBlob->getBufferPointer()),
             (std::streamsize)manifestBlob->getBufferSize());

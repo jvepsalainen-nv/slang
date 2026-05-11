@@ -24,7 +24,7 @@ walkthrough.
 - Vulkan descriptor helper usage:
   - `slang::findSyntheticResourceDescriptorRangeByID(...)`
 - CUDA uniform binding query usage:
-  - `getResourceUniformBindingInfo(...)`
+  - `getResourceInfo(...)` with `uniformOffset` / `uniformStride`
 - `slang-rhi` synthetic resource descriptors passed into
   `createShaderProgram()`
 - helper-based runtime binding with:

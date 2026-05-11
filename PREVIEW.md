@@ -51,7 +51,7 @@ The demo shows:
 - Vulkan descriptor helper usage:
   - `findSyntheticResourceDescriptorRangeByID(...)`
 - CUDA uniform binding query usage:
-  - `getResourceUniformBindingInfo(...)`
+  - `getResourceInfo(...)` with `uniformOffset` / `uniformStride`
 - `slang-rhi` program creation using synthetic resource descriptors
 - helper-based binding with:
   - `bindSyntheticResource(...)`
