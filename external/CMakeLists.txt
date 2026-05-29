@@ -333,7 +333,11 @@ endif()
 # slang-rhi
 if(SLANG_ENABLE_SLANG_RHI)
     set(SLANG_RHI_BUILD_FROM_SLANG_REPO ON)
-    set(SLANG_RHI_BUILD_TESTS ON)
+    # Disabled for the v2026.10.1-falcor2-brass-draft fork build to work
+    # around a doctest+MSVC C5285 (std::tuple specialization) /WX error on
+    # GitHub's updated Windows runners. The release zip only needs the main
+    # slang DLLs, not the slang-rhi test binaries.
+    set(SLANG_RHI_BUILD_TESTS OFF)
     set(SLANG_RHI_BUILD_TESTS_WITH_GLFW OFF)
     set(SLANG_RHI_INSTALL OFF)
     set(SLANG_RHI_BINARY_DIR ${CMAKE_BINARY_DIR}/$<CONFIG>/bin)
