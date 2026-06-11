@@ -1,0 +1,9 @@
+{
+  "slangc": {
+    "lines_covered": 134584,
+    "lines_total": 253417,
+    "regions_covered": 61722,
+    "branches_covered": 46671
+  },
+  "reason": "clean master baseline b2ec9a4f7 (tracked suite only, pre-rsync leftovers + agent expansion excluded)"
+}
