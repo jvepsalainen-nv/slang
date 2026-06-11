@@ -113,6 +113,109 @@ bundles:
       - source/slang/slang-check-overload.cpp
     size_cap_files: 80
 
+  coverage/check-decl:
+    source_doc: docs/generated/design/pipeline/03-semantic-check.md
+    watched_paths:
+      - source/slang/slang-check-decl.cpp
+      - source/slang/slang-check-impl.h
+    coverage_targets:
+      - source/slang/slang-check-decl.cpp
+    size_cap_files: 30
+
+  coverage/check-expr:
+    source_doc: source/slang/slang-check-expr.cpp
+    watched_paths:
+      - source/slang/slang-check-expr.cpp
+    coverage_targets:
+      - source/slang/slang-check-expr.cpp
+    size_cap_files: 30
+
+  coverage/autodiff:
+    source_doc: docs/generated/design/ir-reference/differentiation.md
+    watched_paths:
+      - source/slang/slang-ir-autodiff-fwd.cpp
+      - source/slang/slang-ir-autodiff-transpose.cpp
+      - source/slang/slang-ir-autodiff-primal-hoist.cpp
+    coverage_targets:
+      - source/slang/slang-ir-autodiff-fwd.cpp
+      - source/slang/slang-ir-autodiff-transpose.cpp
+      - source/slang/slang-ir-autodiff-primal-hoist.cpp
+    size_cap_files: 30
+
+  coverage/specialize:
+    source_doc: source/slang/slang-ir-typeflow-specialize.cpp
+    watched_paths:
+      - source/slang/slang-ir-typeflow-specialize.cpp
+      - source/slang/slang-ir-specialize.cpp
+    coverage_targets:
+      - source/slang/slang-ir-typeflow-specialize.cpp
+      - source/slang/slang-ir-specialize.cpp
+    size_cap_files: 30
+
+  coverage/torch:
+    source_doc: source/slang/slang-ir-pytorch-cpp-binding.cpp
+    watched_paths:
+      - source/slang/slang-ir-pytorch-cpp-binding.cpp
+    coverage_targets:
+      - source/slang/slang-ir-pytorch-cpp-binding.cpp
+    size_cap_files: 30
+
+  coverage/lower-to-ir:
+    source_doc: source/slang/slang-lower-to-ir.cpp
+    watched_paths:
+      - source/slang/slang-lower-to-ir.cpp
+    coverage_targets:
+      - source/slang/slang-lower-to-ir.cpp
+    size_cap_files: 30
+
+  coverage/parser:
+    source_doc: source/slang/slang-parser.cpp
+    watched_paths:
+      - source/slang/slang-parser.cpp
+    coverage_targets:
+      - source/slang/slang-parser.cpp
+    size_cap_files: 30
+
+  coverage/cli-options:
+    source_doc: source/slang/slang-options.cpp
+    watched_paths:
+      - source/slang/slang-options.cpp
+    coverage_targets:
+      - source/slang/slang-options.cpp
+    size_cap_files: 30
+
+  coverage/type-layout:
+    source_doc: source/slang/slang-type-layout.cpp
+    watched_paths:
+      - source/slang/slang-type-layout.cpp
+    coverage_targets:
+      - source/slang/slang-type-layout.cpp
+    size_cap_files: 30
+
+  coverage/emit:
+    source_doc: source/slang/slang-emit-c-like.cpp
+    watched_paths:
+      - source/slang/slang-emit-c-like.cpp
+      - source/slang/slang-emit-glsl.cpp
+      - source/slang/slang-emit-spirv.cpp
+    coverage_targets:
+      - source/slang/slang-emit-c-like.cpp
+      - source/slang/slang-emit-glsl.cpp
+      - source/slang/slang-emit-spirv.cpp
+    size_cap_files: 30
+
+  coverage/legalize:
+    source_doc: source/slang/slang-ir-glsl-legalize.cpp
+    watched_paths:
+      - source/slang/slang-ir-glsl-legalize.cpp
+      - source/slang/slang-ir-legalize-types.cpp
+      - source/slang/slang-ir-legalize-varying-params.cpp
+    coverage_targets:
+      - source/slang/slang-ir-glsl-legalize.cpp
+      - source/slang/slang-ir-legalize-types.cpp
+      - source/slang/slang-ir-legalize-varying-params.cpp
+    size_cap_files: 30
+
   design/pipeline/04-ast-to-ir:
     source_doc: docs/generated/design/pipeline/04-ast-to-ir.md
     watched_paths:

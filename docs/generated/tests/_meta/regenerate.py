@@ -129,6 +129,7 @@ _ALLOWED_INTENTS = (
     "negative",  # documented diagnostic / "is rejected" probe
     "expansion",  # added during a Phase E expansion pass
     "regression",  # anchored to a fixed compiler issue
+    "characterization",  # coverage/ white-box tests: pin observed current behaviour (see coverage/METHODOLOGY.md)
 )
 
 _ALLOWED_GAP_KINDS = (
@@ -1203,7 +1204,12 @@ def _lint_emission_fanout(
     """
     issues: list[LintIssue] = []
     # target-pipelines/* bundles are single-target *by design* — exempt.
-    if spec.dir.startswith("docs/generated/tests/design/target-pipelines/"):
+    # coverage/* (white-box characterization) bundles are exempt too: they
+    # target uncovered code on whatever target reaches it, not cross-target
+    # breadth (see coverage/METHODOLOGY.md).
+    if spec.dir.startswith("docs/generated/tests/design/target-pipelines/") or (
+        "/coverage/" in spec.dir
+    ):
         return issues
 
     # Group tests by claim (//META: purpose, which the README Claim cell
@@ -1475,7 +1481,29 @@ def _lint_test_file(spec: BundleSpec, tf: Path) -> list[LintIssue]:
     if not meta:
         issues.append(LintIssue(rel, "error", "missing //META block"))
         return issues
-    for k in _REQUIRED_TEST_META_KEYS:
+    # coverage/* (white-box characterization) bundles follow their own
+    # contract (coverage/METHODOLOGY.md): selected by coverage gap, they cite
+    # the source area via `covers=` instead of a doc claim, so doc_ref /
+    # doc_section_digest are NOT required; instead intent must be
+    # `characterization` and a `covers=` target is mandatory.
+    is_coverage = "/coverage/" in spec.dir
+    if is_coverage:
+        required = tuple(
+            k
+            for k in _REQUIRED_TEST_META_KEYS
+            if k not in ("doc_ref", "doc_section_digest")
+        )
+        if meta.get("intent") != "characterization":
+            issues.append(
+                LintIssue(rel, "error", "coverage/ test must be //META: intent=characterization")
+            )
+        if not meta.get("covers"):
+            issues.append(
+                LintIssue(rel, "error", "coverage/ test must declare //META: covers=source/...")
+            )
+    else:
+        required = _REQUIRED_TEST_META_KEYS
+    for k in required:
         if k not in meta:
             issues.append(LintIssue(rel, "error", f"//META missing key: {k}"))
     if meta.get("generated", "").lower() != "true":
