@@ -1,9 +1,9 @@
 {
   "slangc": {
-    "lines_covered": 135921,
+    "lines_covered": 136339,
     "lines_total": 253415,
-    "regions_covered": 62168,
-    "branches_covered": 47079
+    "regions_covered": 62278,
+    "branches_covered": 47174
   },
-  "reason": "master b2ec9a4f7 + emission fan-out expansion (187 tests); raised from clean baseline 134584 to lock in +1337"
+  "reason": "master b2ec9a4f7 + breadth fan-out + depth expansion (row 11 doc-anchored ceiling)"
 }
