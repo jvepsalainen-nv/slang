@@ -285,6 +285,20 @@ jobs:
             ./tools/coverage/run-coverage.sh --with-synthesis --with-agentic-tests "${test_args[@]}"
           fi
 
+      - name: Generated-suite coverage ratchet (Linux)
+        if: inputs.os == 'linux'
+        # Measure slangc coverage of docs/generated/tests only, then fail if
+        # covered lines/regions/branches dropped below the recorded floor.
+        # The floor (docs/generated/tests/_meta/coverage-snapshot/floors.json)
+        # is committed; raise it deliberately after a legitimate gain with:
+        #   coverage-floor.py record <report> --reason "..."
+        # This is the backstop that catches a coverage regression regardless
+        # of cause (the 2026-06 doc-scope regen dropped 53.10%->51.77% silently).
+        run: |
+          ./tools/coverage/run-generated-coverage.sh --label ci
+          python3 ./tools/coverage/coverage-floor.py check \
+            docs/generated/tests/_meta/coverage-snapshot/ci-slangc-report.txt
+
       - name: Run Tests with Coverage (Windows)
         if: inputs.os == 'windows'
         shell: pwsh
