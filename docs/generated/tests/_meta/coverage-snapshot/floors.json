@@ -1,9 +1,9 @@
 {
   "slangc": {
-    "lines_covered": 136339,
-    "lines_total": 253415,
-    "regions_covered": 62278,
-    "branches_covered": 47174
+    "lines_covered": 141728,
+    "lines_total": 253389,
+    "regions_covered": 64367,
+    "branches_covered": 48713
   },
-  "reason": "master b2ec9a4f7 + breadth fan-out + depth expansion (row 11 doc-anchored ceiling)"
+  "reason": "master + breadth + depth + white-box coverage suite (row 12, 55.93% line)"
 }
