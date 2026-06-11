@@ -1,7 +1,7 @@
 ---
 generated: true
-model: claude-sonnet-4-6
-generated_at: 2026-06-02T09:20:02+00:00
+model: claude-opus-4-8[1m]
+generated_at: 2026-06-11T11:45:13+00:00
 source_commit: 54bb48e67c3a4fdd4c0f4bd8085f5dc0bd8ffc99
 watched_paths_digest: fdd1d7d4de28d99fc0a6516aba6f28447037f9a4aad2516c8b9c18936773972f
 source_doc: docs/language-reference/expressions-operator-precedence.md
@@ -78,7 +78,7 @@ reports a different number, not just "wrong" with no signal.
 
 | Claim                                                                                             | Intent     | Anchor                                                                                                        | Tests                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C17: Level 3 `*` binds more tightly than level 4 `+`: `2 + 3 * 4` = 14, not 20.                   | functional | [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | [`mul-over-add.slang`](mul-over-add.slang), [`mul-over-add-emission.slang`](mul-over-add-emission.slang), [`mul-over-add-hlsl-emit.slang`](mul-over-add-hlsl-emit.slang) |
+| C17: Level 3 `*` binds more tightly than level 4 `+`: `2 + 3 * 4` = 14, not 20.                   | functional, expansion | [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | [`mul-over-add.slang`](mul-over-add.slang), [`mul-over-add-emission.slang`](mul-over-add-emission.slang), [`mul-over-add-hlsl-emit.slang`](mul-over-add-hlsl-emit.slang), [`mul-over-add-glsl-emit.slang`](mul-over-add-glsl-emit.slang), [`mul-over-add-spirv-emit.slang`](mul-over-add-spirv-emit.slang), [`mul-over-add-metal-emit.slang`](mul-over-add-metal-emit.slang), [`mul-over-add-wgsl-emit.slang`](mul-over-add-wgsl-emit.slang) |
 | C4 + C32: Level 3 `*`/`/`/`%` left-associative: `16/4/2` = 2 (not 8).                             | functional | [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | [`mul-left-assoc.slang`](mul-left-assoc.slang)                                                                                                                           |
 | C5 + C32: Level 4 `+`/`-` left-associative: `10-3-2` = 5 (not 9).                                 | functional | [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | [`add-left-assoc.slang`](add-left-assoc.slang)                                                                                                                           |
 | C18: Level 4 `+` binds more tightly than level 5 `<<`: `2+3<<1` = 10, not 8.                      | functional | [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | [`add-over-shift.slang`](add-over-shift.slang)                                                                                                                           |
@@ -120,4 +120,6 @@ reports a different number, not just "wrong" with no signal.
 
 ## Doc gaps observed
 
-NA
+| Anchor                                                                                                       | Kind            | Gap                                                                                                                                                                                                                                                                | Suggested addition                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [#operator-precedence](../../../../language-reference/expressions-operator-precedence.md#operator-precedence) | missing-example | The doc states `*` binds tighter than `+` but does not show how the grouping survives into emitted target code; it names no per-backend form (HLSL/GLSL/SPIR-V/Metal/WGSL) for the same `a + b * c` expression, so a reader cannot tell the grouping is preserved. | Add a short note that the parser-determined grouping is preserved into every emitted backend (the `*` subexpression emits as a nested operand of `+`, e.g. SPIR-V `OpIMul` feeding `OpIAdd`). |

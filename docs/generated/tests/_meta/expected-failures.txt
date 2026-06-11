@@ -157,3 +157,9 @@ docs/generated/tests/design/ir-reference/decorations/struct-with-many-field-deco
 # removal, not a single observed pass"). Re-adding here so the next
 # flip back to FAILED doesn't turn the nightly red again.
 docs/generated/tests/design/ir-reference/resources-and-atomics/rwstructured-buffer-load-negative-index-literal.slang
+
+# Pending: docs/generated/tests/_meta/findings/types-struct-no-body-forward-decl-conflict.yaml
+# (will become a tracking issue at human-triage time)
+# no-body struct decl + later with-members definition rejected as E30200/E39999
+# on all targets, contradicting the language reference; existing HLSL test fails to compile.
+docs/generated/tests/conformance/types-struct/struct-no-body-decl.slang

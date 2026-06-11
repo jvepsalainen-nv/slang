@@ -387,7 +387,7 @@ bundles:
       - design/ast-reference/base
       - design/ast-reference/values
     coverage_targets: []
-    size_cap_files: 120
+    size_cap_files: 140
 
   design/ast-reference/modifiers:
     source_doc: docs/generated/design/ast-reference/modifiers.md
@@ -1000,6 +1000,6 @@ bundles:
     depends_on: []
     coverage_targets:
       - source/slang/slang-emit-spirv.cpp
-    size_cap_files: 30
+    size_cap_files: 34
 
   # --- top-level reference -----------------------------------------------
