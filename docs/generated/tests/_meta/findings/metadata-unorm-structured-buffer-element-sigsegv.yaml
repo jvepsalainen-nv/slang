@@ -1,0 +1,40 @@
+schema_version: 1
+id: metadata-unorm-structured-buffer-element-sigsegv
+bundle: design/ir-reference/metadata
+suspected_kind: sigsegv
+title: "`RWStructuredBuffer<unorm float>` element type SIGSEGVs slangc on all targets"
+observed_at: "2026-06-06T10:32:50+00:00"
+scope: ir
+evidence:
+  command: "build/RelWithDebInfo/bin/slangc docs/generated/tests/design/ir-reference/metadata/unorm-attr-on-buffer-element.slang -target spirv-asm -dump-ir -o /dev/null -entry main -stage compute"
+  source_slang: docs/generated/tests/design/ir-reference/metadata/unorm-attr-on-buffer-element.slang
+  exit_code: 139
+  observed_summary: |
+    Declaring a structured buffer with a UNORM-qualified element type
+    (`uniform RWStructuredBuffer<unorm float> buf;`) and storing into it
+    crashes slangc with a segmentation fault (exit 139). The IR dump shows
+    the element pointer carrying an `Attributed(Float, %unorm)` type
+    (`rwstructuredBufferGetElementPtr(%buf, 0 : Int)` produces
+    `Ptr(Attributed(Float, %1))`) and the process then aborts.
+
+    The crash is independent of target and dump mode: it reproduces with
+    `-target spirv-asm`, `-target hlsl`, with and without `-dump-ir`. Under
+    slang-test's in-process test server it manifests as repeated
+    "JSON RPC failure: waitForResult()/hasMessage()" because the server
+    process dies.
+expected:
+  claim: |
+    The `unorm` Attr opcode originates from the UNormModifier on a value or
+    layout (metadata.md#attr-family). A UNORM-qualified buffer element type
+    should either lower and emit cleanly or produce a graceful unsupported
+    diagnostic, never a segmentation fault.
+  citation_kind: doc
+  citation: docs/generated/design/ir-reference/metadata.md
+provenance:
+  agent_model: claude-opus-4-8
+  source_commit: a8f6d4f7d1b2ceb7e22201ca7523f8671c92bde8
+  doc_anchor: docs/generated/design/ir-reference/metadata.md#attr-family
+agent_self_assessment:
+  confidence: high
+  alternatives_considered:
+    - "Malformed test input: ruled out — `unorm` is a documented modifier with an Attr opcode in the source doc; a crash is never the correct response."
