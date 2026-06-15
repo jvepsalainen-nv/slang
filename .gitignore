@@ -151,3 +151,17 @@ __pycache__/
 .slang-replays*
 log*.txt
 replay-capture
+
+# Local scratch dir (temporary drafts, abstracts, etc.)
+/tmp/
+
+# Coverage-run build logs (regenerable; see tools/coverage/)
+/build-*.log
+/coverage-*.log
+
+# Large per-run coverage blobs + raw reports (regenerable via
+# tools/coverage/run-generated-coverage.sh --report-only). The distilled
+# analysis docs (*.md) and the locked floors.json ARE tracked.
+docs/generated/tests/_meta/coverage-snapshot/*-coverage.json
+docs/generated/tests/_meta/coverage-snapshot/*-full-report.txt
+docs/generated/tests/_meta/coverage-snapshot/*-slangc-report.txt
