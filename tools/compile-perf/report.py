@@ -50,7 +50,8 @@ def combined_index(release_index, results_dir):
     # order) when meta carries it; the tag is the deterministic fallback for
     # points registered before commit_time existed. See track.py.
     recs.sort(key=lambda r: (r.get("date", ""), r.get("kind") == "daily",
-                             r.get("commit_time") or "", r.get("tag", "")))
+                             analyze.commit_time_sort_key(r.get("commit_time")),
+                             r.get("tag", "")))
     return recs
 
 

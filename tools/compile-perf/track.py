@@ -118,7 +118,7 @@ def _daily_points(results_dir):
     # siblings are common). Sort by the commit's full timestamp when meta
     # carries it so siblings land in true code order; the label remains the
     # deterministic fallback for points registered before commit_time existed.
-    pts.sort(key=lambda p: (p["date"], p.get("commit_time") or "", p["label"]))
+    pts.sort(key=lambda p: (p["date"], analyze.commit_time_sort_key(p.get("commit_time")), p["label"]))
     return pts
 
 

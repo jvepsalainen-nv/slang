@@ -14,6 +14,27 @@ Also derives the diagnostics path-cost series (errors - clean).
 import json
 import os
 import re
+from datetime import datetime, timezone
+
+
+def commit_time_sort_key(commit_time):
+    """Normalize an ISO-8601 committer timestamp to a UTC string usable as a
+    sort key. `git log --format=%cI` keeps the committer's own UTC offset, and
+    mixed-offset ISO strings do not order correctly as text (e.g.
+    "23:00+03:00" sorts after "21:00Z" despite being earlier in UTC). The
+    workflow now stamps UTC, but stored metadata may carry any offset, so
+    consumers normalize here. Unparseable input is returned as-is: still a
+    deterministic key, just not chronologic."""
+    if not commit_time:
+        return ""
+    try:
+        dt = datetime.fromisoformat(commit_time.replace("Z", "+00:00"))
+    except ValueError:
+        return commit_time
+    if dt.tzinfo is not None:
+        dt = dt.astimezone(timezone.utc)
+    return dt.strftime("%Y-%m-%dT%H:%M:%S")
+
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
