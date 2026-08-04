@@ -469,3 +469,37 @@ if(SLANG_ENABLE_REPLAYER)
         FOLDER test
     )
 endif()
+
+#
+# THROWAWAY SPIKE — slang-internals-test
+# Standalone exe that static-links the compiler and calls an undecorated
+# internal entry point. Do not land.
+#
+# Only definable in a static config: under SLANG_LIB_TYPE=SHARED the internal
+# symbols this target calls are hidden in libslang-compiler, so the link would
+# fail by design. Guarding here (rather than EXCLUDE_FROM_ALL) means the target
+# is part of `all` exactly where it can work, so CI builds it without a special
+# target argument.
+if(SLANG_LIB_TYPE STREQUAL "STATIC")
+    slang_add_target(
+        slang-internals-test
+        EXECUTABLE
+        USE_FEWER_WARNINGS
+        LINK_WITH_PRIVATE core compiler-core slang Threads::Threads
+        INCLUDE_DIRECTORIES_PRIVATE
+            ${slang_SOURCE_DIR}/source
+            ${slang_SOURCE_DIR}/tools
+        FOLDER test
+    )
+    # Reuse the existing unit-test registration/assertion framework verbatim.
+    target_sources(
+        slang-internals-test
+        PRIVATE ${slang_SOURCE_DIR}/tools/unit-test/slang-unit-test.cpp
+    )
+    target_include_directories(
+        slang-internals-test
+        PRIVATE
+            $<TARGET_PROPERTY:slang-capability-defs,INTERFACE_INCLUDE_DIRECTORIES>
+            $<TARGET_PROPERTY:slang-fiddle-output,INTERFACE_INCLUDE_DIRECTORIES>
+    )
+endif()
