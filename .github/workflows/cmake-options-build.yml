@@ -194,8 +194,11 @@ jobs:
       # SPIKE: slang-internals-test is only defined when SLANG_LIB_TYPE=STATIC,
       # which is exactly this matrix entry. Running it here is the cross-platform
       # check that static-linking reaches source/slang internals on this OS.
+      # The windows-aarch64 entries cross-compile (arch: amd64_arm64) on an x64
+      # runner, so the built binary cannot be executed here — same guard the
+      # slangc version check uses.
       - name: Run slang-internals-test (${{ matrix.option }})
-        if: matrix.option == 'SLANG_LIB_TYPE'
+        if: matrix.option == 'SLANG_LIB_TYPE' && !(inputs.os == 'windows' && inputs.arch != '')
         run: |
           if [[ "${{ inputs.os }}" == "windows" ]]; then
             test_path="$bin_dir/slang-internals-test.exe"
