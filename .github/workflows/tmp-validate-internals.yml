@@ -1,0 +1,28 @@
+name: TMP Validate Internals Test
+
+# Temporary: validates ci-slang-internals-test.yml on a fork branch before the
+# PR is marked ready. Triggered by push so it needs no default-branch presence.
+# Not for upstream.
+
+on:
+  push:
+    branches: [spike/validate-internals-ci]
+
+jobs:
+  linux-aarch64:
+    uses: ./.github/workflows/ci-slang-internals-test.yml
+    with:
+      os: linux
+      compiler: gcc
+      platform: aarch64
+      config: debug
+      runs-on: '["ubuntu-24.04-arm"]'
+
+  windows-x86_64:
+    uses: ./.github/workflows/ci-slang-internals-test.yml
+    with:
+      os: windows
+      compiler: cl
+      platform: x86_64
+      config: debug
+      runs-on: '["windows-2022"]'
