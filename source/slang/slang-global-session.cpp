@@ -739,6 +739,13 @@ SlangResult Session::_readBuiltinModule(
              String(moduleName),
              std::chrono::duration<double, std::milli>(irEnd - irStart).count(),
              int64_t(OnDemandStats::getCurrentRSSBytes()) - int64_t(rssBeforeIR)});
+    }
+    // Completing the shape walks the module, which materializes deferred bodies,
+    // so it is gated separately from the phase records above. It runs after the
+    // IR phase is recorded, so it does not disturb those numbers -- but it does
+    // move process-level RSS, which is why it is not on by default either.
+    if (OnDemandStats::isWalkEnabled())
+    {
         const auto* irDataChunk = as<RIFF::DataChunk>(irChunk);
         OnDemandStats::completeLastIRModuleShape(
             String(moduleName),

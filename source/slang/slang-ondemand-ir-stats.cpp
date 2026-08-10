@@ -57,6 +57,16 @@ bool isEnabled()
     return enabled;
 }
 
+bool isWalkEnabled()
+{
+    static const bool enabled = []
+    {
+        const char* value = ::getenv("SLANG_ONDEMAND_STATS_WALK");
+        return isEnabled() && value && value[0] != '\0' && value[0] != '0';
+    }();
+    return enabled;
+}
+
 uint64_t getCurrentRSSBytes()
 {
 #if defined(__linux__)
