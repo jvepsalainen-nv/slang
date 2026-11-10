@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies an interface method implementation that declares a capability the requirement does not is rejected with E36110 under -std 2026.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

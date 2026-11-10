@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies that under -allow-glsl a GLSL `layout(...)` data-layout qualifier in front of an HLSL `cbuffer` selects the constant buffer's data layout, for each of std140, std430 and scalar.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

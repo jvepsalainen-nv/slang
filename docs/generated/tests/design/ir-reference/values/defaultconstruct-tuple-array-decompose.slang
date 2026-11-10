@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:26+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/values.md#defaultconstruct
-//META: doc_section_digest=70fa32ba53aa5066ea3a76e6f36848a1e76640420b67965c0cf7cf95009cbcf5
 //META: purpose=Default-initialising a tuple or a fixed-size array does not emit `defaultConstruct`; `emitDefaultConstruct` decomposes it into `makeTuple` / an array maker built from zero literals.
 //META: intent=functional
 //META: pipeline_stage=lower

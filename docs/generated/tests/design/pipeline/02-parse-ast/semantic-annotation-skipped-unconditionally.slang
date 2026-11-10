@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#angle-bracket-annotations
-//META: doc_section_digest=2c5cb602908e3515d97a6034149f8485fbc80ce25286dbf4b9ffe1c1046a8600
 //META: purpose=The semantic-level annotation skip is unconditional, so a `< ... >` clause written after a semantic such as `: SV_Position` is advanced past with no flag and nothing inside it reaches the AST.
 //META: intent=functional
 //META: pipeline_stage=parse

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/decorations.md#branch--flatten--loopcontrol": "f2ba884d83c46721a4e1598e9622f13a2cab5e3cbdcc2f2993805ccbe9c8f247",
+    "docs/generated/design/ir-reference/decorations.md#builtinrequirementdecoration": "54acdd20df2ce2d1b263de1808792a14a6fb098b1863cdbff8a8a473872ab568",
+    "docs/generated/design/ir-reference/decorations.md#entry-point-and-stage": "dba27f1411ac31618a8d7cd73ed506a70bd92102a42f2b59e56aa750058110fa",
+    "docs/generated/design/ir-reference/decorations.md#entrypoint--entrypointdecoration": "f91249d2e8a42fc3ec6ad95c39ad5d65e4982723fb7beeb3095464f47cc54d67",
+    "docs/generated/design/ir-reference/decorations.md#inlining-and-optimization": "be3dd448892d8840c35684e6b814bbb4a28a297daf99996e234ecacad1c060e9",
+    "docs/generated/design/ir-reference/decorations.md#interpolation-and-shader-io": "cab069de9f491d651e18ca65a976f70486f9bac662a529f4565a5ed9fa18a2a4",
+    "docs/generated/design/ir-reference/decorations.md#keepalivedecoration": "d34e0f2bcedd453fd31c422261c36c5f46ad56f6477c76132c40ce111506452c",
+    "docs/generated/design/ir-reference/decorations.md#layout--layoutdecoration": "9aea9e5f0576048132cb69783d0a9675d51a7a43153f52ed20527c7dae4045f3",
+    "docs/generated/design/ir-reference/decorations.md#layout-and-binding": "bb0b029cf149621f75e5779e2f3a19e923bd78331824b0f9ffa6d1080fe26c47",
+    "docs/generated/design/ir-reference/decorations.md#linkage-and-lifetime": "d4db4680a555b5ec5a346d1a0aecf4caee7647fbc7644ef76a3dc1edbe8e51e6",
+    "docs/generated/design/ir-reference/decorations.md#loop-and-branch-hints": "dc9cebc6b1ccfabf37d9ddb054319d9e5160d3b17890ab2828db7671ae5490a0",
+    "docs/generated/design/ir-reference/decorations.md#mesh-shader-geometry-shader-and-per-vertex": "b34a7fcbc89cbce0c835bd58d597c8ec12e1447091c613f07d9bb6076dcedbda",
+    "docs/generated/design/ir-reference/decorations.md#namehint--namehintdecoration": "398fede0e4de09435e2c385a07c84980390fc7f07aeaeb82a28ad54acb9e5215",
+    "docs/generated/design/ir-reference/decorations.md#naming-and-provenance": "6831ab52a37fd97537e855fa7a9e66d014490da47978c08179ccda7326652d30",
+    "docs/generated/design/ir-reference/decorations.md#nodelaunch-and-the-work-graph-node-decorations": "daa05cb203fdd0b8d97d568a362266b28c42f4928418925387113d90d02e73f3",
+    "docs/generated/design/ir-reference/decorations.md#other": "25e94198cfd90f64f6e36c4d960d5bb85db8178b17b1ac5e0ed392b86d21a135",
+    "docs/generated/design/ir-reference/decorations.md#requirecapabilityatom": "281884efd5d7d16704b0a8d5fc5f9f82c699d566d7d1b2badab1f5a372822aa7",
+    "docs/generated/design/ir-reference/decorations.md#shader64bitindexing": "2cef34bb99776cda2f51ae6b62e7134ddfe96c53f8b58c27dd5fe25f19a6f759",
+    "docs/generated/design/ir-reference/decorations.md#targetintrinsic--targetintrinsicdecoration": "8dd417122cd239043d2836cf1b6aac681f429d0b8ccfe3bcea947642192414a7",
+    "docs/generated/design/ir-reference/decorations.md#work-graph-nodes": "ba5cf53411be35c9a539664a4903ff408ae31f00dc971f0c8a66a83a4ff5743e"
+  }
+}

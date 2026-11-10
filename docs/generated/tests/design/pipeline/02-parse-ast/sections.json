@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/02-parse-ast.md#angle-bracket-annotations": "2c5cb602908e3515d97a6034149f8485fbc80ce25286dbf4b9ffe1c1046a8600",
+    "docs/generated/design/pipeline/02-parse-ast.md#astbuilder": "9487463b588fd4f4aea24e0b0545152b863344c40f968f8aaab8d2c6b857d237",
+    "docs/generated/design/pipeline/02-parse-ast.md#error-recovery": "838abd6dd447b44608fa9076f9ae6efe7c7794b7d28c0add0f72e45b02b15363",
+    "docs/generated/design/pipeline/02-parse-ast.md#failure-modes": "35a0377e8327c387000594e690000a91232b821b59188e50e4c846f99b749334",
+    "docs/generated/design/pipeline/02-parse-ast.md#generics-ambiguity": "f4570a7e12842bf1709abd7c60c79ea9f41c545accf5639c88df3d54513f7b10",
+    "docs/generated/design/pipeline/02-parse-ast.md#interface-associated-type-and-__constraint-requirements": "b11e08feccae60f3e74b7c342489d592960363cca5b655c2ceefe8d61182cd93",
+    "docs/generated/design/pipeline/02-parse-ast.md#modifier-parsing": "70d77929d730a0398ad6cf62c037992abc0cd9b4600f071779b6380151df5290",
+    "docs/generated/design/pipeline/02-parse-ast.md#other-declaration-parsing-details": "06e1869c72d98fb436674d4c32292564b594230c8d481766001d2a71059c16e5",
+    "docs/generated/design/pipeline/02-parse-ast.md#syntax-as-declaration": "7a94c65efea4dafb7e691a1cc86ee508924c217e2202277cec81a4e249cff22c",
+    "docs/generated/design/pipeline/02-parse-ast.md#the-major-node-families": "46dcdf62bf4aa543b664ba7bb03700798e04717bad2bde760b948ba7b1e414fe",
+    "docs/generated/design/pipeline/02-parse-ast.md#two-stage-parsing": "9e6cdcd331c77e6ace71db8f4327394855e85e18930b373da3d6bbea094c0c09",
+    "docs/generated/design/syntax-reference/grammar.md#types": "1b952f18aa4c01c1843e78ee98bfcf640c2d610fbabae24b6d4fd04bdada1ea6"
+  }
+}

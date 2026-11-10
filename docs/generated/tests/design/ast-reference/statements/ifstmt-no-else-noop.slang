@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#ifstmt
-//META: doc_section_digest=fbe47d469abf3c95cf8c48afe15fbe2baf34948f4ad96baa0cbbda74f8daedab
 //META: purpose=An IfStmt's negativeStatement slot is null for an `if` without an `else`; when the predicate is false the program continues with no side effects from the missing else branch.
 //META: intent=functional
 //META: pipeline_stage=check

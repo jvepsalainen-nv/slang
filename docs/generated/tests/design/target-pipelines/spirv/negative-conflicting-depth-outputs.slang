@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#legalizeentrypointsforglsl-fragdepth-and-geometry-primitive-refinements
-//META: doc_section_digest=101470099f314769a6fe398920091b45f975c62ef00a261100bcd790353ab103
 //META: purpose=A fragment entry point declaring two depth outputs is rejected by the front end with E30705, so the DepthReplacing collapse is unreachable from source.
 //META: intent=negative
 //META: pipeline_stage=check

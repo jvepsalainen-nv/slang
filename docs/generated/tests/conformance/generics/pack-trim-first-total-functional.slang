@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#pack-queries
-//META: doc_section_digest=c04a621bcf00069773d305dfdf4582e5e2e0ce23042884e2675ec84c546547fe
 //META: purpose=`__trimFirst(P)` is a total pack-query operation that drops the first element and yields the remaining pack.
 //META: intent=functional
 //META: pipeline_stage=runtime

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#source-writer-abstraction
-//META: doc_section_digest=890b7ec20a541c752d4e1521025e58ca7c4dff76f8c49d9d8cbec8e673ab0c21
 //META: purpose=`SourceWriter::advanceToSourceLocation` emits `#line` directives naming the original Slang file so a downstream compiler reports its errors at the user's source position; the C-style directive form appears on HLSL, Metal, CUDA, and C++.
 //META: intent=functional
 //META: pipeline_stage=emit

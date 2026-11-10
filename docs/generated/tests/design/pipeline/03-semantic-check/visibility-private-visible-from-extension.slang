@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#visibility-scopes
-//META: doc_section_digest=fc40943abb8d4c479b692d39171c3acf02766b831d8fe5456b3c43f7df6d3a63
 //META: purpose=A `private` member is visible from the declaring type and from extensions of that same type, so an extension method can read it.
 //META: intent=functional
 //META: pipeline_stage=check

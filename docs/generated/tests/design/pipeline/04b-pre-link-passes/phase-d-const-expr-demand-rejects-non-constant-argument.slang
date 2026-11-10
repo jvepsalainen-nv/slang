@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#phase-d-non-essential-validation-stripping-and-finalization
-//META: doc_section_digest=e7c210e2cea55bd2d83ae7a0ea9cf43217c586ddb37974a6331e3f9f13ae57e5
 //META: purpose=Phase D's propagateConstExpr (D3) diagnoses where a constexpr demand cannot be met, rejecting a runtime value passed to a constexpr parameter.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

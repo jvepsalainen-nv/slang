@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/base.md#val-nodebase
-//META: doc_section_digest=17754b4ad55bb3bbeb3b934dd617e4a3120a865a281a81848bf3fc5ab03948d7
 //META: purpose=The IntVal family are Vals too, so two spellings of the same compile-time integer produce one deduplicated generic argument and therefore one specialized type.
 //META: intent=functional
 //META: pipeline_stage=check

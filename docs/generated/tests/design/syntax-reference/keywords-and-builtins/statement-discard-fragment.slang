@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#statement-keywords
-//META: doc_section_digest=3571737d4bbbec12cece17f18e8198029c1f511e52b3e3c93fe529db89cc2fc1
 //META: purpose=`discard` is a fragment-shader statement keyword; it terminates fragment processing for the current invocation.
 //META: intent=functional
 //META: pipeline_stage=parse

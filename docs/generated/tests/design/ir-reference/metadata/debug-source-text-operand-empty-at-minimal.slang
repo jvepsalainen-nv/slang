@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugsource
-//META: doc_section_digest=d9ac85fa4e9467e42f9edecb278c591e5a3f3c479e682a003cd307ec6fe6ebc1
 //META: purpose=Compiling at -g1 leaves the DebugSource text operand an empty string, so the record carries the path without a copy of the file.
 //META: intent=boundary
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:26+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/values.md#arithmetic-and-bitwise
-//META: doc_section_digest=156280c3625197a4ed3b683ed5771a1ea94cd998308b23695241f7f96edbb6a7
 //META: purpose=`%` on an abstract generic floating-point type parameter still lowers to `frem`, because the floating-point decision is made at check time rather than from the lowered operand type.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#builtinoperationintval-and-the-single-representation-invariant
-//META: doc_section_digest=7294e983132681667c88eb7937aa63061a1f9c975bb9567ce8dd36184dcda775
 //META: purpose=The short-circuit operators are resolved-operator-call forms of the symbolic builtin-operation value, so && and || over a generic value parameter fold with the enclosing ?: to a concrete array bound.
 //META: intent=functional
 //META: pipeline_stage=check

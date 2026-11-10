@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/expressions-member-access.md#matrix-swizzles": "ab827430dedad798221ccb6a8d05027ec37ed381ec7b70905cec740e9ed7e864",
+    "docs/language-reference/expressions-member-access.md#member-expression": "ab827430dedad798221ccb6a8d05027ec37ed381ec7b70905cec740e9ed7e864",
+    "docs/language-reference/expressions-member-access.md#static-member-expressions": "ab827430dedad798221ccb6a8d05027ec37ed381ec7b70905cec740e9ed7e864",
+    "docs/language-reference/expressions-member-access.md#vector-swizzles": "ab827430dedad798221ccb6a8d05027ec37ed381ec7b70905cec740e9ed7e864"
+  }
+}

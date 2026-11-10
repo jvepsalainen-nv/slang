@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#entry-point-and-stage
-//META: doc_section_digest=dba27f1411ac31618a8d7cd73ed506a70bd92102a42f2b59e56aa750058110fa
 //META: purpose=Boundary - numthreads with a single x argument defaults the missing y and z dimensions to 1, surfacing as numThreads(x : Int, 1 : Int, 1 : Int).
 //META: intent=boundary
 //META: pipeline_stage=lower

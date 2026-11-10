@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#legalizeentrypointsforglsl-despite-the-name
-//META: doc_section_digest=8edf96a782e7bc310752bbb12ddde6802b40bd2c739b47e51a0408ee1898a2f3
 //META: purpose=A load of an `SV_InstanceID` parameter is rewritten to `gl_InstanceIndex - gl_BaseInstance`, the instance-side companion of the vertex rebasing.
 //META: intent=expansion
 //META: pipeline_stage=emit

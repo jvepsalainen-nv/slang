@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#terminators-unconditional-branches
-//META: doc_section_digest=d0eeb53252388d3a6e69f829f07385b975955f496c04529e2b4fcce99f38c4ae
 //META: purpose=A `break;` lowers to unconditionalBranch to the loop's breakLabel; a `continue;` lowers to unconditionalBranch to the loop's continueLabel.
 //META: intent=functional
 //META: pipeline_stage=lower

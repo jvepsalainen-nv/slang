@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#module-buildmanglednametoglobalinstmap
-//META: doc_section_digest=bb569b55ac4ed0304e2afe2f3bfa1739d66d8f1764f6cac6592e0f17cca88fe1
 //META: purpose=The mangled-name export decorations that the final Phase D index is built from survive the Phase D stripping and dead-code steps.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

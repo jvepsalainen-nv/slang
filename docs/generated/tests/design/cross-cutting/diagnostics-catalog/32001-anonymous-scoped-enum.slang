@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=5a01ebf4b8b814e06aacd10716e6b733381a92cddabef3b83b20a934f4c5bb4e
 //META: purpose=Fires diagnostic E32001 (anonymous-scoped-enum) - anonymous scoped enum is not allowed
 //META: intent=negative
 //META: pipeline_stage=check

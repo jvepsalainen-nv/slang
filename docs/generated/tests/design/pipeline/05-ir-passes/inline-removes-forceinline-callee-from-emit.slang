@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#inlining-and-call-graph
-//META: doc_section_digest=5da27fa506472adfdadf44378ebab1db58de90353819e62362683b33b3c6600c
 //META: purpose=The inline pass inlines a `[ForceInline]` callee so its body appears at the call site and the callee no longer appears in the emit.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/cross-cutting/diagnostics.md#anatomy-of-a-diagnostic-entry": "f22b494b8e869f4fe09a0366d2108166de2b12d27d47542c79c644cf98a38302",
+    "docs/generated/design/cross-cutting/diagnostics.md#diagnostic-definitions": "6fc6f1fd5609757fcbaf6b6cf8aada297ee28b149b44b5846eb72fb0e4ebc7be",
+    "docs/generated/design/cross-cutting/diagnostics.md#diagnosticsink": "d8418d47e63070ba0cf68467df4c96fca1462a9b09b58fcda9b0f2dcaac6484b",
+    "docs/generated/design/cross-cutting/diagnostics.md#error-code-namespace": "5ef206950ef0e6ecfe2a9d8abf02d78b471d242f0a4a1fb9094dec1de2c240ba",
+    "docs/generated/design/cross-cutting/diagnostics.md#severity-levels": "3ea14a1946d125d6e51f1168520ddc4e04afd09127febe10b5079af9e30b1816",
+    "docs/generated/design/cross-cutting/diagnostics.md#source-locations-and-message-rendering": "b56b816820af1c15450b34e955f5435969bcf8f2936c6dbb068f8ab21ec3dca3",
+    "docs/generated/design/cross-cutting/diagnostics.md#warning-groups": "fe2a3c2e311ba8162e26f4c17f4a54e2d2b52665ed3d562b5445ade975ac7e04"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#core-module-syntax-declarations
-//META: doc_section_digest=3494215a2f3d95c66bfc5b7610ef9debb7242679109426ec4c710efa9fe7fa6c
 //META: purpose=`int`, `uint`, `float`, and `bool` are core-module-supplied type names; overload resolution against typed parameters distinguishes all four.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:36:14Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#shader-specific-checks
-//META: doc_section_digest=73b0a54aa16472868adbc586d5469e6a6d226c42e5fd1a1ff6720178eede46b1
 //META: purpose=A system-value semantic compares element counts with a scalar counting as one, so a `float1` is valid for the scalar `SV_Depth` semantic.
 //META: intent=boundary
 //META: pipeline_stage=check

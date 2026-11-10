@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/01-lex-preprocess.md#failure-modes": "7e4fe030e4c8d273dce73bfc62475650108e02955445a796df82003091653dfa",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#include-resolution": "c2e213c5ebf251bc754e66bc7a31f528eda69d9722a5e92902578dc1b5bee22d",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#lexer-flags-and-special-case-rules": "7c196db588b1b46ddab5c3772a5da1bb60ade3121eac6723644f0c4808d045b7",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#literal-scanning-and-value-extraction": "6c5b24137d8a00d45340c81231f003fe2cc4825dcc7a3203d181feeb7da8b977",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#macro-expansion": "3a235903648fca659462d6304faeb328f1fb574dd3679e127f14ad5b78f932b7",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#pragma-warning-state-across-files": "7cd0aa129784e726e7888eb0fd9d5a2e3f77d909331840c3287c13641c8d5c43",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#preprocessor-directives": "a79d944b7d2a39d014afe31606a0e3f7d96f6912c534eadd8d9b1160507f3183",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#source-location-preservation": "b376d677453ba50705d8234aa3572303b42f0c428f903a6b2d9d9b73a3df65a7",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#stack-of-input-streams": "28054dd38c26f546f041459491247cd49b7b928dc597b3f69201bf829f21398a",
+    "docs/generated/design/pipeline/01-lex-preprocess.md#what-the-lexer-does-not-do": "a66927ad7c772505d1caa17edb5bc9ef28e60e4d0e9391050ed0bf07ef5e2a17"
+  }
+}

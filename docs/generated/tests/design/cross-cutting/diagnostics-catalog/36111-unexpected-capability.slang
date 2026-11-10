@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=7c8a72a560b735f9bcbcfb4fd33cb49f48560e8381353f2c8f8c6c7590787e0b
 //META: purpose=Fires diagnostic E36111 (unexpected-capability) - disallowed capability
 //META: intent=negative
 //META: pipeline_stage=check

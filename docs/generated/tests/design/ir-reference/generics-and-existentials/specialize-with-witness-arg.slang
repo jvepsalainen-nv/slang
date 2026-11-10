@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#specialize
-//META: doc_section_digest=cb05174ca18de9aec7cd0f1b2d0a9f691c8420254c205a2b019628a2408e35e5
 //META: purpose=A specialize on an interface-constrained generic passes the type argument followed by the conforming witness table.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#spir-v-literals-and-kinds
-//META: doc_section_digest=cb437a8d3a54100a9f8b0979b5344ce9752099aa4c8732c490575a651f267aad
 //META: purpose=A generic type-parameter is typed type_t in the IR dump.
 //META: intent=functional
 //META: pipeline_stage=lower

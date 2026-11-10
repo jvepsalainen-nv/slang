@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#metalpackedvec
-//META: doc_section_digest=167b3150c6048e03cd650e8f68570073a489fbe77cab8ec27c015d56de4d32bd
 //META: purpose=Expansion: MetalPackedVec generalises over the element type; a uint3 device-buffer element emits as packed_uint3.
 //META: intent=expansion
 //META: pipeline_stage=emit

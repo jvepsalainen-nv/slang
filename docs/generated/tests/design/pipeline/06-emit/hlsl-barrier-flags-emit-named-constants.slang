@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#hlsl
-//META: doc_section_digest=0f503d8fadb1b9f79b472a6c782b61c5b96a0d3696d6b02a5dcf39a0d338f3af
 //META: purpose=Named constants are never emitted as raw integers by the HLSL backend: a work-graph `Barrier()` flag set is expanded back into DXC's flag tokens (`UAV_MEMORY`, `ALL_MEMORY`, `GROUP_SYNC`, `DEVICE_SCOPE`, ...) joined with `|`.
 //META: intent=functional
 //META: pipeline_stage=emit

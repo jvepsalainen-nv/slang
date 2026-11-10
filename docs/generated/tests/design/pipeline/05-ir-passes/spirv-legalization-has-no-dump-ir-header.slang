@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#how-the-passes-are-ordered
-//META: doc_section_digest=2ca48ce00e76569f6fbdb39bc8e56c03183f8c10455888130166edb11bbdb183
 //META: purpose=SPIR-V legalization is a direct call rather than a SLANG_PASS, so no BEFORE legalizeSPIRV / AFTER legalizeSPIRV header appears in -dump-ir output even though the stage certainly ran.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#specialization-and-generics
-//META: doc_section_digest=40b8147969c5ae28bced29b8f878d348a9ab8fbecb2e6e6b023518b00ca90017
 //META: purpose=Stress: a generic with four type parameters is specialized cleanly — the four-arg generic shape is replaced by a concrete specialization, no surviving generic indirection.
 //META: intent=stress
 //META: pipeline_stage=ir-pass

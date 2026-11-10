@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/types.md#declreftype
-//META: doc_section_digest=5cf72875eab2bff5179bb24a0df3a152b019d5d2fb8764c0ea77dc305e749a24
 //META: purpose=A type defined by reference to a declaration also carries whatever generic substitutions the decl-ref encodes, so two instantiations of one generic struct behave as distinct types with substituted field types.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T15:00:00Z
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/04-ast-to-ir.md#mapping-ast-constructs-to-ir
-//META: doc_section_digest=73a8b7d64d9596c97c899fba163502910f89289de9adea3eac1da3e0599596e6
 //META: purpose=Verifies a `float3x3(scalar)` (MakeMatrixFromScalar) emits a 9-arg flat constructor on HLSL/GLSL but a single-arg `makeMatrix` on CUDA.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-c-like.cpp

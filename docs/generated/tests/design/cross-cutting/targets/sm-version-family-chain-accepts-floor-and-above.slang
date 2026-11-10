@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#vocabulary
-//META: doc_section_digest=365121cb55fb6d5257e6b445025431925b17b94447b05e87b83edaa34ae75dc3
 //META: purpose=The Shader Model version family is a chain ordered by inheritance, so a feature whose floor is `sm_6_3` is accepted both at that exact floor and under any higher profile in the same chain.
 //META: intent=boundary
 //META: pipeline_stage=check

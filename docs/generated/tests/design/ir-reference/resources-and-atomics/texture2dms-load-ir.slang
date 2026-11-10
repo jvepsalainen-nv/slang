@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#texture-and-image
-//META: doc_section_digest=dea38283cf7abef972fc229f2afd4d0c0e478c21f406938bc0ffa72b2564baab
 //META: purpose=`Texture2DMS<T>::Load(coord, sampleIndex)` surfaces in `main` as a `call specialize(%Load, ..., TextureShape2DType, ...)(%tex, %coord, %sampleIndex)`, where the `sampleIndex` is passed as a trailing operand to the helper. The MS-ness is carried in the `global_param` texture type, but the `Load`-helper specialization picks the 2D shape token here.
 //META: intent=expansion
 //META: pipeline_stage=lower

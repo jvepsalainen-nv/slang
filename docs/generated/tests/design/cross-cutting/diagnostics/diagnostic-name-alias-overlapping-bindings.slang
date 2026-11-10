@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:32:51Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/diagnostics.md#diagnostic-definitions
-//META: doc_section_digest=6fc6f1fd5609757fcbaf6b6cf8aada297ee28b149b44b5846eb72fb0e4ebc7be
 //META: purpose=The lookup table carries the single alias `overlappingBindings` for `parameterBindingsOverlap`, so both spellings resolve by name.
 //META: intent=functional
 //META: pipeline_stage=check

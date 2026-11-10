@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#untypedresourcehandle-and-untypedsamplerhandle
-//META: doc_section_digest=d6e806c25dfba41d067042ad360a3c32e44aa994da61cbc96a21a93fc9d17d25
 //META: purpose=Indexing ResourceDescriptorHeap yields a value of the nullary IR type UntypedResourceHandle, carrying no operand.
 //META: intent=functional
 //META: pipeline_stage=lower

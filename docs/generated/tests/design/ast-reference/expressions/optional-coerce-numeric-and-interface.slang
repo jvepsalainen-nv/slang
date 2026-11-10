@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#castoptionalexpr
-//META: doc_section_digest=c0cbee6dde417a7e9d164293b4cd04019be3a98878b890b1d1b6bd01d6ebffcb
 //META: purpose=An Optional<T> value used where an Optional<U> is wanted is coerced whenever the bare T-to-U conversion would be accepted, which covers both a numeric widening and an up-cast to an interface.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/target-pipelines/cuda.md#adjacent-targets": "fb44610b2742bfe5f33ac0afcad6bc2224d477ca3be15015211f8fab8d3437c0",
+    "docs/generated/design/target-pipelines/cuda.md#collectoptixentrypointuniformparams": "1f05f38c8eed97035a36748d72ce2614ccee318d957e417dd11d927a15b6e39d",
+    "docs/generated/design/target-pipelines/cuda.md#conditional-gates": "53c4b02712abd1606ada0cd075435fc703c872ab9fb03c55c715018c720c4b38",
+    "docs/generated/design/target-pipelines/cuda.md#cuda-target-pipeline": "5700c9c35d69771ef061f665b0baa2d89de7b538fc053d2bd451b9b44fbf2395",
+    "docs/generated/design/target-pipelines/cuda.md#downstream-nvrtc": "5fd8b654610eb53a347bc6fa7bbe231ed19030077a9448cce02372f505e1eca7",
+    "docs/generated/design/target-pipelines/cuda.md#effect-of-shouldlegalizeexistentialandresourcetypes--false": "39b06611e64c5a16036ec1a690ed5b1566d3582a4ec5dd142460e40b2779bb5d",
+    "docs/generated/design/target-pipelines/cuda.md#eliminatephis-with-default-options": "1c3f8864d8e6012c4e883a20b359418a820056e6dafa3146eba7ecc4886c593f",
+    "docs/generated/design/target-pipelines/cuda.md#inlineglobalconstantsforlegalization-for-cuda": "d35dbdfe42c6d876842218f73a918ab00772037d4625e4f48bbbfaf257fd7ebb",
+    "docs/generated/design/target-pipelines/cuda.md#legalizeentrypointvaryingparamsforcuda": "7818ae92d8e898c6a2b237acf599073db538ac2c57004354349dae8c8432ad6a",
+    "docs/generated/design/target-pipelines/cuda.md#legalizeoptixreportintersectionsforcuda": "d7e76c39deb19b733259283d94c088003a7270dc4cfd11cd05f2073ccecd799e",
+    "docs/generated/design/target-pipelines/cuda.md#lowerbuiltintypesforkernelentrypoints-removetorchkernels-handleautobindnames": "95004f7028f731ce96bafccbe1285fad3c492bf726e679656da5cbe033861009",
+    "docs/generated/design/target-pipelines/cuda.md#lowerimmutablebufferloadforcuda": "176050d5aa6473a960364c4e8306dcb0207b369af4a0a0c828054dd949a1f62f",
+    "docs/generated/design/target-pipelines/cuda.md#phase-a-link-and-entry-point-prep": "a686eed39925656955d4318509d87550eaf868b727c1a59e5c7d1736bd470024",
+    "docs/generated/design/target-pipelines/cuda.md#phase-b-specialization-and-type-legalization": "568f76ee2394f54152926bb0c6b02911e89b9fe2666189b0e859fd9e3af15aa1",
+    "docs/generated/design/target-pipelines/cuda.md#phase-c-cuda-legalization-lowering-phi-elimination": "c5ba7e7159f13cfe3513cb6c3fd83b45567125805d4d70af544f0ece98ee1feb",
+    "docs/generated/design/target-pipelines/cuda.md#phase-d-cuda-emit-and-downstream-tools": "c7f78b94ff182ef2afbf1242196ba7074458230c6fbf27a693b3d1516c676759",
+    "docs/generated/design/target-pipelines/cuda.md#synthesizeactivemask": "4da14d97740540752533c3e7aeacf9f9e31a2baecc796d712395ccf0b88801dd",
+    "docs/generated/design/target-pipelines/cuda.md#undoparametercopy-and-transformparamstoconstref": "ea39f72cf85a02b14635298914bf1e88fdf7f687c069b260de568e5d114bf7ac"
+  }
+}

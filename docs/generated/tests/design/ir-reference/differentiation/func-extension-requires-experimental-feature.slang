@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#synthesized-derivative-witnesses
-//META: doc_section_digest=3f62027381c2407565e5f1b3ef3cfd6b38348501236004d7b78830aade4ef218
 //META: purpose=Without -experimental-feature a user-code __func_extension declaration draws the 30131 gate warning (a warning, not an error) and the declaration is dropped.
 //META: intent=negative
 //META: pipeline_stage=check

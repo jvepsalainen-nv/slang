@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-09-02T18:00:41+00:00
-//META: source_commit=caaa91b2d7
 //META: purpose=Verifies -get-<compiler>-path prints a `<compiler> path: <text>` line for the named downstream compiler and then lets the compile continue, reporting "not available" when the compiler has no recoverable shared-library path and "not found" when it cannot be located.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

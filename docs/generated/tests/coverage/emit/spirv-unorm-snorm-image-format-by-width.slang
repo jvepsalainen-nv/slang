@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins that a `unorm`/`snorm` storage image with no `[format(...)]` infers an 8-bit SPIR-V format sized by the element's component count, with the 3-component case widening to the 4-component format.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-spirv.cpp

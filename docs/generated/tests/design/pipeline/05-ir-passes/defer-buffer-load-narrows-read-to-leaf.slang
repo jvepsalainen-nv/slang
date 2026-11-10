@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#inlining-and-call-graph
-//META: doc_section_digest=5da27fa506472adfdadf44378ebab1db58de90353819e62362683b33b3c6600c
 //META: purpose=Pushing a whole-element buffer load down its access chain changes the width of the read: only the leaf that is used is read, rather than a copy of the whole element.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

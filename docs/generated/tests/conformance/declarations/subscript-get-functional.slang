@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:58:38+00:00
-//META: source_commit=a01e79278cf0be9772deb8b2be52ee87687697a3
 //META: doc_ref=docs/language-reference/declarations.md#subscripts
-//META: doc_section_digest=96fe50283b71fe44fe9a09f0fc0cff5190f23935a1a109bbcdaf1cb870ea319d
 //META: purpose=A `__subscript` declaration with a `get` accessor enables `[]` syntax; reading via `[]` invokes the getter.
 //META: intent=functional
 //META: pipeline_stage=runtime

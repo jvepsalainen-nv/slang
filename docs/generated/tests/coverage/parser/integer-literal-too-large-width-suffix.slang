@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a decimal literal at least two past INT64_MAX with an explicit `ll` or `z` width suffix is reported as too large for a signed type and reinterpreted as unsigned.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

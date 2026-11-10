@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#untyped-descriptor-heap-handle-casts
-//META: doc_section_digest=ef452bdab1983659c871710abdb0a507c292208ad70e7486d710069b6d49c904
 //META: purpose=Indexing `ResourceDescriptorHeap` / `SamplerDescriptorHeap` wraps and unwraps the `uint` heap index through the four untyped-handle cast opcodes, none of which reach target code.
 //META: intent=functional
 //META: pipeline_stage=lower

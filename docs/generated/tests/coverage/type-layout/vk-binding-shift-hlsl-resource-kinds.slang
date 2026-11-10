@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the -fvk-*-shift options make GLSL object layout allocate HLSL-style register kinds, so a Texture2D and a StructuredBuffer share the shifted t-range while sampler, cbuffer and UAV get their own.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

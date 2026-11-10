@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:38:44Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#legalizeemptyraypayloadsforhlsl
-//META: doc_section_digest=51ddf0e5476f0247fc85dfbdded23069c96869eb2f57ab744baf38d1fc99d983
 //META: purpose=A miss shader whose payload parameters are all empty is emitted with an inout parameter of the separate DummyRayPayload struct, not the empty source type.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

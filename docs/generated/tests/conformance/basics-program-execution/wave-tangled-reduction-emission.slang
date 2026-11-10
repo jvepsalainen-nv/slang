@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:45+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/basics-program-execution.md#wave-execution-model
-//META: doc_section_digest=8d83b79ec2f7645747c3d299d4c9c52ee4ddc1279b8d96b52ef616d23d94159e
 //META: purpose=WaveActiveSum is a wave-tangled reduction function; it emits WaveActiveSum in HLSL and OpGroupNonUniformIAdd with Reduce in SPIR-V.
 //META: intent=functional
 //META: pipeline_stage=emit

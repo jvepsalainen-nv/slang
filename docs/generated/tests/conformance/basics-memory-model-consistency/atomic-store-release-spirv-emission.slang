@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:58:23+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-consistency.md#memory-order
-//META: doc_section_digest=f82c5b23c187c6975c3756a23c69a4c91ddfdef1ddfe031714a5cf40822c89c8
 //META: purpose=`Atomic<T>.store` with `MemoryOrder.Release` emits `OpAtomicStore` with Release semantics in SPIRV, confirming loads/stores before the operation cannot be reordered after it.
 //META: intent=functional
 //META: pipeline_stage=emit

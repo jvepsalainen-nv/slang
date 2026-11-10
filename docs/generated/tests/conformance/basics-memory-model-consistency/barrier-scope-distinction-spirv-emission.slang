@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:58:23+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-consistency.md#barriers
-//META: doc_section_digest=28e72df67f1e8f2f68fd59f23431c2be534ec39fa4206bc57dd04922591e5594
 //META: purpose=The three address-space scopes (All, Device, ThreadGroup) for memory barriers produce distinct SPIRV memory semantics operands: All=2376, Device=2120, ThreadGroup=264.
 //META: intent=boundary
 //META: pipeline_stage=emit

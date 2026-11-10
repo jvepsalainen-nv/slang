@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes how the CUDA/OptiX varying-parameter legalizer packs a mixed-width ray payload struct into 32-bit payload registers, sub-word packing the bool/uint8/half/int16 fields, splitting each vector, matrix and array element across one register, and spanning double and int64 over a register pair.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

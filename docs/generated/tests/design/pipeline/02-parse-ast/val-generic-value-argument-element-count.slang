@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#the-major-node-families
-//META: doc_section_digest=46dcdf62bf4aa543b664ba7bb03700798e04717bad2bde760b948ba7b1e414fe
 //META: purpose=The user-level surface of the `Val` node family is a generic value argument, so the `3` in `vector<float, 3>` and the `4` in `int a[4]` are recoverable as compile-time values.
 //META: intent=functional
 //META: pipeline_stage=parse

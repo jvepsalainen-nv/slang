@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/04-ast-to-ir.md#associated-type-bounds": "0c68bfe17b84bd9c39a85e11be734dc556a406eabd46eed808e1ec3d8d61b661",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#builtin-operators-bypass-call-lowering": "406739b370a5ef05319669d01da3461b7d7e09195ac8ecfdfe64017fe9eca325",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#debug-info-gating": "3469efef26e982a46345ae8762272897f6128f72f6bbab55e23668e85fd25748",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#diagnostics-during-lowering": "8da9811f8488ad6ce5409491fafa35c23411a9a65708775cf2a3ad6c64768b12",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#differentiability-arrives-as-a-conformance": "fd2db19e68172ccb8c8aed2ee372ef1ea41885df171ecaeb64b40ee77fde1e22",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#entry-point-scoped-decorations": "9a246dfae970afa6da375b8cf4f4bcd5af2b199ebb02c64ef046e546dbab9e53",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#generic-interface-requirements": "098b79501b776b8d0f50cb7939761c1e503f5d48d2f51044f2065ab99b682db3",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#generics-and-existentials": "00fef3057358760d4225321cd326293f0cb1ef37b4a7e3a927e9a7448fe83891",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#inputs-and-outputs": "2a3a21a200c817198a4030ffee03809e582aec5941fa3ec4071b3131ae7522b9",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#loweredvalinfo-and-the-lowering-environment": "96318f7d742d24d0592973af328b298b37325197fe3df5fb6998a8a3dea76d6e",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#mapping-ast-constructs-to-ir": "dd99e7be1e43f7dbf1c422a81f414e18dee5066cd4a3a5026a22bae8d7e540e8",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#module-level-outputs": "155d8d8ed14757fb02e5f6854e31cd2d2f05a5782b23f664d4b18331af96a126",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#requirement-keys": "7a8b92066c170f221de9d81f46d86492b6e6514ba051120e54c760c4bae14f9f",
+    "docs/generated/design/pipeline/04-ast-to-ir.md#variadic-pack-count-witnesses": "5b58a2fbbfdc353279fef7a454e3a7dbc92c17daee8ab7cad6aba08de5870f6f"
+  }
+}

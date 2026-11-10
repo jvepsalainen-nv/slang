@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#makediffpair
-//META: doc_section_digest=9c6b7a39271eb0f667fd936efc160c0082114c1a92422a72493cec6e8b0fc6cb
 //META: purpose=The free function diffPair(primal, diff) is a second user spelling of MakeDiffPair and yields the same opcode as the DifferentialPair<T> constructor.
 //META: intent=functional
 //META: pipeline_stage=lower

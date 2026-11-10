@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#metal
-//META: doc_section_digest=2c63512e8c55eaa520cc1fe344ba5b272b854acc441029c722b381d592ccdc2a
 //META: purpose=The Metal backend emits Metal Shading Language: the `metal_stdlib` system include, `using namespace metal;`, a `kernel`-qualified entry point, a `thread_position_in_grid` input, and `buffer(N)` argument-table markers.
 //META: intent=functional
 //META: pipeline_stage=emit

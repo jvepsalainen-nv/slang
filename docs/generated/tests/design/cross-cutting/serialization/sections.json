@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/cross-cutting/serialization.md#ir-flat-module-read-path": "3d26c4cc7f54936f66ceb81122bf0ed29dacea88aad893220d71594b4bd769fe",
+    "docs/generated/design/cross-cutting/serialization.md#riff-container-format": "7f02290e83cb1ed6b4003e72516727416da9855c8ded0122a5b60a03d9fa99e4",
+    "docs/generated/design/cross-cutting/serialization.md#source-location-serialization": "96fd282fcc078777e024afffe532377747fb1c684cee2518cb1623dada245df2",
+    "docs/generated/design/cross-cutting/serialization.md#versioning-and-backwards-compatibility": "58a3a4193d4b7da0d4b8c7366fdf0554c1d51097cccafc9eb1df7a910abdf03c",
+    "docs/generated/design/cross-cutting/serialization.md#what-is-serialized": "2b11cce99985d57ed1e1b81227bb3c8cce484ce2ec8ac811f20a9d31b0df81d3"
+  }
+}

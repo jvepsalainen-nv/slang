@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/types.md#resource-and-texture-type-families
-//META: doc_section_digest=0036091ab5f0cd50c2bada4820b7c7d7db668e207cf8e5052d6b074f59b4585f
 //META: purpose=A ParameterBlockType `ParameterBlock<T>` groups its element's fields into one binding whose members are reachable by field access at the entry point.
 //META: intent=functional
 //META: pipeline_stage=emit

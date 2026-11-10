@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#builtinrequirementkey--builtinrequirementkey
-//META: doc_section_digest=b1a94afbc899d9d288d30a8f8271498ebd15a75d3c9d3a82f5ba081cd72d0157
 //META: purpose=A struct conforming to IDifferentiable produces witness-table rows keyed by builtinRequirementKey insts carrying an integer BuiltinRequirementKind operand.
 //META: intent=functional
 //META: pipeline_stage=lower

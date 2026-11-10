@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-12T00:00:00+00:00
-//META: source_commit=2094af503348384f42f81337791d59c3b5e5b6ee
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#diagnosed-failures-during-binding
-//META: doc_section_digest=23e5df26403f2bb8b858afdcef0953b50aa061e5d136ba544146af99357d929a
 //META: purpose=A target whose layout-rules family has no callable-payload rules rejects a callable entry-point payload with E39032 naming the callable stage, rather than dereferencing the null rules.
 //META: intent=negative
 //META: pipeline_stage=layout

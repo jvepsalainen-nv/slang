@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `DescriptorHandle<T>` entry-point parameter is laid out as a varying parameter through GetDescriptorHandleLayout, taking a uint2 varying slot on SPIR-V and the native handle type on CUDA and CPU.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

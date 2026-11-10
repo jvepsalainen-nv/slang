@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/tokens.md#token-flags
-//META: doc_section_digest=04a473d005933df931633159d05180ff8a056cf1147d236ab4891f5fca39e06a
 //META: purpose=A folded `\\`-newline emits no `NewLine` token, so the token after it is not marked as starting a logical line and a macro body can span two physical lines.
 //META: intent=functional
 //META: pipeline_stage=preprocess

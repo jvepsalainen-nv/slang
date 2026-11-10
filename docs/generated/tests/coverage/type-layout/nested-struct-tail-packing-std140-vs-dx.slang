@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T17:00:00Z
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#global-scope-type-layout
-//META: doc_section_digest=cb9b7a613d39760a93548dfbce14e96da09e14aa0f49313bd097e522bedd9206
 //META: purpose=Verifies a field after a nested `float3[2]` struct lands at offset 32 under std140 (size rounds up to alignment) but at offset 28 under HLSL/dx layout (tail packing into the array's trailing space).
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

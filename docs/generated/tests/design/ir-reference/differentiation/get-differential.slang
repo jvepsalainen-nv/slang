@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#differential-pair-projection
-//META: doc_section_digest=30a9aaa3217e1be659ec0b790da17d0c09653790c661efbf208569133ebceb1b
 //META: purpose=The .d getter of DifferentialPair<T> lowers to GetDifferential on the pair, producing the differential element type.
 //META: intent=functional
 //META: pipeline_stage=lower

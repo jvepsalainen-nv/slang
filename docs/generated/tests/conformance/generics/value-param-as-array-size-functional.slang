@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#type-checking
-//META: doc_section_digest=4f712396b718dc4245b0d7a122fe7c024d74b3b4a70dd75948a651b3aa074c9c
 //META: purpose=A generic value parameter is usable only as its declared compile-time constant (e.g. an array bound / loop bound); no other assumption is made about it.
 //META: intent=functional
 //META: pipeline_stage=runtime

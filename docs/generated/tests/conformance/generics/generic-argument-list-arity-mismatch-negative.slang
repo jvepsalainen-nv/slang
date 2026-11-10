@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-12T00:00:00+00:00
-//META: source_commit=d592afa9b9efaf43740554b05a3fdf5b6f6e5077
 //META: doc_ref=docs/language-reference/generics.md#parameter-binding
-//META: doc_section_digest=5fefa3cf4076961bde4d84e979866a0fe46244475e81339e0cd6922ed4777a7a
 //META: purpose=An explicit generic argument list with fewer arguments than the generic has parameters is rejected with E30441 naming both counts.
 //META: intent=negative
 //META: covers=source/slang/slang-check-overload.cpp

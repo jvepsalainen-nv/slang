@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T12:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#generic-specialization-and-constraints
-//META: doc_section_digest=9f957015017e5369dca04b3ddeac3c5f9b0cfdeca3888bbec30602504004bdac
 //META: purpose=Verifies an integer generic value parameter is accepted and specializes a fixed-size array member (Vec<3>) under slangi.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

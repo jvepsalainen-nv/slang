@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/05-ir-passes.md#differentiation-autodiff": "ec7ab587fbb04a8acbf7d0b2ad0771119e07b323b2a0efed00309cf96398b83b",
+    "docs/generated/design/pipeline/05-ir-passes.md#entry-point-and-parameter-handling": "d08158ea09ba0a32a48d37035a53b103ee4e6cf5465c5f5427df02f5ade4cbbb",
+    "docs/generated/design/pipeline/05-ir-passes.md#how-the-passes-are-ordered": "2ca48ce00e76569f6fbdb39bc8e56c03183f8c10455888130166edb11bbdb183",
+    "docs/generated/design/pipeline/05-ir-passes.md#inlining-and-call-graph": "5da27fa506472adfdadf44378ebab1db58de90353819e62362683b33b3c6600c",
+    "docs/generated/design/pipeline/05-ir-passes.md#instrumentation": "371849956d0b8eb3538253c2691f9c31a3721e74a7635f908f0458807aee9ced",
+    "docs/generated/design/pipeline/05-ir-passes.md#layout-and-binding": "0fba7fe66a94de18a3a43af71b0a2a503d43e1e15dfc035e524c23f3c2bdbd9f",
+    "docs/generated/design/pipeline/05-ir-passes.md#linking-and-validation": "4310de5f7ab116db6edec98751cffebaba108c378ea42426e57d23fd6ae5cf23",
+    "docs/generated/design/pipeline/05-ir-passes.md#loop-transformations": "5346083df587dd61328c503d8394df501ae34fed3523d17881e22225881336af",
+    "docs/generated/design/pipeline/05-ir-passes.md#phase-skeleton-of-linkandoptimizeir": "4689b660f03217c10ed398e9c8f3eb9f05764b0118520e9096b78a10b1f94ea1",
+    "docs/generated/design/pipeline/05-ir-passes.md#specialization-and-generics": "40b8147969c5ae28bced29b8f878d348a9ab8fbecb2e6e6b023518b00ca90017",
+    "docs/generated/design/pipeline/05-ir-passes.md#ssa-construction-and-basic-cleanup": "85fd348293c84a305f936573cfa250d2b3123e8603754886c11912b89261539f",
+    "docs/generated/design/pipeline/05-ir-passes.md#target-specific-lowering": "79c80f93e7653bb012008aa7819b0c3ef28024e5d967ea6b1e4206f5d416adc5",
+    "docs/generated/design/pipeline/05-ir-passes.md#type-and-value-legalization": "b9ff903836e65c228e0e2f2b3aec5862dda6d78f824babeb56251f657789e6bf"
+  }
+}

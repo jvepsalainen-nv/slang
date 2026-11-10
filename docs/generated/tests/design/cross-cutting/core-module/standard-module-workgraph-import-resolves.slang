@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/core-module.md#standard-modules
-//META: doc_section_digest=19b72d3c97699e7ac3c4b56c42266ecaaaecfdddcb2eb6781aafb43d9bc7fb56
 //META: purpose=import experimental.workgraph resolves the separately compiled workgraph standard module and brings its record types and Barrier flag enums into scope.
 //META: intent=functional
 //META: pipeline_stage=check

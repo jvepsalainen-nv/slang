@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#inlining-and-optimization
-//META: doc_section_digest=be3dd448892d8840c35684e6b814bbb4a28a297daf99996e234ecacad1c060e9
 //META: purpose=Boundary - a function carrying [__readNone] surfaces a bare readNone decoration distinct from noSideEffect and the other inlining-and-optimization opcodes.
 //META: intent=boundary
 //META: pipeline_stage=lower

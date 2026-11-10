@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-09T10:40:15+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#source-location-preservation
-//META: doc_section_digest=b376d677453ba50705d8234aa3572303b42f0c428f903a6b2d9d9b73a3df65a7
 //META: purpose=An argument token keeps the call-site location it was lexed with, and a parameter used twice replays the same location, so the diagnostic points at the argument in the invocation rather than into the macro body.
 //META: intent=functional
 //META: pipeline_stage=preprocess

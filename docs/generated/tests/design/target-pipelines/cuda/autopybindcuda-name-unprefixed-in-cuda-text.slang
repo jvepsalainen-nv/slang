@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#lowerbuiltintypesforkernelentrypoints-removetorchkernels-handleautobindnames
-//META: doc_section_digest=95004f7028f731ce96bafccbe1285fad3c492bf726e679656da5cbe033861009
 //META: purpose=handleAutoBindNames rewrites only the ExternCpp linkage name, which an entry point never reaches, so an [AutoPyBindCUDA] [CudaKernel] function compiled as the selected entry point for -target cuda still emits as extern "C" __global__ void myKernel with no __kernel__ prefix.
 //META: intent=functional
 //META: pipeline_stage=emit

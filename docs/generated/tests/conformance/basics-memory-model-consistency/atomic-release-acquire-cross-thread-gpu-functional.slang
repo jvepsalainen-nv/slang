@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:58:23+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-consistency.md#atomics
-//META: doc_section_digest=a51e4f61c144b6b055f62cb6dd435450ea8054e86989ebdfc212ed4b29838fc8
 //META: purpose=Release-acquire ordering: thread A writing a payload and performing atomic store-release, followed by thread B atomic load-acquire observing that store, causes thread B to see all thread A side effects before the store.
 //META: intent=functional
 //META: pipeline_stage=runtime

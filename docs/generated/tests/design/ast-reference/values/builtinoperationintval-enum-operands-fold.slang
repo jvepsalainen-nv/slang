@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:58:54+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/values.md#builtinoperationintval-and-the-single-representation-invariant
-//META: doc_section_digest=7294e983132681667c88eb7937aa63061a1f9c975bb9567ce8dd36184dcda775
 //META: purpose=Operators on enum operands are the other resolved-operator-call form that reaches the symbolic builtin-operation value, so an enum comparison over a generic value parameter folds to a concrete array bound.
 //META: intent=functional
 //META: pipeline_stage=check

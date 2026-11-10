@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#breadcrumbs
-//META: doc_section_digest=33d07243bfb42afebbc13d5fbbb87264e2fb46bd44f69743fdec1ff0e2f6c8b3
 //META: purpose=A member reached through an optional conformance survives the post-lookup filter once the surrounding code has checked the constraint with an is statement.
 //META: intent=functional
 //META: pipeline_stage=check

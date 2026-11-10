@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#type-and-value-legalization
-//META: doc_section_digest=b9ff903836e65c228e0e2f2b3aec5862dda6d78f824babeb56251f657789e6bf
 //META: purpose=The bit-field accessor pass fills in the getter / setter bodies with shift-and-mask arithmetic over the backing integer, so a bit-field read emits shifts and masks rather than a field access.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

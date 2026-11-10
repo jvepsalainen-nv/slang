@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#the-major-node-families
-//META: doc_section_digest=46dcdf62bf4aa543b664ba7bb03700798e04717bad2bde760b948ba7b1e414fe
 //META: purpose=A `{ ... }` block parses into a Stmt that holds an ordered sequence of sub-statements, executed in source order.
 //META: intent=functional
 //META: pipeline_stage=parse

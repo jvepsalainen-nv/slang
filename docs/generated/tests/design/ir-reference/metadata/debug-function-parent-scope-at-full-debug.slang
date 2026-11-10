@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debug-info-family
-//META: doc_section_digest=0e7840a1f1f66c8bead87c053f09cb00e50d9fbd9153ec12c90a121dfadab0d3
 //META: purpose=DebugFunction carries the optional trailing parentScope operand at full debug level, referencing the DebugCompilationUnit.
 //META: intent=boundary
 //META: pipeline_stage=lower-to-ir

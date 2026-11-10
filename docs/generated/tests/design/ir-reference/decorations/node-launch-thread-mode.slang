@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#nodelaunch-and-the-work-graph-node-decorations
-//META: doc_section_digest=daa05cb203fdd0b8d97d568a362266b28c42f4928418925387113d90d02e73f3
 //META: purpose=A [NodeLaunch("thread")] attribute lowers to a nodeLaunch decoration whose mode operand is the quoted string "thread", not an integer tag.
 //META: intent=functional
 //META: pipeline_stage=lower

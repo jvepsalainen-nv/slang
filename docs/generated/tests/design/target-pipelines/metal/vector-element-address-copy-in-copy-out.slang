@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:38:51+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#legalizeirformetal
-//META: doc_section_digest=93b06c89a6012feb3801573c05960ec24c865923e2f34e1c7f3dca8e8dfa82d2
 //META: purpose=`legalizeFuncBody` rewrites a call argument that takes the address of a vector element into a temporary with copy-in/copy-out, because Metal cannot take the address of a vector element.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

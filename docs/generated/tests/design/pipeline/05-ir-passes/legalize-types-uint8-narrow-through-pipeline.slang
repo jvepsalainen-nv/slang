@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#type-and-value-legalization
-//META: doc_section_digest=b9ff903836e65c228e0e2f2b3aec5862dda6d78f824babeb56251f657789e6bf
 //META: purpose=Boundary: a `uint8_t` (narrow 8-bit) value routed through the type-legalization pipeline emits `OpCapability Int8` on SPIR-V.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

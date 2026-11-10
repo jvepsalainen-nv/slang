@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#namehint--namehintdecoration
-//META: doc_section_digest=398fede0e4de09435e2c385a07c84980390fc7f07aeaeb82a28ad54acb9e5215
 //META: purpose=A user-named function carries a nameHint decoration with the source identifier as a string literal operand.
 //META: intent=functional
 //META: pipeline_stage=lower

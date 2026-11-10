@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -fvk-t-shift <N> <space> adds N to the Vulkan binding inferred from a `register(tX)` semantic and silences the "D3D register without Vulkan binding or shift" warning for that register class, with `all` behaving like the matching explicit space.
 //META: intent=characterization
 //META: characterization-unverified=true

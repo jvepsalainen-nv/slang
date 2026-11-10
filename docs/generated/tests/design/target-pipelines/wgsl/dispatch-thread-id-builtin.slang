@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#legalizeirforwgsl
-//META: doc_section_digest=86620dc839535002087154141c15a7d452a7ce8a626c5c081b7136a0ff4ed6d6
 //META: purpose=SV_DispatchThreadID becomes @builtin(global_invocation_id) on the WGSL entry-point parameter
 //META: intent=functional
 //META: pipeline_stage=ir-pass

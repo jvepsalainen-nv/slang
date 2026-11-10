@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:40:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#two-stage-parsing
-//META: doc_section_digest=9e6cdcd331c77e6ace71db8f4327394855e85e18930b373da3d6bbea094c0c09
 //META: purpose=A base whose checked type is a swizzle value such as `uv.y` forces the comparison reading of `<` even though the token after the matching `>` is a generic follower.
 //META: intent=negative
 //META: pipeline_stage=parse

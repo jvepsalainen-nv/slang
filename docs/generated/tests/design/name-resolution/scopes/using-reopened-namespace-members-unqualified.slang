@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/scopes.md#sibling-scopes
-//META: doc_section_digest=48e2e716cb98e52f251b42e53f41f2630e81baad625d5ff212284e8c3ac35e05
 //META: purpose=A `using` of a namespace declared in multiple blocks makes members from every block reachable unqualified, because the splice covers the namespace's owned and sibling scopes.
 //META: intent=functional
 //META: pipeline_stage=check

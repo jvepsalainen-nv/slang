@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T14:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#dispatchers-and-existential-specialization
-//META: doc_section_digest=ce4222b88f152eca2d447fe87928f2933e7dd7c80a82eede281299e44001afc3
 //META: purpose=A __ref parameter of interface type used in a dynamic-dispatch context is rejected with E52010.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-typeflow-specialize.cpp

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/04c-layout-ir.md#diagnosed-failures-during-binding": "23e5df26403f2bb8b858afdcef0953b50aa061e5d136ba544146af99357d929a",
+    "docs/generated/design/pipeline/04c-layout-ir.md#explicit-vkbinding-on-entry-point-parameters": "7930b59a5db8b58898ed60da92091df42c2b4b04db9da6322c28c80beab5efe4",
+    "docs/generated/design/pipeline/04c-layout-ir.md#global-scope-type-layout": "de2f3928a815931dc6dd7265b07e16d0209ebf38a96f6d61b30f387739c0a8d8",
+    "docs/generated/design/pipeline/04c-layout-ir.md#option-gates": "e183d3847947b9c76822a8ab196d33f0397bcdeb73b5ed03ff149422a06334aa",
+    "docs/generated/design/pipeline/04c-layout-ir.md#parameter-binding-producing-the-programlayout": "46863bfb82aa25df1a29d14be8a9effbfaf6dae8dd4bc45bede84a9d03334be8",
+    "docs/generated/design/pipeline/04c-layout-ir.md#per-entry-point-steps": "50f231e064e3daa3393bbf07163d90d3c1b16b2a86c39bdb81116cc094d1f311",
+    "docs/generated/design/pipeline/04c-layout-ir.md#per-global-parameter-steps": "5bd56ec3fa9f4c14346ce9f891e07fb31a2a9a681d81060e3fa8d134da97c771",
+    "docs/generated/design/pipeline/04c-layout-ir.md#vkinput_attachment_index-and-descriptor-space-occupancy": "94f08edd7e4a416b48229954db24ee4f70b3ed164da5cf406159e6c5b2795d54",
+    "docs/generated/design/pipeline/04c-layout-ir.md#what-this-module-is-not": "577c93ec37cb04b59efb0caebcab083c29ae3dbed2693a1c5277ccf417cb1da7",
+    "docs/generated/design/pipeline/04c-layout-ir.md#when-it-is-built": "14acb6ce88acca39d38cb731d5aca5374cb8cdb115526a701acdd1c9362f92b7",
+    "docs/generated/design/pipeline/04c-layout-ir.md#why-this-module-exists": "35262d5707ecd67036d365ed617e44cd2adc36e6ef084f2995306197c22f7383"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#builtinoperatorexpr
-//META: doc_section_digest=d86992208065a1cd06198a0c8298546dee4838c3ae7ea2c807513713ba87455a
 //META: purpose=For-loop trip-count inference reads the resolved builtin operation kind: a [ForceUnroll] loop bounded by `i < (7 % 5)` unrolls into per-iteration stores.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

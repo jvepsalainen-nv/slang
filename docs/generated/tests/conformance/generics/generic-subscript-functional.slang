@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#generic-subscript
-//META: doc_section_digest=1e64cc2750ed1926c6eb26ab2344d513090d97e935d043df4ad30be99caa6d12
 //META: purpose=A generic subscript operator `__subscript<T>(T i) where T : IInteger` accepts any IInteger index type for get and set.
 //META: intent=functional
 //META: pipeline_stage=runtime

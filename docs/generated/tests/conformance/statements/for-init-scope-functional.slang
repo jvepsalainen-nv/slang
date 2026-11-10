@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=gpt-6
-//META: generated_at=2026-09-29T07:48:53+00:00
-//META: source_commit=3bb522221d5db85fbdf8dcf441c05ffc3b801358
 //META: doc_ref=docs/language-reference/statements.md#for-statement
-//META: doc_section_digest=f87648884bd8e378e0ef1b17124f49aeae45c6cf361579e72780650010a46968
 //META: purpose=A variable declared in the for-loop init has scope limited to the for statement.
 //META: intent=functional
 //META: pipeline_stage=emit

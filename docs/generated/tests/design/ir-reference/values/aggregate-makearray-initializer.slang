@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/values.md#aggregate-constructors
-//META: doc_section_digest=81cb7db040259e3ef92a1ca250fb9ea0adfaa31cb83daa0c083596c98a915a16
 //META: purpose=An `InitializerListExpr` assigned to a fixed-size array lvalue lowers to a single `makeArray(...)` opcode carrying one operand per element, which is then stored through the array's address.
 //META: intent=functional
 //META: pipeline_stage=lower

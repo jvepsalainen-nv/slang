@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -get-supported-module-versions prints the serialized-module version window and -v prints the build tag, both as notes emitted during option parsing while the compile still proceeds.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

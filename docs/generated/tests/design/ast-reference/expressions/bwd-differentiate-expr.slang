@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#differentiate-family-expressions
-//META: doc_section_digest=d977436f6dd59b4e5e73cb194cb787b23a56ac21de6d48a23ddc96e540a36a6e
 //META: purpose=A BackwardDifferentiateExpr `__bwd_diff(f)` selects the backward-mode derivative; calling it with dL/dy propagates a gradient back into the input differential.
 //META: intent=functional
 //META: pipeline_stage=check

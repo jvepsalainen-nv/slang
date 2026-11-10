@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#arrays
-//META: doc_section_digest=5c9b5155d865f422932e8a81448f6165059d67b7f88cef295a12330d13aef941
 //META: purpose=Stress: a large `static const`-bounded array surfaces the full extent as Array(Float, 256 : Int).
 //META: intent=stress
 //META: pipeline_stage=lower

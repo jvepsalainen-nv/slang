@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#witness-tables-and-witness-facts
-//META: doc_section_digest=16ef6c8f112a2d877c25d0f6d0cebf34356b5864eb3afeb0d551253490cc2f26
 //META: purpose=Inside an interface definition the placeholder witness that ThisType conforms to the enclosing interface is a zero-operand thisTypeWitness whose interface is carried in the result type.
 //META: intent=functional
 //META: pipeline_stage=lower

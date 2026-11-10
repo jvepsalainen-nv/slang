@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:08+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-struct.md#natural-layout
-//META: doc_section_digest=380aa59bd382916defff5c41e4ce069cc263f0377fbd8a35da604e427f5858d7
 //META: purpose=A struct with mixed int/float fields emits with those fields in declaration order (non-static members allocated sequentially in struct).
 //META: intent=functional
 //META: pipeline_stage=emit

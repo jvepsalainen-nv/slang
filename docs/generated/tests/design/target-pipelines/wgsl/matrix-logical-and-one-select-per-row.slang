@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:39:19+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#legalizelogicalandor
-//META: doc_section_digest=0f95d85b7e4917c52c5df24093e28b4af12cd02e40737f7e612285fa2f66c08c
 //META: purpose=A bool2x2 logical And is rewritten to one vector select per matrix row (legalizeMatrixTypes), not a matrix operation
 //META: intent=functional
 //META: pipeline_stage=emit

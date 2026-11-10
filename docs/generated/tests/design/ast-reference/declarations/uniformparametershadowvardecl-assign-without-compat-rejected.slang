@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:26+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#uniformparametershadowvardecl
-//META: doc_section_digest=c6fe74cd1fc3cdee3555e7000cd25e35c17eb37bbcdbb37d40feb743832a77a3
 //META: purpose=Without the extended HLSL backwards-compatibility option no shadow variable is created, so assigning to a global uniform parameter in HLSL source is rejected.
 //META: intent=negative
 //META: pipeline_stage=parse

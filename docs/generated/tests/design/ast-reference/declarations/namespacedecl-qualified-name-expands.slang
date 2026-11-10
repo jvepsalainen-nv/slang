@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:59:02+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#namespacedecl-moduledecl-filedecl
-//META: doc_section_digest=5c73eb281115d6eb7872ab686bf9bf11c3b781484b5a0da42d6602f1bdb3379c
 //META: purpose=A qualified namespace name (`namespace A.B`, `namespace A::B`) is expanded into nested namespaces, so members are reachable through the qualified path.
 //META: intent=functional
 //META: pipeline_stage=parse

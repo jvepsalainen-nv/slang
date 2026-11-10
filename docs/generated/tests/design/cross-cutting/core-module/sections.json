@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/cross-cutting/core-module.md#core-module": "82572fa8cfc4198a91aaf75f7925752f68b3734907dd005fa81952563631b345",
+    "docs/generated/design/cross-cutting/core-module.md#glsl-module": "6e53663afde478db9363f03c7a17f609bb3cac09737cd3141eea200db83510a0",
+    "docs/generated/design/cross-cutting/core-module.md#preludes": "6671cb8510b9e4ed685283f5449c4bcc68316f4ac897602ecd84a7fac8ce0461",
+    "docs/generated/design/cross-cutting/core-module.md#standard-modules": "19b72d3c97699e7ac3c4b56c42266ecaaaecfdddcb2eb6781aafb43d9bc7fb56",
+    "docs/generated/design/cross-cutting/core-module.md#what-the-core-module-provides": "11ffec405cd9ebf039d30e7bd4c76becb242deae737a81d1506f310d0c00719e"
+  }
+}

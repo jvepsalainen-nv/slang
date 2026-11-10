@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=5f3c29fc0c56f8729c719260dc172cfff206440a3a1a233e3623b81488b97372
 //META: purpose=Fires diagnostic E45102 (coverage-target-not-supported) - `-trace-coverage` is not supported on this target; coverage instrumentation skipped
 //META: intent=negative
 //META: pipeline_stage=ir-pass

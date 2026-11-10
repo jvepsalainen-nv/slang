@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#existential-destructuring
-//META: doc_section_digest=59ca2bd8731bf919acc61227eb63a2db1afddf7a5ef57d94dd8669ddfc2dfd15
 //META: purpose=Interface dispatch through an existential follows the sequence extractExistentialType, extractExistentialValue, extractExistentialWitnessTable, lookupWitness, call.
 //META: intent=functional
 //META: pipeline_stage=lower

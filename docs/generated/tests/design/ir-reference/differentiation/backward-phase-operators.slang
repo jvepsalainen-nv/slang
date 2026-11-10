@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#backwarddifferentiateprimal-backwardremat-and-backwarddifferentiatepropagate
-//META: doc_section_digest=bb1717e5869c7bfcffd3efac3194cbf12675edc866da5243f565843b293263c1
 //META: purpose=A [Differentiable] callable reaches lowering as a conformance whose apply_bwd, propagate and remat members are BackwardDifferentiatePrimal, BackwardDifferentiatePropagate and BackwardRemat requests over the base function.
 //META: intent=functional
 //META: pipeline_stage=lower

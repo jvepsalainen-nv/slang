@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/syntax-reference/grammar.md#-disambiguation": "9af1f98685cb612077da94d031ef06cdcc2d4768b2522616e45c9ae531a49988",
+    "docs/generated/design/syntax-reference/grammar.md#attributes-and-decorations": "1665ee0a71eb28664a25ab7d900010719a7bfb2fea1727277e13112ebdb999f2",
+    "docs/generated/design/syntax-reference/grammar.md#declarations": "048ba404f572f02131ad1a58698364473ede65862ab25d2e8a4449e9f45a441d",
+    "docs/generated/design/syntax-reference/grammar.md#expressions": "3994688da40c44101067ae522581121e1875932e81b3149551e77c8f03fcd011",
+    "docs/generated/design/syntax-reference/grammar.md#function-style-declarations": "d2933f044671826cdda47d2bf6584eb3ef9b48c4c8f5e77a17b011c61c8729d4",
+    "docs/generated/design/syntax-reference/grammar.md#generics-and-where-clauses": "41260c8f8bf7f0e8598932b33e0e91618368529d9e8fe3e7b7881fe0dd2a078f",
+    "docs/generated/design/syntax-reference/grammar.md#hlsl-compatibility-declarations": "47566cd8f7a7690b5bc248f56b6ae6ee7deb73f17385a110749298f08f34fd2a",
+    "docs/generated/design/syntax-reference/grammar.md#literal-forms-vs-token-kinds": "f5c669bb9740dfa642523af3da2be0ac7b679950ab4f326668ed87a90288d1e6",
+    "docs/generated/design/syntax-reference/grammar.md#modifiers": "2e87c05cb33c7aa303891b943912a3bf57f22ddf726d917c5fe132ccf91f67b0",
+    "docs/generated/design/syntax-reference/grammar.md#statements": "b9a1edc11e7f4ef12c141b50f73b3a36a9eda5811402d0c118a09dc03161e42b",
+    "docs/generated/design/syntax-reference/grammar.md#top-level-structure": "7765d9b15bc3cf94f40f1c43ffc9e275a43cb76b6b512e8bd81fbafd2cf86f06",
+    "docs/generated/design/syntax-reference/grammar.md#type-defining-declarations": "db395f82daf94bfd107c87ddfcfd165342225cb79f4c373eaa6c86772d42cffb",
+    "docs/generated/design/syntax-reference/grammar.md#types": "1b952f18aa4c01c1843e78ee98bfcf640c2d610fbabae24b6d4fd04bdada1ea6",
+    "docs/generated/design/syntax-reference/grammar.md#user-defined-syntax": "f078f92f70421de72e30bff0a23075965d7170b96ad6442c5bdf7e786914fd3e",
+    "docs/generated/design/syntax-reference/grammar.md#variable--binding-declarations": "581119c2905797d9e5ca17f62d23d4176de2817cf2cb3cd58cf50bd73f2b8fe3"
+  }
+}

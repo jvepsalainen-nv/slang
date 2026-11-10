@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#partiallyappliedgenericexpr
-//META: doc_section_digest=00a9c7301a485338c42856c154381b7ce23934b997924e9acae37c26eafc3d55
 //META: purpose=A partially applied generic preserves the explicitly supplied argument prefix in order: `triple<int, float>` fixes T and U and the third parameter V is inferred from the call site.
 //META: intent=boundary
 //META: pipeline_stage=check

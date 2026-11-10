@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#builtinrequirementdecoration
-//META: doc_section_digest=54acdd20df2ce2d1b263de1808792a14a6fb098b1863cdbff8a8a473872ab568
 //META: purpose=A built-in interface requirement is keyed by a builtinRequirementKey inst that carries a BuiltinRequirementDecoration naming the same requirement kind.
 //META: intent=functional
 //META: pipeline_stage=lower

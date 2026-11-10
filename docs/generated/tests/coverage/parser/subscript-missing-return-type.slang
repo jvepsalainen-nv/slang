@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T15:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#failure-modes
-//META: doc_section_digest=917434add55b557b228b443846eefc5d6962c4a14daa202ebe626eecee22d1ca
 //META: purpose=Verifies a `__subscript` declaration with no `-> ReturnType` clause is rejected with E30901.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=ec128d500c7050606b02ba6a8cabd8ece41e2c707e8cf225ec47f7ec3265d2de
 //META: purpose=Fires diagnostic E30109 (continue-inside-defer) - 'continue' inside defer
 //META: intent=negative
 //META: pipeline_stage=check

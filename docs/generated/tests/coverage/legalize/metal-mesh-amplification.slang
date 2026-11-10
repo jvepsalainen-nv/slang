@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the Metal legalization of the amplification and mesh stages, rewriting DispatchMesh into a synthesized object_data payload parameter plus mesh_grid_properties.set_threadgroups_per_grid, and the mesh outputs into a metal::mesh object driven by set_vertex/set_index/set_primitive.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

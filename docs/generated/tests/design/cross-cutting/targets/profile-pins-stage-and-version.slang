@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#profiles
-//META: doc_section_digest=b5e131a8eb7a35a10536ae0e2786d885f68afc06e5b0d6e5ec88aaf600d4152f
 //META: purpose=A `Profile` pins a `Stage` plus a feature-level `Version`; `-profile sm_6_0` parses and its capability set lets a compute kernel compile on HLSL, and `-profile glsl_450` does the same on GLSL.
 //META: intent=functional
 //META: pipeline_stage=check

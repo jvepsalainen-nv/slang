@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:02Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#function-style-declarations
-//META: doc_section_digest=d2933f044671826cdda47d2bf6584eb3ef9b48c4c8f5e77a17b011c61c8729d4
 //META: purpose=The C++-style trailing `const` after a parameter list is rejected with E30443 outside the HLSL dialect.
 //META: intent=boundary
 //META: pipeline_stage=check

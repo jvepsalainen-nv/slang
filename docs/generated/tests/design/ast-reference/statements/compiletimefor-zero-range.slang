@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#compiletimeforstmt
-//META: doc_section_digest=08fbefd5efa0200e11e5b0f265a4371772d26792ec01888568068161b71d8913
 //META: purpose=A CompileTimeForStmt with a zero-length range (`$for(i in Range(0))`) unrolls to zero copies of the body; the surrounding accumulator is unchanged by the unrolled-no-times loop.
 //META: intent=boundary
 //META: pipeline_stage=check

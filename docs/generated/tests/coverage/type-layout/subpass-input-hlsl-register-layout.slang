@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `SubpassInput` on the HLSL target is laid out through the D3D object rules' SubpassInput arm and receives an ordinary `t` register.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

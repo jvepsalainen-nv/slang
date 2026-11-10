@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#type-instructions
-//META: doc_section_digest=6399b7c2a0c9dbf90340a8eb7cb86baa3cd9c07289fb6d93436a49b19618df81
 //META: purpose=A vector local loaded from a `StructuredBuffer<float3>` stays a native `float3` on Metal while the buffer element is `packed_float3`.
 //META: intent=functional
 //META: pipeline_stage=emit

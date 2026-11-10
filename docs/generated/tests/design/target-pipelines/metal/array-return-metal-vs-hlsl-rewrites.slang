@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#phase-c-metal-legalization-lowering-phi-elimination
-//META: doc_section_digest=c5af8ae560515f62aefb59225c78774ee7d8bd8656a9f3cf1b634fcb3e1f88e4
 //META: purpose=`legalizeArrayReturnType` is filtered out for Metal (`!isMetalTarget && !isSPIRV`), so an array-returning function survives as `array<T, N> f(...)` on Metal while HLSL rewrites it to `void` with an `out` parameter.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

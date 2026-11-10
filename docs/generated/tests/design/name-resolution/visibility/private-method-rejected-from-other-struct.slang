@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/visibility.md#where-visibility-is-filtered
-//META: doc_section_digest=fc9ab91b7ced964782bf81020c2af74307d7749065e306eedc59bc8283c59ebd
 //META: purpose=A `private` method of struct A is not visible from a method of an unrelated struct B; `isDeclVisibleFromScope` walks B's parents and never finds A.
 //META: intent=negative
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T12:00:00+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-special-topics.md#function-parameters-with-inout-inout-modifiers
-//META: doc_section_digest=50b3040fe642ee135f57002e37f20cd9b949f33677eec525295c406b3b231822
 //META: purpose=`out` parameter emission on non-HLSL/non-SPIRV backends: GLSL preserves the `out` keyword; Metal, CUDA, and C++ lower to a pointer parameter; WGSL lowers to `ptr<function, i32>`.
 //META: intent=functional
 //META: pipeline_stage=emit

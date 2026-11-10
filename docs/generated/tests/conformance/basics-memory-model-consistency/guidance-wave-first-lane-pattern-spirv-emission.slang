@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:58:23+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-consistency.md#general-programming-guidance
-//META: doc_section_digest=3d7e3e029e78610815c5af6fd77095dcd95914a8f6598bf9a2d7b55d6080810e
 //META: purpose=The doc's recommended pattern (elect first lane with `WaveIsFirstLane` + `AllMemoryBarrierWithWaveSync` + `Atomic<T>.store`) compiles to SPIRV `OpGroupNonUniformElect` + `OpControlBarrier` + `OpAtomicStore`.
 //META: intent=functional
 //META: pipeline_stage=emit

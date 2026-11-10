@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#profiles-versus-explicit--capability
-//META: doc_section_digest=86d885abbc7bc1dd1eef8202abb2b85827b91f65865198cb1196cac24a787374
 //META: purpose=A `-capability` whose atom inherits a higher version than the pinned `-profile` in the same family is reported as E00046 rather than silently raising the emitted target version.
 //META: intent=negative
 //META: pipeline_stage=cli-options

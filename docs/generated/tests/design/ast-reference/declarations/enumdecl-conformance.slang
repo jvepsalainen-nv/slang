@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#enumdecl-and-enumcasedecl
-//META: doc_section_digest=5913d0c8b5a03bb97424073383f39cd15879942901dbf04870fcacd5831b152c
 //META: purpose=An EnumDecl is an aggregate type declaration, so an enum can be given an interface conformance and dispatched through a constrained generic.
 //META: intent=functional
 //META: pipeline_stage=check

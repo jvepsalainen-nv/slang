@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/values.md#aggregate-constructors": "81cb7db040259e3ef92a1ca250fb9ea0adfaa31cb83daa0c083596c98a915a16",
+    "docs/generated/design/ir-reference/values.md#arithmetic-and-bitwise": "156280c3625197a4ed3b683ed5771a1ea94cd998308b23695241f7f96edbb6a7",
+    "docs/generated/design/ir-reference/values.md#comparison": "bf81ae64bcb3ebf34033f80837df03e474b90159b95904ac3be2fb4e350793c2",
+    "docs/generated/design/ir-reference/values.md#conversions": "e9d21ff4a25410c2c41b9f2413bf081c7a9f699c2230818fe1a6fdf8979075a6",
+    "docs/generated/design/ir-reference/values.md#defaultconstruct": "70fa32ba53aa5066ea3a76e6f36848a1e76640420b67965c0cf7cf95009cbcf5",
+    "docs/generated/design/ir-reference/values.md#fieldaddress-vs-fieldextract": "c51c6f434f2f289530bd44c1c012d7d1ae5c9ab1af33f21f78b660210957b529",
+    "docs/generated/design/ir-reference/values.md#getelementptr-vs-getelement": "195ebbd1505e90ba20d1d703df4fc5fb9fbbe285f99ce7b130014f9706b3cbf6",
+    "docs/generated/design/ir-reference/values.md#literal-payload-encoding": "14cd6e5688aa5a37c4a0c35b957fbdce4d155a0d4efe4a41d203a279ed17f84c",
+    "docs/generated/design/ir-reference/values.md#literals-constant-group": "ac863bc7fc7e67c2b457d8f7eb1865dec41c2377cdf82476f464617c44f7a8c9",
+    "docs/generated/design/ir-reference/values.md#live-but-unproduced-opcodes": "bc0d3c6ac70fa6f0bc969a34df3549b7d535ab7021553f5538fd684ca4141902",
+    "docs/generated/design/ir-reference/values.md#logical": "a26adbecfd21590b141baad57db0916d5340c5abb1af0fdeab3d70f7c6128b1d",
+    "docs/generated/design/ir-reference/values.md#memory": "f662fb7782cd3fc576fa13c3285e3f58c0e5cf06b8fc8ea778138d3616c5a4bf",
+    "docs/generated/design/ir-reference/values.md#out--inout-argument-casts": "3d6bc9494eca7dfe819dc8113825be51fde86d8045b3a28a809c78deb26e1702",
+    "docs/generated/design/ir-reference/values.md#reshape-and-pack-helpers": "8048372bf4934a77e6dd87e52389c17ae44933ad62e3f83a6f26004d30fcaf5d",
+    "docs/generated/design/ir-reference/values.md#result--optional--conditional-helpers": "b3ddfcf6633a61b27422d8bc64aaf60fdf964f353e9c9daf4a37f1c4514a9235",
+    "docs/generated/design/ir-reference/values.md#select": "3b5109edc595d8e386591ea291155032aaed6d4073b37d2b31e86bba10c285b4",
+    "docs/generated/design/ir-reference/values.md#swizzle-swizzleset-swizzledstore": "fdc744db2750ee85a974decc3e160bc9964d00c13ec39e93f41062c5f651f980",
+    "docs/generated/design/ir-reference/values.md#var-vs-globalvar-vs-alloca": "015fc32433b67b42977bcc4cdd1f50489d71e13c08f3ea9e36824d7ef792babc"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:40:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/overview.md#emit
-//META: doc_section_digest=f5ca0be190b77cca517eee93b8fc03af868bd9b8d69abe8e20fadc934d5e4ab2
 //META: purpose=Torch glue emission only binds functions marked [TorchEntryPoint], so `-target torch` on an ordinary compute entry point has nothing to bind and produces an empty pybind module rather than an error.
 //META: intent=functional
 //META: pipeline_stage=emit

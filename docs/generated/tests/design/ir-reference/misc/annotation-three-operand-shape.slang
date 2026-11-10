@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#annotation
-//META: doc_section_digest=ebff6a010b1284d551f2c4730b63be4741318d18c71fe095333fedd3c4668e27
 //META: purpose=Every `Annotation` is built with three operands — the annotated inst, an `AnnotationKind` stored as a `uint` literal, and the annotation value — so one target can carry several annotations keyed by kind.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

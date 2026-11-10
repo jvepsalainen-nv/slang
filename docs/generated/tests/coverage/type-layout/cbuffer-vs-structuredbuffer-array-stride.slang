@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T17:00:00Z
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#global-scope-type-layout
-//META: doc_section_digest=cb9b7a613d39760a93548dfbce14e96da09e14aa0f49313bd097e522bedd9206
 //META: purpose=Verifies a `float[4]` array gets std140 ArrayStride 16 (tail field at 64) inside a ConstantBuffer but std430 ArrayStride 4 (tail field at 16) inside a StructuredBuffer.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

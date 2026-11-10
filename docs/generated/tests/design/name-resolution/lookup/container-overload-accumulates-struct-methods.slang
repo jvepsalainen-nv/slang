@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#container-level-overload-accumulation
-//META: doc_section_digest=00a7bd151175f59e65484892d8fa214ae070323723e925e2298fb5d2b24f2679
 //META: purpose=Same-named decls inside one container do not shadow each other; they accumulate through the same-name chain into one overload set and resolution picks by argument type.
 //META: intent=functional
 //META: pipeline_stage=check

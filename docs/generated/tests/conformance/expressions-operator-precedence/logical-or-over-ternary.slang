@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:20:02+00:00
-//META: source_commit=54bb48e67c3a4fdd4c0f4bd8085f5dc0bd8ffc99
 //META: doc_ref=docs/language-reference/expressions-operator-precedence.md#operator-precedence
-//META: doc_section_digest=2c43dea5ca69ca0e9d2a792df3b8f164e2487c75e25ef796f78839c678589fa1
 //META: purpose=Level-12 `||` binds more tightly than level-13 `?:`: `false || true ? 1 : 2` groups as `(false||true) ? 1 : 2` = 1, not `false || (true ? 1 : 2)` = 1 (same here — use distinguishable values).
 //META: intent=functional
 //META: pipeline_stage=runtime

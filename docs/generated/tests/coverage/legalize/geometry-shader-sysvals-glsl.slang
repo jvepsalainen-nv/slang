@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the geometry-stage system-value mapping in the GLSL legalizer, where SV_PrimitiveID splits into gl_PrimitiveIDIn on input and gl_PrimitiveID on output and SV_GSInstanceID becomes gl_InvocationID.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

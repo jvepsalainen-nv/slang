@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Symbolic shape-pack transforms (__shapeConcat / __shapePermute / __shapeSwap / __shapeReduce) that survive front-end folding are folded by the IR specialization pass, producing the concatenated / permuted / swapped / reduced dimension lists.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-specialize.cpp

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the explicit `Std430DataLayout` and `ScalarDataLayout` type arguments on `ConstantBuffer` select those rule sets, packing a scalar into a float3's tail at offset 12 instead of the std140 offset 16.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

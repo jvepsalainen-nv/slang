@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies that a token after `:` which is neither a semantic name nor a bit-field width is reported as E20001 expecting an identifier.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

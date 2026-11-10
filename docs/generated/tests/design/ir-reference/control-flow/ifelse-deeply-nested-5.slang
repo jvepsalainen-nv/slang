@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#ifelse
-//META: doc_section_digest=69efda819e39cba201908703879949bee162c97716e69f8114247bf4114d9ec0
 //META: purpose=Stress: five nested if-statements produce five distinct structured ifElse terminators in the same function, each with the four-operand cond/true/false/merge tuple.
 //META: intent=stress
 //META: pipeline_stage=lower

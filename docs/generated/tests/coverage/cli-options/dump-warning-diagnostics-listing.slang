@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -dump-warning-diagnostics prints the compiler's warning table as `<numeric id> : <name>` lines before the normal compile output.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

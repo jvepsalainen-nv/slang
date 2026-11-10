@@ -21,11 +21,12 @@ the severity model, and the single shared id namespace; the _enumeration_ of cod
 declines to reproduce lives in the structured catalogs the doc points at
 (`source/slang/slang-diagnostics.lua` plus the `*-diagnostic-defs.h` files under
 `source/compiler-core/`). Each test therefore anchors `doc_ref` at the catalog file
-that declares its code, and `doc_section_digest` is the SHA-256 of that code's catalog
+that declares its code, and the `sections.json` entry `catalog:<code>` is the SHA-256 of that code's catalog
 entry rendered as `code<TAB>severity<TAB>name<TAB>message`, read from the committed
 snapshot `_meta/diagnostics-catalog/catalog.txt`, so a rename or a message edit
 invalidates exactly the tests for that code. Print it with
-`_meta/regenerate.py catalog-digest <code>` instead of hashing by hand;
+`_meta/regenerate.py catalog-digest <code>` instead of hashing by hand, and record it
+with `_meta/regenerate.py review-sections design/cross-cutting/diagnostics-catalog --accept`;
 `_meta/regenerate.py lint` recomputes every entry and warns about the ones that have
 drifted.
 
@@ -100,7 +101,7 @@ coverage gap this enumeration reveals.
 - **E1.** For each entry in the diagnostic catalog, the claim is: _the compiler
   emits `E<code>` from a minimum single-file reproduction._ One `DIAGNOSTIC_TEST`
   per entry is the decomposition; the entry's `code<TAB>severity<TAB>name<TAB>message`
-  rendering is the `doc_section_digest`, printed by
+  rendering is the digest recorded as `catalog:<code>` in `sections.json`, printed by
   `_meta/regenerate.py catalog-digest <code>`.
 
 ### Accounting for E1 against the committed snapshot

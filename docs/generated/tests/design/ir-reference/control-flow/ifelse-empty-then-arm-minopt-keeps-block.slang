@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#ifelse
-//META: doc_section_digest=69efda819e39cba201908703879949bee162c97716e69f8114247bf4114d9ec0
 //META: purpose=With -minimum-slang-optimization the mandatory simplifyCFG is skipped, so an if with an empty then-arm keeps its own then block: trueBlock and afterBlock stay distinct in the first dump.
 //META: intent=boundary
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=0946846bb39448f14c9d6d0c2d7969621fd0ac33a340d3d3d73b1d7f8debd67b
 //META: purpose=Fires diagnostic E41022 (loss-of-derivative-due-to-call-of-non-differentiable-function) - derivative cannot be propagated through non-differentiable call
 //META: intent=negative
 //META: pipeline_stage=ir-pass

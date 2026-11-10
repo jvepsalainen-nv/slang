@@ -58,11 +58,7 @@ that triggers that diagnostic from a minimum-reproduction input.
 
 ```slang
 //META: generated=true
-//META: model=<your model id>
-//META: generated_at=<ISO 8601 UTC>
-//META: source_commit=<HEAD>
 //META: doc_ref=source/slang/slang-diagnostics.lua    ← or the appropriate -defs.h
-//META: doc_section_digest=<output of `_meta/regenerate.py catalog-digest <code>`>
 //META: purpose=Fires diagnostic E<code> (<name>) — <message>
 //META: intent=negative
 //META: pipeline_stage=<lex | parse | check | lower | ir-pass | emit | link>
@@ -71,11 +67,13 @@ that triggers that diagnostic from a minimum-reproduction input.
 //META: warning=Auto-generated. May drift from source. Do not edit by hand.
 ```
 
-Run `catalog-digest` for the digest rather than hashing the entry
-yourself. It is the sha256 of `code<TAB>severity<TAB>name<TAB>message`
-from `_meta/diagnostics-catalog/catalog.txt`, and `lint` recomputes it
-the same way, so a hand-derived value that differs by a column or a
-separator will be reported as drift.
+The entry digest is recorded in this bundle's `sections.json` under
+`catalog:<code>`, not in the test. It is the sha256 of
+`code<TAB>severity<TAB>name<TAB>message` from
+`_meta/diagnostics-catalog/catalog.txt`; run
+`_meta/regenerate.py review-sections design/cross-cutting/diagnostics-catalog --accept`
+to record it, and `lint` recomputes it to report drift. `catalog-digest
+<code>` still prints the value.
 
 Note the field `catalog_code` (and `catalog_name`). `catalog_code` is
 what `lint` keys the digest recomputation on, so it has to be the code

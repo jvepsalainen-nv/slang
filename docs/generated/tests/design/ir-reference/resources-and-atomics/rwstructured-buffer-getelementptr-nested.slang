@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#rwstructuredbuffergetelementptr
-//META: doc_section_digest=c1926379566a798f6e26928651f281675df5e998bf0bf008f9481bf70aad885c
 //META: purpose=`rwBuf[i].field = v` surfaces as `rwstructuredBufferGetElementPtr(%base, %i)` followed by `get_field_addr` then `store`, the lvalue counterpart to `rwstructuredBufferLoad`.
 //META: intent=functional
 //META: pipeline_stage=lower

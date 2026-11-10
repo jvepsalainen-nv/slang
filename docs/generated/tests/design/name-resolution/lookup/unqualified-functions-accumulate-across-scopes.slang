@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#unqualified-lookup
-//META: doc_section_digest=d1c02da07b357c8b41134fbb13a153c9451e991db3087032b3d340a5ddfdfa75
 //META: purpose=Callables are overloadable, so the outward scope walk does not short-circuit on a function hit and a same-named function in an enclosing scope stays a candidate.
 //META: intent=functional
 //META: pipeline_stage=check

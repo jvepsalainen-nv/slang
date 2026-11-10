@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#block-local-shadowing
-//META: doc_section_digest=24b2e37706dffd5a2f6286a13b0271a96dc30366c33fe244deca52d7be73e0e4
 //META: purpose=A catch clause's error variable is cleared of the block-local hidden flag before its handler is checked, so the handler body can refer to it.
 //META: intent=boundary
 //META: pipeline_stage=check

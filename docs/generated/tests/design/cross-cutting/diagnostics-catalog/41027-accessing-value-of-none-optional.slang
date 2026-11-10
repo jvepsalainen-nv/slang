@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=fec20f7bcac8fcdc2dfbdab25d05b3d7b296b884cc6c891f799e2e484b45a0a8
 //META: purpose=Fires diagnostic E41027 (accessing-value-of-none-optional) - accessing .value on an Optional that is always none
 //META: intent=negative
 //META: pipeline_stage=ir-pass

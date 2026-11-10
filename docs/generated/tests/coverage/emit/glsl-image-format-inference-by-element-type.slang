@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins the GLSL format that is inferred for an `RWTexture2D` with no `[format(...)]` attribute, across component counts 1/2/3/4 and element types float/half/uint/int/int16/uint8.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-glsl.cpp

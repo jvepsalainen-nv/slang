@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/target-pipelines/spirv.md#abort-lowering-processabort--emitabort": "660e7ba678827365e22bd2ef87a0417cbfdb75dc35481cf7eb187c665aacea4a",
+    "docs/generated/design/target-pipelines/spirv.md#capabilities-and-extensions-decided-at-emit-time": "42b60cbc03a13fbb7144f6605c9a5b8ebf0ab604187ecf3ce7e27dab3df6b393",
+    "docs/generated/design/target-pipelines/spirv.md#debug-levels-and--debug-info-include-source": "cae6418a8ce9e0bf2143e416b8e307d3c18ce2991332dc0230ce32507a3aed2c",
+    "docs/generated/design/target-pipelines/spirv.md#eliminatephis-with-spir-v-specific-options": "0a4f74a6c7834cbb05d6e7d70e5ea929f55c2181bc663bc38759fceba70ccb2e",
+    "docs/generated/design/target-pipelines/spirv.md#flat-decoration-for-integral-fragment-inputs": "c29faa394fe84ed74bb3a8e3e0eee05062d61058d310b2db9553c2bff6e14a1a",
+    "docs/generated/design/target-pipelines/spirv.md#float-to-bool-casts": "49ef2ddab0c8a53a821f407172ec83876473b71ecc43f2b7ebd5f7460b48b218",
+    "docs/generated/design/target-pipelines/spirv.md#forward-declared-pointer-fixup-phase-d-step-15": "12e41312325a978694cba2736cf8f8393cdfbf00d84c52cf6c5b122efde79d56",
+    "docs/generated/design/target-pipelines/spirv.md#legalizeentrypointsforglsl-despite-the-name": "8edf96a782e7bc310752bbb12ddde6802b40bd2c739b47e51a0408ee1898a2f3",
+    "docs/generated/design/target-pipelines/spirv.md#legalizeentrypointsforglsl-fragdepth-and-geometry-primitive-refinements": "101470099f314769a6fe398920091b45f975c62ef00a261100bcd790353ab103",
+    "docs/generated/design/target-pipelines/spirv.md#opswitch-case-literals-follow-the-selector-width": "df525a2f3d687cee2cf33a268d3a981ea063c2889013390817331349a04aea87",
+    "docs/generated/design/target-pipelines/spirv.md#option-set-toggles": "7b73796b1513f898e87604b7436f2c6892de119e5b53805d355755089b918219",
+    "docs/generated/design/target-pipelines/spirv.md#phase-b-specialization-and-type-legalization": "7e4be0fb7c9a2f01d5afa95414d7af8ea56abbfed8418b262fe7bea3bbad672c",
+    "docs/generated/design/target-pipelines/spirv.md#phase-c-spir-v-legalization-lowering-phi-elimination": "e492693f38638cb18557561f76c53c2ecd1552856a03aba9bd6c16c0bff73bd8",
+    "docs/generated/design/target-pipelines/spirv.md#phase-d-ir-to-spir-v-emit-simplification-loop-downstream-tools": "9bf971e79309b04b98ac1b07e618148a41a5c833af2e6a7f18f5e4b57eddceb9",
+    "docs/generated/design/target-pipelines/spirv.md#spir-v-specific-runtime-predicates": "de7fb1b469f279ad72ab2adf5d4d8d12e6f5f3d071cfbb3e0bca532a60e980c9"
+  }
+}

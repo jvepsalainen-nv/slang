@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:37:02+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#per-translation-unit-predicates
-//META: doc_section_digest=505ba5cb2ba8288c9e2a707a250d36248eca444ecc8ac1111122ea3c4e472ee8
 //META: purpose=Phase D's D5 missing-return check also runs from the else arm when non-essential validation is off but languageVersion >= 202C, so the missing-return error is unconditional from 202C.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

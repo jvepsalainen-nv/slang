@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the image format slangc infers for a writable texture from its element type for the 8-bit, 64-bit and half element widths.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

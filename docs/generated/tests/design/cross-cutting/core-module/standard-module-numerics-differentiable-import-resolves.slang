@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:58:48+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/core-module.md#standard-modules
-//META: doc_section_digest=19b72d3c97699e7ac3c4b56c42266ecaaaecfdddcb2eb6781aafb43d9bc7fb56
 //META: purpose=slang.numerics.differentiable, an artifact nested one level deeper than numerics.slang-module, is a client-facing entry point that resolves by import path once experimental features are enabled.
 //META: intent=functional
 //META: pipeline_stage=check

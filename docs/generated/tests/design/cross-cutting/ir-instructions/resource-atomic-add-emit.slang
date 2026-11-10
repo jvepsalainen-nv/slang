@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#resource-and-shader-io-opcodes
-//META: doc_section_digest=9e5354e38bb09fc16bac90544687941aec8ef947b56cd9f9b65ce3ddb041f315
 //META: purpose=An `Atomic<uint>` buffer element's `add` lowers to the `atomicAdd` member of the `AtomicOperation` family and emits as each target's atomic add.
 //META: intent=functional
 //META: pipeline_stage=emit

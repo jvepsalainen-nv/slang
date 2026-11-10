@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#lowerimmutablebufferloadforcuda
-//META: doc_section_digest=176050d5aa6473a960364c4e8306dcb0207b369af4a0a0c828054dd949a1f62f
 //META: purpose=Boundary - a struct whose field walk reaches an unrecognized leaf discards the half-built load function and returns empty, so the whole struct load stays an ordinary .Load with no per-field __ldg emitted.
 //META: intent=boundary
 //META: pipeline_stage=emit

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins that the explicit `Std140DataLayout` / `Std430DataLayout` / `ScalarDataLayout` arguments of `StructuredBuffer` select the matching GLSL block layout qualifier, and that `ScalarDataLayout` pulls in `GL_EXT_scalar_block_layout`.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-glsl.cpp

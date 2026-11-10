@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debug-info-family
-//META: doc_section_digest=0e7840a1f1f66c8bead87c053f09cb00e50d9fbd9153ec12c90a121dfadab0d3
 //META: purpose=At Minimal debug level a DebugCompilationUnit is built and the DebugFunction carries it as its trailing parentScope operand.
 //META: intent=boundary
 //META: pipeline_stage=lower

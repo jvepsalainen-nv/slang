@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#texture-sampler-and-texture-intrinsic-spellings
-//META: doc_section_digest=3a94acd8dd9a59970d7d0e3c3f2fe42bd83171ea939d74747983a3775ddfe2eb
 //META: purpose=A storage texture takes a texel format and an access mode where a sampled texture takes its element type, with the format inferred from the element type by getWgslImageFormat and the mode read_write for a RWTexture.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04-ast-to-ir.md#mapping-ast-constructs-to-ir
-//META: doc_section_digest=dd99e7be1e43f7dbf1c422a81f414e18dee5066cd4a3a5026a22bae8d7e540e8
 //META: purpose=A builtin `a & b` (bitwise AND, a checker fast-path BuiltinOperatorExpr) lowers to an `and` IR opcode — the doc's BuiltinOperatorExpr row explicitly names bitwise operators (`IRBitAnd`).
 //META: intent=boundary
 //META: pipeline_stage=lower

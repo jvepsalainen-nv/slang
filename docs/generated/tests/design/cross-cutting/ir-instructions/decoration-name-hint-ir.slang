@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#decorations
-//META: doc_section_digest=1ab53409e2cba6b92a18270a5bfb136836158c640f0e5dc49f907805c463cf92
 //META: purpose=A user-named declaration carries a `nameHint` decoration in the IR carrying its identifier name.
 //META: intent=functional
 //META: pipeline_stage=lower

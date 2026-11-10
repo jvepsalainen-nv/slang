@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debuglexicalblock
-//META: doc_section_digest=4b17526a5ebdb3091f4f46201f2818b32e7da614403168f6e45b160e1862df35
 //META: purpose=DebugLexicalBlock carries source, line, column and a parentScope that is the enclosing DebugFunction for a braced block directly in the function body, and is created at Standard debug level.
 //META: intent=functional
 //META: pipeline_stage=lower

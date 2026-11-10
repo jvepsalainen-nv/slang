@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/03-semantic-check.md#differentiability-as-interface-conformance": "271d83765d49a8cc6260ea11e3d23658ba1c24b0d973e153539ac4d693a801e9",
+    "docs/generated/design/pipeline/03-semantic-check.md#dyn-interface-restrictions": "630e7c72909468c5bb7b3968c35bb00b899aedcf09b80f0e1814203509f007d2",
+    "docs/generated/design/pipeline/03-semantic-check.md#failure-modes": "9aab17755318b3eba1171ef991b0e4f492c51e9b08946482351cebd403903cdb",
+    "docs/generated/design/pipeline/03-semantic-check.md#files-and-responsibilities": "945e0e7ae3cbf784bb9a33476a0f0098d325add73b8ef9ecaa04ffc5497af7ed",
+    "docs/generated/design/pipeline/03-semantic-check.md#generic-specialization-and-constraints": "8c569fc3a505737867c26481a28d0bae31f23172e453102fec283d0fdcde62bf",
+    "docs/generated/design/pipeline/03-semantic-check.md#inputs-and-outputs": "a5543d250f3e4ebce51e00a93e32c2e0924721b1d17d075f9e94fe3b4fecac27",
+    "docs/generated/design/pipeline/03-semantic-check.md#modifier-validation": "6d3d353f7acb30664cc90831179bf06d5f613a7e643d2f70a23548558a35ee35",
+    "docs/generated/design/pipeline/03-semantic-check.md#name-lookup-and-declref": "974c295d7822368d7371b23d0dae553135ae7f5870e74a61cb71417386c7531f",
+    "docs/generated/design/pipeline/03-semantic-check.md#shader-specific-checks": "73b0a54aa16472868adbc586d5469e6a6d226c42e5fd1a1ff6720178eede46b1",
+    "docs/generated/design/pipeline/03-semantic-check.md#synthesizing-implicit-code": "6d010633d724c7a7528759b725f5f229e533cca76c7c250f8ff4f590aa0f3a2b",
+    "docs/generated/design/pipeline/03-semantic-check.md#two-pass-interaction-with-the-parser": "a7dea93156126395af43f909ce2264a419291aa4fbab609c33243957962e4449",
+    "docs/generated/design/pipeline/03-semantic-check.md#visibility-scopes": "fc40943abb8d4c479b692d39171c3acf02766b831d8fe5456b3c43f7df6d3a63"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/types.md#errortype-and-bottomtype
-//META: doc_section_digest=3d0b98b5a9dfdb21e5d846e5291fce8a427595ccbfe5e2bd998b9b125a792d94
 //META: purpose=ErrorType is the type of an expression that failed to check and keeps downstream checking from cascading, so a single root cause yields a single diagnostic.
 //META: intent=negative
 //META: pipeline_stage=check

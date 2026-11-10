@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#implicit-parameter-binding-ambiguous-value-argument
-//META: doc_section_digest=d91f482916124f53d789e942e45a31fc7f6d8c8621157c05540b759a5798b3e4
 //META: purpose=When inference yields conflicting values for one generic value parameter (two arrays of different lengths bound to the same `let N`), specialization fails with an error.
 //META: intent=negative
 //META: pipeline_stage=check

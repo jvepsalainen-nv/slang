@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#probe-phase-where-candidates-come-from
-//META: doc_section_digest=b2af3e2f54c7f6754ec3aa9bfc60fdd838fc76d81ba2211206a249dbafab3091
 //META: purpose=AddCtorOverloadCandidate contributes a type's constructor declarations as candidates, and the resolver picks among them on argument types like free functions.
 //META: intent=functional
 //META: pipeline_stage=check

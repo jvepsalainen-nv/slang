@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#optional-type-constraint
-//META: doc_section_digest=2bd9fe6264f733a580a2b269135a8b15acfe2639c32d5e4cb98074447953689e
 //META: purpose=An `optional` conformance constraint enables `if (T is IInteger)` to select behavior at specialization time, using T as IInteger in the then-branch.
 //META: intent=functional
 //META: pipeline_stage=runtime

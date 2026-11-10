@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a conjunction constraint `where T : IA & IB` is split into one constraint per conjunct so the generic body can call both interfaces' methods.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

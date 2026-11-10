@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#reverse-mode
-//META: doc_section_digest=bd1766c04483f68403ee6c452452f3420d2221e629512f00278f7c06e719651b
 //META: purpose=The forward-mode transcriber names the derivative it builds for a function f with the s_fwd_ prefix, so f yields s_fwd_f in every text target.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -86,8 +86,8 @@ how that doc's claims were extracted. Shared prompts —
    claims get a functional + emission pair; target-dependent claims emit
    on **every feasible back-end** (HLSL/GLSL/SPIR-V/Metal/WGSL/CUDA/CPP).
 4. **Write `.slang` files**: one per (claim × dimension), each with a
-   `//META` block (`doc_ref` anchor, `purpose`, `intent`,
-   `doc_section_digest`, provenance), `//TEST` directives, and `CHECK`
+   `//META` block (`doc_ref` anchor, `purpose`, `intent`),
+   `//TEST` directives, and `CHECK`
    lines that encode what the doc says (not merely what the compiler
    emits).
 5. **Verify as you write**: `slang-test <file>` or

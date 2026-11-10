@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:06+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-interface.md#description
-//META: doc_section_digest=2ed61530bd334a97114c08a34024c5fb9ccf09620d7a60bd6a64f9d345223014
 //META: purpose=A member function implementation is compatible with an interface requirement when the impl function can be called with the interface parameter types and the return type is convertible to the interface return type; wider parameter types and narrower return types are accepted.
 //META: intent=functional
 //META: pipeline_stage=check

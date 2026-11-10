@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins the GLSL spelling of each HLSL interpolation modifier on a fragment varying input -- `nointerpolation` becomes `flat`, `linear` becomes `smooth`, and `noperspective`/`centroid`/`sample` keep their names.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-glsl.cpp

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/values.md#comparison
-//META: doc_section_digest=bf81ae64bcb3ebf34033f80837df03e474b90159b95904ac3be2fb4e350793c2
 //META: purpose=The `cmpEQ` opcode lowers to `OpIEqual` for integer operands (signed and unsigned collapse to the same op) and `OpFOrdEqual` for floating-point operands.
 //META: intent=expansion
 //META: pipeline_stage=emit

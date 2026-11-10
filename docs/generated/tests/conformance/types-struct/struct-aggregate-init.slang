@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:08+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-struct.md#constructor
-//META: doc_section_digest=508a36baffb3b3fb0a209db200b9264ba975f5e186451437b5114720d356e55e
 //META: purpose=Without a user-provided constructor, aggregate initialization fills non-static fields in order from the initializer list; extra unspecified fields are default-initialized.
 //META: intent=functional
 //META: pipeline_stage=runtime

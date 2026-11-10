@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#downstream-dxc--fxc
-//META: doc_section_digest=d2b70f7c177c7e83d711597b55d20014285aa7ccfee5b7c11ead561d668f0bfa
 //META: purpose=`-target hlsl` stops at HLSL text; no DXIL, no SPIR-V, no bytecode is emitted, only HLSL source.
 //META: intent=functional
 //META: pipeline_stage=emit

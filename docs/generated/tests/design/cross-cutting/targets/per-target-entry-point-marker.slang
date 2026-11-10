@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#how-target-choice-affects-ir
-//META: doc_section_digest=a06981cfad27799a980d12bc9debd43f1796df2e683f48b7ed9122101fbb44c3
 //META: purpose=Target choice surfaces through target-specific lowering passes; a `[shader("compute")]` entry point emits the target-shaped compute marker on each text-emit backend.
 //META: intent=functional
 //META: pipeline_stage=emit

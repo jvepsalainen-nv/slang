@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:12+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#how-target-choice-affects-ir
-//META: doc_section_digest=a06981cfad27799a980d12bc9debd43f1796df2e683f48b7ed9122101fbb44c3
 //META: purpose=`__stage_switch` is resolved per referencing entry point's stage (not against the target's capability set), so one shared function yields the compute arm in a compute entry point and the fragment arm in a fragment entry point.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

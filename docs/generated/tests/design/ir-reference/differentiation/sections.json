@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/differentiation.md#backwarddifferentiate": "b166ba910ef2a99442f2c03d25cc7b3a091f3457459ecbd8e21af4813cf75b71",
+    "docs/generated/design/ir-reference/differentiation.md#backwarddifferentiateprimal-backwardremat-and-backwarddifferentiatepropagate": "bb1717e5869c7bfcffd3efac3194cbf12675edc866da5243f565843b293263c1",
+    "docs/generated/design/ir-reference/differentiation.md#builtinrequirementkey": "2ceef85ef0f7e3e2032b23321c6a33649940568aac23a65e0680b6a547265147",
+    "docs/generated/design/ir-reference/differentiation.md#checkpointobj-and-reportcheckpointstore": "9b275676b116d94271492b70c7736823034fbf9bc303a258e6064031f497e876",
+    "docs/generated/design/ir-reference/differentiation.md#detachderivative": "a5f429e50a404aa0a4ddb2be899ebf5ee6430f639bfac92c88add9f4cdae7ee3",
+    "docs/generated/design/ir-reference/differentiation.md#differential-pair-construction": "94baa99b60cb82fe486d311fcf1a6ed19cf37b8c6ff65ecb372a31812c6e6208",
+    "docs/generated/design/ir-reference/differentiation.md#differential-pair-projection": "30a9aaa3217e1be659ec0b790da17d0c09653790c661efbf208569133ebceb1b",
+    "docs/generated/design/ir-reference/differentiation.md#forward-mode": "328436a3e1ac7ba4a32f6c5a0c5421e03200780194110def75518088f8387192",
+    "docs/generated/design/ir-reference/differentiation.md#forwarddifferentiate": "253b62f624b99e63acc35c460550cad113090638a5968766c01156be5d3afdf2",
+    "docs/generated/design/ir-reference/differentiation.md#getdifferential--getprimal": "992c5be4c40a8e9d048876fb0fcf3e8d42db8a3550af8e540fa5fbb2049c019a",
+    "docs/generated/design/ir-reference/differentiation.md#legacy-bridge": "6e5ebd9b813484e58a166e9960a401e7ac7afa23540f9e4e485f666f15ca1bf8",
+    "docs/generated/design/ir-reference/differentiation.md#makediffpair": "9c6b7a39271eb0f667fd936efc160c0082114c1a92422a72493cec6e8b0fc6cb",
+    "docs/generated/design/ir-reference/differentiation.md#opcodes-with-no-producer-at-head": "e965c60e07853dc2ca5fbc080670e13c0225cc7b20eeebfad552401efd6d3387",
+    "docs/generated/design/ir-reference/differentiation.md#reverse-mode": "bd1766c04483f68403ee6c452452f3420d2221e629512f00278f7c06e719651b",
+    "docs/generated/design/ir-reference/differentiation.md#synthesized-derivative-witnesses": "3f62027381c2407565e5f1b3ef3cfd6b38348501236004d7b78830aade4ef218"
+  }
+}

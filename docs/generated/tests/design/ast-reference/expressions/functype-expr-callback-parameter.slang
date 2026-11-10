@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#type-expression-family-pointertypeexpr-functypeexpr-tupletypeexpr-andtypeexpr-modifiedtypeexpr-packbranchtypeexpr
-//META: doc_section_digest=c302dc74b058ca543a5a7a87698d341622b83a61a0da5b402a400dbeccc44d4c
 //META: purpose=A function-type expression requires the functype keyword as part of its spelling, and a parameter declared functype(T, T) -> T accepts an ordinary function and calls it.
 //META: intent=functional
 //META: pipeline_stage=check

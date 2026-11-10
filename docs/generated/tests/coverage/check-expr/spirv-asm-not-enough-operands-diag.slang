@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=A `spirv_asm` instruction with fewer operands than its result-id position needs is rejected with the not-enough-operands error (E29112).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

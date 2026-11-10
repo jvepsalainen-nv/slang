@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:02Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#statements
-//META: doc_section_digest=b9a1edc11e7f4ef12c141b50f73b3a36a9eda5811402d0c118a09dc03161e42b
 //META: purpose=`$for` is deprecated from language version 2025 (E30525 warning) and removed in 202c (E30526 error).
 //META: intent=boundary
 //META: pipeline_stage=parse

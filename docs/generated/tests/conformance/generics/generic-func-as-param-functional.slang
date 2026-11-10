@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#generic-function-with-type-parameter
-//META: doc_section_digest=c59debbe3e17a3a2ab8b9d098c19641c5ad3b7ac102c0670d8911cb4973db4ca
 //META: purpose=A generic function taking an `IFunc<T,T,T>` parameter can be called with a concrete struct implementing IFunc.
 //META: intent=functional
 //META: pipeline_stage=runtime

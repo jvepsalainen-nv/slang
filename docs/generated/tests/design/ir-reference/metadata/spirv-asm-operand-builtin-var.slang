@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#spirvasmoperand
-//META: doc_section_digest=68106a291d7f7a8630bdf58b4820819939b762de014ec19cab695b1ed173d8c3
 //META: purpose=A builtin(...) token in an inline-asm instruction becomes a SPIRVAsmOperandBuiltinVar operand carrying the built-in kind.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#lambdaexpr-and-lambdadecl
-//META: doc_section_digest=88158e254118bbcaa14ae66079e66a43621c70534d5a6d5c30c9c48586b3aa21
 //META: purpose=The single-expression lambda form wraps its expression in a synthesized return statement, so it shares the outer LambdaExpr shape with the explicit block form and the two behave identically when called.
 //META: intent=functional
 //META: pipeline_stage=check

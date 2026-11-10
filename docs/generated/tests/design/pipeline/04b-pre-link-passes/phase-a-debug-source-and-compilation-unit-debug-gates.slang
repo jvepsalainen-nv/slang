@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#phase-a-ast-walk-and-ir-emission
-//META: doc_section_digest=94881c573723d5b98cfbc42adedec7f412824c3ab543d9cbbddd55d495627a3d
 //META: purpose=Phase A's emitDebugSource (A4) and emitDebugCompilationUnit (A5) both run whenever the debug-info level is above None, so Minimal builds the compilation unit too.
 //META: intent=boundary
 //META: pipeline_stage=lower

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the GLSL mesh-output legalization that redeclares only the used members of gl_MeshPerVertexEXT and gl_MeshPerPrimitiveEXT and routes indices to gl_PrimitiveTriangleIndicesEXT.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

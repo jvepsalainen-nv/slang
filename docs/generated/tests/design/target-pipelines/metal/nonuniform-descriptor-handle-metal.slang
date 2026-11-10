@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#phase-c-metal-legalization-lowering-phi-elimination
-//META: doc_section_digest=c5af8ae560515f62aefb59225c78774ee7d8bd8656a9f3cf1b634fcb3e1f88e4
 //META: purpose=The Metal-reachable non-uniform surface is `nonuniform(handle)` on a `DescriptorHandle<T>`, which carries no capability requirement and compiles to the plain underlying resource access.
 //META: intent=functional
 //META: pipeline_stage=emit

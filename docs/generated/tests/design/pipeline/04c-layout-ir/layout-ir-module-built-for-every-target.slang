@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#why-this-module-exists
-//META: doc_section_digest=35262d5707ecd67036d365ed617e44cd2adc36e6ef084f2995306197c22f7383
 //META: purpose=A layout IR module is built per target, so the same source yields layout instructions and layout decorations on every text-emit target.
 //META: intent=functional
 //META: pipeline_stage=layout

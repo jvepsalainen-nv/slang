@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#varlayout-and-entrypointlayout
-//META: doc_section_digest=5cbe87346946724d08129ff2f93252193d7269b1f14a4dffa311d86ced5d988b
 //META: purpose=An EntryPointLayout has exactly two fixed operands and no attribute tail: the parameters layout and the result layout, both varLayouts.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

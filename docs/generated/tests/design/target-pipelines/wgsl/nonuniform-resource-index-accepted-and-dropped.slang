@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:39:19+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#floatnonuniformresourceindex
-//META: doc_section_digest=ffbb0e6bd6bd50f592bc8662e57b5222bd859b8745c69c1b89379aaec65514af
 //META: purpose=A NonUniformResourceIndex(...) call on WGSL is accepted (not capability-rejected) and the base emitter drops the wrapper, leaving the plain index into a binding_array
 //META: intent=functional
 //META: pipeline_stage=emit

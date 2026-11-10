@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#syntaxdecl-and-the-syntax-as-declaration-model
-//META: doc_section_digest=ccc96202b8190ecae14138274f50708a8ffe8ed996c80aa5b35a9ae44fa51106
 //META: purpose=attribute_syntax binds a new spelling to an AST attribute class the compiler already knows, and the attribute's behaviour comes from that class rather than from anything the declaration says.
 //META: intent=negative
 //META: pipeline_stage=check

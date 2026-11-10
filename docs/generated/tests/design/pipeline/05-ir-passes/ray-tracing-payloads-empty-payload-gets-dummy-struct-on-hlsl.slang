@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T20:50:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#type-and-value-legalization
-//META: doc_section_digest=b9ff903836e65c228e0e2f2b3aec5862dda6d78f824babeb56251f657789e6bf
 //META: purpose=legalizeRayTracingPayloads gives an empty ray payload physical storage on D3D by substituting a nonempty dummy struct.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

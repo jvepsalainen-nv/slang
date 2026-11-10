@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#specialization-and-generics
-//META: doc_section_digest=40b8147969c5ae28bced29b8f878d348a9ab8fbecb2e6e6b023518b00ca90017
 //META: purpose=A call passing a global function to a `functype` parameter is rewritten into a call to a specialized variant that references the global directly, so no function-typed value survives to emit.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

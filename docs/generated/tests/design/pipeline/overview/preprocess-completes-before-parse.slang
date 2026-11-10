@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/overview.md#lex--preprocess
-//META: doc_section_digest=5c3df6c5ee061f965c288cc9fd7cc0bfdc08b911677308aa464a6cefdae4a23c
 //META: purpose=Macro expansion and conditional compilation finish before parsing, so only the selected, fully expanded token text reaches the parser and every downstream stage.
 //META: intent=functional
 //META: pipeline_stage=preprocess

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#generic
-//META: doc_section_digest=d1ab561dd682e4564f6b72f381aab193f47e30d183fecd3d0ff7756d45298d4d
 //META: purpose=A generic's single block ends with a return_val whose operand is the type-level result; for a generic function that result is the inner func value.
 //META: intent=functional
 //META: pipeline_stage=lower

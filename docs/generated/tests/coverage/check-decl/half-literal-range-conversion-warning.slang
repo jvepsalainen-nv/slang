@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the +/-2048 window in which an integer literal converted to `half` is accepted silently, and that a literal outside it warns with E30081.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

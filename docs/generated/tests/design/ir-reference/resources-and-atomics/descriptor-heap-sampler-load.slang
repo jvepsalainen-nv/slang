@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#loadresourcedescriptorfromheap
-//META: doc_section_digest=51bb78878333a1965bd93f980a078e0c29cd459282a318e33a19fce416018edf
 //META: purpose=Indirecting through a `DescriptorHandle<SamplerState>` on the HLSL target surfaces the documented `LoadSamplerDescriptorFromHeap` opcode in the IR dump.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:40:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#member-lookup
-//META: doc_section_digest=31abb67bf5286f69461146710f091d89f6d90d100b6c4de40ee80f2ebf88ef5a
 //META: purpose=An interface-typed value wrapped in no_diff is still opened as an existential before member access, so a requirement is callable on it.
 //META: intent=boundary
 //META: pipeline_stage=check

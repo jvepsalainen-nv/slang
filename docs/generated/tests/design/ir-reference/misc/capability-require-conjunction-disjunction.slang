@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#capability-sets
-//META: doc_section_digest=1d3d760fa96bf20ac7a3330cfa55a700c34f3758a49227e9f22917bac7fcd1cd
 //META: purpose=A `__requireCapability(...)` statement encodes its capability set as `capabilityConjunction` insts of integer atoms wrapped by an outer `capabilityDisjunction`.
 //META: intent=functional
 //META: pipeline_stage=lower

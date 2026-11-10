@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#conversion-costs
-//META: doc_section_digest=0250e18742b3786726efc1e85a165627e5d19d2338098891f6ef00a648a8d5df
 //META: purpose=kConversionCost_IntegerToFloatConversion (400) is cheaper than kConversionCost_IntegerTruncate (450), so an int argument prefers a float parameter over a narrower integer one.
 //META: intent=boundary
 //META: pipeline_stage=check

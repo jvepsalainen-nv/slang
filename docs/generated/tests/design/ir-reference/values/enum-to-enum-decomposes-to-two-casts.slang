@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/values.md#conversions
-//META: doc_section_digest=e9d21ff4a25410c2c41b9f2413bf081c7a9f699c2230818fe1a6fdf8979075a6
 //META: purpose=A source-level enum-to-enum conversion does not reach the `EnumCast` opcode: the checker decomposes it into a `CastEnumToInt` followed by a `CastIntToEnum`.
 //META: intent=functional
 //META: pipeline_stage=lower

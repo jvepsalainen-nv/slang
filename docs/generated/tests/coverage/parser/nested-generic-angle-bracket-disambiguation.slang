@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T15:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#generics-ambiguity
-//META: doc_section_digest=8661d99511cfbac4ddbac2f0c7e26c6482606dcfb0d70903168829b486372184
 //META: purpose=Verifies the parser splits a trailing `>>` into two generic-argument closers rather than a right-shift operator.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#mesh-shader-outputs
-//META: doc_section_digest=cdd3efcf311d65cc31b83bbbfa363244d30188bf12467915e7bca68422d965c9
 //META: purpose=A mesh-shader entry point on `-target metal` writes to `out vertices`, `out primitives`, and `out indices` arrays through the documented `metalSetVertex`, `metalSetPrimitive`, and `metalSetIndices` opcodes in the IR dump.
 //META: intent=functional
 //META: pipeline_stage=lower

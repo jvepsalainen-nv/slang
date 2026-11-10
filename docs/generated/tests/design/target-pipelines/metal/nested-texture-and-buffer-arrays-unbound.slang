@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:38:51+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#resource-type-spellings
-//META: doc_section_digest=0f39500a5c2260589167928aaa1a2c794b4b5a7ab8e224fd5cf5024f96aac3ee
 //META: purpose=Nested texture arrays and arrays of buffers get no binding attribute: `[[buffer(N)]]` tests the whole parameter type (issue 12291).
 //META: intent=negative
 //META: pipeline_stage=emit

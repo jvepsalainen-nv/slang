@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#opswitch-case-literals-follow-the-selector-width
-//META: doc_section_digest=df525a2f3d687cee2cf33a268d3a981ea063c2889013390817331349a04aea87
 //META: purpose=A loop body is emitted as a breakable region whose OpSwitch always uses a 32-bit zero selector, independent of any user switch.
 //META: intent=boundary
 //META: pipeline_stage=emit

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/values.md#aggregate-constructors
-//META: doc_section_digest=81cb7db040259e3ef92a1ca250fb9ea0adfaa31cb83daa0c083596c98a915a16
 //META: purpose=Default-initializing a fixed-size array field lowers to `makeArrayFromElement`, a one-operand splat of the element's default value, rather than to a `makeArray` listing every element.
 //META: intent=functional
 //META: pipeline_stage=lower

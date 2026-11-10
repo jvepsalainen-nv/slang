@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=48c746dc1eda1c6e2aa98c17bbdb7a645c24a048
 //META: purpose=Characterizes the Metal system-value mapping for the vertex and compute stages, including that SV_InstanceID is rebased by subtracting [[base_instance]] and that SV_GroupIndex has no Metal attribute and is instead synthesized from the thread position within the threadgroup.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

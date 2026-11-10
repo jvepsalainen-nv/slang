@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T20:50:17+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#nonuniformresourceindex
-//META: doc_section_digest=da7804ffd61b86af2c970fd765eb12daa92bd5d94d9373a5ac2b08752465a66f
 //META: purpose=The deprecated `NonUniformResourceIndex<T>` overload for a non-arithmetic type warns (`E31200`) and creates no `nonUniformResourceIndex` opcode; it returns its argument unchanged.
 //META: intent=boundary
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#substitution-and-the-substitution-cache
-//META: doc_section_digest=841f6124a2f008033b29dd540674723ec016ad2961fe9d1a99ddcd6e2749cd23
 //META: purpose=Substitution rebuilds a value from its substituted operands, so a generic argument that is itself an expression over the outer generic's parameter reaches the inner generic already specialized.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#buffer-load-and-store
-//META: doc_section_digest=539f4d826195c55c809a7bdee601b791ce9a4d320d577f17983cfe774c4e7973
 //META: purpose=`StructuredBuffer<S>::Load(idx)` on a struct element type produces `structuredBufferLoad` returning the struct value; field reads through `get_field` follow.
 //META: intent=functional
 //META: pipeline_stage=lower

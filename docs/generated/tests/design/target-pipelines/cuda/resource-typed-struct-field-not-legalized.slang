@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#effect-of-shouldlegalizeexistentialandresourcetypes--false
-//META: doc_section_digest=39b06611e64c5a16036ec1a690ed5b1566d3582a4ec5dd142460e40b2779bb5d
 //META: purpose=Because shouldLegalizeExistentialAndResourceTypes is false for CUDA, legalizeResourceTypes is skipped and a resource-carrying struct keeps its texture and sampler as fields through the call, where HLSL scalarizes them out into extra function parameters.
 //META: intent=functional
 //META: pipeline_stage=emit

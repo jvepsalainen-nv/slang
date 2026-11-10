@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#source-location-preservation
-//META: doc_section_digest=b376d677453ba50705d8234aa3572303b42f0c428f903a6b2d9d9b73a3df65a7
 //META: purpose=`__FILE__` is a constructed token synthesized fresh at the use site; it expands to a string literal naming the current source file.
 //META: intent=functional
 //META: pipeline_stage=preprocess

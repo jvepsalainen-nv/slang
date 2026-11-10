@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#missingreturn-and-unreachable
-//META: doc_section_digest=26a97d045a79c541f13053bb869f73d7230d355079d7c493c6899dba3041d07a
 //META: purpose=A value-returning function whose body can fall off the end terminates that block with missingReturn rather than an implicit return_val.
 //META: intent=functional
 //META: pipeline_stage=lower

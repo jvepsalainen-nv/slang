@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:36:27+00:00
-//META: source_commit=273e29cb6cac600f70da7245a506bae6689e0e23
 //META: doc_ref=docs/language-reference/expressions-identifier.md#overloading
-//META: doc_section_digest=9484a135a7d65023e550053886ef224a8110c3717ecb4a6f046fb51a7be6e355
 //META: purpose=An overloaded identifier resolves to the correct candidate when the call context disambiguates by argument type.
 //META: intent=functional
 //META: pipeline_stage=runtime

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/06-emit.md#backends": "3fcd5c098d2186b86f0d01c5816338c9558b229b65d5f9261280e9ec6569a9e3",
+    "docs/generated/design/pipeline/06-emit.md#c": "585599af0d14a8ae92dc0151b194de6d0a7e3c07d00c46c916fef329b0d50382",
+    "docs/generated/design/pipeline/06-emit.md#cuda": "727deb3a627e0080c2b0beee98e62ea785941ba3a3f746a00146314b79eaeaee",
+    "docs/generated/design/pipeline/06-emit.md#emit-dispatcher": "92e023f0a75afa74e97ee54b41fb321e85a40d089c1c1745a438f658bc96eee2",
+    "docs/generated/design/pipeline/06-emit.md#glsl": "822775df5ae4626b6fea7f78ebdd1d058de34fb701c6ac5f2e992147b255eb96",
+    "docs/generated/design/pipeline/06-emit.md#hlsl": "0f503d8fadb1b9f79b472a6c782b61c5b96a0d3696d6b02a5dcf39a0d338f3af",
+    "docs/generated/design/pipeline/06-emit.md#metal": "2c63512e8c55eaa520cc1fe344ba5b272b854acc441029c722b381d592ccdc2a",
+    "docs/generated/design/pipeline/06-emit.md#operator-precedence-and-parenthesization": "ac5209f47969a57048460bb2059320973fc1da4f9fbf7670b21dda1072978507",
+    "docs/generated/design/pipeline/06-emit.md#preludes": "9fa9d4d8ff3650acfa063160335358733ac5ae3ae92f195e83b837196acc465b",
+    "docs/generated/design/pipeline/06-emit.md#shared-c-like-base": "2925195aa74cfaa771484ed6ad98e7d46471401bdbd2dae25ac81dc1530166c0",
+    "docs/generated/design/pipeline/06-emit.md#source-writer-abstraction": "890b7ec20a541c752d4e1521025e58ca7c4dff76f8c49d9d8cbec8e673ab0c21",
+    "docs/generated/design/pipeline/06-emit.md#spir-v-direct": "6795190d6e973dc49c27d2d64f289ffc9d0a4ee9074e6fe89cb121c00bd75475",
+    "docs/generated/design/pipeline/06-emit.md#torch": "f3dd18f72b82f5be40dfcaec174f508ebfc775342fb9b2670b1ef110166e8db5",
+    "docs/generated/design/pipeline/06-emit.md#vm": "28fbfadd0c1d3fb05d731111f2b9fcbbd0a88edd7de1c77813ea07b4283d0a9a",
+    "docs/generated/design/pipeline/06-emit.md#wgsl": "24cf127ba87a077887a4ad8e725f5ae07b1714ceed5cc4f322ad01d02f3bfd6e"
+  }
+}

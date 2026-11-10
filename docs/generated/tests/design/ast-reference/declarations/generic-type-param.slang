@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#nodes
-//META: doc_section_digest=77300e5bb37435bb7b157816bcb412b5ea19e8971e767a3eb68e890fccdc3431
 //META: purpose=A GenericTypeParamDecl introduces a type parameter usable anywhere a type is expected inside the generic.
 //META: intent=functional
 //META: pipeline_stage=check

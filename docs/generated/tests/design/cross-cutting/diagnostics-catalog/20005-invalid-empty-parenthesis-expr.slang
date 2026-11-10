@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=6e78f48c71d97ef2a9ea5b13edc02dc7ced3f30d041eb8da7b80c48d7b1b6fbf
 //META: purpose=Fires diagnostic E20005 (invalid-empty-parenthesis-expr) - invalid empty parentheses expression
 //META: intent=negative
 //META: pipeline_stage=parse

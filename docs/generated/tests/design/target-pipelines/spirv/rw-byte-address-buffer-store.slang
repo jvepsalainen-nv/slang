@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#phase-c-spir-v-legalization-lowering-phi-elimination
-//META: doc_section_digest=e492693f38638cb18557561f76c53c2ecd1552856a03aba9bd6c16c0bff73bd8
 //META: purpose=RWByteAddressBuffer.Store<uint>(off, v) lowers to an OpAccessChain through the underlying runtime array followed by OpStore — the write counterpart to the byte-address Load case.
 //META: intent=expansion
 //META: pipeline_stage=ir-pass

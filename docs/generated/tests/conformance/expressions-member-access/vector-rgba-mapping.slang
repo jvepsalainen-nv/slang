@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-7
-//META: generated_at=2026-06-01T17:00:00+00:00
-//META: source_commit=d25453d7f0b4867db4cb5eabf34fb6cd088cf596
 //META: doc_ref=docs/language-reference/expressions-member-access.md#vector-swizzles
-//META: doc_section_digest=ab827430dedad798221ccb6a8d05027ec37ed381ec7b70905cec740e9ed7e864
 //META: purpose=Vector swizzle via member: `.r`/`.g`/`.b`/`.a` map to indices 0/1/2/3, parallel to `.x`/`.y`/`.z`/`.w`.
 //META: intent=functional
 //META: pipeline_stage=runtime

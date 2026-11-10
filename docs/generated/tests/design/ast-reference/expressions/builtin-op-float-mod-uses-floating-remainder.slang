@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:11+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#builtinoperatorexpr
-//META: doc_section_digest=d86992208065a1cd06198a0c8298546dee4838c3ae7ea2c807513713ba87455a
 //META: purpose=A floating-point `%` builds a BuiltinOperatorExpr whose Mod operation is treated as a floating-point remainder, for concrete float operands and for a generic parameter constrained to `__BuiltinFloatingPointType`.
 //META: intent=functional
 //META: pipeline_stage=check

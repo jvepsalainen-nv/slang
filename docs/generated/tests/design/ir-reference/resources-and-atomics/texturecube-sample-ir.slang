@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#sampling-and-combined-samplers
-//META: doc_section_digest=bbf71e9879e5ca6464e703729e122f9e3af7f79c62a7f182ca2c1576a2edbfe2
 //META: purpose=`TextureCube::Sample(samp, uv)` surfaces in `main` as a `call specialize(%Sample, ..., TextureShapeCubeDType, ...)` against the library helper.
 //META: intent=expansion
 //META: pipeline_stage=lower

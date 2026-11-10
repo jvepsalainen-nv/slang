@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=`__dispatch_kernel` reports a type mismatch against `vector<uint,3>` for each of its two size arguments that is not a 3-component integer vector.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

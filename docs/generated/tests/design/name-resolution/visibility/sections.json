@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/name-resolution/visibility.md#concepts": "a1a66cf6f671ece5d0d103a57354b14f58896cdc838f902527be54a3589bedde",
+    "docs/generated/design/name-resolution/visibility.md#container-level-cap": "d83dae05e0e7481f6942efbbae41ad28781f57bf1ef326d5237d5732290704df",
+    "docs/generated/design/name-resolution/visibility.md#defaults-by-language-version": "f3a6042185df9067ba5bb4f98e85b57b0d4b871f2819527ab4a27a2cd9500936",
+    "docs/generated/design/name-resolution/visibility.md#edge-cases-and-failure-modes": "c8df5707a8529f8b54eb08117b70cc5d32a632cfac0bf45bd758aba4031e885f",
+    "docs/generated/design/name-resolution/visibility.md#generic-parameters-accessors-and-synthesized-members": "9cf2018f7631fb1edb894cee46db1dd141344017dc943113e8662661b88df42c",
+    "docs/generated/design/name-resolution/visibility.md#interaction-with-extern-and-export": "403fe2795d9f861f86a9b27c1535faca2b2c8fd96e1ba9fff4f9858b4f7b550f",
+    "docs/generated/design/name-resolution/visibility.md#per-keyword-semantics": "8d823e104ba9d88a156c5a46bd34a740e29503d4d3d4e19dfe53018f179c9822",
+    "docs/generated/design/name-resolution/visibility.md#synthesized-extensions-two-visibilities-not-one": "8abd7f1109f9def2d37c1e3647eb1589eb4850f8ab3eddcf9d46bb2945ecffed",
+    "docs/generated/design/name-resolution/visibility.md#where-visibility-is-filtered": "fc9ab91b7ced964782bf81020c2af74307d7749065e306eedc59bc8283c59ebd"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#angle-bracket-annotations
-//META: doc_section_digest=2c5cb602908e3515d97a6034149f8485fbc80ce25286dbf4b9ffe1c1046a8600
 //META: purpose=The declarator-level annotation skip is opt-in, so without `-enable-effect-annotations` the same `< ... >` clause is read as a generic argument list and its `;` is an unexpected token.
 //META: intent=negative
 //META: pipeline_stage=parse

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-12T00:00:00+00:00
-//META: source_commit=d592afa9b9efaf43740554b05a3fdf5b6f6e5077
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#differentiability-as-interface-conformance
-//META: doc_section_digest=1fb413b84d197eac2789f533b613f130cab11653654d7878501604b76295e997
 //META: purpose=Verifies a [ForwardDifferentiable] member cannot satisfy a [BackwardDifferentiable] interface requirement, and is rejected with E38110 naming the required mode.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

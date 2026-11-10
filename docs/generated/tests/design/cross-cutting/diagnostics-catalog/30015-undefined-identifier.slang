@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=0195bc3e005617bc1235e6b481351c5c3cd7f28a3b8b71821b78820569c2cd0a
 //META: purpose=Fires diagnostic E30015 (undefined-identifier) - undefined identifier
 //META: intent=negative
 //META: pipeline_stage=check

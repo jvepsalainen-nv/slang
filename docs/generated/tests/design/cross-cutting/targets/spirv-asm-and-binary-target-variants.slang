@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#targets
-//META: doc_section_digest=69b107f4782f9ecf7830ee47173687274ec18b773210afb33c78ee54075e5efa
 //META: purpose=`SLANG_SPIRV` and `SLANG_SPIRV_ASM` are binary and assembly variants of one emit backend, and the assembly variant `-target spirv-asm` produces SPIR-V module text.
 //META: intent=functional
 //META: pipeline_stage=emit

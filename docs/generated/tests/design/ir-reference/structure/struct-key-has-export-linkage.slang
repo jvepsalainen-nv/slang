@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#key--structkey
-//META: doc_section_digest=5b29b137b6d9c4b0dc69ab53f9cc5d592cf4a8960514db67698c83c00c81867d
 //META: purpose=A field-name key is a module-scope let with an export-linkage decoration so the same field compares equal across compilation units.
 //META: intent=functional
 //META: pipeline_stage=lower

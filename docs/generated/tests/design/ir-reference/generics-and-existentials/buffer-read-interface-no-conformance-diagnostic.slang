@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:34:02+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#existential-construction
-//META: doc_section_digest=fc4731125d3e1fb116f0025ce0d4b2ecc5234e8d4fae162606e0795f4acc047e
 //META: purpose=A buffer read of an interface-typed element whose interface has no conformance in the linkage stops code generation with E50100, "no type conformances found".
 //META: intent=negative
 //META: pipeline_stage=ir-pass

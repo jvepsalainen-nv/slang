@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#keyword-vs-identifier
-//META: doc_section_digest=605dbbca347706bc291985d6714fd81f2a428befce850d0d8fbbbf8a688667ef
 //META: purpose=A contextual keyword is only available when plain lookup of that identifier finds nothing, so a user local of the same spelling makes the parser treat the token as an ordinary identifier.
 //META: intent=functional
 //META: pipeline_stage=parse

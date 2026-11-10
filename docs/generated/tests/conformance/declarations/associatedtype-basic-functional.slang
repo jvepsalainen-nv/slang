@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:58:38+00:00
-//META: source_commit=a01e79278cf0be9772deb8b2be52ee87687697a3
 //META: doc_ref=docs/language-reference/declarations.md#associated-types
-//META: doc_section_digest=8d9c44dd9c721b43aebf4a957962e3afa5853681003d7200add0704f4d3c54f1
 //META: purpose=An `associatedtype` in an interface introduces a type requirement; different implementations may satisfy it with different concrete types.
 //META: intent=functional
 //META: pipeline_stage=runtime

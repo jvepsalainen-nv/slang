@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#where-keywords-come-from
-//META: doc_section_digest=2c4ab5d6db5ae644652c49ae60dc5ee855e4f6b1262d2c51c4570d195bbb262c
 //META: purpose=Negative: `int` is a core-module type name; once a local named `int` exists, the parser still treats a subsequent leading `int` in a declaration as the type token, so `int x = int + 1;` is rejected because the parser cannot reuse the type name as a value expression.
 //META: intent=negative
 //META: pipeline_stage=parse

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#syntax
-//META: doc_section_digest=53368bceb09c2fd2d073113b9d1fb5324abcb9db853a9b3aded020d2ada84c45
 //META: purpose=A generic interface declared with `<...>` parameters can be conformed to at a concrete argument and its requirement called.
 //META: intent=functional
 //META: pipeline_stage=runtime

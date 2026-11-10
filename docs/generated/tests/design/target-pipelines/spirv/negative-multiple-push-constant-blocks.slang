@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#phase-d-ir-to-spir-v-emit-simplification-loop-downstream-tools
-//META: doc_section_digest=9bf971e79309b04b98ac1b07e618148a41a5c833af2e6a7f18f5e4b57eddceb9
 //META: purpose=An entry point that uses two push-constant blocks is rejected by checkForMultiplePushConstantBlocksPerEntryPoint with E39033 and no SPIR-V is produced.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

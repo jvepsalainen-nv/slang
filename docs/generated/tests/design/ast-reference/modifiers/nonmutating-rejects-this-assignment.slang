@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/modifiers.md#receiver-parameter-modes
-//META: doc_section_digest=0a94769a669aa12d0fcebf6cfa246eb8793500358434d0e57afd65ad8545f45a
 //META: purpose=A method without `[mutating]` cannot assign through `this`; the checker diagnoses it.
 //META: intent=negative
 //META: pipeline_stage=check

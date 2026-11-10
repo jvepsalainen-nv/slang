@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#func
-//META: doc_section_digest=6566eb7a5e7ce9f2f7cebba0549b8996bada0919491786771ac67ff1fb1a920d
 //META: purpose=The entry block of a func owns its function parameters as param children in declaration order.
 //META: intent=functional
 //META: pipeline_stage=lower

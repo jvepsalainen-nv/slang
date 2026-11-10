@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#entry-point-and-parameter-handling
-//META: doc_section_digest=d08158ea09ba0a32a48d37035a53b103ee4e6cf5465c5f5427df02f5ade4cbbb
 //META: purpose=Expansion: lower-out-parameters preserves the `out` keyword on multiple parameters (two `out` parameters in one helper) on HLSL — many-args axis to the existing single-out case.
 //META: intent=expansion
 //META: pipeline_stage=ir-pass

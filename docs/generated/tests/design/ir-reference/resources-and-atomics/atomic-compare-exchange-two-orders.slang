@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#atomiccompareexchange
-//META: doc_section_digest=e4eb208d1f9824d2e81cc5953a860caae9db983d08b74c7f4528a7adf051d211
 //META: purpose=`atomicCompareExchange` is the only atomic with two memory orders: `ptr, expected, desired` are followed by a success order at operand 3 and a failure order at operand 4.
 //META: intent=functional
 //META: pipeline_stage=lower

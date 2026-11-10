@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#extractexistentialvalue--extractexistentialtype--extractexistentialwitnesstable
-//META: doc_section_digest=2831394637fc16470e6426b0ef26aa0c691647c1fa7ec6c0ecb2e6e5d269f621
 //META: purpose=Two dispatches through the same existential share a single hoistable extractExistentialType inst, while each dispatch keeps its own non-hoistable extractExistentialValue.
 //META: intent=boundary
 //META: pipeline_stage=lower

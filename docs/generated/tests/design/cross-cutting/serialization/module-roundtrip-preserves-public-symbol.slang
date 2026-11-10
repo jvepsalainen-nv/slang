@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/serialization.md#what-is-serialized
-//META: doc_section_digest=2b11cce99985d57ed1e1b81227bb3c8cce484ce2ec8ac811f20a9d31b0df81d3
 //META: purpose=A .slang-module written by slangc carries the checked AST/IR of its public symbol, and re-reading the container with -dump-module recovers the export name, name hint and function type.
 //META: intent=functional
 //META: pipeline_stage=link

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-12T00:00:00+00:00
-//META: source_commit=d592afa9b9efaf43740554b05a3fdf5b6f6e5077
 //META: doc_ref=docs/generated/design/cross-cutting/diagnostics.md#error-code-namespace
-//META: doc_section_digest=5ef206950ef0e6ecfe2a9d8abf02d78b471d242f0a4a1fb9094dec1de2c240ba
 //META: purpose=Verifies -debug-info-include-source combined with -g0 is rejected with E57007, the cross-option validation that runs after both options parse successfully.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

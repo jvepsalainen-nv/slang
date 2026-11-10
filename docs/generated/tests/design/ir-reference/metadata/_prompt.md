@@ -307,7 +307,7 @@ Variants this bundle legitimately needs:
 ## Quality checklist (in addition to `_common.md`'s)
 
 - [ ] Every `doc_ref` resolves to an anchor in `ir-reference/metadata.md` (or a
-      listed secondary doc), and every `doc_section_digest` is current.
+      listed secondary doc), and every section in `sections.json` is current (`review-sections`).
 - [ ] Every test follows at least one captured operand id to its definition,
       rather than asserting a mnemonic appears.
 - [ ] Each optional operand has both a present-form and an absent-form test.

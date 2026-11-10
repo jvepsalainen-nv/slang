@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#global-state
-//META: doc_section_digest=b99cd634d7767c3e608ac1457ec02c747a3002b11e0c6ec01b999815f7b996c1
 //META: purpose=A string literal fed to getStringHash is collected into the module-scope global_hashed_string_literals aggregate.
 //META: intent=functional
 //META: pipeline_stage=lower

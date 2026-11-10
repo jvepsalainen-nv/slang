@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:50:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#trycall-and-throw
-//META: doc_section_digest=316affe4711df67f83b285c59efaaea11c26c7af447b6bd0e6539bca6fcf0b4b
 //META: purpose=A throwing function reaches the first dump as a Result-returning function: throw becomes makeResultError, a normal return becomes makeResultValue, and the caller's try becomes a call plus isResultError / getResultValue, with no throw or tryCall opcode.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#layout
-//META: doc_section_digest=681066604ecc1aa1aa27dac539df0c36904948c5c9a564159c5c48aa4d5c9c1f
 //META: purpose=A laid-out instruction is connected to its layout by a layout decoration whose operand is a concrete Layout child.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

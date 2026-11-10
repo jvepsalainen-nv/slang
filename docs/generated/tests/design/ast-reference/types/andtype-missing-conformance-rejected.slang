@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/types.md#andtype
-//META: doc_section_digest=276be3a0ef406e1f03533a72d5ee898889d527b8cf55e4a39ec109f47c8fac42
 //META: purpose=An AndType `IA & IB` requires both conformances; a type conforming to only IA is rejected where `IA & IB` is required.
 //META: intent=negative
 //META: pipeline_stage=check

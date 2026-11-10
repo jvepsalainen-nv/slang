@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T14:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#specialize
-//META: doc_section_digest=0cc99cb5e0e3d3377473e83d6b3cf2854bebe79ada87f0ce4ea42180738db9ee
 //META: purpose=A generic value parameter (let N : int) specialized to 3 unrolls and sums the first three array elements, yielding 6.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-typeflow-specialize.cpp

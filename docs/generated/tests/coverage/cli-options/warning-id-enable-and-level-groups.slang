@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -W<id> re-enables a warning that an earlier -Wno-<id> disabled, and that the -Wall/-Wextra/-Wpedantic warning-group flags are accepted and leave the always-on Default group emitting.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

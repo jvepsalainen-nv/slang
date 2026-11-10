@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#target-specific-lowering
-//META: doc_section_digest=79c80f93e7653bb012008aa7819b0c3ef28024e5d967ea6b1e4206f5d416adc5
 //META: purpose=The vk-invert-y pass inserts a Y-flip on vertex-shader output position when targeting Vulkan / SPIR-V; the SPIR-V emit shows OpFNegate of the Y component.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

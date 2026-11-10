@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#switch-and-targetswitch
-//META: doc_section_digest=9ed6898dc4712155dd5c86ec8e6556e0db11da6e13cde8988194d8247ca4141f
 //META: purpose=A switch on an enum : bool is legalized like a bool switch on SPIR-V, GLSL and WGSL (case keys become integers 1 and 0), while HLSL and Metal keep the case true / case false labels.
 //META: intent=functional
 //META: pipeline_stage=emit

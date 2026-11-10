@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#declstmt-expressionstmt-and-emptystmt
-//META: doc_section_digest=003e69c99073f5634eddc84cdfb1b66685b97f4c42311978531b11906df8dbf4
 //META: purpose=An EmptyStmt is a bare `;` accepted in statement position; it carries no state and produces no effect.
 //META: intent=functional
 //META: pipeline_stage=check

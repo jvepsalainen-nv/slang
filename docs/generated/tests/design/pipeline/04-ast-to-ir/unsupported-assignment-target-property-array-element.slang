@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04-ast-to-ir.md#diagnostics-during-lowering
-//META: doc_section_digest=8da9811f8488ad6ce5409491fafa35c23411a9a65708775cf2a3ad6c64768b12
 //META: purpose=Indexing an array-valued `property` in assignment position reaches the assignment-lowering switch with a left-hand side it cannot encode and reports `error[E40017]: assignment target is not supported` rather than aborting.
 //META: intent=negative
 //META: pipeline_stage=lower

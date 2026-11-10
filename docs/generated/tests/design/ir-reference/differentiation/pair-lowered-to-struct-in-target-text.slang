@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#makediffpair
-//META: doc_section_digest=9c6b7a39271eb0f667fd936efc160c0082114c1a92422a72493cec6e8b0fc6cb
 //META: purpose=processPairTypes rewrites MakeDiffPair into a makeStruct over an auto-generated pair struct, so the pair reaches target text as a two-field struct.
 //META: intent=functional
 //META: pipeline_stage=emit

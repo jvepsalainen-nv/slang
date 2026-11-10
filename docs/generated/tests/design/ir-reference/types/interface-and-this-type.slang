@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#existentials-and-interfaces
-//META: doc_section_digest=e3a0033316a52205702d8e14e6434db7aa425c3f1c6ba42818650baa11ade7e6
 //META: purpose=An interface declaration produces interface_req_entry instructions whose method-types use this_type.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies `-trace-branch-coverage` makes a `while` loop's condition lower with a coverage marker on each arm, backed by a synthesized `_slang_coverage` counter buffer.
 //META: intent=characterization
 //META: covers=source/slang/slang-lower-to-ir.cpp

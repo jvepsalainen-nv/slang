@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/generics.md#description": "06568c8014909b1a1fe61ae1dd314428312f177b6412e33a4e643d370a1fc6d9",
+    "docs/language-reference/generics.md#explicit-and-implicit-generic-arguments": "218ee5cba4302cd1ce6a03071af653d794cd8242eba11a62d5f8dde729a692c4",
+    "docs/language-reference/generics.md#generic-constructor": "84110c19cd479ac78a3cab0412932226933d86185349aa66c82743765c7dec1c",
+    "docs/language-reference/generics.md#generic-extension-for-generic-types": "034115795153f5efbf5da1b1002c144506804e86277f5c21d084a065283c9b56",
+    "docs/language-reference/generics.md#generic-function-with-type-parameter": "c59debbe3e17a3a2ab8b9d098c19641c5ad3b7ac102c0670d8911cb4973db4ca",
+    "docs/language-reference/generics.md#generic-structure-with-type-and-value-parameters": "da081aceaa02998e40ea6cc22b6ac1d29064f4b32ae25b1a60fc6c17e56e7e73",
+    "docs/language-reference/generics.md#generic-subscript": "1e64cc2750ed1926c6eb26ab2344d513090d97e935d043df4ad30be99caa6d12",
+    "docs/language-reference/generics.md#generic-type-alias-for-partial-type-binding": "1f7e1ab2f3df268c7c4bbe2afab1e01c09e0911bdcc4fe2de793395bd3b3dc68",
+    "docs/language-reference/generics.md#implicit-parameter-binding-ambiguous-type-argument": "5a242a0b2f3a0ce246085c303baec4847733bd0badeaee717cbb03060d2a52a9",
+    "docs/language-reference/generics.md#implicit-parameter-binding-ambiguous-value-argument": "d91f482916124f53d789e942e45a31fc7f6d8c8621157c05540b759a5798b3e4",
+    "docs/language-reference/generics.md#implicit-parameter-binding-for-type-and-value": "1eb078a5d75d46ddaae7b6812c14428fc4e02b596a2513f807bef1787bd78227",
+    "docs/language-reference/generics.md#multiple-function-parameter-packs": "6a49090c102ac71d081efba7c41258e3755cb9dfca2d7c28d44430ef49218974",
+    "docs/language-reference/generics.md#optional-type-constraint": "2bd9fe6264f733a580a2b269135a8b15acfe2639c32d5e4cb98074447953689e",
+    "docs/language-reference/generics.md#pack-count-constraints": "4cab677003373b1406871adb52be6c61cf027b707a49fe5f17a102d4ea0eaf9f",
+    "docs/language-reference/generics.md#pack-queries": "c04a621bcf00069773d305dfdf4582e5e2e0ce23042884e2675ec84c546547fe",
+    "docs/language-reference/generics.md#parameter-binding": "5fefa3cf4076961bde4d84e979866a0fe46244475e81339e0cd6922ed4777a7a",
+    "docs/language-reference/generics.md#syntax": "53368bceb09c2fd2d073113b9d1fb5324abcb9db853a9b3aded020d2ada84c45",
+    "docs/language-reference/generics.md#type-checking": "4f712396b718dc4245b0d7a122fe7c024d74b3b4a70dd75948a651b3aa074c9c",
+    "docs/language-reference/generics.md#type-constraint": "f8f9d27a9d4d52fa1ccabfb6595d02e760b74f56359f1c7d4cbf06dbfc7db829",
+    "docs/language-reference/generics.md#type-equality-constraint-for-associated-type": "958160af4c2966f6e20e61471f0a74c872064cb4383535c7e18521da21d8e22a",
+    "docs/language-reference/generics.md#type-parameter-pack": "f0666c2d444ef1f203d4941f9f3316ff8c39bef6547ab07edd2666e6a16554d6",
+    "docs/language-reference/generics.md#type-parameter-packs-type-param-packs": "1d7c4d9f36d4d30dc9d8e89006174f0691c6f26a9618f3cb1da30611dc1fe7df"
+  }
+}

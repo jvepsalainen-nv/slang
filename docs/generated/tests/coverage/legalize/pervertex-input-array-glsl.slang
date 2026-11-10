@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes how GetAttributeAtVertex on a nointerpolation fragment input turns the scalar stage input into a single pervertexEXT three-element array shared by every vertex index.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

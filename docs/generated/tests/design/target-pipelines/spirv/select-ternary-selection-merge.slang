@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#eliminatephis-with-spir-v-specific-options
-//META: doc_section_digest=0a4f74a6c7834cbb05d6e7d70e5ea929f55c2181bc663bc38759fceba70ccb2e
 //META: purpose=A ternary "?:" expression emits an OpSelectionMerge structured-control-flow header with two OpStore branches into a Function-storage variable — eliminatePhis(useRegisterAllocation=true) rewrites the merge phi as a per-branch store.
 //META: intent=expansion
 //META: pipeline_stage=ir-pass

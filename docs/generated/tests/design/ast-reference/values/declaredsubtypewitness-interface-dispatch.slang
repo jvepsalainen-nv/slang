@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#witness-and-witness-table-evidence
-//META: doc_section_digest=5988cb257320ec90e43b3610a64f2e3e3057f99ab3613c24fa88fd9583dcee33
 //META: purpose=Proving T conforms to an interface constructs the conformance evidence an inheritance declaration carries, and that evidence is what permits dispatching the interface's methods on a T value inside a generic.
 //META: intent=functional
 //META: pipeline_stage=check

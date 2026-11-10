@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a function whose `[require]` target conflicts with a callee's is rejected with E36108 plus the provenance notes naming the call and the callee definition.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

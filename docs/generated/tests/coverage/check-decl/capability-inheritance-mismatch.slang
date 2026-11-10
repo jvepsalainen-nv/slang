@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the two directions of a sub-type/super-type capability mismatch on an inheritance clause: extra capability on the sub-type (E36114) and a missing target atom (E36118).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

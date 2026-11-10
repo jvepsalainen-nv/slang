@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#inlining-and-call-graph
-//META: doc_section_digest=5da27fa506472adfdadf44378ebab1db58de90353819e62362683b33b3c6600c
 //META: purpose=Nothing is emitted for the inferred ReadNone / NoSideEffect decorations themselves; their footprint is that an unused call to an inferred-pure function becomes dead code.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

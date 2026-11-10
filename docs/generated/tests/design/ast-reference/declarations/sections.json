@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/declarations.md#accessordecl-family": "03169737d36df2cb366066a627de816d73fb2852ec3bfa331a119195dabda0c0",
+    "docs/generated/design/ast-reference/declarations.md#aggtypedecl-structdecl-classdecl-enumdecl": "e899cc0803999820cd90ccc66d71078646ccd75a709e1801316ef7df32b9d638",
+    "docs/generated/design/ast-reference/declarations.md#assoctypedecl": "9c9f01adf6122cb0dc3d48b249f6234107092edc3e147d2d88e10294fda7a2b7",
+    "docs/generated/design/ast-reference/declarations.md#enumdecl-and-enumcasedecl": "5913d0c8b5a03bb97424073383f39cd15879942901dbf04870fcacd5831b152c",
+    "docs/generated/design/ast-reference/declarations.md#extensiondecl": "8268cd5b5b59f2fcee0fddd4be6cf96029cb2486183cafd3f53e5f7f5a1a1c19",
+    "docs/generated/design/ast-reference/declarations.md#funcextensiondecl": "ab70cb8cc77fd77f50a070aa2ea5840dfc4b047424408c5dbcc955bce0b712e5",
+    "docs/generated/design/ast-reference/declarations.md#genericdecl": "a2a3ea7028c33b102ee0481668bced4a8344b439c1722b28c04420d18b915e69",
+    "docs/generated/design/ast-reference/declarations.md#generictypeconstraintdecl-as-an-interface-requirement": "cb681a5a5428e160c2311cbf091e8eda34ecba068f868b779a464083304bb62f",
+    "docs/generated/design/ast-reference/declarations.md#globalgenericparamdecl-and-globalgenericvalueparamdecl": "15d7605d7b182860ac8a8c83d6379a61fdb9867eee97cfc0392ad60de3bbe6ca",
+    "docs/generated/design/ast-reference/declarations.md#inheritancedecl": "fb166f641a47111139b90d9bae931d7fe4a8eda48e9f02167ee1bcb0e48fb8ab",
+    "docs/generated/design/ast-reference/declarations.md#namespacedecl-moduledecl-filedecl": "5c73eb281115d6eb7872ab686bf9bf11c3b781484b5a0da42d6602f1bdb3379c",
+    "docs/generated/design/ast-reference/declarations.md#nodes": "77300e5bb37435bb7b157816bcb412b5ea19e8971e767a3eb68e890fccdc3431",
+    "docs/generated/design/ast-reference/declarations.md#requirementdecl-style-nodes-inside-interfacedecl": "5dc1964c7477434b28551157a3fa6fc4a600fa3374a80b5512ec1c9d08c15d4e",
+    "docs/generated/design/ast-reference/declarations.md#syntaxdecl-and-the-syntax-as-declaration-model": "ccc96202b8190ecae14138274f50708a8ffe8ed996c80aa5b35a9ae44fa51106",
+    "docs/generated/design/ast-reference/declarations.md#uniformparametershadowvardecl": "c6fe74cd1fc3cdee3555e7000cd25e35c17eb37bbcdbb37d40feb743832a77a3",
+    "docs/generated/design/ast-reference/declarations.md#unresolveddecl": "7543c9fe329c4a72d948315492fc2d45ccedfdddb5bc7bec600d31eeb29eaada"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#mesh-shader-geometry-shader-and-per-vertex
-//META: doc_section_digest=b34a7fcbc89cbce0c835bd58d597c8ec12e1447091c613f07d9bb6076dcedbda
 //META: purpose=A geometry-shader entry point declaring a `triangle` input parameter lowers to a trianglePrimitiveType decoration on that parameter, with no operands.
 //META: intent=expansion
 //META: pipeline_stage=lower

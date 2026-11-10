@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#wave-intrinsics
-//META: doc_section_digest=19b7f41bcaec8819132da06910d21da3f5eb869cf91a4374d8d6ef8ddd38a268
 //META: purpose=`WaveGetActiveMask()` does not reach `func %main` as the `waveGetActiveMask` opcode — lowering leaves `call %WaveGetActiveMask()` and each backend emits its own active-mask expression.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#memory-instructions
-//META: doc_section_digest=f9005d19ddbc4548f1db51bd12e064243f69089f5ee772db1c43b134661a06c0
 //META: purpose=An rvalue read of a struct field lowers to the `get_field` opcode (`FieldExtract`).
 //META: intent=functional
 //META: pipeline_stage=lower

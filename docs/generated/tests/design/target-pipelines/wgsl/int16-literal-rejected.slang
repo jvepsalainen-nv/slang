@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:39:19+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#emitted-spellings
-//META: doc_section_digest=ca87341a69803444f52888445bf6ee872dc3354e25802ed20298eb24d8313278
 //META: purpose=An int16_t literal emits nothing and reports Int16NotSupportedInWgsl (E56103)
 //META: intent=negative
 //META: pipeline_stage=emit

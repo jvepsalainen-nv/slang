@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#intval-family
-//META: doc_section_digest=5fed4ba267a444ba4547b1574c8db862932b61bd0c009914f7040a04720849a9
 //META: purpose=An error placeholder integer lets checking continue when a compile-time integer cannot be computed, so an undeclared name in an array bound produces only the root-cause diagnostic.
 //META: intent=negative
 //META: pipeline_stage=check

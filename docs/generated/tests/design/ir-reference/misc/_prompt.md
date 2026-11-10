@@ -149,7 +149,7 @@ appears in the same dump.
 ## Quality checklist (in addition to `_common.md`'s)
 
 - [ ] Every `doc_ref` resolves to an anchor in `ir-reference/misc.md` (or a
-      listed secondary doc), and every `doc_section_digest` is current.
+      listed secondary doc), and every section in `sections.json` is current (`review-sections`).
 - [ ] Every catalogue row is either covered by a test or listed under
       `## Untested claims` with a reason — the page is a catalogue, so coverage
       is measured row by row.

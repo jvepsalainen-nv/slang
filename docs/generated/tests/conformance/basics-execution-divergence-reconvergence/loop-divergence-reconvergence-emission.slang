@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=gpt-6
-//META: generated_at=2026-09-29T07:48:53+00:00
-//META: source_commit=3bb522221d5db85fbdf8dcf441c05ffc3b801358
 //META: doc_ref=docs/language-reference/basics-execution-divergence-reconvergence.md#divergence
-//META: doc_section_digest=55e4138f7b51a582d48fae00eb4b7bca5a411cd2c22c90e424f145698370dc0a
 //META: purpose=Loop statement: SPIRV emits OpLoopMerge marking the loop merge block where all threads reconverge after the loop exits.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/target-pipelines/hlsl.md#applyvariablescopecorrection": "8858923ad48b5247e5ae34b0213cf34cf9e4cf5622823dcd298df8f99107df4e",
+    "docs/generated/design/target-pipelines/hlsl.md#context-predicates-and-capability-gates": "a446f5f1b00c98ec88710f2cd4e2ed7d7871afd918d7f976630ecc830d076868",
+    "docs/generated/design/target-pipelines/hlsl.md#downstream-dxc--fxc": "d2b70f7c177c7e83d711597b55d20014285aa7ccfee5b7c11ead561d668f0bfa",
+    "docs/generated/design/target-pipelines/hlsl.md#eliminatephis-with-default-options": "9c2139ff4af3c8c3cde52a7bb922ee9bd7948ea3d59b24900d37789dbce0e86e",
+    "docs/generated/design/target-pipelines/hlsl.md#emitting-hlsl-named-constants-rather-than-integers": "e5d0f405ce1c1c2593d64cdb52d2e58b224fe7ec6787de1a2da740494f2d7a00",
+    "docs/generated/design/target-pipelines/hlsl.md#hlsl-specific-runtime-predicates": "6c2c3b79bcc1271314ad3c5f0147142745017e230365ec5dcf2faf4590a75884",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizebyteaddressbufferops-for-hlsl": "741a110714068608b64d7a16ab88aa1708cee3b837fc11dd4461fb92e9567e90",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizeemptyraypayloadsforhlsl": "51ddf0e5476f0247fc85dfbdded23069c96869eb2f57ab744baf38d1fc99d983",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizelogicalandor": "e7e94a2aeb9019bee14cb6e84863d6584c1ac694c1d9873ef54bb71a3b4a1367",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizenonstructparametertostructforhlsl": "709ba20230a3c7f123762b400712ee8e3976f798151abee31576df09be5bcf22",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizenonvectorcompositeselect": "91945b91f0ef5f8c97fb42298e0ccc4af95a00d2644244d36b722f26f75038ac",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizeraypayloadaccessqualifiersforhlsl": "fa93ab1a6089e95a7fd9ec37072323b57e52e9f3b3557418965c8650534d48be",
+    "docs/generated/design/target-pipelines/hlsl.md#legalizeuniformbufferload": "8bed69f5bd70a6209e14bea9460226f079bd82d7e278f76a3260ec2979928264",
+    "docs/generated/design/target-pipelines/hlsl.md#lowercombinedtexturesamplers": "2c12c182458c73ae06317619cf488687f97dcb4e230c94df829602fac6ac0eaf",
+    "docs/generated/design/target-pipelines/hlsl.md#option-set-toggles": "fc10010221d82ad48ab46ee6a1d371b1f30fc27227f92e2615d9f87ed2c7dc24",
+    "docs/generated/design/target-pipelines/hlsl.md#phase-a-link-and-entry-point-prep": "fde5a99d6ef4d3bbf5691751fda87d002ea44868460a76d22f4dd71e37c1b65c",
+    "docs/generated/design/target-pipelines/hlsl.md#phase-b-specialization-and-type-legalization": "b1a772cd52d2040f30154ab240611958fb152ee42151e424dc0b33db4c29e97f",
+    "docs/generated/design/target-pipelines/hlsl.md#phase-c-hlsl-legalization-lowering-phi-elimination": "a8c4fe8f82db2627965e05b91b8cd95b5dca976c67648791b7338b2ffdef93e1",
+    "docs/generated/design/target-pipelines/hlsl.md#phase-d-hlsl-emit-and-downstream-tools": "affc65088b4faddcbee9b222f5a894089c99cb8eee13a5f0c0bac210c0fd5c78",
+    "docs/generated/design/target-pipelines/hlsl.md#profile-predicates-hlsl-specific": "f605a537bd58db98bf53ba413fe2389fb32c7565a0ab895c8345add7ad7b40c8",
+    "docs/generated/design/target-pipelines/hlsl.md#requiredloweringpassset-flags": "7a4f75f24460d63ba3108a84312df6e7ce7a66608f8ab6aeb6fd017bd306c21c",
+    "docs/generated/design/target-pipelines/hlsl.md#shape-of-the-emitted-file": "f7d5cbd1c3620eef32d32fe0c7e4e9df28ec40d641f947026a4c21d50fd6e988",
+    "docs/generated/design/target-pipelines/hlsl.md#validatebarrierflagsforhlsl": "6cbd39eec2211a4d27b8aeb7bc485b9aa128ffc964fb0150a79a05af657f5f17",
+    "docs/generated/design/target-pipelines/hlsl.md#wrapstructuredbuffersofmatrices": "bdab7c96cac9a55381381f37622841c41f387f80bb1577daf4c1cc5d5aa46b5d"
+  }
+}

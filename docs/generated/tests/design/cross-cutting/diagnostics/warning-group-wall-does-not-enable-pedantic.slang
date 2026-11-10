@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:32:51Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/diagnostics.md#warning-groups
-//META: doc_section_digest=fe2a3c2e311ba8162e26f4c17f4a54e2d2b52665ed3d562b5445ade975ac7e04
 //META: purpose=Boundary: the groups are independent rather than nested, so `-Wall` does not enable a `pedantic` warning.
 //META: intent=boundary
 //META: pipeline_stage=check

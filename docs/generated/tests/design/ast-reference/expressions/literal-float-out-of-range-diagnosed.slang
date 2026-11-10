@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/expressions.md#literalexpr-family
-//META: doc_section_digest=a94dca0039eb4252e1b8fd3b7f350745e39efaac5fece1dae4ad82b3e6325392
 //META: purpose=Verifies that a float literal outside the range of its suffix type is reported as a diagnostic (E40009) instead of being silently folded.
 //META: intent=negative
 //META: pipeline_stage=check

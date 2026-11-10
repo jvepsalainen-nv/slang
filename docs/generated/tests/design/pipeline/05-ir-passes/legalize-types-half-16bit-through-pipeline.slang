@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#type-and-value-legalization
-//META: doc_section_digest=b9ff903836e65c228e0e2f2b3aec5862dda6d78f824babeb56251f657789e6bf
 //META: purpose=Boundary: a 16-bit `half` value routed through type-legalization emits `OpCapability Float16` on SPIR-V and preserves the `half` spelling on HLSL.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:30:00+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-interface.md#description
-//META: doc_section_digest=2ed61530bd334a97114c08a34024c5fb9ccf09620d7a60bd6a64f9d345223014
 //META: purpose=Inheriting types may override a default method using `override`; emitted code contains the default-impl function for the non-overriding struct and the concrete override function for the overriding struct on every target.
 //META: intent=functional
 //META: pipeline_stage=emit

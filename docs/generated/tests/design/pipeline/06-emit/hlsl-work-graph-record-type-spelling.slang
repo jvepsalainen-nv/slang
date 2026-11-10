@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#hlsl
-//META: doc_section_digest=0f503d8fadb1b9f79b472a6c782b61c5b96a0d3696d6b02a5dcf39a0d338f3af
 //META: purpose=Work-graph record types are spelled by mapping the IR opcode to its HLSL type name and re-emitting the element type as a generic argument, so `DispatchNodeInputRecord<T>`, `NodeOutput<T>`, and `GroupNodeOutputRecords<T>` all come out named with their element struct.
 //META: intent=functional
 //META: pipeline_stage=emit

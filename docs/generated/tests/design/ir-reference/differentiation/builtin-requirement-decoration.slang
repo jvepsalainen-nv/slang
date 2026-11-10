@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#builtinrequirementkey
-//META: doc_section_digest=2ceef85ef0f7e3e2032b23321c6a33649940568aac23a65e0680b6a547265147
 //META: purpose=Every builtinRequirementKey is emitted with a BuiltinRequirementDecoration carrying the same requirement-kind operand, so a lookup can find a witness-table entry by role instead of by position.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the WGSL system-value table for a fragment entry point, mapping SV_Position/SV_IsFrontFace/SV_SampleIndex to @builtin inputs and SV_Depth/SV_Coverage to @builtin members of the returned struct while SV_Target becomes a @location.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

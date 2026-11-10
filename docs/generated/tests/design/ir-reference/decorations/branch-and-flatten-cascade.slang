@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#loop-and-branch-hints
-//META: doc_section_digest=dc9cebc6b1ccfabf37d9ddb054319d9e5160d3b17890ab2828db7671ae5490a0
 //META: purpose=Stress - `branch` and `flatten` are per-conditional markers: three hinted conditionals in one function each keep their own bare decoration.
 //META: intent=stress
 //META: pipeline_stage=lower

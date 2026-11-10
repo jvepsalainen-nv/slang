@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#capabilities-and-extensions-decided-at-emit-time
-//META: doc_section_digest=42b60cbc03a13fbb7144f6605c9a5b8ebf0ab604187ecf3ce7e27dab3df6b393
 //META: purpose=For a matrix operation under precise mode the per-row results are decorated with NoContraction individually and the OpCompositeConstruct that reassembles the matrix is left undecorated.
 //META: intent=boundary
 //META: pipeline_stage=emit

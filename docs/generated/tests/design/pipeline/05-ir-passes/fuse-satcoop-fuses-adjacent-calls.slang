@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#loop-transformations
-//META: doc_section_digest=5346083df587dd61328c503d8394df501ae34fed3523d17881e22225881336af
 //META: purpose=Adjacent calls to the core-module saturated_cooperation builtin are fused into one, so two wave-match regions in the emit collapse into one.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

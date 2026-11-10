@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#value-instructions
-//META: doc_section_digest=eb992431f4d874635d2da973730ce3ff72d018dedbdbec9c0f839f6aea79fa0c
 //META: purpose=An array initializer list lowers to a `makeArray` aggregate-constructor opcode with one operand per element.
 //META: intent=functional
 //META: pipeline_stage=lower

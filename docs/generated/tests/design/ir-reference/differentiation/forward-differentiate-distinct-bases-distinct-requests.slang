@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:34:20+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#forwarddifferentiate
-//META: doc_section_digest=253b62f624b99e63acc35c460550cad113090638a5968766c01156be5d3afdf2
 //META: purpose=ForwardDifferentiate is deduplicated by opcode, type and operands across the whole module, so different functions each get their own request and a reference from inside another function reuses the module-scope one.
 //META: intent=boundary
 //META: pipeline_stage=lower

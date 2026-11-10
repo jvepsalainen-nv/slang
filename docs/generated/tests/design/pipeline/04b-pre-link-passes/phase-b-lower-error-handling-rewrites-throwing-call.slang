@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#lowererrorhandling
-//META: doc_section_digest=6012a751eb4b0decdb1fa3ff12001ca27f0ad52537062e20c69014a57a63372a
 //META: purpose=Phase B's lowerErrorHandling (B2) rewrites a throwing function to return Result<T,E> and turns the try-call into an ordinary call plus an ifElse on the result tag, leaving no tryCall behind.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

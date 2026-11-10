@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:34:18+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#generic-application
-//META: doc_section_digest=1b35acbd21812d559bc561b706440cf4fe3c630c3cac3ebd9b614ae7f2aa48b6
 //META: purpose=A module-scope type_param T declaration lowers to let %T : Type = global_generic_param.
 //META: intent=functional
 //META: pipeline_stage=lower

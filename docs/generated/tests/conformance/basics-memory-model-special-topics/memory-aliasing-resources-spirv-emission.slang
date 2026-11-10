@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T12:00:00+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-special-topics.md#memory-aliasing-via-binding
-//META: doc_section_digest=0cb77e4bc46ab9a7f3eefef7b0e375bb9755811b790ee7577f7b13bbf467bf6b
 //META: purpose=`ConstantBuffer<T>` and `RWStructuredBuffer<T>` emit as independently-decorated SPIRV variables (distinct Binding decorations, Uniform vs StorageBuffer storage classes); they are never merged even when the client API could bind them to overlapping memory.
 //META: intent=functional
 //META: pipeline_stage=emit

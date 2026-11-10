@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#shape-of-the-emitted-file
-//META: doc_section_digest=f7d5cbd1c3620eef32d32fe0c7e4e9df28ec40d641f947026a4c21d50fd6e988
 //META: purpose=The `#pragma pack_matrix(...)` argument follows the compile's matrix-layout mode, so `-matrix-layout-row-major` opens the artifact with `pack_matrix(row_major)` instead of the `slangc` default `column_major`.
 //META: intent=boundary
 //META: pipeline_stage=emit

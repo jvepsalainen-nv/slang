@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#entry-point-and-stage
-//META: doc_section_digest=dba27f1411ac31618a8d7cd73ed506a70bd92102a42f2b59e56aa750058110fa
 //META: purpose=Negative - [numthreads(-1,1,1)] is rejected with E31102, confirming the positive-integer validator also catches signed underflow.
 //META: intent=negative
 //META: pipeline_stage=check

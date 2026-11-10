@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#shared-c-like-base
-//META: doc_section_digest=2925195aa74cfaa771484ed6ad98e7d46471401bdbd2dae25ac81dc1530166c0
 //META: purpose=`emitTempModifiers` is a per-target override: HLSL and GLSL carry a `precise` local through to the emitted text, while Metal and WGSL drop it and diagnose that the qualifier is unsupported on the target.
 //META: intent=negative
 //META: pipeline_stage=emit

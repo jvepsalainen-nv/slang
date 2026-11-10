@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -specialize <typename> supplies the generic argument for a generic entry point so it compiles to a concrete non-generic entry, where omitting the flag fails with E38014.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

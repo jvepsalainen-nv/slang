@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/overview.md#end-to-end-flow
-//META: doc_section_digest=1ecebc97d9b9a7bc9f7446de832f668a21384d423d0e4828c931dfa6ab8d61e8
 //META: purpose=One non-trivial source traverses lex, preprocess, parse, check, lower, IR passes, and emit and emerges as a recognizable artefact on every text-emit target.
 //META: intent=functional
 //META: pipeline_stage=emit

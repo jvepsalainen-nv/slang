@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a constant buffer whose struct ends in an unsized ordinary array is rejected with E31215 naming the trailing field.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/types.md#andtype": "276be3a0ef406e1f03533a72d5ee898889d527b8cf55e4a39ec109f47c8fac42",
+    "docs/generated/design/ast-reference/types.md#basicexpressiontype-vectorexpressiontype-matrixexpressiontype": "a9e6231e60a10097307c960ed42577646899eb49854183d8f45eeb036c42700a",
+    "docs/generated/design/ast-reference/types.md#declreftype": "5cf72875eab2bff5179bb24a0df3a152b019d5d2fb8764c0ea77dc305e749a24",
+    "docs/generated/design/ast-reference/types.md#errortype-and-bottomtype": "3d0b98b5a9dfdb21e5d846e5291fce8a427595ccbfe5e2bd998b9b125a792d94",
+    "docs/generated/design/ast-reference/types.md#functype": "ec7fb3af8ac52fbfa85f29879864eda7df1485be04cba1defcab59284c8b6a53",
+    "docs/generated/design/ast-reference/types.md#namedexpressiontype": "b6537aa1d5b9351d15e2a1b7c28be434c2442043e20c61e79c79530bd6e9879d",
+    "docs/generated/design/ast-reference/types.md#nodes": "76ee6e7723bb37a4f19d893a5f6a1b0f60d1fe8881e266ab68ab9b3946c62211",
+    "docs/generated/design/ast-reference/types.md#resource-and-texture-type-families": "0036091ab5f0cd50c2bada4820b7c7d7db668e207cf8e5052d6b074f59b4585f",
+    "docs/generated/design/ast-reference/types.md#thistype-and-assoctypedecl": "35b2b46dc04e84b08b4aa611ac4530252370da8bdabd15d01fd1ac308064a09d",
+    "docs/generated/design/ast-reference/types.md#untypedresourcehandletype-and-untypedsamplerhandletype": "f268b5de37f7e6c9147bb9540c9ab7e8d8517dbcdbc595542a45dcdfef731730"
+  }
+}

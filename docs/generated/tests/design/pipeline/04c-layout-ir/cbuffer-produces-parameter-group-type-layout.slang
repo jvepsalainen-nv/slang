@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#global-scope-type-layout
-//META: doc_section_digest=de2f3928a815931dc6dd7265b07e16d0209ebf38a96f6d61b30f387739c0a8d8
 //META: purpose=When the global scope is wrapped in a parameter group such as a cbuffer, the module's layout is a parameterGroupTypeLayout rather than a bare structTypeLayout.
 //META: intent=functional
 //META: pipeline_stage=layout

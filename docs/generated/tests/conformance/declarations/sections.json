@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/declarations.md#associated-types": "8d9c44dd9c721b43aebf4a957962e3afa5853681003d7200add0704f4d3c54f1",
+    "docs/language-reference/declarations.md#body": "fdc286f331c0c685dd422ee1d30a0c012594b17c6e2b446f9862de4629795eb8",
+    "docs/language-reference/declarations.md#constant-buffers-and-texture-buffers": "61e21c1be5bb416ba6baceab286e906aa9cc16593b33364af40a28f57a31f79c",
+    "docs/language-reference/declarations.md#enumeration-types": "4b116a159e7885ebdd4cd361d9d70a300c658321193492133928c90bc17abd3e",
+    "docs/language-reference/declarations.md#extensions": "ec41e5f3bc9673746ac30b0bb1f19e54c7c9d47f0377ab73cc170b70580c168d",
+    "docs/language-reference/declarations.md#functions": "983e24a8bd9b3f5460dd9d28ca3ec2f20be57d342d6af677787a1627b1972246",
+    "docs/language-reference/declarations.md#generics": "de256a399516188e43bb96d93ea3c68437fd40807db23a0da48c05221ab85f6d",
+    "docs/language-reference/declarations.md#initializers": "42e0c0a3aebf1644284046e5a27a45b490b9bc6e618e09f646a51067c956edd4",
+    "docs/language-reference/declarations.md#interfaces": "a18c3296228874543a504555179e0ed00ec448f24436111e6f7990ab61491195",
+    "docs/language-reference/declarations.md#parameters": "00c2961b7ec63f08cdde68ad692eff760da88176385d08086919fbf37306beee",
+    "docs/language-reference/declarations.md#subscripts": "96fe50283b71fe44fe9a09f0fc0cff5190f23935a1a109bbcdaf1cb870ea319d",
+    "docs/language-reference/declarations.md#type-aliases": "f22a5a3e9b185affa7aa79dc81418911e02b79b1e1eaf02eebfdcef5d9b84e6a",
+    "docs/language-reference/declarations.md#variables": "98b79b7c34fc8faf47b9b15881a4299669d58061046761d5503ddf01389e9d47"
+  }
+}

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins the SPIR-V image-format name that each `[format("...")]` attribute selects, for the 27 formats that no other test in the suite declares.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-spirv.cpp

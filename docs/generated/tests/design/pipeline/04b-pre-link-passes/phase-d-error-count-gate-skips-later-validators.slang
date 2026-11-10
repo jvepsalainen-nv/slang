@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#context-predicates
-//META: doc_section_digest=666232460cc1549150d42e63540887426056c0a1dd5950548f0704f2d865055e
 //META: purpose=Phase D returns early when an earlier diagnostic raised an error, so the validators after checkForRecursiveTypes never run on the same module.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

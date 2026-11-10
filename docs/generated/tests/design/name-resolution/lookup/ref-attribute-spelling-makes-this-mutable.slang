@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-11T00:00:00+00:00
-//META: source_commit=25a5bb130ef0e46a222896f37119b4b5408d2d40
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#unqualified-lookup
-//META: doc_section_digest=d1c02da07b357c8b41134fbb13a153c9451e991db3087032b3d340a5ddfdfa75
 //META: purpose=The attribute that makes a method's implicit `this` mutable is spelled [__ref] with two leading underscores; a bare [ref] is an unknown attribute and leaves `this` immutable.
 //META: intent=negative
 //META: pipeline_stage=check

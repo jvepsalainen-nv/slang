@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/types.md#tuples-packs-and-target-tuples
-//META: doc_section_digest=debbbb972e6800da97d7993e2f2fd56b9739048c25ff410d8e0d265743b807bc
 //META: purpose=Calling a variadic generic produces a value of IR type TypePack(types...) holding one operand per pack element.
 //META: intent=functional
 //META: pipeline_stage=lower

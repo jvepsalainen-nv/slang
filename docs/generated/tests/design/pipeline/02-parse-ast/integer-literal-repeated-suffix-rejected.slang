@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/02-parse-ast.md#failure-modes
-//META: doc_section_digest=35a0377e8327c387000594e690000a91232b821b59188e50e4c846f99b749334
 //META: purpose=An integer literal suffix splits into one width part and one unsigned part, so repeating either part draws the invalid-integer-literal-suffix error.
 //META: intent=negative
 //META: pipeline_stage=parse

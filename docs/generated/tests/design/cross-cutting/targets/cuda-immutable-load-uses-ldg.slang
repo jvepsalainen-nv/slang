@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=gpt-5.6-sol
-//META: generated_at=2026-09-16T08:36:25Z
-//META: source_commit=d3b56927b854c14fa1ac169b72da6e080ea80833
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#how-target-choice-affects-ir
-//META: doc_section_digest=a06981cfad27799a980d12bc9debd43f1796df2e683f48b7ed9122101fbb44c3
 //META: purpose=The CUDA-specific immutable-load lowering pass rewrites read-only `StructuredBuffer` loads as `__ldg(...)` calls on CUDA only, while the other text targets use their ordinary buffer-load forms.
 //META: intent=functional
 //META: pipeline_stage=emit

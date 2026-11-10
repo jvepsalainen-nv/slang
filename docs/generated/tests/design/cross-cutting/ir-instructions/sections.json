@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/cross-cutting/ir-instructions.md#control-flow-instructions": "84a56cdc54a61bf845ba17e0760f56fb7758a625c46a5925f23f07061273dd5f",
+    "docs/generated/design/cross-cutting/ir-instructions.md#decorations": "1ab53409e2cba6b92a18270a5bfb136836158c640f0e5dc49f907805c463cf92",
+    "docs/generated/design/cross-cutting/ir-instructions.md#function-and-module-structure": "27921395120bc3ed80c2a95121cc0c772e99f0c507a5495b06170dd4ce34f717",
+    "docs/generated/design/cross-cutting/ir-instructions.md#memory-instructions": "f9005d19ddbc4548f1db51bd12e064243f69089f5ee772db1c43b134661a06c0",
+    "docs/generated/design/cross-cutting/ir-instructions.md#resource-and-shader-io-opcodes": "9e5354e38bb09fc16bac90544687941aec8ef947b56cd9f9b65ce3ddb041f315",
+    "docs/generated/design/cross-cutting/ir-instructions.md#specialization-and-existentials": "561db21a4ad8f3742180c521eb399a01338495f47b8085f196d3a2228c3211cf",
+    "docs/generated/design/cross-cutting/ir-instructions.md#type-instructions": "6399b7c2a0c9dbf90340a8eb7cb86baa3cd9c07289fb6d93436a49b19618df81",
+    "docs/generated/design/cross-cutting/ir-instructions.md#value-instructions": "eb992431f4d874635d2da973730ce3ff72d018dedbdbec9c0f839f6aea79fa0c"
+  }
+}

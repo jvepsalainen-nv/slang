@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/types-pointer.md#examples": "74dfb10b7d91752d51319c8910e55fda1963e64a00cc846e913db2cfd45a342b",
+    "docs/language-reference/types-pointer.md#generic-pointer": "0a3cd3e5c061a1c2465d71accdb421b9abe6d03e1a1b0bfbd0b67db662ed7071",
+    "docs/language-reference/types-pointer.md#syntax": "3eac3aff8a5d5daa072f3cad641be3c7b7a2f0e1ecf59515c5939a7a993d85ec",
+    "docs/language-reference/types-pointer.md#traits": "e9381d81a059f23a446d37fc5fd347e5e21c4ae31ce71d3a8ae46d44bdd19142"
+  }
+}

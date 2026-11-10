@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/expressions-identifier.md#identifier-expressions": "caa6a8edb60e77c5f7baea1fd474acf5d581589b89a50b719ca26405a5bcf66e",
+    "docs/language-reference/expressions-identifier.md#implicit-lookup": "81444a04e3158afb0f979b5eaa4e66672a28128589f884b354ac44b03dbff7ad",
+    "docs/language-reference/expressions-identifier.md#overloading": "9484a135a7d65023e550053886ef224a8110c3717ecb4a6f046fb51a7be6e355"
+  }
+}

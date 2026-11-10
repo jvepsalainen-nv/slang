@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#wrapcbufferelementsformetal
-//META: doc_section_digest=e62da3d6b6db24feabd1f45464a0258ca63e17ab8a341f2125ce07de4bbf28d7
 //META: purpose=A `ConstantBuffer<T>` emits as a `T constant*` pointer parameter with a positional `[[buffer(N)]]` slot.
 //META: intent=functional
 //META: pipeline_stage=emit

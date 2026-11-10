@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/expressions.md#astypeexpr--istypeexpr--casttosupertypeexpr": "a1b5995779c673c26a303bd7b4c37473fda1915905c75120601e573453457f3a",
+    "docs/generated/design/ast-reference/expressions.md#builtinoperatorexpr": "d86992208065a1cd06198a0c8298546dee4838c3ae7ea2c807513713ba87455a",
+    "docs/generated/design/ast-reference/expressions.md#castoptionalexpr": "c0cbee6dde417a7e9d164293b4cd04019be3a98878b890b1d1b6bd01d6ebffcb",
+    "docs/generated/design/ast-reference/expressions.md#differentiate-family-expressions": "d977436f6dd59b4e5e73cb194cb787b23a56ac21de6d48a23ddc96e540a36a6e",
+    "docs/generated/design/ast-reference/expressions.md#invokeexpr-and-the-call--operator--cast-unification": "bed8880e5d3d3d67324d1cc51b8508d2d1f9ce1f6e5e3f3eadf4c071f728a402",
+    "docs/generated/design/ast-reference/expressions.md#lambdaexpr-and-lambdadecl": "88158e254118bbcaa14ae66079e66a43621c70534d5a6d5c30c9c48586b3aa21",
+    "docs/generated/design/ast-reference/expressions.md#literalexpr-family": "a94dca0039eb4252e1b8fd3b7f350745e39efaac5fece1dae4ad82b3e6325392",
+    "docs/generated/design/ast-reference/expressions.md#memberexpr--staticmemberexpr--derefmemberexpr": "2e4c0cf09ff9c6fb2f3bd8e1c643d300367d45168a8b35d087ed154695482428",
+    "docs/generated/design/ast-reference/expressions.md#nodes": "26c797434ab51700cf84e595593cca11917ffceaff2d95c7a0504524e997316e",
+    "docs/generated/design/ast-reference/expressions.md#overloadedexpr-and-overloadedexpr2": "9895bfca5ddc67f2f49caef21aa6068a74e3319decff398b32f9bbfc36767520",
+    "docs/generated/design/ast-reference/expressions.md#partiallyappliedgenericexpr": "00a9c7301a485338c42856c154381b7ce23934b997924e9acae37c26eafc3d55",
+    "docs/generated/design/ast-reference/expressions.md#type-expression-family-pointertypeexpr-functypeexpr-tupletypeexpr-andtypeexpr-modifiedtypeexpr-packbranchtypeexpr": "c302dc74b058ca543a5a7a87698d341622b83a61a0da5b402a400dbeccc44d4c",
+    "docs/generated/design/ast-reference/expressions.md#varexpr-and-declrefexpr": "d41eb7e3da9d1c66fee3952dce01afeadec7647fa5526911668777fd6602e274"
+  }
+}

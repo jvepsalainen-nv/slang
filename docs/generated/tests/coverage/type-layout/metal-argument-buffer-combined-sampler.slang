@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a combined `Sampler2D` inside a Metal ParameterBlock takes two argument-buffer element slots and emits as a texture plus sampler pair in the argument-buffer struct.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

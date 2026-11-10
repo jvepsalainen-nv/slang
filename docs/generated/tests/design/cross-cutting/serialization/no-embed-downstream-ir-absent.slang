@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/serialization.md#riff-container-format
-//META: doc_section_digest=7f02290e83cb1ed6b4003e72516727416da9855c8ded0122a5b60a03d9fa99e4
 //META: purpose=Without -embed-downstream-ir the container carries only the AST and IR payloads, so -dump-module reports the module's own IR and no EmbeddedDownstreamIR entry.
 //META: intent=regression
 //META: pipeline_stage=link

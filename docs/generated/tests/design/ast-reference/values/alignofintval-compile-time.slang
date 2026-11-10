@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#intval-family
-//META: doc_section_digest=5fed4ba267a444ba4547b1574c8db862932b61bd0c009914f7040a04720849a9
 //META: purpose=An alignof of a type is a compile-time integer value, distinct from the sizeof form, and is strictly positive and no larger than the type's size.
 //META: intent=functional
 //META: pipeline_stage=check

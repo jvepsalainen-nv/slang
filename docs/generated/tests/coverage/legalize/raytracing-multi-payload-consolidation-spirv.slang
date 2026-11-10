@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes how a ray-tracing entry point with more than one inout varying parameter has those parameters merged into a single IncomingRayPayloadKHR struct variable at Location 0.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

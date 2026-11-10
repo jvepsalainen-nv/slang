@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#layout--layoutdecoration
-//META: doc_section_digest=9aea9e5f0576048132cb69783d0a9675d51a7a43153f52ed20527c7dae4045f3
 //META: purpose=The layout decoration attaches a Layout opcode reference to a global parameter; the operand is an inst-reference to a Layout instruction.
 //META: intent=functional
 //META: pipeline_stage=lower

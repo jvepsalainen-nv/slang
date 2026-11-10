@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#operator-precedence-and-parenthesization
-//META: doc_section_digest=ac5209f47969a57048460bb2059320973fc1da4f9fbf7670b21dda1072978507
 //META: purpose=A shift whose operand is an addition, `a << b + c`, gains parentheses around the addition even though C precedence already evaluates it first, because shift combinations are one of the sets the emitter deliberately over-parenthesizes.
 //META: intent=functional
 //META: pipeline_stage=emit

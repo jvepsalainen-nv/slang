@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#per-translation-unit-predicates
-//META: doc_section_digest=505ba5cb2ba8288c9e2a707a250d36248eca444ecc8ac1111122ea3c4e472ee8
 //META: purpose=D8 only marks the specialize instruction, so the existential-specialization error E33180 is still reported when non-essential validation is disabled and D8 does not run.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

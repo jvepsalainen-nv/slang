@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#witnesstable
-//META: doc_section_digest=262392d4cade6818fa50d359b2316885929c40f118ef8faff820b866302eee05
 //META: purpose=A witness_table records one conformance: operand 0 is the concrete type, and the interface it satisfies is carried in its WitnessTableType result type rather than as an operand.
 //META: intent=functional
 //META: pipeline_stage=lower

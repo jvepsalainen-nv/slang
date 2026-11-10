@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the three GLSL interface-block forms the declaration parser distinguishes under -allow-glsl: a `uniform` block becomes a constant buffer, an `out` block becomes an entry-point output, and an `out gl_*` redeclaration is dropped.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

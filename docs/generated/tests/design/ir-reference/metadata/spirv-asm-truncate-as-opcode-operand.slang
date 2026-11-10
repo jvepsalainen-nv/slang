@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#sampledtype--imagetype--sampledimagetype
-//META: doc_section_digest=3802383fe789695ddbf7fcdf3ef23e57f2080fc08c83096add9b83bc97997b54
 //META: purpose=__truncate is a pseudo-opcode accepted in an inline-asm instruction's opcode operand, and __sampledType computes the result type of sampling an image of a given component type.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

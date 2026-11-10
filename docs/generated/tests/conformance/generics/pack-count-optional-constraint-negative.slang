@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-12T00:00:00+00:00
-//META: source_commit=d592afa9b9efaf43740554b05a3fdf5b6f6e5077
 //META: doc_ref=docs/language-reference/generics.md#pack-count-constraints
-//META: doc_section_digest=4cab677003373b1406871adb52be6c61cf027b707a49fe5f17a102d4ea0eaf9f
 //META: purpose=An optional countof(...) pack-count constraint is rejected with E30434; optionality is not meaningful for a pack-count constraint.
 //META: intent=negative
 //META: covers=source/slang/slang-check-decl.cpp

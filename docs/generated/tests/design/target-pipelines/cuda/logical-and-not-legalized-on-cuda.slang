@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#phase-c-cuda-legalization-lowering-phi-elimination
-//META: doc_section_digest=c5ba7e7159f13cfe3513cb6c3fd83b45567125805d4d70af544f0ece98ee1feb
 //META: purpose=legalizeLogicalAndOr is filtered out for CUDA because CUDA is in none of the pass's four D3D / Khronos / WGPU / Metal arms, so a vector-operand && reaches emit as an infix && between the two constructed vectors.
 //META: intent=functional
 //META: pipeline_stage=emit

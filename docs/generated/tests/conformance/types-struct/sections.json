@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/types-struct.md#accessing-members-and-nested-types": "2755043638ff4d80438587ffde5a02e52e4e6ff81f851f26621452c5c5afad95",
+    "docs/language-reference/types-struct.md#constructor": "508a36baffb3b3fb0a209db200b9264ba975f5e186451437b5114720d356e55e",
+    "docs/language-reference/types-struct.md#d3d-constant-buffer-layout": "ebd30924bf777b67b6ac3c520785d923dfbd7247c96b9f0e8010016332107ae9",
+    "docs/language-reference/types-struct.md#description": "0b091f4f0ba7cb2a07817dc55025aaaaadee5292438bfc88fba1ab02ee5d3878",
+    "docs/language-reference/types-struct.md#function-call-op": "25db753c000949cdb0161bb6d155f6566474fe2e1005a820a94f2bb0487efed3",
+    "docs/language-reference/types-struct.md#natural-layout": "380aa59bd382916defff5c41e4ce069cc263f0377fbd8a35da604e427f5858d7",
+    "docs/language-reference/types-struct.md#nonstatic-member-function": "c90f11708cb380fb674a4708aaf5743e5a1f31c69b6cf4d7b4a599ffc35791bb",
+    "docs/language-reference/types-struct.md#property": "2be36ef488309471e001ccf502f4e364705629af21bac8d6137274483b7c4b14",
+    "docs/language-reference/types-struct.md#static-member-function": "8afbecf75d617dcea4fff9698c69139804aa496835e7f4949f20e79ddf202cec",
+    "docs/language-reference/types-struct.md#subscript-op": "624917b929b5db01e3231965412253236cf0ba05012e0fb465fd200622c5ec90",
+    "docs/language-reference/types-struct.md#syntax": "362ffce5f577a08a16fa66e283951f5a11bdf34ab8552fa1aa839abf43be9765"
+  }
+}

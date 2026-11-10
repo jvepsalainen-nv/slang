@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=80fc211b5014ebf21cef23474f5d86506eab664273088eb817a27c89d0f5304b
 //META: purpose=Fires diagnostic E39015 (whole-space-parameter-requires-zero-binding) - whole descriptor set requires binding 0
 //META: intent=negative
 //META: pipeline_stage=check

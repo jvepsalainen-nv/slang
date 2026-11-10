@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#global-state
-//META: doc_section_digest=b99cd634d7767c3e608ac1457ec02c747a3002b11e0c6ec01b999815f7b996c1
 //META: purpose=Unlike global_var, a global_param is the value itself rather than its address, so its result type is the declared type and not a Ptr to it.
 //META: intent=boundary
 //META: pipeline_stage=lower

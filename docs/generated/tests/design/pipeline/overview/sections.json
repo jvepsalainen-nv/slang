@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/overview.md#ast--ir-lowering": "f6080f195ff136c94750bc26ce49f918dba5a42006e4c4170e4ad4820a141882",
+    "docs/generated/design/pipeline/overview.md#emit": "f5ca0be190b77cca517eee93b8fc03af868bd9b8d69abe8e20fadc934d5e4ab2",
+    "docs/generated/design/pipeline/overview.md#end-to-end-flow": "1ecebc97d9b9a7bc9f7446de832f668a21384d423d0e4828c931dfa6ab8d61e8",
+    "docs/generated/design/pipeline/overview.md#ir-passes": "8eb46aace39b08225cdeb2b72e28b3195136184200d25f39b56909696873a5e9",
+    "docs/generated/design/pipeline/overview.md#lex--preprocess": "5c3df6c5ee061f965c288cc9fd7cc0bfdc08b911677308aa464a6cefdae4a23c"
+  }
+}

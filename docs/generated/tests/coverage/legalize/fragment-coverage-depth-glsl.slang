@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the GLSL mapping of the fragment coverage and depth system values, where SV_Coverage becomes element 0 of gl_SampleMaskIn/gl_SampleMask, SV_InnerCoverage becomes gl_FragFullyCoveredNV and SV_DepthGreaterEqual becomes a layout(depth_greater) gl_FragDepth.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

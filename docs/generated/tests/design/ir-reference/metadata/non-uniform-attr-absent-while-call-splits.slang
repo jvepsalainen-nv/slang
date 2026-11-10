@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#nonuniform
-//META: doc_section_digest=f962b7a26c74b9d73e00eb4137f76610769360f64a572defcbc0a8f066272130
 //META: purpose=The nonuniform attribute never reaches a dump; its only visible effect is that the call site splits into two specialized functions with an identical signature.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

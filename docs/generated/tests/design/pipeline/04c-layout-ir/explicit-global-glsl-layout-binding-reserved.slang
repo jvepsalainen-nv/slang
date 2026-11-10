@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#parameter-binding-producing-the-programlayout
-//META: doc_section_digest=46863bfb82aa25df1a29d14be8a9effbfaf6dae8dd4bc45bede84a9d03334be8
 //META: purpose=The third explicit-binding spelling the stage-2 row names, GLSL layout(binding=), is reserved on a global parameter before automatic allocation.
 //META: intent=functional
 //META: pipeline_stage=layout

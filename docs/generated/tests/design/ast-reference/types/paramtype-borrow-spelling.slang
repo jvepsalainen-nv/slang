@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:31+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/types.md#nodes
-//META: doc_section_digest=76ee6e7723bb37a4f19d893a5f6a1b0f60d1fe8881e266ab68ab9b3946c62211
 //META: purpose=BorrowInParamType is written __borrow (legacy alias __constref) and is an input-only borrow: the callee reads the caller's value through it.
 //META: intent=functional
 //META: pipeline_stage=runtime

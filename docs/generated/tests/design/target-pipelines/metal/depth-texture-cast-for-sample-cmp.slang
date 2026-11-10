@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#where-the-metal-specific-opcodes-come-from
-//META: doc_section_digest=1a75c977ef651cd4504965e371cf471aeb2f418cba22a342a1e031a5cdbad999
 //META: purpose=A comparison sample on a `Texture2D<float>` goes through the Metal-only `MetalCastToDepthTexture` opcode, emitted as a cast into `depth2d<float, access::sample>` before `sample_compare`.
 //META: intent=functional
 //META: pipeline_stage=emit

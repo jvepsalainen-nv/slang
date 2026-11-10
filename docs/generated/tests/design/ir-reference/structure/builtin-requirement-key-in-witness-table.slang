@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/structure.md#builtinrequirementkey--builtinrequirementkey
-//META: doc_section_digest=53d596706a40555a853a87c7f536f95290e3ccceb8d054182e8bc38e8e94bbfe
 //META: purpose=Conforming a user struct to the built-in interface IDifferentiable produces builtinRequirementKey insts as the requirement keys, alongside the conformance's witness_table.
 //META: intent=functional
 //META: pipeline_stage=lower

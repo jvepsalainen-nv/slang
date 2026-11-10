@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `do { }` body followed by neither `while` nor `catch` is rejected with E20004 naming both accepted keywords.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies `Optional<float>` in a constant buffer is laid out as a (value, bool) tuple with the value first at offset 0 and the flag at offset 4.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#specializeaddressspaceformetal
-//META: doc_section_digest=59ef424a18f99049f9ec229ab276693c12e8cd63b80fe7453b5a039912306594
 //META: purpose=`specializeAddressSpaceForMetal` annotates a `groupshared` array so it emits as `threadgroup array<T, int(N)>` inside the kernel.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#unreachable-code-diagnostics-come-from-lowering
-//META: doc_section_digest=16495c9fa99361ea1a42f11df48f0494e99d8fb018fdca929c78af4b7764317f
 //META: purpose=A statement written after a return is diagnosed as unreachable code by the lowering pass, not by the semantic checker.
 //META: intent=negative
 //META: pipeline_stage=lower

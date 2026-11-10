@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#stack-of-input-streams
-//META: doc_section_digest=28054dd38c26f546f041459491247cd49b7b928dc597b3f69201bf829f21398a
 //META: purpose=Each `#include`d file gets its own stack of conditional state, so a `#if` opened in the header is diagnosed against the header at its end of file and an `#endif` in the parent has no conditional to close.
 //META: intent=functional
 //META: pipeline_stage=preprocess

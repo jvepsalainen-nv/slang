@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#labelstmt-breakstmt-continuestmt-and-discardstmt
-//META: doc_section_digest=adfde865e3afc82ccfc5ca78a86a905bce73f1b1961ab0afdae17dd2375d854d
 //META: purpose=A LabelStmt attaches a label token to an inner statement; a `BreakStmt` with a matching `targetLabel` breaks out of the labeled (non-innermost) loop rather than the innermost one.
 //META: intent=functional
 //META: pipeline_stage=check

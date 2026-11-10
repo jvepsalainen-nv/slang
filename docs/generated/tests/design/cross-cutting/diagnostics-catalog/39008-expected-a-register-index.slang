@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=ec790559deea93f9398a620acc1c376762a701e80383d03a3e914cf08e8d6561
 //META: purpose=Fires diagnostic E39008 (expected-a-register-index) - expected a register index
 //META: intent=negative
 //META: pipeline_stage=check

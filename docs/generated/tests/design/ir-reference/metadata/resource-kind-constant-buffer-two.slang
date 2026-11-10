@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#size-and-offset
-//META: doc_section_digest=80aec4150b8f6b992009e053942ad9fdafb333290a6cb7055ecbc07f0d7637d8
 //META: purpose=A cbuffer's own binding uses LayoutResourceKind 2, constant buffer, in operand 0 of its size and offset attributes.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

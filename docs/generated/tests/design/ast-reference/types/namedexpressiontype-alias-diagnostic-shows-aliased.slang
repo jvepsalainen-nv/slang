@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:31+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/types.md#namedexpressiontype
-//META: doc_section_digest=b6537aa1d5b9351d15e2a1b7c28be434c2442043e20c61e79c79530bd6e9879d
 //META: purpose=A NamedExpressionType prints under its alias name but is canonicalized to the aliased type for type-mismatch diagnostics, so a mismatch involving a typealias names the aliased type, not the alias.
 //META: intent=negative
 //META: pipeline_stage=check

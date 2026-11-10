@@ -196,7 +196,7 @@ Variants this bundle legitimately needs:
 ## Quality checklist (in addition to `_common.md`'s)
 
 - [ ] Every `doc_ref` resolves to an anchor in `target-pipelines/cuda.md` (or a
-      listed secondary doc), and every `doc_section_digest` is current.
+      listed secondary doc), and every section in `sections.json` is current (`review-sections`).
 - [ ] The default directive is `-target cuda`; sibling-target directives appear
       only for `#adjacent-targets` claims and carry a distinct CHECK prefix.
 - [ ] CHECK patterns use wildcards for mangled/generated identifiers.

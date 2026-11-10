@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#nonuniformresourceindex
-//META: doc_section_digest=da7804ffd61b86af2c970fd765eb12daa92bd5d94d9373a5ac2b08752465a66f
 //META: purpose=`NonUniformResourceIndex(i)` is a no-op at the value level: the operand and result share the same type, so the surrounding indexing expression sees an integer of the same width.
 //META: intent=functional
 //META: pipeline_stage=lower

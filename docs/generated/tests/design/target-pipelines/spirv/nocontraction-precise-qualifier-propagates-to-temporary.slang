@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#capabilities-and-extensions-decided-at-emit-time
-//META: doc_section_digest=42b60cbc03a13fbb7144f6605c9a5b8ebf0ab604187ecf3ce7e27dab3df6b393
 //META: purpose=A precise-qualified value also marks the feeding temporary arithmetic (computePreciseInsts), so both the OpFMul and the OpFAdd carry NoContraction without -fp-mode precise.
 //META: intent=functional
 //META: pipeline_stage=emit

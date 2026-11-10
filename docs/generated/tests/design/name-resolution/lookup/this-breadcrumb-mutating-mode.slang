@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#unqualified-lookup
-//META: doc_section_digest=d1c02da07b357c8b41134fbb13a153c9451e991db3087032b3d340a5ddfdfa75
 //META: purpose=A [mutating] method's implicit this is writable (the modifier matters to the checker's this computation, not to lookup), so an unqualified write to a field inside that method updates the receiver.
 //META: intent=functional
 //META: pipeline_stage=check

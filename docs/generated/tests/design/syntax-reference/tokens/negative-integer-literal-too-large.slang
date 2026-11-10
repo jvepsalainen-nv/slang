@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/tokens.md#content-tokens
-//META: doc_section_digest=d772d9a407ac188fcd34c5908294cbc14fdde88567d1c3fba6970a29a34502af
 //META: purpose=Negative - an integer literal too wide for any built-in integer type triggers the documented "integer literal is too large" diagnostic.
 //META: intent=negative
 //META: pipeline_stage=lex

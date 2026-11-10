@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/syntax-reference/tokens.md#content-tokens": "d772d9a407ac188fcd34c5908294cbc14fdde88567d1c3fba6970a29a34502af",
+    "docs/generated/design/syntax-reference/tokens.md#end-markers-and-special": "7d027eaef54f8d01019f7c8500338fd2356fbe2e30aea34768af0343dfee8c53",
+    "docs/generated/design/syntax-reference/tokens.md#operators": "ed91c7b6d6cd5adc6d847babeaaa96bdb8e0cf1bae7a7fa6718e5d2bdcb70b4f",
+    "docs/generated/design/syntax-reference/tokens.md#preprocessor-markers": "201ff9242516697daa268085dbc9f99b91d0fc710e1da33e7eb81daa78517f72",
+    "docs/generated/design/syntax-reference/tokens.md#punctuation-and-structural-symbols": "0786d0795f8ef21f235cb47bedc955b7c43f8ba5c9f9c5989e209bfdddf3d063",
+    "docs/generated/design/syntax-reference/tokens.md#source-location": "c4ca2734815ed72ab33ee38347c8bf4f036e6e8d10d51879ae4a0db964c693a0",
+    "docs/generated/design/syntax-reference/tokens.md#special-case-lexing-rules": "02a80201a5690a8a624d91ba229db896f43d7b71e5abd5c2e95980b3d576102d",
+    "docs/generated/design/syntax-reference/tokens.md#token-flags": "04a473d005933df931633159d05180ff8a056cf1147d236ab4891f5fca39e06a",
+    "docs/generated/design/syntax-reference/tokens.md#trivia-whitespace-and-comments": "e8da9aa08a65016dd5b8d75b6932a8c7ee98601f324137231a1bcc21e05b49ac"
+  }
+}

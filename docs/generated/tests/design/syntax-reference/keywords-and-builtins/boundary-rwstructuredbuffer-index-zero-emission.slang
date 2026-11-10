@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#core-module-syntax-declarations
-//META: doc_section_digest=3494215a2f3d95c66bfc5b7610ef9debb7242679109426ec4c710efa9fe7fa6c
 //META: purpose=Boundary: the HLSL-flavored buffer vocabulary contributed by `hlsl.meta.slang` reaches every text-emit back-end, and a write at the lower-edge index 0 survives into each target's own indexing form.
 //META: intent=boundary
 //META: pipeline_stage=emit

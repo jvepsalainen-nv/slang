@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `dyn interface` may not inherit a non-`dyn` interface (E33077) and may not be generic (E33072).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

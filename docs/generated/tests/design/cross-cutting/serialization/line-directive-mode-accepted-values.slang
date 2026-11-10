@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/serialization.md#source-location-serialization
-//META: doc_section_digest=96fd282fcc078777e024afffe532377747fb1c684cee2518cb1623dada245df2
 //META: purpose=Whether and how a #line directive appears in emitted text is the compile option -line-directive-mode, which takes none, source-map, default, standard or glsl; any other value is rejected.
 //META: intent=boundary
 //META: pipeline_stage=emit

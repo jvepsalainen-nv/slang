@@ -63,9 +63,10 @@ Each bundle directory contains:
 
 Every `.slang` file begins with a `//META` block of `key=value` lines
 declaring `doc_ref` (the documentation anchor the test is derived
-from), `doc_section_digest` (used to detect doc drift), `intent`
-(`functional` / `boundary` / `negative` / `stress` / `expansion` /
-`regression`), and the usual generation provenance. See
+from), `intent` (`functional` / `boundary` / `negative` / `stress` /
+`expansion` / `regression`), and a purpose line. Provenance lives in the
+bundle README and `freshness.json`; the digests that detect doc drift live
+in the bundle's `sections.json`, one per cited doc section. See
 [`_meta/prompts/_common.md`](_meta/prompts/_common.md) for the full
 contract.
 
@@ -152,6 +153,7 @@ python3 docs/generated/tests/_meta/regenerate.py list             # bundle keys
 python3 docs/generated/tests/_meta/regenerate.py list-stale       # bundles whose source doc / watched paths drifted
 python3 docs/generated/tests/_meta/regenerate.py lint             # structural lint
 python3 docs/generated/tests/_meta/regenerate.py show <bundle>    # manifest entry + resolved files
+python3 docs/generated/tests/_meta/regenerate.py review-sections <bundle> [--accept]  # doc sections changed since last review
 python3 docs/generated/tests/_meta/regenerate.py index --write    # regenerate INDEX.md
 python3 docs/generated/tests/_meta/regenerate.py doc-gaps         # aggregated doc-gap rows, grouped by source doc
 python3 docs/generated/tests/_meta/regenerate.py coverage-gaps <bundle> --from <report>.txt

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:40:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/overview.md#ir-passes
-//META: doc_section_digest=8eb46aace39b08225cdeb2b72e28b3195136184200d25f39b56909696873a5e9
 //META: purpose=The IR pass list itself branches on the target: the PyTorch binding generation runs only for the torch target, so one source with a [TorchEntryPoint] function gains a pybind module binding on `-target torch` and nothing of the kind on the C++ target.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

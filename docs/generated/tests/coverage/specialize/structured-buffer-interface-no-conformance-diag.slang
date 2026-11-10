@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=A witness lookup left unresolved inside an entry point because the interface has no conforming type anywhere in the linkage is reported as E50100 at the call site, naming the interface.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-typeflow-specialize.cpp

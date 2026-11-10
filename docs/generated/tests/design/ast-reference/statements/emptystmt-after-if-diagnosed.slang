@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#declstmt-expressionstmt-and-emptystmt
-//META: doc_section_digest=003e69c99073f5634eddc84cdfb1b66685b97f4c42311978531b11906df8dbf4
 //META: purpose=A `;` immediately after an `if` is suspicious rather than illegal: it still yields an EmptyStmt, but the compiler reports the potentially-unintended-empty-statement warning.
 //META: intent=negative
 //META: pipeline_stage=parse

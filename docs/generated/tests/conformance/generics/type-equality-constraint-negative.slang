@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#type-equality-constraint-for-associated-type
-//META: doc_section_digest=958160af4c2966f6e20e61471f0a74c872064cb4383535c7e18521da21d8e22a
 //META: purpose=A call violating an associated-type equality constraint (`where T.PropertyType == int` applied to a conformer whose PropertyType is float) is rejected.
 //META: intent=negative
 //META: pipeline_stage=check

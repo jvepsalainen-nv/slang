@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:39+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/name-resolution/scopes.md#sibling-scopes
-//META: doc_section_digest=48e2e716cb98e52f251b42e53f41f2630e81baad625d5ff212284e8c3ac35e05
 //META: purpose=A qualified namespace declaration pushes a scope for the earlier component, so the body of namespace A.B reaches members of A unqualified.
 //META: intent=functional
 //META: pipeline_stage=check

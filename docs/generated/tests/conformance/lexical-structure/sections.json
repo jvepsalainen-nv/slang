@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/lexical-structure.md#comments": "966a201fda28c775172186dbde06cb14891d584c984af5c90890d8c08ff9e353",
+    "docs/language-reference/lexical-structure.md#escaped-line-breaks": "966a201fda28c775172186dbde06cb14891d584c984af5c90890d8c08ff9e353",
+    "docs/language-reference/lexical-structure.md#identifiers": "966a201fda28c775172186dbde06cb14891d584c984af5c90890d8c08ff9e353",
+    "docs/language-reference/lexical-structure.md#integer-literals": "966a201fda28c775172186dbde06cb14891d584c984af5c90890d8c08ff9e353",
+    "docs/language-reference/lexical-structure.md#whitespace": "966a201fda28c775172186dbde06cb14891d584c984af5c90890d8c08ff9e353"
+  }
+}

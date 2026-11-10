@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/base.md#type-val
-//META: doc_section_digest=617a194ed6ec24148aa785801ab591efc2b4d803a1ca1e6680b6f00d76499121
 //META: purpose=Every type the front end works with is a value, so an alias and the type it names denote one and the same type at an overload-resolution site.
 //META: intent=functional
 //META: pipeline_stage=check

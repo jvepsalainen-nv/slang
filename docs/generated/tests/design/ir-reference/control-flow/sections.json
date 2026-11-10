@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/control-flow.md#abort": "16fc1bd9386f5dae15e0833138d76a19ff43596b18ba9580dce4b003c1242672",
+    "docs/generated/design/ir-reference/control-flow.md#block-and-param": "2a352bcf0ce838b95cff334ee1235c003b2f526ca07b93710337b16c2a4872f8",
+    "docs/generated/design/ir-reference/control-flow.md#conditionalbranch-vs-ifelse": "96f04f740c4687e22beab296ffbc9afcbc132a64b968c6692bcb6c3ea1648cbc",
+    "docs/generated/design/ir-reference/control-flow.md#discard": "3cf81b6eb3d95b5fa46670b0fed82bde67855866c317c17db56b427401c89356",
+    "docs/generated/design/ir-reference/control-flow.md#ifelse": "69efda819e39cba201908703879949bee162c97716e69f8114247bf4114d9ec0",
+    "docs/generated/design/ir-reference/control-flow.md#loop": "bc7061314517cbb77b1286ea88e74f8ec0967651ce6a5da22cdcf8c71f3e99d0",
+    "docs/generated/design/ir-reference/control-flow.md#missingreturn-and-unreachable": "26a97d045a79c541f13053bb869f73d7230d355079d7c493c6899dba3041d07a",
+    "docs/generated/design/ir-reference/control-flow.md#moving-and-deleting-control-flow-instructions": "b5c40a8fba2f1860c6461d18d1356180fc9df68f942c590a3816aa17abbdab12",
+    "docs/generated/design/ir-reference/control-flow.md#other-control-flow-opcodes": "2fbf434d88b8c04d432e174a859825b9963483ee0b5709efd8f95a6713e5d681",
+    "docs/generated/design/ir-reference/control-flow.md#switch-and-targetswitch": "9ed6898dc4712155dd5c86ec8e6556e0db11da6e13cde8988194d8247ca4141f",
+    "docs/generated/design/ir-reference/control-flow.md#terminators-defer-and-asm": "46e83c6dbdc71467d683480c9e5fc12b4e289cef6f526df309a461ae8bf323d3",
+    "docs/generated/design/ir-reference/control-flow.md#terminators-no-continuation": "78e0bf7576551f8ff9e811edd1abd135d18634ae25bb0afa4cf3437830164ba1",
+    "docs/generated/design/ir-reference/control-flow.md#terminators-returns-and-yields": "19520b191e2b148481e6b700687fe1131b2a8c16bbfb46366168336ce634d33f",
+    "docs/generated/design/ir-reference/control-flow.md#terminators-switches": "4f92d597f0ab99ac7a5bb1f36c4e428d75a654eb5563d9d14d56b9d5fbda6ec7",
+    "docs/generated/design/ir-reference/control-flow.md#terminators-unconditional-branches": "d0eeb53252388d3a6e69f829f07385b975955f496c04529e2b4fcce99f38c4ae",
+    "docs/generated/design/ir-reference/control-flow.md#trycall-and-throw": "316affe4711df67f83b285c59efaaea11c26c7af447b6bd0e6539bca6fcf0b4b",
+    "docs/generated/design/ir-reference/control-flow.md#unreachable-code-diagnostics-come-from-lowering": "16495c9fa99361ea1a42f11df48f0494e99d8fb018fdca929c78af4b7764317f"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-09T08:46:18+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#simple-modifiers
-//META: doc_section_digest=5dce51d3aa0b042b6517dc2c5e5fe18577401d36310634d73a84c52470cea996
 //META: purpose=`__borrow` and `__constref` are two spellings of the same BorrowModifier; a parameter written with either is accepted and both reach the emitted call.
 //META: intent=functional
 //META: pipeline_stage=emit

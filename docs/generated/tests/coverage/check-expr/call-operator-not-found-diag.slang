@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T13:22:38+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: purpose=Calling a struct value that has no call operator (`s(3)`) is rejected with "no call operation found" (E30016).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

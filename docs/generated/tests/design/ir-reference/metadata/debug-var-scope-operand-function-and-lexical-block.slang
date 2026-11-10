@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugvar
-//META: doc_section_digest=5e624fe4d59626301c0a26642fbfc7ef147f62f38d27132871b59bfd03634759
 //META: purpose=A DebugVar's fourth operand is its scope: the DebugFunction for a function-level local and the DebugLexicalBlock for a local declared in a nested block.
 //META: intent=functional
 //META: pipeline_stage=lower

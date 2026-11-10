@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/overview.md#ast--ir-lowering
-//META: doc_section_digest=f6080f195ff136c94750bc26ce49f918dba5a42006e4c4170e4ad4820a141882
 //META: purpose=A generic function declaration becomes an IR generic that the specialization passes turn into one concrete emitted function per instantiated type argument.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

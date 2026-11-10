@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/core-module.md#core-module
-//META: doc_section_digest=82572fa8cfc4198a91aaf75f7925752f68b3734907dd005fa81952563631b345
 //META: purpose=uint32_t addition wraps at the MAX boundary: uint32_t(0xFFFFFFFF) + 1 is 0.
 //META: intent=boundary
 //META: pipeline_stage=runtime

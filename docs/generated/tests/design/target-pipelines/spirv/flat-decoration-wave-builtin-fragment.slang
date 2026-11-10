@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#flat-decoration-for-integral-fragment-inputs
-//META: doc_section_digest=c29faa394fe84ed74bb3a8e3e0eee05062d61058d310b2db9553c2bff6e14a1a
 //META: purpose=A wave built-in reaching the emitter as a spirv_asm builtin-var shape (SubgroupLocalInvocationId) still receives the Flat decoration in a fragment entry point.
 //META: intent=boundary
 //META: pipeline_stage=emit

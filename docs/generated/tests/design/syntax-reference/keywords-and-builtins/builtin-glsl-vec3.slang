@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#core-module-syntax-declarations
-//META: doc_section_digest=3494215a2f3d95c66bfc5b7610ef9debb7242679109426ec4c710efa9fe7fa6c
 //META: purpose=`vec3` is a GLSL-flavored name supplied by `glsl.meta.slang`; after `import glsl;` it resolves on every text-emit target and lowers to that target's three-component float vector.
 //META: intent=functional
 //META: pipeline_stage=emit

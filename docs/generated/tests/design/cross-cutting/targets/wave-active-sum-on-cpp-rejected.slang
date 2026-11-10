@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#capability-system
-//META: doc_section_digest=8105f5c5b0374b2319595fedf8212420478f80cae6e5e70bd69a8ee16d772e93
 //META: purpose=`WaveActiveSum` carries a wave-intrinsic capability available on the HLSL target but not on the C++ shader target; calling it from a C++ entry point trips the capability join and surfaces a target-mismatch diagnostic.
 //META: intent=negative
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugline
-//META: doc_section_digest=eb5cc6b339fed6275ffa177c8c0c47a41583954b25feb65903b85fa94849df4a
 //META: purpose=DebugLine pins an instruction to a source range with five operands: the source file, the start and end lines, and the start and end columns.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

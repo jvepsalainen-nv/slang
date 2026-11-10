@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-09T10:40:55+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#legalizeoptixreportintersectionsforcuda
-//META: doc_section_digest=d7e76c39deb19b733259283d94c088003a7270dc4cfd11cd05f2073ccecd799e
 //META: purpose=Negative - legalizeOptiXReportIntersectionsForCUDA flattens the ReportHit attribute aggregate into scalar leaves and diagnoses E55218 when more than kMaxOptiXHitAttributeRegisters (8) leaves result.
 //META: intent=negative
 //META: pipeline_stage=ir-passes

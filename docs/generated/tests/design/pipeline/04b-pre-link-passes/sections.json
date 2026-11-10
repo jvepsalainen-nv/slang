@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#context-predicates": "666232460cc1549150d42e63540887426056c0a1dd5950548f0704f2d865055e",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#lowerdefer": "7ae5fe7dc9992f36f284f4dc1fd1b7a0f8a84959d24476b29a32da98a11c7a5e",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#lowererrorhandling": "6012a751eb4b0decdb1fa3ff12001ca27f0ad52537062e20c69014a57a63372a",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#lowerexpandtype": "2af9384f52b762a61f92e97f07d8418049eb9e1a371668e59b67a4bec604335f",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#module-buildmanglednametoglobalinstmap": "bb569b55ac4ed0304e2afe2f3bfa1739d66d8f1764f6cac6592e0f17cca88fe1",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#option-set-toggles": "351a0eec9787bb3f1be5ecda710441450a420c9d618bd13fc985a55db16383a6",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#per-translation-unit-predicates": "505ba5cb2ba8288c9e2a707a250d36248eca444ecc8ac1111122ea3c4e472ee8",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#performmandatoryearlyinlining-and-the-surrounding-loop": "45700e5c47e0a2ee88e4d198dd52d0a8014c20dcf49db894f9da9ec487600515",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#phase-a-ast-walk-and-ir-emission": "94881c573723d5b98cfbc42adedec7f412824c3ab543d9cbbddd55d495627a3d",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#phase-b-mandatory-pre-optimization-transformations": "d068109314516b9597bd450c12afb40a134d080ee926d40efa3dc2825592f91e",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#phase-c-mandatory-optimization-passes": "8411136075cfb1ef02f4e7d52df8c86c4640843d63a083f7900740dd0f80c151",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#phase-d-non-essential-validation-stripping-and-finalization": "e7c210e2cea55bd2d83ae7a0ea9cf43217c586ddb37974a6331e3f9f13ae57e5",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#pre-link-mandatory-passes": "cfba7e0229aa33754251e2f6ca4c48d43b4b19975b9fd796cd0d1148af7a941d",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#stripfrontendonlyinstructions": "6e25abcc355037dfe668f1161546740ab39cb097bb6f40dad154de646c4cea39",
+    "docs/generated/design/pipeline/04b-pre-link-passes.md#synthesizebitfieldaccessors": "567a399041a92fcbf85453003530b8688fa87949447a5f2fae5b2dd5e5cb2b64"
+  }
+}

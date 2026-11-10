@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugvar
-//META: doc_section_digest=5e624fe4d59626301c0a26642fbfc7ef147f62f38d27132871b59bfd03634759
 //META: purpose=A DebugVar for an ordinary local omits the argument-index operand, and the variable's own type is the pointee of the instruction's pointer result type rather than an operand.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

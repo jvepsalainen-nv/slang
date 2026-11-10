@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/types.md#untypedresourcehandletype-and-untypedsamplerhandletype
-//META: doc_section_digest=f268b5de37f7e6c9147bb9540c9ab7e8d8517dbcdbc595542a45dcdfef731730
 //META: purpose=The descriptor-heap subscript is capability-gated, so writing ResourceDescriptorHeap[i] for a target outside the gated set is diagnosed, and the gate repeated on the subscript makes the note land at the indexing site rather than inside the core module.
 //META: intent=negative
 //META: pipeline_stage=check

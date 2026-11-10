@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `__target_switch` body that starts with something other than `case` or `default` is rejected with E20001 naming the two expected keywords.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

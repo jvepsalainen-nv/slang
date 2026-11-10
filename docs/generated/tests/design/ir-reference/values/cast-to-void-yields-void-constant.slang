@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/values.md#live-but-unproduced-opcodes
-//META: doc_section_digest=bc0d3c6ac70fa6f0bc969a34df3549b7d535ab7021553f5538fd684ca4141902
 //META: purpose=`castToVoid` is declared but never constructed: a `(void)expr` cast is intercepted and yields the unique `void_constant` value instead, and the operand's side effects survive as their own instructions.
 //META: intent=functional
 //META: pipeline_stage=lower

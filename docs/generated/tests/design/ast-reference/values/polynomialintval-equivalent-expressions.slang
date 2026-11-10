@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#polynomialintval-and-polynomial-canonicalization
-//META: doc_section_digest=17fa4894f1273e7614f2fca10ae7e0fd30e8f753b02c39a565511130eb1f2cfc
 //META: purpose=Polynomial canonicalization makes 2*N + 3 and 3 + 2*N the same compile-time value, which is what gives dependent array types over those expressions a single identity.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#finalize-phase-completeoverloadcandidate
-//META: doc_section_digest=be7cb845146dff6e17cc55868c420377fde289080c02c7b773e24e30ea6297e1
 //META: purpose=A pack argument whose length violates a countof constraint fails as VariadicPackCountMismatch during inference and is reported with the expected and actual element counts.
 //META: intent=negative
 //META: pipeline_stage=check

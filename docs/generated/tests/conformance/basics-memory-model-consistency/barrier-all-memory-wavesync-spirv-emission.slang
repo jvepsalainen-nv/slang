@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T09:58:23+00:00
-//META: source_commit=57fb63455095efe1465661001ad147b24b968932
 //META: doc_ref=docs/language-reference/basics-memory-model-consistency.md#barriers
-//META: doc_section_digest=28e72df67f1e8f2f68fd59f23431c2be534ec39fa4206bc57dd04922591e5594
 //META: purpose=`AllMemoryBarrierWithWaveSync()` emits `OpControlBarrier` with Subgroup (wave) scope for execution and all-memory semantics in SPIRV.
 //META: intent=functional
 //META: pipeline_stage=emit

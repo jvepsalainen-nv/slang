@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/modifiers.md#differentiable-attribute-family": "26638fd86ec5c70772b8785345490b0ec9d7a8615adf9756f19b99197dda84c5",
+    "docs/generated/design/ast-reference/modifiers.md#hlsl-semantics": "924ecf08334941e0ce19332c62256f9af73bd09c738c20e634f3eefd0c64d11f",
+    "docs/generated/design/ast-reference/modifiers.md#matrix-layout-modifiers": "067e73d70aa04a99d59492486d8b06552dfb179696b3a89cb8bc60a05a2207a5",
+    "docs/generated/design/ast-reference/modifiers.md#modifiers-vs-attributes": "0be0f22a51918f9fc5f00ab42a13ab6eb20120ba83f03c20f196cfda4fc6178d",
+    "docs/generated/design/ast-reference/modifiers.md#nodes": "29d86296deb73a57a4f207507e16ba645a6bf2e722162db8157e7554d2cf8004",
+    "docs/generated/design/ast-reference/modifiers.md#receiver-parameter-modes": "0a94769a669aa12d0fcebf6cfa246eb8793500358434d0e57afd65ad8545f45a",
+    "docs/generated/design/ast-reference/modifiers.md#reference-parameter-keywords": "b27e1faf6e9ecd77be8bf939451515b867e905561ac61f1289d503aca4311f21",
+    "docs/generated/design/ast-reference/modifiers.md#requirecapabilityattribute": "822b852736570bef2ccdf33dca2fdfcb645a761ef3c85e33d183f5f82810a980",
+    "docs/generated/design/ast-reference/modifiers.md#visibility-modifiers-and-language-version": "66bf908dbaf192cd7f9354f359a06bd91eb43e89705796533a5b763621a4c295"
+  }
+}

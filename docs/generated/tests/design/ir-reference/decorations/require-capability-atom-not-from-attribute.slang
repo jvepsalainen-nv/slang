@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:32+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#requirecapabilityatom
-//META: doc_section_digest=281884efd5d7d16704b0a8d5fc5f9f82c699d566d7d1b2badab1f5a372822aa7
 //META: purpose=requireCapabilityAtom is not produced by lowering a [require(...)] attribute: the user's LOWER-TO-IR module carries none on the entry point, and the decoration appears only in later (layout-IR) module state.
 //META: intent=negative
 //META: pipeline_stage=lower

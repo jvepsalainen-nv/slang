@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:35:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#missingreturn-and-unreachable
-//META: doc_section_digest=26a97d045a79c541f13053bb869f73d7230d355079d7c493c6899dba3041d07a
 //META: purpose=Negative: for Slang 202c and later a reachable fall-off-the-end path in a value-returning function is reported as error 40025 (missing-return-not-allowed-in-slang-202c) at the function signature.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

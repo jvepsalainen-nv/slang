@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#eliminatephis-with-default-options
-//META: doc_section_digest=9c2139ff4af3c8c3cde52a7bb922ee9bd7948ea3d59b24900d37789dbce0e86e
 //META: purpose=eliminatePhis runs with default options on HLSL: an if/else-merged value becomes a named local temporary assigned in each branch.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

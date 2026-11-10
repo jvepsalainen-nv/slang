@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-11T00:00:00+00:00
-//META: source_commit=48c746dc1eda1c6e2aa98c17bbdb7a645c24a048
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#preprocessor-directives
-//META: doc_section_digest=a79d944b7d2a39d014afe31606a0e3f7d96f6912c534eadd8d9b1160507f3183
 //META: purpose=The #lang version operand is resolved by name through one table in which each version carries several accepted spellings, so `202b` selects the same version as `2026`.
 //META: intent=functional
 //META: pipeline_stage=preprocess

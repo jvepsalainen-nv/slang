@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:08+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-struct.md#property
-//META: doc_section_digest=2be36ef488309471e001ccf502f4e364705629af21bac8d6137274483b7c4b14
 //META: purpose=A `property` with both `get` and `set` accessors: reading the property calls `get`; assigning to it calls `set` with the new value as `newValue`.
 //META: intent=functional
 //META: pipeline_stage=runtime

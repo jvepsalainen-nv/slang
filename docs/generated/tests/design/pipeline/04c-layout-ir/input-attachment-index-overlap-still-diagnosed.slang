@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#vkinput_attachment_index-and-descriptor-space-occupancy
-//META: doc_section_digest=94f08edd7e4a416b48229954db24ee4f70b3ed164da5cf406159e6c5b2795d54
 //META: purpose=Skipping the descriptor-space reservation for an input-attachment index does not weaken overlap detection: two parameters requesting the same index are still diagnosed.
 //META: intent=negative
 //META: pipeline_stage=layout

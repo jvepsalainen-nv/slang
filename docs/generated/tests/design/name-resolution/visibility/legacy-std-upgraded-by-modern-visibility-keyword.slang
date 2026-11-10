@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/visibility.md#concepts
-//META: doc_section_digest=a1a66cf6f671ece5d0d103a57354b14f58896cdc838f902527be54a3589bedde
 //META: purpose=A file requested as legacy (`-std 2018`) is upgraded away from the legacy language version when it uses a modern construct, so unannotated decls default to `internal` rather than the legacy `public`.
 //META: intent=boundary
 //META: pipeline_stage=check

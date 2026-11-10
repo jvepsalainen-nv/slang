@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#backwarddifferentiate
-//META: doc_section_digest=b166ba910ef2a99442f2c03d25cc7b3a091f3457459ecbd8e21af4813cf75b71
 //META: purpose=The user-facing __bwd_diff form does not reach IR as a BackwardDifferentiate inst, because semantic checking resolves the expression earlier.
 //META: intent=negative
 //META: pipeline_stage=lower

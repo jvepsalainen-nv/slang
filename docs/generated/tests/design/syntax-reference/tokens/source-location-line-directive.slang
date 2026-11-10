@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/tokens.md#source-location
-//META: doc_section_digest=c4ca2734815ed72ab33ee38347c8bf4f036e6e8d10d51879ae4a0db964c693a0
 //META: purpose=A token's nominal source location honours `#line`, so `__LINE__` after `#line 100` reports 100 rather than the physical line.
 //META: intent=functional
 //META: pipeline_stage=preprocess

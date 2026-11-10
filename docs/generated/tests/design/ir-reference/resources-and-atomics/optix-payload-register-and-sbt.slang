@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/resources-and-atomics.md#raytracing-payload
-//META: doc_section_digest=9082ae54ded6cb49d7f3a159b2f8dd6bcb051518267d30ba67d1ca1dc471a6f4
 //META: purpose=A `closesthit` entry point on `-target cuda` emits `optixGetPayload_N` and `optixSetPayload_N` calls, the user-visible artifact of the `getOptiXPayloadRegister` / `setOptiXPayloadRegister` opcodes that varying-param legalization synthesizes after the IR-dump point.
 //META: intent=functional
 //META: pipeline_stage=lower

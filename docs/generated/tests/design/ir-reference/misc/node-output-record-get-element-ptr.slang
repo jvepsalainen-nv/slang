@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#work-graph-records-and-barrier-flags
-//META: doc_section_digest=bfd67dc85af2750b4e7280782b8bb1df45e7ccceccc714257ca2c0031e18cf36
 //META: purpose=Subscripting a node output-record collection lowers to `nodeOutputRecordGetElementPtr(base, index)` and is emitted as `base.Get(index)` in HLSL.
 //META: intent=functional
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#per-entry-point-steps
-//META: doc_section_digest=50f231e064e3daa3393bbf07163d90d3c1b16b2a86c39bdb81116cc094d1f311
 //META: purpose=Lowering the entry-point layout produces an EntryPointLayout instruction with two operands, one varLayout for the parameters and one for the result.
 //META: intent=functional
 //META: pipeline_stage=layout

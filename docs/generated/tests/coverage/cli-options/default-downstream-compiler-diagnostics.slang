@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -default-downstream-compiler validates both of its operands, rejecting an unrecognized source language with E00019 and an unrecognized pass-through compiler with E00016, and accepting a valid pair.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

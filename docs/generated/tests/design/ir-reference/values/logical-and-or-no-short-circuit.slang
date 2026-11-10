@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/values.md#logical
-//META: doc_section_digest=a26adbecfd21590b141baad57db0916d5340c5abb1af0fdeab3d70f7c6128b1d
 //META: purpose=The free `and(x, y)` / `or(x, y)` core-module functions lower to the `logicalAnd` / `logicalOr` opcodes, which print in the IR dump as `and` / `or` on a `Bool` result.
 //META: intent=functional
 //META: pipeline_stage=lower

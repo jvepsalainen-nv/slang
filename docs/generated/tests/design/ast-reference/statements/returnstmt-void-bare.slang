@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#returnstmt
-//META: doc_section_digest=c25c0b38fe3f374b6c53bf5d39f45dbef8f00f160edf334a7927f62cea89fd70
 //META: purpose=A ReturnStmt in a void function is allowed to omit its expression (`return;`); the function halts and statements after the bare return do not execute on the early-return path.
 //META: intent=boundary
 //META: pipeline_stage=check

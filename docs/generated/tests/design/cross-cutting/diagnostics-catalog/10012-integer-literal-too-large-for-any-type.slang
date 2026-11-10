@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/compiler-core/slang-lexer-diagnostic-defs.h
-//META: doc_section_digest=404012bc1c89ab01a1d60f47593353205ea324a2606e952c6e1ce2b6a8a19e16
 //META: purpose=Fires diagnostic E10012 (integer-literal-too-large-for-any-type) from a minimum-reproduction input.
 //META: intent=negative
 //META: pipeline_stage=parse

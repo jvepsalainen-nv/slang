@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#linkage-and-lifetime
-//META: doc_section_digest=d4db4680a555b5ec5a346d1a0aecf4caee7647fbc7644ef76a3dc1edbe8e51e6
 //META: purpose=A user-declared uniform global parameter carries an export decoration with the variable-linkage mangled name (prefix _SV).
 //META: intent=functional
 //META: pipeline_stage=lower

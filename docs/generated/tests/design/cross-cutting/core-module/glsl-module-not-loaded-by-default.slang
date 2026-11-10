@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/core-module.md#glsl-module
-//META: doc_section_digest=6e53663afde478db9363f03c7a17f609bb3cac09737cd3141eea200db83510a0
 //META: purpose=The GLSL builtin module is opt-in: without the GLSL module enabled, vec3 is an undefined identifier.
 //META: intent=negative
 //META: pipeline_stage=check

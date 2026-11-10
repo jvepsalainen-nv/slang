@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=2c6b49777ee83918e9c045475349590db539546e849f853d84f6a5f00bd994ae
 //META: purpose=Fires diagnostic E30055 (use-of-non-short-circuiting-operator-in-diff-func) - non-short-circuiting `?:` not allowed in differentiable function
 //META: intent=negative
 //META: pipeline_stage=check

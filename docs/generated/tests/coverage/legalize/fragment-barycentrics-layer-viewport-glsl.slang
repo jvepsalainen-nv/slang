@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes that SV_Barycentrics selects gl_BaryCoordEXT or gl_BaryCoordNoPerspEXT depending on whether the field carries the noperspective modifier, alongside the fragment mappings for SV_RenderTargetArrayIndex, SV_ViewportArrayIndex, SV_SampleIndex, SV_VulkanSamplePosition and SV_ShadingRate.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

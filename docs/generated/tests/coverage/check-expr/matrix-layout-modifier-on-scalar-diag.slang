@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=A matrix layout modifier such as `row_major` applied to a non-matrix type is rejected (E39026), and the alias still resolves to the plain type.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

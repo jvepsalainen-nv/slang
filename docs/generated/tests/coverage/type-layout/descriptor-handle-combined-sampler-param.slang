@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `DescriptorHandle<Sampler2D>` entry-point parameter is classified as the combined TextureSampler shader-parameter kind and collapses to a single CUDA texture object.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the hard-coded `__GPU_FOREACH(device, gridDims, LAMBDA(uint3 id) { call; });` statement form parses and lowers to a call to the kernel's `_wrapper` entry.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

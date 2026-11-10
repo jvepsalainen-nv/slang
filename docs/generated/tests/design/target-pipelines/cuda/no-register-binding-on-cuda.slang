@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#conditional-gates
-//META: doc_section_digest=53c4b02712abd1606ada0cd075435fc703c872ab9fb03c55c715018c720c4b38
 //META: purpose=CUDA is not isD3DTarget and is non-Khronos so HLSL register(uN) bindings do not appear in CUDA emit; resources are reached through GlobalParams_0.
 //META: intent=functional
 //META: pipeline_stage=emit

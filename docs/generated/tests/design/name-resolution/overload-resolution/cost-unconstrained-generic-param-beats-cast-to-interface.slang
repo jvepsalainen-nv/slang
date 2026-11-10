@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#conversion-costs
-//META: doc_section_digest=0250e18742b3786726efc1e85a165627e5d19d2338098891f6ef00a648a8d5df
 //META: purpose=kConversionCost_UnconstraintGenericParam (20) is cheaper than kConversionCost_CastToInterface (50), so the cost step selects the generic candidate before the specificity step could prefer the non-generic one.
 //META: intent=functional
 //META: pipeline_stage=check

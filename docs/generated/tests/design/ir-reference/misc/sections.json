@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/misc.md#annotation": "ebff6a010b1284d551f2c4730b63be4741318d18c71fe095333fedd3c4668e27",
+    "docs/generated/design/ir-reference/misc.md#capability-sets": "1d3d760fa96bf20ac7a3330cfa55a700c34f3758a49227e9f22917bac7fcd1cd",
+    "docs/generated/design/ir-reference/misc.md#compiler-dictionary-and-late-capability-requirements": "33a83f163d58d5303f0b6a4fca4888b3116167e18a987ac25535e1502d5e4342",
+    "docs/generated/design/ir-reference/misc.md#expand-and-each": "b0c56c5045e656ca5e7dc8064189fa241646d7b924e02fd2f3b06ed86e75e378",
+    "docs/generated/design/ir-reference/misc.md#getenumbarriermemorytypeflags-and-getenumbarriersemanticflags": "8cf0682827ec9cdfec0745e8a2aeeffcc7f3dfedf183640205f6d2fb03cef85f",
+    "docs/generated/design/ir-reference/misc.md#getstringhash": "2e49a7038974c54373eb64a6a67281810cb65f3247508b881fd7e7f8fe060368",
+    "docs/generated/design/ir-reference/misc.md#istype": "eba8b802107a7b78ba644a0cd5bc2ccb99ac9f038f6d40e2a7f909357d146094",
+    "docs/generated/design/ir-reference/misc.md#makewitnesspack": "fe1225ef818f5986744905f20bc687a5c35530b9db6bbd7242dde840776992ce",
+    "docs/generated/design/ir-reference/misc.md#pack-and-expansion": "8cf3e84d8fc339e06ca5711e82cf0be3b994a54278d31752ced4164b73ec084f",
+    "docs/generated/design/ir-reference/misc.md#packbranch": "c10f10bfbb477837660274b8f59eaaaa242044d268742b892c0e93a981cc5014",
+    "docs/generated/design/ir-reference/misc.md#size-alignment-count": "2dd2bfcaa2aa059f39f24fda445895796cfd89712938d9d37e820a7ca67b9e63",
+    "docs/generated/design/ir-reference/misc.md#storage-type-legalization-casts": "96b87d6b5442ad6c1bef1c050044861920cb28d3ed66bb9755bd34d3a87bba7b",
+    "docs/generated/design/ir-reference/misc.md#string-hashing": "aa2afd6a45af4a5bede0e4e6bb51d5bf4d6150e7a3b1fd9599961c4908973d52",
+    "docs/generated/design/ir-reference/misc.md#type-queries-and-predicates": "a314589d5bf1e20e3602ad6d1cfc7cdbc66f447af11efa30fb64ff86fa52545e",
+    "docs/generated/design/ir-reference/misc.md#untyped-descriptor-heap-handle-casts": "ef452bdab1983659c871710abdb0a507c292208ad70e7486d710069b6d49c904",
+    "docs/generated/design/ir-reference/misc.md#work-graph-records-and-barrier-flags": "bfd67dc85af2750b4e7280782b8bb1df45e7ccceccc714257ca2c0031e18cf36"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugline
-//META: doc_section_digest=eb5cc6b339fed6275ffa177c8c0c47a41583954b25feb65903b85fa94849df4a
 //META: purpose=Lowering emits no DebugLine markers inside a Slang-synthesized constructor, so a debugger cannot step into compiler-generated code.
 //META: intent=negative
 //META: pipeline_stage=lower

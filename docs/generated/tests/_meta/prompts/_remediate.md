@@ -46,9 +46,10 @@ The operator gives you:
 
 When you take a `fixed` action that edits a `.slang` file:
 
-- Update its `//META` block: bump `generated_at`, set `model` to your
-  identifier, set `source_commit` to current HEAD, recompute
-  `doc_section_digest` if `doc_ref` changed.
+- If `doc_ref` changed, run `regenerate.py review-sections <bundle>
+  --accept` after re-reading the new section against the claim. Tests
+  carry no `model`, `generated_at`, `source_commit` or `doc_section_digest`
+  lines; do not add them.
 - Keep the rest of the `//META` contract intact (every required key,
   `generated=true`, `warning` banner).
 - If you delete a test entirely, remove its filename from the
@@ -56,8 +57,7 @@ When you take a `fixed` action that edits a `.slang` file:
   only test on its claim row, drop the row.
 - If you add a new test in response to a finding (e.g. the reviewer
   said an enumerated claim has no test), the new test's `//META` block
-  uses your model identifier and **must** still derive from the source
-  doc. Do not invent claims.
+  **must** still derive from the source doc. Do not invent claims.
 
 When you take a `fixed` action that edits `README.md`:
 

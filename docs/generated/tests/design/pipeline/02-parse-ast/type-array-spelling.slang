@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#types
-//META: doc_section_digest=1b952f18aa4c01c1843e78ee98bfcf640c2d610fbabae24b6d4fd04bdada1ea6
 //META: purpose=The Type production includes the array form `T '[' Expr? ']'` (grammar.md handing off from the parse-AST doc's `## AST data model` Type family note); `int arr[3]` parses into an array-typed VarDecl.
 //META: intent=functional
 //META: pipeline_stage=parse

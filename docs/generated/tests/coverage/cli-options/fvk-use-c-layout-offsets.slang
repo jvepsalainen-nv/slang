@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -fvk-use-c-layout lays out a constant-buffer struct with C/C++ rules, producing an `_c`-suffixed SPIR-V struct with member offsets 0/4/16 where the default std140 layout produces an `_std140` struct with offsets 0/16/28.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

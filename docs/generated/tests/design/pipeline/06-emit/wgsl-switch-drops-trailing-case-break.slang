@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#wgsl
-//META: doc_section_digest=24cf127ba87a077887a4ad8e725f5ae07b1714ceed5cc4f322ad01d02f3bfd6e
 //META: purpose=WGSL sets `shouldEmitSwitchCaseTerminatingBreak` to false, so the `break` Slang places at the tail of every switch case is omitted from WGSL output while the other C-like backends still emit it.
 //META: intent=functional
 //META: pipeline_stage=emit

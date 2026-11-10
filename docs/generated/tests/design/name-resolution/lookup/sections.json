@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/name-resolution/lookup.md#block-local-shadowing": "24b2e37706dffd5a2f6286a13b0271a96dc30366c33fe244deca52d7be73e0e4",
+    "docs/generated/design/name-resolution/lookup.md#breadcrumbs": "33d07243bfb42afebbc13d5fbbb87264e2fb46bd44f69743fdec1ff0e2f6c8b3",
+    "docs/generated/design/name-resolution/lookup.md#concepts": "9beb7ce113203f7b6a97267dc5716f8e7cf59ebe42628adaf018784110a2aac5",
+    "docs/generated/design/name-resolution/lookup.md#container-level-overload-accumulation": "00a7bd151175f59e65484892d8fa214ae070323723e925e2298fb5d2b24f2679",
+    "docs/generated/design/name-resolution/lookup.md#deduplication": "60a4f0c645cae71e331033c0ee07c5670ed7e8539bc9f7678b4e7cc9ab4040e1",
+    "docs/generated/design/name-resolution/lookup.md#edge-cases-and-failure-modes": "074addd0c2d66598101cf0dfc70be7e1bcffe641d2e7c455a491f14df2014a84",
+    "docs/generated/design/name-resolution/lookup.md#generic-parameters": "e6a604ecd95d745398ce230ff444eb5e4ef8a7eb569f1a45fd57675c245e1700",
+    "docs/generated/design/name-resolution/lookup.md#interface-requirements-vs-default-implementations": "3898e99e2187a0d73cce97f15bd01da86fa89646d1aab8e2c3a9708277b9c471",
+    "docs/generated/design/name-resolution/lookup.md#keyword-vs-identifier": "605dbbca347706bc291985d6714fd81f2a428befce850d0d8fbbbf8a688667ef",
+    "docs/generated/design/name-resolution/lookup.md#member-lookup": "31abb67bf5286f69461146710f091d89f6d90d100b6c4de40ee80f2ebf88ef5a",
+    "docs/generated/design/name-resolution/lookup.md#module-and-namespace": "133885f40d47646386a7126573bda25629492d971ace7c1f5d02ba88572d11f6",
+    "docs/generated/design/name-resolution/lookup.md#transparent-members": "0241c2b2d6b5982b38fcab65827ac1661c13c0ef631b7184ea3b202026236a30",
+    "docs/generated/design/name-resolution/lookup.md#unqualified-lookup": "d1c02da07b357c8b41134fbb13a153c9451e991db3087032b3d340a5ddfdfa75"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#hlsl-specific-runtime-predicates
-//META: doc_section_digest=6c2c3b79bcc1271314ad3c5f0147142745017e230365ec5dcf2faf4590a75884
 //META: purpose=HLSL is non-Khronos: an RWStructuredBuffer is HLSL-shaped (register(uN)) on HLSL but GLSL-shaped (layout buffer) on GLSL.
 //META: intent=functional
 //META: pipeline_stage=emit

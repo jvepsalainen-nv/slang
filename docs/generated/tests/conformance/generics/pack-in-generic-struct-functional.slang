@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/language-reference/generics.md#type-parameter-packs-type-param-packs
-//META: doc_section_digest=1d7c4d9f36d4d30dc9d8e89006174f0691c6f26a9618f3cb1da30611dc1fe7df
 //META: purpose=A generic struct can store a type parameter pack by expanding it into a `Tuple` field, and the tuple elements are accessible after specialization.
 //META: intent=functional
 //META: pipeline_stage=runtime

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#diagnosed-failures-during-binding
-//META: doc_section_digest=23e5df26403f2bb8b858afdcef0953b50aa061e5d136ba544146af99357d929a
 //META: purpose=A family that supplies ray-payload rules binds the miss payload instead of diagnosing it, so the same shader that fails on Metal compiles for SPIR-V and for CUDA.
 //META: intent=functional
 //META: pipeline_stage=layout

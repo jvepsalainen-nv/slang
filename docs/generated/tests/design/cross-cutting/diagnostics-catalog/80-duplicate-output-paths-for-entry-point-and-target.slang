@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=11146c02edef75bf885c42eac8eda7da33aa64dbd737eb22970316a202ddfd52
 //META: purpose=Fires diagnostic E00080 (duplicate-output-paths-for-entry-point-and-target) - multiple output paths have been specified entry point '~entryPoint:Name' on target '~target'
 //META: intent=negative
 //META: pipeline_stage=parse

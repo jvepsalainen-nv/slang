@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/types.md#differentiation-types
-//META: doc_section_digest=418e205c407dfedf73a453aa71e19d8c136a8759dd81549fefaf44a7781fd4e9
 //META: purpose=A function carrying both [BackwardDifferentiable] and [BackwardDerivative(fn)] gets only the FromLegacy context opcode pair, not the BackwardDiff pair.
 //META: intent=boundary
 //META: pipeline_stage=lower-to-ir

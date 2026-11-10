@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/tokens.md#punctuation-and-structural-symbols
-//META: doc_section_digest=0786d0795f8ef21f235cb47bedc955b7c43f8ba5c9f9c5989e209bfdddf3d063
 //META: purpose=The two-character spelling `::` lexes as a single `Scope` token that separates a namespace from the name it qualifies.
 //META: intent=functional
 //META: pipeline_stage=lex

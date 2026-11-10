@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#polynomial-helpers
-//META: doc_section_digest=b5eb05716e03d485ee334da2f955b3860ecb75a00316fb77c3e6d6a07ddaf801
 //META: purpose=A polynomial factor's parameter is a general compile-time integer rather than only a generic parameter, so sums built over the symbolic division N / 2 still canonicalize across commuted spellings.
 //META: intent=boundary
 //META: pipeline_stage=check

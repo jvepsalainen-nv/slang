@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=`const` written as a type modifier in a typedef is rejected, and the aliased type still checks as the unmodified type.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

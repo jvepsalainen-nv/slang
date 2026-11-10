@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/04-ast-to-ir.md#mapping-ast-constructs-to-ir
-//META: doc_section_digest=dd99e7be1e43f7dbf1c422a81f414e18dee5066cd4a3a5026a22bae8d7e540e8
 //META: purpose=An `IndexExpr` lowers to `getElement` when its base is a value and to `getElementPtr` when its base is a pointer — the same subscript syntax picks a different opcode from the base's l-value-ness.
 //META: intent=functional
 //META: pipeline_stage=lower

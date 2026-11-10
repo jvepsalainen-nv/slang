@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/values.md#builtinoperationintval-and-the-single-representation-invariant": "7294e983132681667c88eb7937aa63061a1f9c975bb9567ce8dd36184dcda775",
+    "docs/generated/design/ast-reference/values.md#declref-family": "f5940ad19edabc1d30b4557e70c9c750ecca37f72902e5ab3221b5f0e0f6f564",
+    "docs/generated/design/ast-reference/values.md#declref-family-and-the-four-shapes-a-decl-ref-can-take": "d1cde98ce417ba3a6d58bfc34254895d6aff291ea4927910dedf997bf90971df",
+    "docs/generated/design/ast-reference/values.md#intval-and-why-integer-values-are-first-class-vals": "8e5242c70de0586f8b4e9893dc1df5d50bc1f48c7dcc1a2393d05698891625eb",
+    "docs/generated/design/ast-reference/values.md#intval-family": "5fed4ba267a444ba4547b1574c8db862932b61bd0c009914f7040a04720849a9",
+    "docs/generated/design/ast-reference/values.md#modifier-values": "4c5c9c1e7765b6e543cea7e621ed93e8031fdc0356761ba05a209405b33bc867",
+    "docs/generated/design/ast-reference/values.md#polynomial-helpers": "b5eb05716e03d485ee334da2f955b3860ecb75a00316fb77c3e6d6a07ddaf801",
+    "docs/generated/design/ast-reference/values.md#polynomialintval-and-polynomial-canonicalization": "17fa4894f1273e7614f2fca10ae7e0fd30e8f753b02c39a565511130eb1f2cfc",
+    "docs/generated/design/ast-reference/values.md#substitution-and-the-substitution-cache": "841f6124a2f008033b29dd540674723ec016ad2961fe9d1a99ddcd6e2749cd23",
+    "docs/generated/design/ast-reference/values.md#subtype-witnesses": "3720fe8d4a22123cd3b048fe57096607dd7126d8108b0690dfab8a67fd9a65bc",
+    "docs/generated/design/ast-reference/values.md#typeequalitywitness": "34af3b9cdb8c156d52422e1bfabc0f7717f0c6c5217754ef7512f31b2c312223",
+    "docs/generated/design/ast-reference/values.md#witness-and-witness-table-evidence": "5988cb257320ec90e43b3610a64f2e3e3057f99ab3613c24fa88fd9583dcee33"
+  }
+}

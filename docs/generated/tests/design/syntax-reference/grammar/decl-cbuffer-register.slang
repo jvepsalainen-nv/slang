@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#hlsl-compatibility-declarations
-//META: doc_section_digest=47566cd8f7a7690b5bc248f56b6ae6ee7deb73f17385a110749298f08f34fd2a
 //META: purpose=`CBufferDecl` parses as `'cbuffer' IDENT ':' Register '{' StructMember* '}'` with a `register(...)` clause.
 //META: intent=functional
 //META: pipeline_stage=parse

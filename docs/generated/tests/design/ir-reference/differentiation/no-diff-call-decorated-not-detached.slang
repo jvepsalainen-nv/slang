@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:34:20+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#detachderivative
-//META: doc_section_digest=a5f429e50a404aa0a4ddb2be899ebf5ee6430f639bfac92c88add9f4cdae7ee3
 //META: purpose=no_diff applied to a call expression attaches TreatCallAsDifferentiableDecoration to the call and emits no detachDerivative.
 //META: intent=boundary
 //META: pipeline_stage=lower

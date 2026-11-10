@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/name-resolution/scopes.md#edge-cases-and-failure-modes": "6f56ac76aaddef7a4076217c6b9406ddfe1d14ddd4d122a991eba3c769b781e4",
+    "docs/generated/design/name-resolution/scopes.md#implicit-scopes": "19ad073ab979d4a331ac1f5fc84f58af039847fad8e90dbe9db085b55e74e2b0",
+    "docs/generated/design/name-resolution/scopes.md#scope-bearing-ast-nodes": "ba0fbb59f19c90964f30f63e36bd6d872a6caad870e1c39a6b2b4f2f5f9714ca",
+    "docs/generated/design/name-resolution/scopes.md#scope-walking-order-during-lookup": "1a49dc286532d677a254b9cf02b7dfa3065f611704c034f59d6210cab0b32c1b",
+    "docs/generated/design/name-resolution/scopes.md#sibling-scopes": "48e2e716cb98e52f251b42e53f41f2630e81baad625d5ff212284e8c3ac35e05"
+  }
+}

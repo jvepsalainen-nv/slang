@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/name-resolution/overload-resolution.md#conversion-costs": "0250e18742b3786726efc1e85a165627e5d19d2338098891f6ef00a648a8d5df",
+    "docs/generated/design/name-resolution/overload-resolution.md#conversions-that-do-not-have-their-own-cost-level": "9227aed1f78a83806e63a847830af51d590c31ca851486fe30369ae22b80c447",
+    "docs/generated/design/name-resolution/overload-resolution.md#edge-cases-and-failure-modes": "b389e40b388d5f30478f28f97f1bbbbdfb2576ddc1cea6d321380e5d95ca739d",
+    "docs/generated/design/name-resolution/overload-resolution.md#finalize-phase-completeoverloadcandidate": "be7cb845146dff6e17cc55868c420377fde289080c02c7b773e24e30ea6297e1",
+    "docs/generated/design/name-resolution/overload-resolution.md#partial-generic-application": "e06ed409a53cec273f1b68cefb6951235a8d59457bb201304104fe7026c8e802",
+    "docs/generated/design/name-resolution/overload-resolution.md#probe-phase-trycheckoverloadcandidate": "471a235af8be78d2eb5c62c0f69c7e4037797818d1630eb02a08fcdaae148425",
+    "docs/generated/design/name-resolution/overload-resolution.md#probe-phase-where-candidates-come-from": "b2af3e2f54c7f6754ec3aa9bfc60fdd838fc76d81ba2211206a249dbafab3091",
+    "docs/generated/design/name-resolution/overload-resolution.md#the-builtin-operator-fast-path": "9ff302fe090bb783b80fc43fa698c8bb501ddcb429e303b69ba88b9724eafaf1",
+    "docs/generated/design/name-resolution/overload-resolution.md#the-general-path": "2c5cf19780ff5e32c3610b10c3f170b49191675976d3294898fdf305168a3009",
+    "docs/generated/design/name-resolution/overload-resolution.md#tie-breaking-comparator": "764e196b19a5dd0e0f2c516c498be250f0fdaba7e58c28f2ac820f88be1e5466"
+  }
+}

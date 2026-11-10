@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/types.md#array-vs-unsizedarray": "8d861464d52d5973316dc6cf7fb88f9d4e6d9a20f1c42ebaf22ceb34ed960ce4",
+    "docs/generated/design/ir-reference/types.md#arrays": "5c9b5155d865f422932e8a81448f6165059d67b7f88cef295a12330d13aef941",
+    "docs/generated/design/ir-reference/types.md#basic-scalar-types": "fc3f64cf1767fc468943c658dcb39e5c71cdbb3af8d9335eb8de55db2a3c15f7",
+    "docs/generated/design/ir-reference/types.md#differentiation-types": "418e205c407dfedf73a453aa71e19d8c136a8759dd81549fefaf44a7781fd4e9",
+    "docs/generated/design/ir-reference/types.md#enum": "428a69e0f3a257be5f1a17e13be2f81975a2af13fd7603ea470a884feabbeb74",
+    "docs/generated/design/ir-reference/types.md#existentials-and-interfaces": "e3a0033316a52205702d8e14e6434db7aa425c3f1c6ba42818650baa11ade7e6",
+    "docs/generated/design/ir-reference/types.md#func": "fdd06f0a3a11b54325a8474139094f83e3f6174898d99c25f5f4cdcfc864d79a",
+    "docs/generated/design/ir-reference/types.md#metalpackedvec": "167b3150c6048e03cd650e8f68570073a489fbe77cab8ec27c015d56de4d32bd",
+    "docs/generated/design/ir-reference/types.md#ptr-and-the-access-qualifier--address-space-operands": "4eb81c51191334ef3e30616d7d16be9c32be2a38ef15ecc8cf34a2886b8386ae",
+    "docs/generated/design/ir-reference/types.md#rates-and-rate-qualified-types": "1c6a8f0e5bba8df21836ec9c7740986d01e6ef7ccfa3cbf1a6ab88d0febf8224",
+    "docs/generated/design/ir-reference/types.md#resource-and-texture-types": "8a7a3c63487b8f293c70c075134ef33eae10ff00b2e4f1c4f9b195bed7528e0c",
+    "docs/generated/design/ir-reference/types.md#sampler-and-buffer-layout-types": "59ba98a454f4a7ca3fa23a351d1e27c390bcdb5d53b0de7c4c6da9a4cfb1e10a",
+    "docs/generated/design/ir-reference/types.md#spir-v-literals-and-kinds": "cb437a8d3a54100a9f8b0979b5344ce9752099aa4c8732c490575a651f267aad",
+    "docs/generated/design/ir-reference/types.md#storage-only-floating-point": "f5b583f28a33d31cfd085806a27cd0dc991ff52e4389577a35aa5289d1f9d2c2",
+    "docs/generated/design/ir-reference/types.md#strings-and-dynamic-types": "5c3efb9eca6e8ed5a890316545cac33ee93fdcd05dcf2b369fac4813da693813",
+    "docs/generated/design/ir-reference/types.md#struct-and-class-containers": "dc8bc7206795f1cd2c841b0040ce70b9d481e3dc01f19fe9b3fa8d38576f4ab3",
+    "docs/generated/design/ir-reference/types.md#the-work-graph-record-types": "856af2ab938a1fbf64d79e09103fb58a57af82ebebf7c31953889d3866993584",
+    "docs/generated/design/ir-reference/types.md#tuples-packs-and-target-tuples": "debbbb972e6800da97d7993e2f2fd56b9739048c25ff410d8e0d265743b807bc",
+    "docs/generated/design/ir-reference/types.md#untypedresourcehandle-and-untypedsamplerhandle": "d6e806c25dfba41d067042ad360a3c32e44aa994da61cbc96a21a93fc9d17d25",
+    "docs/generated/design/ir-reference/types.md#vec-and-mat": "bb574530be2949c3439b7d94ef06cf75ea770a6c6d65a1d5d5ef56c055963e3b",
+    "docs/generated/design/ir-reference/types.md#vectors-matrices-and-composite": "d954301fdc74111df1e5e54e77e9f4a6d231275aa7a1492da12b7560db422806",
+    "docs/generated/design/ir-reference/types.md#witness-table-types": "e804dd0e1e326f32e2072e925cf745e3e35e20584b05d06daa59b8a1d356bcd1",
+    "docs/generated/design/ir-reference/types.md#work-graph-record-types": "9440247b285eddb1647ff4031353b3207993dc8666f0bdfe3b36cb0d9ad97501"
+  }
+}

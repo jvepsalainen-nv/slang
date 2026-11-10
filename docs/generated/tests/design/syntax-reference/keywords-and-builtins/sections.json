@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#callback-parsed-modifiers-some-take-arguments": "5ced1614f116f53d6caffaa618918a40f5c6010a69679fb425388168f20e1c77",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#core-module-syntax-declarations": "3494215a2f3d95c66bfc5b7610ef9debb7242679109426ec4c710efa9fe7fa6c",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#decl-keywords": "38bbbd7083f0dd5470308b28e015e307c9b17c55d97e2e766bc45629df65ad7a",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#expression-keywords": "dfed8ec8651a096c4ad6a7aed9f4bc652318061d4ce6e334e3058975c328e942",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#reserved-identifier-prefixes": "181c5adee97f9fe71ebee471c83f25347189162a34c6172623c5c8a17cb9e656",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#simple-modifiers": "5dce51d3aa0b042b6517dc2c5e5fe18577401d36310634d73a84c52470cea996",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#statement-keywords": "3571737d4bbbec12cece17f18e8198029c1f511e52b3e3c93fe529db89cc2fc1",
+    "docs/generated/design/syntax-reference/keywords-and-builtins.md#where-keywords-come-from": "2c4ab5d6db5ae644652c49ae60dc5ee855e4f6b1262d2c51c4570d195bbb262c"
+  }
+}

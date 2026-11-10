@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-02T10:45:10+00:00
-//META: source_commit=6815ed82d5e8c95b0e1258ca2eba0ca9c7825d86
 //META: doc_ref=docs/language-reference/basics-memory-model-special-topics.md#function-parameters-with-inout-inout-modifiers
-//META: doc_section_digest=50b3040fe642ee135f57002e37f20cd9b949f33677eec525295c406b3b231822
 //META: purpose=Passing the same variable to two `inout` parameters of one function call elicits diagnostic W30051 (potentially aliased argument to out/inout/ref parameter).
 //META: intent=negative
 //META: pipeline_stage=check

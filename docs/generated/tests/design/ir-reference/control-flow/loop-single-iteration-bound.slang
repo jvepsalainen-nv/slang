@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#loop
-//META: doc_section_digest=bc7061314517cbb77b1286ea88e74f8ec0967651ce6a5da22cdcf8c71f3e99d0
 //META: purpose=Boundary: a loop with a statically-known single iteration (`for (int i=0; i<1; i++)`) still emits the loop terminator with the three structured-join operands plus induction args.
 //META: intent=boundary
 //META: pipeline_stage=lower

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#unresolveddecl
-//META: doc_section_digest=7543c9fe329c4a72d948315492fc2d45ccedfdddb5bc7bec600d31eeb29eaada
 //META: purpose=A reference to a name with no matching declaration in scope is diagnosed rather than silently bound to a placeholder declaration.
 //META: intent=negative
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#shader64bitindexing
-//META: doc_section_digest=2cef34bb99776cda2f51ae6b62e7134ddfe96c53f8b58c27dd5fe25f19a6f759
 //META: purpose=A [Shader64BitIndexing] attribute written on a callee is lifted onto the calling entry point, which is where the shader64BitIndexing decoration appears.
 //META: intent=functional
 //META: pipeline_stage=lower

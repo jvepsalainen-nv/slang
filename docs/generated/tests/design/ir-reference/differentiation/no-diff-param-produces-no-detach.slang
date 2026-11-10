@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#detachderivative
-//META: doc_section_digest=a5f429e50a404aa0a4ddb2be899ebf5ee6430f639bfac92c88add9f4cdae7ee3
 //META: purpose=no_diff on a parameter declaration is a modifier rather than an expression and produces no detachDerivative inst at all.
 //META: intent=boundary
 //META: pipeline_stage=lower

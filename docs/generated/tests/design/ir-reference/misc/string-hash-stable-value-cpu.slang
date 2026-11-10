@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#getstringhash
-//META: doc_section_digest=2e49a7038974c54373eb64a6a67281810cb65f3247508b881fd7e7f8fe060368
 //META: purpose=`getStringHash` of the same literal produces the same value at every call site, and different literals produce different values.
 //META: intent=functional
 //META: pipeline_stage=runtime

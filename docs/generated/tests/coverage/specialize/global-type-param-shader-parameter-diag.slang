@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=A `type_param` used as the element type of a global shader parameter survives front-end checking and is rejected by the IR specialization pass with E38207, reported once at the `type_param` declaration.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-specialize.cpp

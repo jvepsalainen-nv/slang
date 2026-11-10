@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T20:50:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#linking-and-validation
-//META: doc_section_digest=4310de5f7ab116db6edec98751cffebaba108c378ea42426e57d23fd6ae5cf23
 //META: purpose=checkForMultiplePushConstantBlocksPerEntryPoint reports an error for an entry point that statically uses more than one push-constant block, from legalizeIRForSPIRV and from the GLSL emitter.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

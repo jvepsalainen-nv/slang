@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#the-builtin-operator-fast-path
-//META: doc_section_digest=9ff302fe090bb783b80fc43fa698c8bb501ddcb429e303b69ba88b9724eafaf1
 //META: purpose=Among integer operands the larger size wins, so an int + int64_t expression has type int64_t.
 //META: intent=boundary
 //META: pipeline_stage=check

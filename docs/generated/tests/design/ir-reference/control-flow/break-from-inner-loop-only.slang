@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#terminators-unconditional-branches
-//META: doc_section_digest=d0eeb53252388d3a6e69f829f07385b975955f496c04529e2b4fcce99f38c4ae
 //META: purpose=Boundary: a `break;` inside a nested inner loop targets the inner loop's breakLabel only — the outer loop's break/continue labels are unchanged and both `loop` terminators retain their independent structured-join operands.
 //META: intent=boundary
 //META: pipeline_stage=lower

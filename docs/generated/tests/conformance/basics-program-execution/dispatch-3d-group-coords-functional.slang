@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:45+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/basics-program-execution.md#program-execution
-//META: doc_section_digest=adbd230383e252b1f6ddca986456ca84146e424a9f5eea3bdd18df8bd52b8168
 //META: purpose=SV_GroupID lies in [0,grid_dim) and SV_GroupThreadID lies in [0,group_dim) for each axis of a 3D dispatch.
 //META: intent=functional
 //META: pipeline_stage=runtime

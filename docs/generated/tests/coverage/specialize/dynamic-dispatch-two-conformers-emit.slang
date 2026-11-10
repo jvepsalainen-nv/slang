@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=gpt-5.6-sol
-//META: generated_at=2026-09-18T09:14:37+00:00
-//META: source_commit=55e3dbdd739d0fa97570be60754f7c2543321d7c
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#dispatchers-and-existential-specialization
-//META: doc_section_digest=ce4222b88f152eca2d447fe87928f2933e7dd7c80a82eede281299e44001afc3
 //META: purpose=An interface value assigned one of two concrete conformers on different paths lowers to a dynamic-dispatch switch over the runtime tag.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-lower-dynamic-dispatch-insts.cpp

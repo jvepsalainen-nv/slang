@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the member restrictions a `dyn interface` is subject to under -std 2026 (no associated types, generic methods, [mutating] or [Differentiable] methods).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

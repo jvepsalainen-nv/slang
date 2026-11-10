@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#wgsl
-//META: doc_section_digest=24cf127ba87a077887a4ad8e725f5ae07b1714ceed5cc4f322ad01d02f3bfd6e
 //META: purpose=WGSL also sets `supportsSwitchFallThrough` to false, so two labels sharing one body are emitted as a single comma-separated WGSL case selector instead of the stacked empty-case form the other C-like backends use.
 //META: intent=boundary
 //META: pipeline_stage=emit

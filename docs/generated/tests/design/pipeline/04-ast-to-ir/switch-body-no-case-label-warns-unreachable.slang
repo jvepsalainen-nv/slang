@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/04-ast-to-ir.md#diagnostics-during-lowering
-//META: doc_section_digest=8da9811f8488ad6ce5409491fafa35c23411a9a65708775cf2a3ad6c64768b12
 //META: purpose=A `switch` body with no `case` or `default` label takes visitSwitchStmt's no-cases early return, which itself reports the unreachable-code warning (E41000) naming the first statement.
 //META: intent=functional
 //META: pipeline_stage=lower

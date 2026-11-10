@@ -417,11 +417,7 @@ Every `.slang` file must begin with:
 
 ```slang
 //META: generated=true
-//META: model=<your model identifier>
-//META: generated_at=<ISO 8601 timestamp, UTC>
-//META: source_commit=<git HEAD when you ran>
 //META: doc_ref=docs/generated/design/<path>.md#<anchor>
-//META: doc_section_digest=<sha256 of the cited section's text>
 //META: purpose=<one-line summary, in plain English>
 //META: intent=<functional | boundary | negative | stress | expansion | regression>
 //META: pipeline_stage=<lex | preprocess | parse | check | lower | ir-pass | layout | link | emit | runtime>
@@ -474,11 +470,28 @@ Inline comments next to a specific `// CHECK` line (explaining one
 assertion) are fine and should be kept — this rule is about the
 descriptive block, not about banning all commentary.
 
-`doc_section_digest` is the SHA-256 of the text of the cited doc
-section, computed as the body lines from the heading whose id is the
-anchor up to but not including the next same-or-higher-level heading.
-The agent can compute this directly from the doc file at
-`source_commit`.
+A test carries no provenance or digest keys. Which model wrote it and when
+is in the bundle README front-matter and `freshness.json` (and in git); the
+digest that detects doc drift is recorded once per cited doc section, not
+once per test, in the bundle's `sections.json`.
+
+`sections.json` maps each `doc_ref` (or `catalog:<code>` in the diagnostics
+catalog bundle) to the SHA-256 of the cited section's text: the body lines
+from the heading whose id is the anchor up to but not including the next
+same-or-higher-level heading. You never compute or edit it by hand. After
+you have re-read the claims of the tests under a section against its
+current text (and fixed or deleted any whose claim no longer holds), run
+
+```
+python3 docs/generated/tests/_meta/regenerate.py review-sections <bundle>            # list pending
+python3 docs/generated/tests/_meta/regenerate.py review-sections <bundle> --accept   # record
+```
+
+`--accept` is the statement "I re-read these sections"; do not run it to
+silence lint. A new test under an already-recorded section needs no ledger
+change; a test under a new section gets its entry from `--accept`. Do not
+write `model`, `generated_at`, `source_commit` or `doc_section_digest`
+`//META` lines: lint warns about them.
 
 ### `requires-tool` (optional)
 

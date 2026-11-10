@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:40:00Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/overview.md#emit
-//META: doc_section_digest=f5ca0be190b77cca517eee93b8fc03af868bd9b8d69abe8e20fadc934d5e4ab2
 //META: purpose=Each C-like source emitter emits for any compute entry point and spells the thread-group declaration in its own idiom: an HLSL attribute, a GLSL layout qualifier, a SPIR-V execution mode, a WGSL attribute, with the host-dispatched Metal and CUDA kernels carrying no 16, 1, 1.
 //META: intent=functional
 //META: pipeline_stage=emit

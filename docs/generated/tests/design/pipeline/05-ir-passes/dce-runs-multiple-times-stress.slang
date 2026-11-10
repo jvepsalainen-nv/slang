@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#how-the-passes-are-ordered
-//META: doc_section_digest=2ca48ce00e76569f6fbdb39bc8e56c03183f8c10455888130166edb11bbdb183
 //META: purpose=Stress: the eliminateDeadCode pass runs at least three times during the SPIR-V pipeline — three or more `### AFTER eliminateDeadCode:` headers appear in the dump.
 //META: intent=stress
 //META: pipeline_stage=ir-pass

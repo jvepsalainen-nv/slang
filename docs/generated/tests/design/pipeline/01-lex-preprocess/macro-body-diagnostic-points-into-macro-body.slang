@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#source-location-preservation
-//META: doc_section_digest=b376d677453ba50705d8234aa3572303b42f0c428f903a6b2d9d9b73a3df65a7
 //META: purpose=A token copied verbatim from a macro body keeps the macro definition's source location, so a diagnostic about it points into the macro body rather than at the invocation site.
 //META: intent=functional
 //META: pipeline_stage=preprocess

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/keywords-and-builtins.md#statement-keywords
-//META: doc_section_digest=3571737d4bbbec12cece17f18e8198029c1f511e52b3e3c93fe529db89cc2fc1
 //META: purpose=A `do` statement may be followed by a chain of `catch` clauses; the parser keeps consuming further `catch` clauses and nests each one inside the next, so every error type in the chain reaches its own handler.
 //META: intent=functional
 //META: pipeline_stage=parse

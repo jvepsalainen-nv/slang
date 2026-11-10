@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/resources-and-atomics.md#append-and-consume-buffers": "15f1e60f440b7b3872eedb1a557e23652128d2b360ca043f0d0b361c0dbb8325",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#atomic-operations": "05d2a0b4a3db43236d3559421222e61b18c415c1fc63143d73dee571f32aaba5",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#atomiccompareexchange": "e4eb208d1f9824d2e81cc5953a860caae9db983d08b74c7f4528a7adf051d211",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#barriers-and-synchronization": "8c466a442d244a131b8545faefbb2dad3bf762ee56c68f8afb7214ab1c19ad42",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#buffer-load-and-store": "539f4d826195c55c809a7bdee601b791ce9a4d320d577f17983cfe774c4e7973",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#byteaddressbufferstore-operand-naming": "506781798e5ac2ada0cb22420a06962f4ca8860da13dd9451ced8a02b444b1c9",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#controlbarrier-vs-groupmemorybarrierwithgroupsync": "b5bb477b8dc3ab13fffb64524a869751519cd2bad7694a685d8a90a1be1b01ab",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#cooperative-matrix-and-vector": "39add88dadb99d08c1db82989db6374fb58831b91549114387ca571522d36488",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#descriptor-heaps": "8b942a67553bd39927206387b01540aebf09dd1c1b7da3b5e44f4891e5017fc3",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#getnaturalstride-and-getnaturalalignment": "20f2aab65ec72746e71abf34821634d06e6bdc840158f8ecd1247f51c10c11f0",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#imagegatheroffset": "57ab19fe86465c8bf8bea47b9e3d5843769082b65acc1d99a037644f8175be4d",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#interlocked-is-a-wrapper-not-an-opcode": "f6cf80458915c8409d3d0c1d97c3c8a35a8993765cb056ae9eb82e0b5301e131",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#loadresourcedescriptorfromheap": "51bb78878333a1965bd93f980a078e0c29cd459282a318e33a19fce416018edf",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#mesh-shader-outputs": "cdd3efcf311d65cc31b83bbbfa363244d30188bf12467915e7bca68422d965c9",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#nonuniformresourceindex": "da7804ffd61b86af2c970fd765eb12daa92bd5d94d9373a5ac2b08752465a66f",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#raytracing-payload": "9082ae54ded6cb49d7f3a159b2f8dd6bcb051518267d30ba67d1ca1dc471a6f4",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#resource-queries-and-modifiers": "3fa57c07d0da1e5457cc82b9ee03437599d2c7fe2f0bfaf6e783d187f12c9264",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#rwstructuredbuffergetelementptr": "c1926379566a798f6e26928651f281675df5e998bf0bf008f9481bf70aad885c",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#sampling-and-combined-samplers": "bbf71e9879e5ca6464e703729e122f9e3af7f79c62a7f182ca2c1576a2edbfe2",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#shader-io": "a773e5d9549bbb68f3cb1b14f6a75cb5ac368be4037f672f043b86eb02481ba9",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#texture-and-image": "dea38283cf7abef972fc229f2afd4d0c0e478c21f406938bc0ffa72b2564baab",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#the-atomic-memory-order-operand": "adf1421d9e876005b9b4a50c4385745f838c4bface29d5d14e5bfd4987a276b7",
+    "docs/generated/design/ir-reference/resources-and-atomics.md#wave-intrinsics": "19b7f41bcaec8819132da06910d21da3f5eb869cf91a4374d8d6ef8ddd38a268"
+  }
+}

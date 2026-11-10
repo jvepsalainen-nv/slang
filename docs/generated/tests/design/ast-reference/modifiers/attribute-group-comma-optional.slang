@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/modifiers.md#modifiers-vs-attributes
-//META: doc_section_digest=0be0f22a51918f9fc5f00ab42a13ab6eb20120ba83f03c20f196cfda4fc6178d
 //META: purpose=Several attributes may share one bracket group and the comma between them is optional.
 //META: intent=functional
 //META: pipeline_stage=parse

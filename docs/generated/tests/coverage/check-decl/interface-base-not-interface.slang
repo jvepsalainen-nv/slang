@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-4-8[1m]
-//META: generated_at=2026-06-11T12:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#failure-modes
-//META: doc_section_digest=1690bc07bc351f6d57ef0cbfbdf90dd7a3a711d8e434d872c178e166712d1f85
 //META: purpose=Verifies an interface inheriting from a non-interface struct type is rejected with E30810.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

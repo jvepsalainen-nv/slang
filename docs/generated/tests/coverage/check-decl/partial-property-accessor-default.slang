@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies an interface `property` with a body on only one accessor is rejected with E30318, and that giving every accessor a body is rejected too (E30317).
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

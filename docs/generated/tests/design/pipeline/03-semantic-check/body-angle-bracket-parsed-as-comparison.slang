@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#two-pass-interaction-with-the-parser
-//META: doc_section_digest=a7dea93156126395af43f909ce2264a419291aa4fbab609c33243957962e4449
 //META: purpose=When the name before `<` is an ordinary local rather than a generic, the same token shape inside a body parses as relational comparisons.
 //META: intent=boundary
 //META: pipeline_stage=check

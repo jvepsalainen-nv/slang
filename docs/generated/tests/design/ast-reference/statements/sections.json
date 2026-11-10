@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/statements.md#blockstmt-and-seqstmt": "b7945f88c46da1ac38d5eef1017c65ea1540af45af3be9fa70d93d8265ed6154",
+    "docs/generated/design/ast-reference/statements.md#compiletimeforstmt": "08fbefd5efa0200e11e5b0f265a4371772d26792ec01888568068161b71d8913",
+    "docs/generated/design/ast-reference/statements.md#declstmt-expressionstmt-and-emptystmt": "003e69c99073f5634eddc84cdfb1b66685b97f4c42311978531b11906df8dbf4",
+    "docs/generated/design/ast-reference/statements.md#deferstmt": "01a2d9637a96e0fd75d243d8f821bc31bba04bdf6901b24966dcfbc09af87ef9",
+    "docs/generated/design/ast-reference/statements.md#ifstmt": "fbe47d469abf3c95cf8c48afe15fbe2baf34948f4ad96baa0cbbda74f8daedab",
+    "docs/generated/design/ast-reference/statements.md#labelstmt-breakstmt-continuestmt-and-discardstmt": "adfde865e3afc82ccfc5ca78a86a905bce73f1b1961ab0afdae17dd2375d854d",
+    "docs/generated/design/ast-reference/statements.md#loop-family": "62d41f734409e853620e442a2938448e5d7be850d748cdbabc3e948d9882271a",
+    "docs/generated/design/ast-reference/statements.md#requirecapabilitystmt": "0e475ed415a7b8317f2533d70e3c8adea676556ba4f72a3f5ab508aea132037d",
+    "docs/generated/design/ast-reference/statements.md#returnstmt": "c25c0b38fe3f374b6c53bf5d39f45dbef8f00f160edf334a7927f62cea89fd70",
+    "docs/generated/design/ast-reference/statements.md#switchstmt-casestmt-defaultstmt": "13efdda0ccc7720aa861efdef335d6633fc6c1f771e3f28b4047c028e42fa9a0",
+    "docs/generated/design/ast-reference/statements.md#targetswitchstmt-stageswitchstmt-targetcasestmt": "f69af12d2291a28f0733806246d3cce0dc667ca73a7d8e4d5dfa0167dab37f95",
+    "docs/generated/design/ast-reference/statements.md#throwstmt-and-catchstmt": "9a6cecec6f6b38732550b099e7d3df67449d1415430eff969ce34213cd09eefb",
+    "docs/generated/design/ast-reference/statements.md#unparsedstmt": "1ec74077d800eeabe53f62ca462d69cfbf6b2d1aa7f55e585e872c7283b8ce83"
+  }
+}

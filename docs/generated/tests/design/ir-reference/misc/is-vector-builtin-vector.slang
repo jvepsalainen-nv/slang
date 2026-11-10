@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:59:05+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#type-queries-and-predicates
-//META: doc_section_digest=a314589d5bf1e20e3602ad6d1cfc7cdbc66f447af11efa30fb64ff86fa52545e
 //META: purpose=`__isVector<T>()` is true for a builtin vector and false for a scalar or a matrix, because the fold classifies the operand type itself rather than its element type.
 //META: intent=boundary
 //META: pipeline_stage=lower

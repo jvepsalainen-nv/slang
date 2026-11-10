@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#conditionalbranch-vs-ifelse
-//META: doc_section_digest=96f04f740c4687e22beab296ffbc9afcbc132a64b968c6692bcb6c3ea1648cbc
 //META: purpose=AST lowering never emits the unstructured conditionalBranch: an entry point built from if, for, and switch statements contains only structured terminators.
 //META: intent=functional
 //META: pipeline_stage=lower

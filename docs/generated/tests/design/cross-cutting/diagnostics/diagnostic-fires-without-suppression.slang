@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:32:51Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/cross-cutting/diagnostics.md#diagnosticsink
-//META: doc_section_digest=d8418d47e63070ba0cf68467df4c96fca1462a9b09b58fcda9b0f2dcaac6484b
 //META: purpose=With no severity override registered in the sink, the comma-operator warning E41024 reaches the user unchanged.
 //META: intent=functional
 //META: pipeline_stage=check

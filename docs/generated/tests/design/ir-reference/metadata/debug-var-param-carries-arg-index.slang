@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugvar
-//META: doc_section_digest=5e624fe4d59626301c0a26642fbfc7ef147f62f38d27132871b59bfd03634759
 //META: purpose=A DebugVar for an entry-point parameter carries the optional argument-index operand after source, line, column and scope.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

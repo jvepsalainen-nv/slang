@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:40+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#synthesized-derivative-witnesses
-//META: doc_section_digest=3f62027381c2407565e5f1b3ef3cfd6b38348501236004d7b78830aade4ef218
 //META: purpose=Without -experimental-feature the __func_extension declaration is dropped after its warning, and the compile fails later on a separate error at whatever referred to it.
 //META: intent=negative
 //META: pipeline_stage=check

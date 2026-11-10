@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#layout-and-binding
-//META: doc_section_digest=0fba7fe66a94de18a3a43af71b0a2a503d43e1e15dfc035e524c23f3c2bdbd9f
 //META: purpose=moveGlobalVarInitializationToEntryPoints moves initialization logic off global variables and onto each entry point, so the initializer shows up as the first statements of the emitted entry-point body rather than on the global's declaration.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -diagnostic-color always wraps diagnostic text in ANSI SGR escapes even when the output is not a terminal, while never leaves the plain text form, and an unrecognized value is rejected with E00062.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

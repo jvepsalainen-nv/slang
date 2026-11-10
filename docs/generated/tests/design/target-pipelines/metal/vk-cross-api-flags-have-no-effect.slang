@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#phase-c-metal-legalization-lowering-phi-elimination
-//META: doc_section_digest=c5af8ae560515f62aefb59225c78774ee7d8bd8656a9f3cf1b634fcb3e1f88e4
 //META: purpose=Negative: Vulkan cross-API options are filtered out of the Metal pipeline, so `-fvk-invert-y` and `-fvk-use-dx-position-w` leave the emitted MSL unchanged.
 //META: intent=negative
 //META: pipeline_stage=ir-pass

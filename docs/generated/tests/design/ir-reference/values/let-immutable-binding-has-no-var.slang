@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T22:00:26+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/values.md#var-vs-globalvar-vs-alloca
-//META: doc_section_digest=015fc32433b67b42977bcc4cdd1f50489d71e13c08f3ea9e36824d7ef792babc
 //META: purpose=An initialized immutable `let` lowers to its initializer's SSA value with no `var`, while a `var` that needs storage (here, one passed as `inout`) lowers to a `var` instruction.
 //META: intent=functional
 //META: pipeline_stage=lower

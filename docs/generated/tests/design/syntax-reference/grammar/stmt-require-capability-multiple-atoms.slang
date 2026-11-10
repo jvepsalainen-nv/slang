@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#statements
-//META: doc_section_digest=b9a1edc11e7f4ef12c141b50f73b3a36a9eda5811402d0c118a09dc03161e42b
 //META: purpose=`RequireCapabilityStmt` takes parentheses and a comma-separated atom list, so it is the spelling that can name several atoms at once.
 //META: intent=functional
 //META: pipeline_stage=parse

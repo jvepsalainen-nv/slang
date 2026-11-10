@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#intval-and-why-integer-values-are-first-class-vals
-//META: doc_section_digest=8e5242c70de0586f8b4e9893dc1df5d50bc1f48c7dcc1a2393d05698891625eb
 //META: purpose=A generic value reference to an extern declaration stays symbolic past semantic checking as a link-time value, and a polynomial built over it propagates that property and resolves to the linked constant at emit.
 //META: intent=functional
 //META: pipeline_stage=emit

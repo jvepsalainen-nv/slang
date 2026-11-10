@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -emit-spirv-via-glsl routes SPIR-V generation through glslang, so the module reports the Glslang generator and SPIR-V 1.0, while the default direct path reports the Slang generator and SPIR-V 1.5, and a later -emit-spirv-directly wins.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

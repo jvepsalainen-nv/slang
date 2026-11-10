@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#literal-forms-vs-token-kinds
-//META: doc_section_digest=f5c669bb9740dfa642523af3da2be0ac7b679950ab4f326668ed87a90288d1e6
 //META: purpose=`CHAR_LIT` is a `Literal` that lowers to an `IntegerLiteralExpr` rather than a dedicated character node.
 //META: intent=functional
 //META: pipeline_stage=parse

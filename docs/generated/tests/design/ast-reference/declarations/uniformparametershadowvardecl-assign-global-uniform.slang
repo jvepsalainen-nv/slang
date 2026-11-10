@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:26+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#uniformparametershadowvardecl
-//META: doc_section_digest=c6fe74cd1fc3cdee3555e7000cd25e35c17eb37bbcdbb37d40feb743832a77a3
 //META: purpose=For HLSL source with extended backwards compatibility, a global uniform parameter the program assigns to is accepted because a mutable shadow variable takes over its name.
 //META: intent=functional
 //META: pipeline_stage=parse

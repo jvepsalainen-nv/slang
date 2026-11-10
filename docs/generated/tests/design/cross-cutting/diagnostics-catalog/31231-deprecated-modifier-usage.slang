@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=9fbcde4f9ac224c04e5f2a9b5897f6aa1ba29646065c3a6493db47be21a2d692
 //META: purpose=Fires diagnostic E31231 (deprecated-modifier-usage) - use of deprecated modifier
 //META: intent=negative
 //META: pipeline_stage=parse

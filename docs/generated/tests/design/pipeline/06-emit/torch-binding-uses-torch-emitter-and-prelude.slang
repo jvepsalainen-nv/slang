@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/06-emit.md#torch
-//META: doc_section_digest=f3dd18f72b82f5be40dfcaec174f508ebfc775342fb9b2670b1ef110166e8db5
 //META: purpose=The PyTorch binding target is special-cased to the Torch emitter, which emits the PyTorch C++ glue (a `PYBIND11_MODULE` with an `m.def` per `[TorchEntryPoint]`) on top of the Torch prelude.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/wgsl.md#phase-b-specialization-and-type-legalization
-//META: doc_section_digest=9170fd752e08e7e2778f564ecb1cabc328722ba47d9d53a46dfb89d7feaa308a
 //META: purpose=lowerAppendConsumeStructuredBuffers runs for WGSL and splits AppendStructuredBuffer<T> into an atomic counter buffer plus an element buffer
 //META: intent=functional
 //META: pipeline_stage=ir-pass

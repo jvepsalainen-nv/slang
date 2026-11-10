@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#conversion-costs
-//META: doc_section_digest=0250e18742b3786726efc1e85a165627e5d19d2338098891f6ef00a648a8d5df
 //META: purpose=kConversionCost_ScalarIntegerToFloatMatrix (410) is the sum of the int-to-float and scalar-to-matrix levels, so an int scalar prefers an int2x2 parameter (10) over a float2x2 one.
 //META: intent=boundary
 //META: pipeline_stage=check

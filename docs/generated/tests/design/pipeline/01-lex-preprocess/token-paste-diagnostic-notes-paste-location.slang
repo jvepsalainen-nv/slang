@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#source-location-preservation
-//META: doc_section_digest=b376d677453ba50705d8234aa3572303b42f0c428f903a6b2d9d9b73a3df65a7
 //META: purpose=A pasted token is re-lexed from a fresh token-paste source view, and a diagnostic raised on it is reported against that view plus a note pointing back at the `##` that initiated the paste.
 //META: intent=functional
 //META: pipeline_stage=preprocess

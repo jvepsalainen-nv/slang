@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/target-pipelines/metal.md#descriptorhandlet-parameter-binding-emission": "c4bc4aa95a9f0c504acac5cbe36ac2ac9c85a1c9622ee31b77de701fc02e270c",
+    "docs/generated/design/target-pipelines/metal.md#downstream-apple-metal-compiler": "493f392639c5a17ee3f1baf8a77a2222a0f4ff648b2f59628575efc1dd1a87c3",
+    "docs/generated/design/target-pipelines/metal.md#eliminatephis-with-default-options": "95d100050bc47f2bd5fba31843e81b751f46f7c3645b89b451d242d327b5a816",
+    "docs/generated/design/target-pipelines/metal.md#entry-point-shape": "8d998c07009a972c35da67bd6e5664754c9f9202d1f0594877545852dbd8b327",
+    "docs/generated/design/target-pipelines/metal.md#legalizeemptytypes-runs-twice": "e318940853ac78ef62659e69253b628edf2c968aefece2a4df458f7ec505f945",
+    "docs/generated/design/target-pipelines/metal.md#legalizeimagesubscript": "aa9bf84d8620c8c7f7f71d4a17a788c4c9a4a1245f763e82fd6ffc0bd5f7726c",
+    "docs/generated/design/target-pipelines/metal.md#legalizeirformetal": "93b06c89a6012feb3801573c05960ec24c865923e2f34e1c7f3dca8e8dfa82d2",
+    "docs/generated/design/target-pipelines/metal.md#metal-caps-coverage-counters-to-32-bits": "40abf9941744b73d17c93e4cc12d11237458f600cab399022effa6f6d2dc1841",
+    "docs/generated/design/target-pipelines/metal.md#metals-three-lowerbufferelementtypetostoragetype-invocations": "3aceda666e9b61557ae6e477f56a082f9ca8a551751410e690a18985649e0b14",
+    "docs/generated/design/target-pipelines/metal.md#phase-a-link-and-entry-point-prep": "4f783666c7c9b7df63417e280a2ad3b3b3b16e7b3d8855003810a245e967bb08",
+    "docs/generated/design/target-pipelines/metal.md#phase-b-specialization-and-type-legalization": "be21d41e9bcf238da33907605680b4b8b37fb9b1b413e9ab52ab59de8b1ec0c2",
+    "docs/generated/design/target-pipelines/metal.md#phase-c-metal-legalization-lowering-phi-elimination": "c5af8ae560515f62aefb59225c78774ee7d8bd8656a9f3cf1b634fcb3e1f88e4",
+    "docs/generated/design/target-pipelines/metal.md#phase-d-metal-emit-and-downstream-tools": "28370caff3e53ad4ca487ddccd3ad5653bd2c2329fcec697ace59cf448351749",
+    "docs/generated/design/target-pipelines/metal.md#resource-type-spellings": "0f39500a5c2260589167928aaa1a2c794b4b5a7ab8e224fd5cf5024f96aac3ee",
+    "docs/generated/design/target-pipelines/metal.md#specializeaddressspaceformetal": "59ef424a18f99049f9ec229ab276693c12e8cd63b80fe7453b5a039912306594",
+    "docs/generated/design/target-pipelines/metal.md#undoparametercopy--transformparamstoconstref": "90951800db549746ae3a24259c6678e0f33a81236c908ea2c96c3d1d3becca3b",
+    "docs/generated/design/target-pipelines/metal.md#where-the-metal-specific-opcodes-come-from": "1a75c977ef651cd4504965e371cf471aeb2f418cba22a342a1e031a5cdbad999",
+    "docs/generated/design/target-pipelines/metal.md#wrapcbufferelementsformetal": "e62da3d6b6db24feabd1f45464a0258ca63e17ab8a341f2125ce07de4bbf28d7"
+  }
+}

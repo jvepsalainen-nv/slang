@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/expressions-operators.md#compatibility-feature": "7fc06f74bccd80f5ad67ec31cc96986ffd178b15f5edb80257c79bb75b196d01",
+    "docs/language-reference/expressions-operators.md#conditional-expression": "7fc06f74bccd80f5ad67ec31cc96986ffd178b15f5edb80257c79bb75b196d01",
+    "docs/language-reference/expressions-operators.md#parenthesized-expression": "7fc06f74bccd80f5ad67ec31cc96986ffd178b15f5edb80257c79bb75b196d01",
+    "docs/language-reference/expressions-operators.md#postfix-operator-expressions": "7fc06f74bccd80f5ad67ec31cc96986ffd178b15f5edb80257c79bb75b196d01",
+    "docs/language-reference/expressions-operators.md#prefix-operator-expressions": "7fc06f74bccd80f5ad67ec31cc96986ffd178b15f5edb80257c79bb75b196d01"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#expressions
-//META: doc_section_digest=3994688da40c44101067ae522581121e1875932e81b3149551e77c8f03fcd011
 //META: purpose=`PostfixSuffix` accepts `'.' IDENT` member access, binding tighter than arithmetic.
 //META: intent=functional
 //META: pipeline_stage=parse

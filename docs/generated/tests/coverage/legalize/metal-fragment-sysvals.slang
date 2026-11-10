@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the Metal system-value table for fragment inputs and outputs, mapping SV_Position/SV_IsFrontFace/SV_SampleIndex/SV_PrimitiveID/SV_RenderTargetArrayIndex/SV_ViewportArrayIndex/SV_ViewID onto Metal attribute qualifiers and SV_Target/SV_DepthGreaterEqual/SV_Coverage/SV_StencilRef onto the output struct.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

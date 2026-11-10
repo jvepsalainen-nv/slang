@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/name-resolution/overload-resolution.md#conversion-costs
-//META: doc_section_digest=0250e18742b3786726efc1e85a165627e5d19d2338098891f6ef00a648a8d5df
 //META: purpose=kConversionCost_Explicit (90000) is never accepted implicitly, so a non-implicit __init is rejected as an argument conversion and only offered as an explicit one.
 //META: intent=negative
 //META: pipeline_stage=check

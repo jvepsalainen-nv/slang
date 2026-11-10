@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:34:20+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#checkpointobj-and-reportcheckpointstore
-//META: doc_section_digest=9b275676b116d94271492b70c7736823034fbf9bc303a258e6064031f497e876
 //META: purpose=Nothing is printed from ReportCheckpointStore unless -report-checkpoint-intermediates is passed.
 //META: intent=negative
 //META: pipeline_stage=emit

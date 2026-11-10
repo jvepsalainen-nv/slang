@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=716ec597fc9c85111cd2fa06ba4e89bc4469b6b2
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#statements
-//META: doc_section_digest=b9a1edc11e7f4ef12c141b50f73b3a36a9eda5811402d0c118a09dc03161e42b
 //META: purpose=Omitting the terminating semicolon of a ThrowStmt is a parse error.
 //META: intent=negative
 //META: pipeline_stage=parse

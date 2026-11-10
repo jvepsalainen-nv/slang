@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#when-it-is-built
-//META: doc_section_digest=14acb6ce88acca39d38cb731d5aca5374cb8cdb115526a701acdd1c9362f92b7
 //META: purpose=When parameter binding fails with an error no layout IR module is built, so the dump contains no layout instructions after the pre-link block.
 //META: intent=negative
 //META: pipeline_stage=layout

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/cross-cutting/core-module.md#what-the-core-module-provides
-//META: doc_section_digest=11ffec405cd9ebf039d30e7bd4c76becb242deae737a81d1506f310d0c00719e
 //META: purpose=A core-module Tuple's positional members compose into a swizzle, so t._2_1_0 yields a reordered Tuple with no import.
 //META: intent=functional
 //META: pipeline_stage=check

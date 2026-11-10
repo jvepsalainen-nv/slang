@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies calling a function that requires an undeclared SPIR-V capability from a function that only declares `spirv` is rejected with E36104 plus provenance notes.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-decl.cpp

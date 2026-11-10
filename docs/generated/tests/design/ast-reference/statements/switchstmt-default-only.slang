@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#switchstmt-casestmt-defaultstmt
-//META: doc_section_digest=13efdda0ccc7720aa861efdef335d6633fc6c1f771e3f28b4047c028e42fa9a0
 //META: purpose=A SwitchStmt whose body holds only a `default:` marker dispatches every condition value to that default section.
 //META: intent=boundary
 //META: pipeline_stage=lower

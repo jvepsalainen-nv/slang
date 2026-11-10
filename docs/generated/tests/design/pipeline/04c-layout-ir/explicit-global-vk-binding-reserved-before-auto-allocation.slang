@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04c-layout-ir.md#parameter-binding-producing-the-programlayout
-//META: doc_section_digest=46863bfb82aa25df1a29d14be8a9effbfaf6dae8dd4bc45bede84a9d03334be8
 //META: purpose=Explicit vk::binding annotations on global parameters are reserved before any automatic allocation, so an earlier unannotated global skips the reserved slot.
 //META: intent=functional
 //META: pipeline_stage=layout

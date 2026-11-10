@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ast-reference/base.md#decl-declbase": "915bcd7944590a821e3804c467a586b0f11f16f9c8765931a612fb024d5bd5cf",
+    "docs/generated/design/ast-reference/base.md#declbase-modifiablesyntaxnode": "969001d1349114a67182eac58e6a01de585cac3090a37aca3606728e5914f436",
+    "docs/generated/design/ast-reference/base.md#expr-syntaxnode": "3ceadb9e8d42625f40a72efaaf60c33dc05dd0990014975dfffb9d8d5c3ed92f",
+    "docs/generated/design/ast-reference/base.md#modifiablesyntaxnode-syntaxnode": "5400392de5f3914b937152b3a687cf2f86b73c6fdd2711ed9c393a4bd6334fdb",
+    "docs/generated/design/ast-reference/base.md#modifier-syntaxnode": "5cb5621b2773d5f6ec04d5bc35259002e9d4852c3cb753314dece67006618d73",
+    "docs/generated/design/ast-reference/base.md#root-hierarchy": "f096489235afb0ace7568d52e5958adc760834f2011fdaf7b734854a7c3fd937",
+    "docs/generated/design/ast-reference/base.md#stmt-modifiablesyntaxnode": "8ea5e05b7dcdf6004362460ead8f7e0c770d0d1fd47a885f5710ce2e461e0a0f",
+    "docs/generated/design/ast-reference/base.md#syntaxnode-syntaxnodebase": "1ad4722af90d4681f39bfa8a4ce29ca156274cd102b43fbcd44252bd7eee3e2e",
+    "docs/generated/design/ast-reference/base.md#type-val": "617a194ed6ec24148aa785801ab591efc2b4d803a1ca1e6680b6f00d76499121",
+    "docs/generated/design/ast-reference/base.md#val-nodebase": "17754b4ad55bb3bbeb3b934dd617e4a3120a865a281a81848bf3fc5ab03948d7"
+  }
+}

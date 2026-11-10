@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#block-and-param
-//META: doc_section_digest=2a352bcf0ce838b95cff334ee1235c003b2f526ca07b93710337b16c2a4872f8
 //META: purpose=Boundary: a phi at an if-merge (each arm of a ternary supplying a different value) appears as a `param` on the merge block, fed by argument operands on each predecessor's unconditionalBranch.
 //META: intent=boundary
 //META: pipeline_stage=lower

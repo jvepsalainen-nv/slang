@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/01-lex-preprocess.md#pragma-warning-state-across-files
-//META: doc_section_digest=7cd0aa129784e726e7888eb0fd9d5a2e3f77d909331840c3287c13641c8d5c43
 //META: purpose=`#pragma warning(push)` saves warning state and `#pragma warning(pop)` restores it, re-enabling a warning disabled inside the push/pop region.
 //META: intent=functional
 //META: pipeline_stage=preprocess

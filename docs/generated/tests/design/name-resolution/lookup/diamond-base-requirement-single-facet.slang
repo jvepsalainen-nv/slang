@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#deduplication
-//META: doc_section_digest=60a4f0c645cae71e331033c0ee07c5670ed7e8539bc9f7678b4e7cc9ab4040e1
 //META: purpose=The facet list is deduplicated by origin, so a base interface reached through two inheritance paths contributes one facet and its requirement is not ambiguous.
 //META: intent=boundary
 //META: pipeline_stage=check

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/language-reference/basics-memory-model-special-topics.md#function-parameters-with-inout-inout-modifiers": "50b3040fe642ee135f57002e37f20cd9b949f33677eec525295c406b3b231822",
+    "docs/language-reference/basics-memory-model-special-topics.md#memory-aliasing-via-binding": "0cb77e4bc46ab9a7f3eefef7b0e375bb9755811b790ee7577f7b13bbf467bf6b"
+  }
+}

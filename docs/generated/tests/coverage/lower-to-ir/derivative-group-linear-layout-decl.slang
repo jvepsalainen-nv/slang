@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a file-scope `layout(derivative_group_linearNV) in;` declaration decorates every entry point in the module and re-emits as the same GLSL layout qualifier.
 //META: intent=characterization
 //META: covers=source/slang/slang-lower-to-ir.cpp

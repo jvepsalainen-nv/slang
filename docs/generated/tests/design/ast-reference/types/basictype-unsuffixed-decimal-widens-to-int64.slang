@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/types.md#basicexpressiontype-vectorexpressiontype-matrixexpressiontype
-//META: doc_section_digest=a9e6231e60a10097307c960ed42577646899eb49854183d8f45eeb036c42700a
 //META: purpose=An unsuffixed decimal integer literal takes the narrowest basic type that holds it - int first, then int64 - so a value one past int MAX picks int64 rather than wrapping or picking uint.
 //META: intent=boundary
 //META: pipeline_stage=check

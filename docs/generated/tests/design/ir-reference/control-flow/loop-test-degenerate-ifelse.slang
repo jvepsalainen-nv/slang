@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#ifelse
-//META: doc_section_digest=69efda819e39cba201908703879949bee162c97716e69f8114247bf4114d9ec0
 //META: purpose=A loop-condition test lowers to a degenerate ifElse whose afterBlock operand names the loop body (its trueBlock) and whose falseBlock is the loop's break label.
 //META: intent=functional
 //META: pipeline_stage=lower

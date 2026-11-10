@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#reverse-mode
-//META: doc_section_digest=bd1766c04483f68403ee6c452452f3420d2221e629512f00278f7c06e719651b
 //META: purpose=Reverse mode gives the propagate function the s_bwdProp_ prefix and the full intermediate-context struct the s_bwdCallableCtx_ prefix, so f yields s_bwdProp_f alongside a s_bwdCallableCtx_f struct.
 //META: intent=functional
 //META: pipeline_stage=emit

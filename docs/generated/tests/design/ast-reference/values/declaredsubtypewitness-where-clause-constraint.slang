@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#subtype-witnesses
-//META: doc_section_digest=3720fe8d4a22123cd3b048fe57096607dd7126d8108b0690dfab8a67fd9a65bc
 //META: purpose=Declared conformance evidence is reported by an in-scope declaration, which may be a where-clause constraint rather than an inheritance clause, and either spelling permits the same interface dispatch.
 //META: intent=functional
 //META: pipeline_stage=check

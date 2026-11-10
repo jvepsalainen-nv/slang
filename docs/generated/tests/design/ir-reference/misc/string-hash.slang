@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#string-hashing
-//META: doc_section_digest=aa2afd6a45af4a5bede0e4e6bb51d5bf4d6150e7a3b1fd9599961c4908973d52
 //META: purpose=A call to the core-module `getStringHash(String)` lowers to a `getStringHash` inst whose single operand is the string literal itself.
 //META: intent=functional
 //META: pipeline_stage=lower

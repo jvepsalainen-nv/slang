@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#phase-d-cuda-emit-and-downstream-tools
-//META: doc_section_digest=c7f78b94ff182ef2afbf1242196ba7074458230c6fbf27a693b3d1516c676759
 //META: purpose=Negative: [numthreads(0,1,1)] is rejected at check time with an "expected a positive integer" diagnostic before CUDA emit can run.
 //META: intent=negative
 //META: pipeline_stage=check

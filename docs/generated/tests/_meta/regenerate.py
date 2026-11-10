@@ -42,6 +42,17 @@ Subcommands
                                headings, README tables are well-formed,
                                size cap respected) on the given bundles
                                (default: all).
+    review-sections <bundle>... | --all [--accept] [--only TEXT]
+                               List the doc sections (and catalog entries)
+                               whose text changed since the bundle's tests
+                               were last reviewed. With --accept, record the
+                               current digests in <bundle>/sections.json;
+                               run it only after re-reading the claims.
+    migrate-sections [--write]
+                               One-off: move per-test //META digests into
+                               per-bundle sections.json and strip the legacy
+                               model/generated_at/source_commit/
+                               doc_section_digest //META lines.
     expansion-candidates [--from <report.json>]
                                Rank bundles by how lightly their
                                coverage_targets are exercised by the
@@ -160,11 +171,7 @@ FINDINGS_STATE_PATH = META_DIR / "findings-state.json"
 # no native front-matter syntax.
 _REQUIRED_TEST_META_KEYS = (
     "generated",
-    "model",
-    "generated_at",
-    "source_commit",
     "doc_ref",
-    "doc_section_digest",
     "purpose",
     "intent",
     "pipeline_stage",
@@ -1575,6 +1582,76 @@ def _github_slug(title: str) -> str:
     return slug.replace(" ", "-")
 
 
+# Per-test //META keys that older bundles carried and that now live elsewhere:
+# the provenance triple in the bundle README front-matter and `freshness.json`,
+# and the section digest in the bundle's `sections.json` ledger. They are still
+# read when present so that an unmigrated bundle keeps linting, but lint warns
+# about them and `migrate-sections` removes them.
+_LEGACY_TEST_META_KEYS = ("model", "generated_at", "source_commit", "doc_section_digest")
+
+SECTIONS_LEDGER_NAME = "sections.json"
+
+_LEDGER_CACHE: dict[Path, dict[str, str]] = {}
+
+
+def load_section_ledger(bundle_dir: Path) -> dict[str, str]:
+    """Return a bundle's section-review ledger as `key -> digest`.
+
+    The ledger records, once per cited doc section rather than once per test,
+    the digest of the section text the bundle's tests were last reviewed
+    against. A key is the test's `doc_ref` (`<doc>#<anchor>`) or, for the
+    diagnostics-catalog bundle, `catalog:<code>`. A bundle that has not been
+    migrated has no ledger and gets an empty mapping.
+    """
+    path = bundle_dir / SECTIONS_LEDGER_NAME
+    cached = _LEDGER_CACHE.get(path)
+    if cached is not None:
+        return cached
+    sections: dict[str, str] = {}
+    if path.is_file():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            sections = {str(k): str(v) for k, v in data.get("sections", {}).items()}
+        except (ValueError, AttributeError):
+            sections = {}
+    _LEDGER_CACHE[path] = sections
+    return sections
+
+
+def write_section_ledger(bundle_dir: Path, sections: dict[str, str]) -> None:
+    """Write a bundle's ledger with sorted keys so a refresh diffs minimally,
+    or remove the file when no section is recorded."""
+    path = bundle_dir / SECTIONS_LEDGER_NAME
+    _LEDGER_CACHE.pop(path, None)
+    if not sections:
+        path.unlink(missing_ok=True)
+        return
+    payload = {"schema_version": 1, "sections": dict(sorted(sections.items()))}
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def section_ledger_key(meta: dict[str, str]) -> str | None:
+    """Return the ledger key for a test, or None when it cites no section.
+
+    A catalog test cites a diagnostic definition (`catalog_code`), not a doc
+    section; every other doc-anchored test cites `doc_ref` with an `#anchor`.
+    """
+    code = (meta.get("catalog_code") or "").strip()
+    if code:
+        return f"catalog:{code}"
+    ref = (meta.get("doc_ref") or "").strip()
+    return ref if "#" in ref else None
+
+
+def recorded_section_digest(meta: dict[str, str], ledger: dict[str, str]) -> str:
+    """Return the digest a test was reviewed against: the ledger entry for its
+    section, else the legacy per-test `//META: doc_section_digest`."""
+    key = section_ledger_key(meta)
+    if key and key in ledger:
+        return ledger[key]
+    return (meta.get("doc_section_digest") or "").strip()
+
+
 _DOC_SECTION_DIGEST_MOD = None
 
 
@@ -1636,11 +1713,12 @@ def lint_doc_section_digests(specs: list) -> list[LintIssue]:
     for spec in specs:
         if not spec.is_doc_anchored:
             continue
+        ledger = load_section_ledger(REPO_ROOT / spec.dir)
         for tf in sorted((REPO_ROOT / spec.dir).glob("*.slang")):
             meta = parse_test_meta(tf.read_text(encoding="utf-8", errors="replace"))
-            recorded = (meta.get("doc_section_digest") or "").strip()
+            recorded = recorded_section_digest(meta, ledger)
             doc_ref = (meta.get("doc_ref") or "").strip()
-            if not recorded or "#" not in doc_ref:
+            if not recorded or "#" not in doc_ref or meta.get("catalog_code"):
                 continue
             target, _, anchor = doc_ref.partition("#")
             doc = resolve_doc_path(target)
@@ -1665,8 +1743,8 @@ def lint_doc_section_digests(specs: list) -> list[LintIssue]:
                 "warning",
                 f"section changed since {len(tests)} test(s) were anchored to it"
                 f" ({sample}{more}). Re-read those claims against the current"
-                f" text, then refresh their //META doc_section_digest with"
-                f" `_meta/doc-section-digest.py {target} {anchor}`.",
+                f" text, then record the review with"
+                f" `_meta/regenerate.py review-sections <bundle> --accept`.",
             )
         )
     return issues
@@ -1780,9 +1858,10 @@ def lint_catalog_entry_digests(
     for spec in specs:
         if not spec.is_diagnostics_catalog:
             continue
+        ledger = load_section_ledger(root / spec.dir)
         for tf in sorted((root / spec.dir).glob("*.slang")):
             meta = parse_test_meta(tf.read_text(encoding="utf-8", errors="replace"))
-            recorded = (meta.get("doc_section_digest") or "").strip()
+            recorded = recorded_section_digest(meta, ledger)
             code = (meta.get("catalog_code") or "").strip()
             if not recorded or not code:
                 continue
@@ -1798,9 +1877,9 @@ def lint_catalog_entry_digests(
                         "warning",
                         f"catalog entry {code} changed since this test was"
                         " anchored to it. Re-read the claim against the"
-                        " current entry, then refresh //META"
-                        " doc_section_digest with `_meta/regenerate.py"
-                        f" catalog-digest {code}`",
+                        " current entry, then record the review with"
+                        " `_meta/regenerate.py review-sections"
+                        " design/cross-cutting/diagnostics-catalog --accept`",
                     )
                 )
     if unknown:
@@ -2523,6 +2602,31 @@ def _lint_test_file(spec: BundleSpec, tf: Path) -> list[LintIssue]:
     for k in required_meta_keys:
         if k not in meta:
             issues.append(LintIssue(rel, "error", f"//META missing key: {k}"))
+    legacy = [k for k in _LEGACY_TEST_META_KEYS if k in meta]
+    if legacy:
+        issues.append(
+            LintIssue(
+                rel,
+                "warning",
+                f"deprecated //META key(s) {', '.join(legacy)}: provenance lives"
+                " in the bundle README front-matter and freshness.json, and the"
+                " section digest in the bundle's sections.json"
+                " (`regenerate.py review-sections`)",
+            )
+        )
+    if (
+        spec.is_doc_anchored
+        and section_ledger_key(meta)
+        and not recorded_section_digest(meta, load_section_ledger(REPO_ROOT / spec.dir))
+    ):
+        issues.append(
+            LintIssue(
+                rel,
+                "error",
+                "no recorded section digest: run `regenerate.py review-sections"
+                f" {spec.key} --accept` after re-reading the cited section",
+            )
+        )
     # coverage/METHODOLOGY.md § Per-test contract: a coverage test names the
     # source area it characterizes in place of the doc_ref it does not have,
     # so `covers=` is what makes it traceable at all.
@@ -4368,6 +4472,33 @@ def _build_parser() -> argparse.ArgumentParser:
     p_cd.add_argument("code", help="diagnostic code, e.g. 30019")
     p_cd.set_defaults(func=cmd_catalog_digest)
 
+    p_rv = sub.add_parser(
+        "review-sections",
+        help="list or record doc sections changed since a bundle's tests were reviewed",
+    )
+    p_rv.add_argument("bundles", nargs="*")
+    p_rv.add_argument("--all", action="store_true", help="every doc-anchored bundle")
+    p_rv.add_argument(
+        "--accept",
+        action="store_true",
+        help="record the current digest of each listed section in sections.json"
+        " (only after re-reading the claims against the section)",
+    )
+    p_rv.add_argument(
+        "--only",
+        action="append",
+        default=[],
+        help="restrict to sections whose key contains this text (repeatable)",
+    )
+    p_rv.set_defaults(func=cmd_review_sections)
+
+    p_ms = sub.add_parser(
+        "migrate-sections",
+        help="one-off: move per-test section digests into per-bundle sections.json",
+    )
+    p_ms.add_argument("--write", action="store_true")
+    p_ms.set_defaults(func=cmd_migrate_sections)
+
     p_st = sub.add_parser(
         "selftest",
         help="unit-check the slug / link / table helpers used by lint",
@@ -4470,6 +4601,175 @@ def _build_parser() -> argparse.ArgumentParser:
     p_fx.set_defaults(func=cmd_findings_fixed)
 
     return p
+
+
+def _bundle_test_files(spec: BundleSpec) -> list[Path]:
+    """Return the test sources of a bundle, `.slang` and `.hlsl`."""
+    d = REPO_ROOT / spec.dir
+    return sorted(list(d.glob("*.slang")) + list(d.glob("*.hlsl")))
+
+
+def _collect_section_refs(spec: BundleSpec) -> dict[str, dict]:
+    """Return, per ledger key cited by the bundle's tests, the section's
+    current digest (None when the doc, anchor or catalog entry cannot be
+    resolved), the tests citing it, and any legacy per-test digests."""
+    mod = _doc_section_digest_module()
+    catalog = parse_catalog_snapshot() if spec.is_diagnostics_catalog else {}
+    refs: dict[str, dict] = {}
+    for tf in _bundle_test_files(spec):
+        meta = parse_test_meta(tf.read_text(encoding="utf-8", errors="replace"))
+        key = section_ledger_key(meta)
+        if not key:
+            continue
+        info = refs.get(key)
+        if info is None:
+            current = None
+            if key.startswith("catalog:"):
+                entry = catalog.get(key[len("catalog:"):])
+                if entry is not None:
+                    current = catalog_entry_digest(key[len("catalog:"):], *entry)
+            elif mod is not None:
+                target, _, anchor = key.partition("#")
+                doc = resolve_doc_path(target)
+                if doc.is_file():
+                    try:
+                        current = hashlib.sha256(
+                            mod.section_text(str(doc), anchor).encode("utf-8")
+                        ).hexdigest()
+                    except SystemExit:
+                        current = None
+            info = refs[key] = {"current": current, "tests": [], "legacy": set()}
+        info["tests"].append(tf)
+        legacy = (meta.get("doc_section_digest") or "").strip()
+        if legacy:
+            info["legacy"].add(legacy)
+    return refs
+
+
+def cmd_review_sections(args: argparse.Namespace) -> int:
+    """List, or with `--accept` record, the doc sections whose text changed
+    since a bundle's tests were last reviewed against them.
+
+    The review itself is the caller's job: re-read each listed section against
+    the claims of the tests citing it, fix or delete the tests whose claim no
+    longer holds, and only then run this with `--accept`. Accepting writes the
+    current digest into the bundle's `sections.json`, so a doc refresh changes
+    one small file per bundle instead of a `//META` line in every test.
+    """
+    manifest = load_manifest()
+    if args.all:
+        specs = [b for b in manifest.bundles.values() if b.is_doc_anchored]
+    elif args.bundles:
+        specs = _bundles_arg(manifest, args.bundles)
+    else:
+        print("error: name one or more bundles, or pass --all")
+        return 2
+    pending_total = 0
+    for spec in specs:
+        if not spec.is_doc_anchored:
+            continue
+        bdir = REPO_ROOT / spec.dir
+        ledger = dict(load_section_ledger(bdir))
+        refs = _collect_section_refs(spec)
+        accepted: dict[str, str] = {}
+        for key, info in sorted(refs.items()):
+            current = info["current"]
+            if current is None:
+                continue
+            if key in ledger:
+                status = "ok" if ledger[key] == current else "changed"
+            elif info["legacy"]:
+                status = "ok" if info["legacy"] == {current} else "changed"
+            else:
+                status = "new"
+            if status == "ok":
+                accepted[key] = current
+                continue
+            if args.only and not any(o in key for o in args.only):
+                if key in ledger:
+                    accepted[key] = ledger[key]
+                continue
+            pending_total += 1
+            print(f"{status:8} {spec.key}  {key}  ({len(info['tests'])} test(s))")
+            if args.accept:
+                accepted[key] = current
+            elif key in ledger:
+                accepted[key] = ledger[key]
+        if args.accept:
+            # Unresolvable sections keep their recorded digest; entries no test
+            # cites any more are dropped.
+            for key, info in refs.items():
+                if info["current"] is None and key in ledger:
+                    accepted[key] = ledger[key]
+            if accepted != ledger:
+                write_section_ledger(bdir, accepted)
+    if args.accept:
+        print(f"recorded {pending_total} section(s)")
+        return 0
+    print(f"{pending_total} section(s) pending review")
+    return 1 if pending_total else 0
+
+
+_LEGACY_META_LINE_RE = re.compile(
+    r"^//META:\s*(?:" + "|".join(_LEGACY_TEST_META_KEYS) + r")\s*="
+)
+
+
+def _strip_legacy_meta(text: str) -> str:
+    """Remove the legacy per-test //META lines from a test's leading comment
+    block, leaving the rest of the file byte-for-byte unchanged."""
+    out: list[str] = []
+    in_header = True
+    for line in text.splitlines(keepends=True):
+        stripped = line.strip()
+        if in_header and stripped and not stripped.startswith("//"):
+            in_header = False
+        if in_header and _LEGACY_META_LINE_RE.match(line):
+            continue
+        out.append(line)
+    return "".join(out)
+
+
+def cmd_migrate_sections(args: argparse.Namespace) -> int:
+    """One-off migration from per-test section digests to per-bundle ledgers.
+
+    For every doc-anchored bundle, write `sections.json` from the digests its
+    tests carry, then (with `--write`) strip the legacy `model`, `generated_at`,
+    `source_commit` and `doc_section_digest` lines from every test. Tests of one
+    section that disagree are a stale group; the ledger keeps a digest that
+    differs from the current text so lint still reports the section.
+    """
+    manifest = load_manifest()
+    entries = conflicts = stripped = 0
+    for spec in manifest.bundles.values():
+        files = _bundle_test_files(spec)
+        if spec.is_doc_anchored:
+            bdir = REPO_ROOT / spec.dir
+            ledger = dict(load_section_ledger(bdir))
+            for key, info in sorted(_collect_section_refs(spec).items()):
+                legacy = info["legacy"]
+                if not legacy or key in ledger:
+                    continue
+                if len(legacy) > 1:
+                    conflicts += 1
+                    stale = sorted(d for d in legacy if d != info["current"])
+                    ledger[key] = stale[0]
+                else:
+                    ledger[key] = next(iter(legacy))
+                entries += 1
+            if args.write:
+                write_section_ledger(bdir, ledger)
+        if args.write:
+            for tf in files:
+                text = tf.read_text(encoding="utf-8")
+                new = _strip_legacy_meta(text)
+                if new != text:
+                    tf.write_text(new, encoding="utf-8")
+                    stripped += 1
+    verb = "wrote" if args.write else "would write"
+    print(f"{verb} {entries} ledger entries ({conflicts} conflicting group(s));"
+          f" stripped legacy META from {stripped} test(s)")
+    return 0
 
 
 def cmd_catalog_digest(args: argparse.Namespace, snapshot: Path | None = None) -> int:
@@ -5009,6 +5309,31 @@ def cmd_selftest(args: argparse.Namespace) -> int:
                 b"1\terr\tcannot-open-file\tcannot open file '~path'"
             ).hexdigest(),
         )
+
+    # The section ledger wins over a legacy per-test digest, keys catalog tests
+    # by code and other tests by doc_ref, and ignores tests that cite no
+    # anchored section.
+    check("ledger key for a doc test", section_ledger_key({"doc_ref": "a.md#b"}), "a.md#b")
+    check("ledger key for a catalog test", section_ledger_key({"doc_ref": "x.lua", "catalog_code": "7"}), "catalog:7")
+    check("ledger key without anchor", section_ledger_key({"doc_ref": "a.md"}), None)
+    check(
+        "ledger digest beats legacy digest",
+        recorded_section_digest({"doc_ref": "a.md#b", "doc_section_digest": "old"}, {"a.md#b": "new"}),
+        "new",
+    )
+    check(
+        "legacy digest used without a ledger entry",
+        recorded_section_digest({"doc_ref": "a.md#b", "doc_section_digest": "old"}, {}),
+        "old",
+    )
+    check(
+        "legacy meta lines are stripped from the header only",
+        _strip_legacy_meta(
+            "//META: model=m\n//META: doc_ref=a.md#b\n//META: doc_section_digest=d\n"
+            "int x;\n//META: model=body\n"
+        ),
+        "//META: doc_ref=a.md#b\nint x;\n//META: model=body\n",
+    )
 
     # lint_catalog_entry_digests over a fixture holding an agreeing test, a
     # drifted test, and one citing an unknown code. Drift and unknown-code are

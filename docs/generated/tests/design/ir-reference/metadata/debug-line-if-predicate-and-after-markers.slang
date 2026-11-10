@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ir-reference/metadata.md#debugline
-//META: doc_section_digest=eb5cc6b339fed6275ffa177c8c0c47a41583954b25feb65903b85fa94849df4a
 //META: purpose=One if statement produces DebugLine markers at both its predicate and the location following the statement, in the predicate block and the merge block respectively.
 //META: intent=functional
 //META: pipeline_stage=lower
@@ -34,13 +30,13 @@ void main(uint3 tid : SV_DispatchThreadID)
 
 // CHECK: {{^}}func %main {{.*}}Func(Void,
 // The statement itself is marked at the `if` keyword's column.
-// CHECK: DebugLine(%{{[0-9]+}}, 28 : UInt, 28 : UInt, 5 : UInt, 6 : UInt)
+// CHECK: DebugLine(%{{[0-9]+}}, 24 : UInt, 24 : UInt, 5 : UInt, 6 : UInt)
 // The predicate gets a second marker of its own, at the comparison operator's
 // column, emitted after the comparison and immediately before the branch.
-// CHECK: DebugLine(%{{[0-9]+}}, 28 : UInt, 28 : UInt, 15 : UInt, 16 : UInt)
+// CHECK: DebugLine(%{{[0-9]+}}, 24 : UInt, 24 : UInt, 15 : UInt, 16 : UInt)
 // Operand 3 of the branch names the merge block, which is where the after
 // location is marked -- following the id rather than taking whichever marker
 // comes next is what distinguishes the merge block from the else arm.
 // CHECK: ifElse(%{{[0-9]+}}, %{{[0-9]+}}, %{{[0-9]+}}, %[[MERGE:[0-9]+]])
 // CHECK: {{^}}block %[[MERGE]](
-// CHECK: DebugLine(%{{[0-9]+}}, 32 : UInt, 32 : UInt, 5 : UInt, 6 : UInt)
+// CHECK: DebugLine(%{{[0-9]+}}, 28 : UInt, 28 : UInt, 5 : UInt, 6 : UInt)

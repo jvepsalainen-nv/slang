@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#throwstmt-and-catchstmt
-//META: doc_section_digest=9a6cecec6f6b38732550b099e7d3df67449d1415430eff969ce34213cd09eefb
 //META: purpose=A CatchStmt with a null `errorVar` is a catch-all that does not bind the error value; it catches errors of any type from the protected body.
 //META: intent=functional
 //META: pipeline_stage=check

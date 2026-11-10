@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes how an aggregate hit-attribute struct is fetched from OptiX's eight 32-bit attribute slots, recursing through vectors, matrices and arrays in declaration order and bit-casting each float slot with __int_as_float.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-legalize-varying-params.cpp

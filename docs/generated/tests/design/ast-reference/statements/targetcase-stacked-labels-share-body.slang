@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/statements.md#targetswitchstmt-stageswitchstmt-targetcasestmt
-//META: doc_section_digest=f69af12d2291a28f0733806246d3cce0dc667ca73a7d8e4d5dfa0167dab37f95
 //META: purpose=Capability labels stacked in front of one body inside a `__target_switch` each select that same body, so every stacked capability compiles to the shared case body while other targets fall to `default`.
 //META: intent=boundary
 //META: pipeline_stage=lower

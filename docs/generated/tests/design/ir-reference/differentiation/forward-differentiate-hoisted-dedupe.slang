@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#forwarddifferentiate
-//META: doc_section_digest=253b62f624b99e63acc35c460550cad113090638a5968766c01156be5d3afdf2
 //META: purpose=ForwardDifferentiate is hoistable, so two __fwd_diff references to the same function are one IR value that both call sites share.
 //META: intent=boundary
 //META: pipeline_stage=lower

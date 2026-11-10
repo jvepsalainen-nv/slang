@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#pack-and-expansion
-//META: doc_section_digest=8cf3e84d8fc339e06ca5711e82cf0be3b994a54278d31752ced4164b73ec084f
 //META: purpose=`__trimFirst(pack)` and `__trimLast(pack)` lower to `TrimFirstOfPack` / `TrimLastOfPack` insts whose result is again a pack value.
 //META: intent=functional
 //META: pipeline_stage=lower

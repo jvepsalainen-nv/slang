@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#metals-three-lowerbufferelementtypetostoragetype-invocations
-//META: doc_section_digest=3aceda666e9b61557ae6e477f56a082f9ca8a551751410e690a18985649e0b14
 //META: purpose=The Phase-B `MetalParameterBlock` policy turns resource-typed fields inside a `ParameterBlock` into raw `T device*` descriptor-handle fields, and the block binds as one `constant*` argument.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

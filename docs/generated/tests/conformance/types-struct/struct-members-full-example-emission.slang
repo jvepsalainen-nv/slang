@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-4-6
-//META: generated_at=2026-06-02T07:02:08+00:00
-//META: source_commit=9c1a6a00ef413932805da5b813465a7a9d517fb9
 //META: doc_ref=docs/language-reference/types-struct.md#accessing-members-and-nested-types
-//META: doc_section_digest=2755043638ff4d80438587ffde5a02e52e4e6ff81f851f26621452c5c5afad95
 //META: purpose=The doc's `TestStruct` example with static/non-static members, static/non-static functions, and nested struct emits valid HLSL.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/values.md#intval-family
-//META: doc_section_digest=5fed4ba267a444ba4547b1574c8db862932b61bd0c009914f7040a04720849a9
 //META: purpose=An integer requirement read off a type parameter as T.Name is a compile-time integer resolved through the conformance witness, so the same generic body gets a different array bound for each conforming argument.
 //META: intent=functional
 //META: pipeline_stage=check

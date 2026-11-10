@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=0db02a6cf8ccf27398c45a8e76e03cfad9e70c4a0f39534a42a69cde832051e3
 //META: purpose=Fires diagnostic 40011 (overload-candidate) - candidate note after overload error
 //META: intent=negative
 //META: pipeline_stage=check

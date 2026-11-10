@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#control-flow-instructions
-//META: doc_section_digest=84a56cdc54a61bf845ba17e0760f56fb7758a625c46a5925f23f07061273dd5f
 //META: purpose=An `if`/`else` statement lowers to the `ifElse` terminator plus `unconditionalBranch` joins.
 //META: intent=functional
 //META: pipeline_stage=lower

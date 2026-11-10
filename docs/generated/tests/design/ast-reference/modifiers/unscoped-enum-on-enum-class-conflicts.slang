@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-09-11T00:00:00+00:00
-//META: source_commit=48c746dc1eda1c6e2aa98c17bbdb7a645c24a048
 //META: doc_ref=docs/generated/design/ast-reference/modifiers.md#nodes
-//META: doc_section_digest=29d86296deb73a57a4f207507e16ba645a6bf2e722162db8157e7554d2cf8004
 //META: purpose=An explicit [UnscopedEnum] on an `enum class` conflicts with the implicit `class` modifier and is reported as E31202, not resolved by a precedence rule.
 //META: intent=negative
 //META: pipeline_stage=check

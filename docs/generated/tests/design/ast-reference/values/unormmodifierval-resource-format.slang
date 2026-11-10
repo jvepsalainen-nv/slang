@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#modifier-values
-//META: doc_section_digest=4c5c9c1e7765b6e543cea7e621ed93e8031fdc0356761ba05a209405b33bc867
 //META: purpose=A resource-format modifier written on a texture element type is converted into a value stored on the modified type, and that stored modifier survives to code generation, spelled back in the HLSL element position and rendered as the SPIR-V image format.
 //META: intent=functional
 //META: pipeline_stage=emit

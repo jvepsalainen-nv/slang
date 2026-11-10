@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/targets.md#profiles
-//META: doc_section_digest=b5e131a8eb7a35a10536ae0e2786d885f68afc06e5b0d6e5ec88aaf600d4152f
 //META: purpose=On the direct SPIR-V path with no `-profile` supplying a SPIR-V version, the target capability set falls back to `spirv_1_5` and the emitted module declares `Version: 1.5`.
 //META: intent=boundary
 //META: pipeline_stage=emit

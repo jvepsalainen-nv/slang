@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `type_param` global generic parameter reaching layout with no concrete binding is rejected with E38207.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

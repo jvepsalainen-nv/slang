@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/target-pipelines/spirv.md#phase-c-spir-v-legalization-lowering-phi-elimination
-//META: doc_section_digest=e492693f38638cb18557561f76c53c2ecd1552856a03aba9bd6c16c0bff73bd8
 //META: purpose=Sampler2DArray (combined image+sampler) lowers to OpTypeSampledImage backed by an OpTypeImage with dim=2D and Arrayed=1 — combining the Sampler2D combined-sampler claim with the array-image dim claim.
 //META: intent=expansion
 //META: pipeline_stage=emit

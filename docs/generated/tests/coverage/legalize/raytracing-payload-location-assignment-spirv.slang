@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Characterizes the automatic location assignment for ray payloads, callable payloads and hit-object attributes that were declared without an explicit location, which skips locations already claimed explicitly.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-glsl-legalize.cpp

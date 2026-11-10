@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/structure.md#builtinrequirementkey--builtinrequirementkey": "53d596706a40555a853a87c7f536f95290e3ccceb8d054182e8bc38e8e94bbfe",
+    "docs/generated/design/ir-reference/structure.md#func": "6566eb7a5e7ce9f2f7cebba0549b8996bada0919491786771ac67ff1fb1a920d",
+    "docs/generated/design/ir-reference/structure.md#functions-and-generics": "d9c6cf4f837d25ae755b0e257d6cddda3fedea83b491aa0f828dd84b3c990065",
+    "docs/generated/design/ir-reference/structure.md#generic": "d1ab561dd682e4564f6b72f381aab193f47e30d183fecd3d0ff7756d45298d4d",
+    "docs/generated/design/ir-reference/structure.md#global-state": "b99cd634d7767c3e608ac1457ec02c747a3002b11e0c6ec01b999815f7b996c1",
+    "docs/generated/design/ir-reference/structure.md#interface-internals": "631091a3c7dc1e04cb9f969f0a3d91e5c836e06ad2bccf61b2c314a8b98e5d36",
+    "docs/generated/design/ir-reference/structure.md#key--structkey": "5b29b137b6d9c4b0dc69ab53f9cc5d592cf4a8960514db67698c83c00c81867d",
+    "docs/generated/design/ir-reference/structure.md#struct-internals": "02fe24b354f7b44d3d21cb346b9763109b397604498e3603c0d1e3a5dd3787ba",
+    "docs/generated/design/ir-reference/structure.md#symbolalias": "3c5325fdfe0b619702fa9558861bad0c6a4d26977f78436c97b0793cffbc5cb2",
+    "docs/generated/design/ir-reference/structure.md#witness-tables-and-witness-facts": "16ef6c8f112a2d877c25d0f6d0cebf34356b5864eb3afeb0d551253490cc2f26",
+    "docs/generated/design/ir-reference/structure.md#witnesstable": "262392d4cade6818fa50d359b2316885929c40f118ef8faff820b866302eee05",
+    "docs/generated/design/ir-reference/structure.md#witnesstableentry-vs-interfacereqentry": "efe3a8c4431ab5a6b399324347401abcc5166c36a6b9143375ce7938cda0b03d"
+  }
+}

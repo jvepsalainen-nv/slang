@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=The three shape rules around `try` — the operand must be a call, the callee must throw, and a throwing callee must be wrapped in `try` — each get their own diagnostic.
 //META: intent=characterization
 //META: covers=source/slang/slang-check-expr.cpp

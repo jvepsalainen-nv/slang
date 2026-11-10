@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Pins that `-track-liveness` on the GLSL target turns live-range markers into declared `spirv_instruction` functions (`livenessStart_N` / `livenessEnd_N`, ids 256 and 257) called around each local's live range.
 //META: intent=characterization
 //META: covers=source/slang/slang-emit-glsl.cpp

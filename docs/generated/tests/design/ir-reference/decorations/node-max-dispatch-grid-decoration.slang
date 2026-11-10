@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/decorations.md#work-graph-nodes
-//META: doc_section_digest=ba5cf53411be35c9a539664a4903ff408ae31f00dc971f0c8a66a83a4ff5743e
 //META: purpose=A [NodeMaxDispatchGrid(x,y,z)] attribute lowers to a nodeMaxDispatchGrid decoration carrying three integer operands, distinct from nodeDispatchGrid.
 //META: intent=functional
 //META: pipeline_stage=lower

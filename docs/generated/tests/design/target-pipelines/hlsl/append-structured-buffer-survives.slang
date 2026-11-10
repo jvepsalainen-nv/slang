@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#phase-b-specialization-and-type-legalization
-//META: doc_section_digest=b1a772cd52d2040f30154ab240611958fb152ee42151e424dc0b33db4c29e97f
 //META: purpose=lowerAppendConsumeStructuredBuffers is skipped for HLSL because HLSL has native Append/Consume types; the type spellings survive.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

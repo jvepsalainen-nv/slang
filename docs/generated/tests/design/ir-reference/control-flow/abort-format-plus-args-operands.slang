@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/control-flow.md#abort
-//META: doc_section_digest=16fc1bd9386f5dae15e0833138d76a19ff43596b18ba9580dce4b003c1242672
 //META: purpose=The front-end-emitted Abort carries the format string plus the variadic argument pack: call arguments after the format ride on the Abort as a single makeValuePack operand holding them.
 //META: intent=functional
 //META: pipeline_stage=lower

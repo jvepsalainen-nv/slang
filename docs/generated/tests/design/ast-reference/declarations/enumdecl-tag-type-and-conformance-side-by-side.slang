@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#enumdecl-and-enumcasedecl
-//META: doc_section_digest=5913d0c8b5a03bb97424073383f39cd15879942901dbf04870fcacd5831b152c
 //META: purpose=An enum's tag type is written where a base list would go and is parsed by the same inheritance clause a struct uses, so a tag type and an interface conformance can arrive side by side in one list and both take effect.
 //META: intent=functional
 //META: pipeline_stage=check

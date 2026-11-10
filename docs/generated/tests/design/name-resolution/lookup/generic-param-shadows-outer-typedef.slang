@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/name-resolution/lookup.md#generic-parameters
-//META: doc_section_digest=e6a604ecd95d745398ce230ff444eb5e4ef8a7eb569f1a45fd57675c245e1700
 //META: purpose=A generic parameter is a direct member of the generic's own scope, which the inner decl's parent chain passes through first, so it shadows a same-named decl in the enclosing scope.
 //META: intent=functional
 //META: pipeline_stage=check

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/target-pipelines/metal.md#resource-type-spellings
-//META: doc_section_digest=0f39500a5c2260589167928aaa1a2c794b4b5a7ab8e224fd5cf5024f96aac3ee
 //META: purpose=A `RaytracingAccelerationStructure` emits as `metal::raytracing::acceleration_structure<metal::raytracing::instancing>` and takes a `[[buffer(N)]]` slot.
 //META: intent=expansion
 //META: pipeline_stage=emit

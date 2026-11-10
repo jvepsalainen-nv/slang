@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies `Optional<Ptr<T>>` is laid out as the bare pointer with no separate flag, because a pointer has a spare bit pattern for the absent case.
 //META: intent=characterization
 //META: covers=source/slang/slang-type-layout.cpp

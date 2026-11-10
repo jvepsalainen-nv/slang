@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/misc.md#type-queries-and-predicates
-//META: doc_section_digest=a314589d5bf1e20e3602ad6d1cfc7cdbc66f447af11efa30fb64ff86fa52545e
 //META: purpose=`__type_equals<T, U>()` emits a two-operand `TypeEquals` inst that folds to `true` only when the two queried types are the same.
 //META: intent=functional
 //META: pipeline_stage=lower

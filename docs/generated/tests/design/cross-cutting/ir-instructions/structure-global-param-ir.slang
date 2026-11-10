@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/ir-instructions.md#function-and-module-structure
-//META: doc_section_digest=27921395120bc3ed80c2a95121cc0c772e99f0c507a5495b06170dd4ce34f717
 //META: purpose=A module-scope shader parameter lowers to a `global_param` inst.
 //META: intent=functional
 //META: pipeline_stage=lower

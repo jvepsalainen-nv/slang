@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#assoctypedecl
-//META: doc_section_digest=9c9f01adf6122cb0dc3d48b249f6234107092edc3e147d2d88e10294fda7a2b7
 //META: purpose=A `where`-clause bound on an associated type (`associatedtype A where A : IBar`) produces the same constraint as the inheritance-style spelling.
 //META: intent=functional
 //META: pipeline_stage=check

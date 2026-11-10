@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:33:31+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/ast-reference/types.md#basicexpressiontype-vectorexpressiontype-matrixexpressiontype
-//META: doc_section_digest=a9e6231e60a10097307c960ed42577646899eb49854183d8f45eeb036c42700a
 //META: purpose=An unsuffixed decimal literal past INT64_MAX is diagnosed (IntegerLiteralTooLarge) rather than truncated: INT64_MAX+1 is diagnosed unless negated, INT64_MAX+2 and above always.
 //META: intent=boundary
 //META: pipeline_stage=check

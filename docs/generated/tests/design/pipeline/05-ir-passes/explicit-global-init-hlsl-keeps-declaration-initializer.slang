@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T20:50:00+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/05-ir-passes.md#layout-and-binding
-//META: doc_section_digest=0fba7fe66a94de18a3a43af71b0a2a503d43e1e15dfc035e524c23f3c2bdbd9f
 //META: purpose=On HLSL, moveGlobalVarInitializationToEntryPoints leaves a scalar static global with its declaration initializer instead of moving it into the entry point.
 //META: intent=boundary
 //META: pipeline_stage=ir-pass

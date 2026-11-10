@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies -no-codegen still runs the front end and reports its diagnostics but emits no target code, where the same run without the flag emits HLSL.
 //META: intent=characterization
 //META: covers=source/slang/slang-options.cpp

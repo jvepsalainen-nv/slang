@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/values.md#literals-constant-group
-//META: doc_section_digest=ac863bc7fc7e67c2b457d8f7eb1865dec41c2377cdf82476f464617c44f7a8c9
 //META: purpose=A `StringLiteralExpr` becomes a `string_constant` whose bytes are stored inline on the instruction, so the literal prints as its quoted text at the use site rather than as a separately-named operand line.
 //META: intent=functional
 //META: pipeline_stage=lower

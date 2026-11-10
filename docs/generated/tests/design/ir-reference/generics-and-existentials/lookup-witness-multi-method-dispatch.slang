@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/generics-and-existentials.md#lookupwitness--lookupwitnessmethod
-//META: doc_section_digest=03ce8a07d74435c1345279ed550f7d28fe132baa1a868a71d50c52ba3eeccbfa
 //META: purpose=Two distinct interface methods called on the same generic-constrained value produce two lookupWitness sites keyed by different requirement keys.
 //META: intent=boundary
 //META: pipeline_stage=lower

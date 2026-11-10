@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=d7e52e1ef88736ccac450f856236a8e865f3eae26d52d8f7c8b2bd6dfcf9956f
 //META: purpose=Fires diagnostic E00040 (same-profile-specified-more-than-once) - the '~profile' was specified more than once for target '~target'
 //META: intent=negative
 //META: pipeline_stage=parse

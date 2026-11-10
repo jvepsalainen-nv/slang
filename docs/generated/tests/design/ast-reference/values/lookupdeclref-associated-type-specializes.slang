@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/values.md#declref-family-and-the-four-shapes-a-decl-ref-can-take
-//META: doc_section_digest=d1cde98ce417ba3a6d58bfc34254895d6aff291ea4927910dedf997bf90971df
 //META: purpose=A decl-ref reached by witness-table lookup carries its witness, so specializing the generic that owns the witness also specializes what the lookup resolves to.
 //META: intent=functional
 //META: pipeline_stage=check

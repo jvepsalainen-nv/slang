@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:36:14Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/pipeline/03-semantic-check.md#dyn-interface-restrictions
-//META: doc_section_digest=630e7c72909468c5bb7b3968c35bb00b899aedcf09b80f0e1814203509f007d2
 //META: purpose=The field checks on a type conforming to a `dyn interface` (E33079, E33080) are not gated on the language version, so they fire under the default `-std`.
 //META: intent=negative
 //META: pipeline_stage=check

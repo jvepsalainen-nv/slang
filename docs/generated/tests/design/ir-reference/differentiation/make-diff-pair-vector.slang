@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#differential-pair-construction
-//META: doc_section_digest=94baa99b60cb82fe486d311fcf1a6ed19cf37b8c6ff65ecb372a31812c6e6208
 //META: purpose=MakeDiffPair carries a differential-pair result type over a vector element type, spelled DiffPair(Vec(Float, 3), witness).
 //META: intent=boundary
 //META: pipeline_stage=lower

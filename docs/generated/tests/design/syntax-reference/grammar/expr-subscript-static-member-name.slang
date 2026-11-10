@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-13T00:00:00+00:00
-//META: source_commit=c0e5ca5c55ff5ea6b210ac9418bac04728cc45e0
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#top-level-structure
-//META: doc_section_digest=7765d9b15bc3cf94f40f1c43ffc9e275a43cb76b6b512e8bd81fbafd2cf86f06
 //META: purpose=`NameOrSubscript` rewrites `__subscript` to the subscript's internal name only when another `::` follows, leaving `MyType::__subscript(i)` unaffected.
 //META: intent=negative
 //META: pipeline_stage=parse

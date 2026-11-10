@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/target-pipelines/wgsl.md#downstream-tint": "bbe49ec33e70c502e379ae5e4252045f994055fe757eecf0eabe3fa1f87f8ef3",
+    "docs/generated/design/target-pipelines/wgsl.md#eliminatephis-with-default-options": "113ec0f5fedb560261c41f0922f991b7f452eafb4a063ac8aa6fd35928b749f4",
+    "docs/generated/design/target-pipelines/wgsl.md#emitted-spellings": "ca87341a69803444f52888445bf6ee872dc3354e25802ed20298eb24d8313278",
+    "docs/generated/design/target-pipelines/wgsl.md#floatnonuniformresourceindex": "ffbb0e6bd6bd50f592bc8662e57b5222bd859b8745c69c1b89379aaec65514af",
+    "docs/generated/design/target-pipelines/wgsl.md#legalizebyteaddressbufferops-with-wgsl-options": "6a3a2e1bb26de470cada52a563239cc6c568616a7300f7b6778e8518d5650dd6",
+    "docs/generated/design/target-pipelines/wgsl.md#legalizecall-and-the-ptrfunction-t-address-space-rule": "f4a3bc5ddc3d834e82f3fe4a075113dd6ae2927e73c74b3c13753d0cffdda364",
+    "docs/generated/design/target-pipelines/wgsl.md#legalizeirforwgsl": "86620dc839535002087154141c15a7d452a7ce8a626c5c081b7136a0ff4ed6d6",
+    "docs/generated/design/target-pipelines/wgsl.md#legalizelogicalandor": "0f95d85b7e4917c52c5df24093e28b4af12cd02e40737f7e612285fa2f66c08c",
+    "docs/generated/design/target-pipelines/wgsl.md#phase-a-link-and-entry-point-prep": "dc124972539e4905fa7f5d047c9ca0f2150aa706870da0fb769f938650740766",
+    "docs/generated/design/target-pipelines/wgsl.md#phase-b-specialization-and-type-legalization": "9170fd752e08e7e2778f564ecb1cabc328722ba47d9d53a46dfb89d7feaa308a",
+    "docs/generated/design/target-pipelines/wgsl.md#phase-c-wgsl-legalization-lowering-phi-elimination": "a15f36e90ce71c175813e4f9aaae1546ac333d5b71b1977e258855334d9377bf",
+    "docs/generated/design/target-pipelines/wgsl.md#phase-d-wgsl-emit-and-downstream-tools": "a11a177f08e66b89cc22b72f8789aac183281f455fe9b5f1596303bdf81cd2e2",
+    "docs/generated/design/target-pipelines/wgsl.md#specializeaddressspaceforwgsl": "a535ac698a328375660abddf30ccc7c90b05fae6981c70e8776d841e976a0133",
+    "docs/generated/design/target-pipelines/wgsl.md#texture-sampler-and-texture-intrinsic-spellings": "3a94acd8dd9a59970d7d0e3c3f2fe42bd83171ea939d74747983a3775ddfe2eb",
+    "docs/generated/design/target-pipelines/wgsl.md#wgslsourceemitter-module-scope-array-constants": "bc1f6ab73f8e5a4687ab0b124f858acd2d3b3e49e73ea880d6ae2d0b2e39ad9d",
+    "docs/generated/design/target-pipelines/wgsl.md#wgslsourceemitter-policy-overrides-and-bool-conditioned-values": "3eb656b9aedf4fda1a1310d903954e043c88751dba5159c8d5337e7ff6d4c613"
+  }
+}

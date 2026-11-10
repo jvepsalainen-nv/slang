@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/syntax-reference/grammar.md#type-defining-declarations
-//META: doc_section_digest=db395f82daf94bfd107c87ddfcfd165342225cb79f4c373eaa6c86772d42cffb
 //META: purpose=`StructMember` accepts `VarDecl` members produced by `Type IDENT` C-style declarators.
 //META: intent=functional
 //META: pipeline_stage=parse

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/cross-cutting/serialization.md#ir-flat-module-read-path
-//META: doc_section_digest=3d26c4cc7f54936f66ceb81122bf0ed29dacea88aad893220d71594b4bd769fe
 //META: purpose=The flat-module encoding keeps string payloads in side tables of lengths plus one concatenated character stream, and a string literal inside a module function reappears verbatim after a write/read round-trip.
 //META: intent=functional
 //META: pipeline_stage=link

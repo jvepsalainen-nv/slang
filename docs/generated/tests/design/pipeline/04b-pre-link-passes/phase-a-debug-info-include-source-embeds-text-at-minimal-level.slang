@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/04b-pre-link-passes.md#option-set-toggles
-//META: doc_section_digest=351a0eec9787bb3f1be5ecda710441450a420c9d618bd13fc985a55db16383a6
 //META: purpose=The DebugInfoIncludeSource toggle widens A4 so IRDebugSource carries the source text at Minimal debug-info level, without promoting the debug-info level itself.
 //META: intent=boundary
 //META: pipeline_stage=lower

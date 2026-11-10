@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/cross-cutting/targets.md#auto-generated-reference": "3aa36f8eac90de1c8c457c7242960b71258e34cf130aa9ba39c4620ba403f0b9",
+    "docs/generated/design/cross-cutting/targets.md#capability-system": "8105f5c5b0374b2319595fedf8212420478f80cae6e5e70bd69a8ee16d772e93",
+    "docs/generated/design/cross-cutting/targets.md#definition-forms": "222012023b43e7122e72f59e25f3a0031eadebb2990b9381de9fe214554d25cc",
+    "docs/generated/design/cross-cutting/targets.md#how-target-choice-affects-ir": "a06981cfad27799a980d12bc9debd43f1796df2e683f48b7ed9122101fbb44c3",
+    "docs/generated/design/cross-cutting/targets.md#profiles": "b5e131a8eb7a35a10536ae0e2786d885f68afc06e5b0d6e5ec88aaf600d4152f",
+    "docs/generated/design/cross-cutting/targets.md#profiles-versus-explicit--capability": "86d885abbc7bc1dd1eef8202abb2b85827b91f65865198cb1196cac24a787374",
+    "docs/generated/design/cross-cutting/targets.md#runtime-representation": "ce4c6d32588cb461dc2ba01ea8574b416dd01815e02117d784e26c3447da877a",
+    "docs/generated/design/cross-cutting/targets.md#targets": "69b107f4782f9ecf7830ee47173687274ec18b773210afb33c78ee54075e5efa",
+    "docs/generated/design/cross-cutting/targets.md#vocabulary": "365121cb55fb6d5257e6b445025431925b17b94447b05e87b83edaa34ae75dc3"
+  }
+}

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-06-11T12:00:00+00:00
-//META: source_commit=ef1068b5485e09b3a7afadba2e25f9541e29af42
 //META: doc_ref=docs/generated/design/ir-reference/differentiation.md#checkpointing-and-rematerialization
-//META: doc_section_digest=2a11c1b31995754a29ec8e5966c25c4cb49e4b0654d8ad58ccc8f38616328e18
 //META: purpose=Verifies bwd_diff over a bounded loop emits a backward-propagation function plus a callable-context struct that carries the hoisted primal state.
 //META: intent=characterization
 //META: covers=source/slang/slang-ir-autodiff-primal-hoist.cpp

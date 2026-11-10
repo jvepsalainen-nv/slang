@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "sections": {
+    "docs/generated/design/ir-reference/generics-and-existentials.md#builtinrequirementkey--builtinrequirementkey": "b1a94afbc899d9d288d30a8f8271498ebd15a75d3c9d3a82f5ba081cd72d0157",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#dispatchers-and-existential-specialization": "8e0f76f1fccf9b16873ad404825298e7d5821f6ce86d9c92971ad68dd0858bea",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#existential-construction": "fc4731125d3e1fb116f0025ce0d4b2ecc5234e8d4fae162606e0795f4acc047e",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#existential-destructuring": "59ca2bd8731bf919acc61227eb63a2db1afddf7a5ef57d94dd8669ddfc2dfd15",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#extractexistentialvalue--extractexistentialtype--extractexistentialwitnesstable": "2831394637fc16470e6426b0ef26aa0c691647c1fa7ec6c0ecb2e6e5d269f621",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#generic-application": "1b35acbd21812d559bc561b706440cf4fe3c630c3cac3ebd9b614ae7f2aa48b6",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#getsequentialid-and-the-rtti-opcodes": "d30beb040d16a57ce7efa305234efe3327c699b6b660c33dd892fc6226b3052d",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#lookupwitness--lookupwitnessmethod": "03ce8a07d74435c1345279ed550f7d28fe132baa1a868a71d50c52ba3eeccbfa",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#makeexistential": "3c0cd4082bd3266d446667eea23ba12280943a5a887c659045a3b6337aa076b0",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#runtime-type-information": "38ea84870f0e2fd34d501740693e97169fbbf78872952660cbc1fe435de3c654",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#specialize": "cb05174ca18de9aec7cd0f1b2d0a9f691c8420254c205a2b019628a2408e35e5",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#typeequalitywitness": "ca78fdfd5d0ba9cc35db3faa8107dac6b7810fc5e4cb813599e86a977f47d4d3",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#witness-lookup": "f99193617631e9b8b8132ba9fd11f7c8270ccf1bb6c05d3758d64114bcc04701",
+    "docs/generated/design/ir-reference/generics-and-existentials.md#witness-tables-and-witness-facts": "6c32764e0dcc60f903ba1bdabfd110bbdb1135327ccdcd6ab2ef286174ea96d0"
+  }
+}

@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies a `builtin(Name:Type)` operand inside a `spirv_asm` block lowers to a synthesized Input variable decorated with that SPIR-V BuiltIn.
 //META: intent=characterization
 //META: covers=source/slang/slang-lower-to-ir.cpp

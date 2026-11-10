@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-09T10:40:55+00:00
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/cuda.md#phase-d-cuda-emit-and-downstream-tools
-//META: doc_section_digest=c7f78b94ff182ef2afbf1242196ba7074458230c6fbf27a693b3d1516c676759
 //META: purpose=With -fp-mode fast, CUDASourceEmitter::emitFrontMatterImpl writes #define SLANG_CUDA_ENABLE_FAST_MATH 1 ahead of the prelude; the default precise mode does not.
 //META: intent=functional
 //META: pipeline_stage=emit

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-sonnet-5-5
-//META: generated_at=2026-11-08T21:38:44Z
-//META: source_commit=ae4e57957a0adad3061b069b0e0eec8217779338
 //META: doc_ref=docs/generated/design/target-pipelines/hlsl.md#legalizenonstructparametertostructforhlsl
-//META: doc_section_digest=709ba20230a3c7f123762b400712ee8e3976f798151abee31576df09be5bcf22
 //META: purpose=A non-empty non-struct callable payload on D3D is retyped to a one-field wrapper struct named ForceVarIntoStructTemporarily_t with a data field.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

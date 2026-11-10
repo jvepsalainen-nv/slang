@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=source/slang/slang-diagnostics.lua
-//META: doc_section_digest=d92a8f589bdeea318efa6d8bcf2c0249182c81b3ae9b309eb67bbe9acdbed6bd
 //META: purpose=Fires diagnostic E50101 (dynamic-dispatch-on-potentially-uninitialized-existential) - cannot dispatch on uninitialized interface
 //META: intent=negative
 //META: pipeline_stage=ir-pass

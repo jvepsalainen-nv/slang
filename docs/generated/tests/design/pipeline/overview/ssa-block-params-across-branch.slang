@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/pipeline/overview.md#ast--ir-lowering
-//META: doc_section_digest=f6080f195ff136c94750bc26ce49f918dba5a42006e4c4170e4ad4820a141882
 //META: purpose=Expressions lower to SSA values and a value produced on both sides of a branch is carried to the join point by a block parameter, which reaches SPIR-V as an OpPhi.
 //META: intent=functional
 //META: pipeline_stage=ir-pass

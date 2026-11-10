@@ -1,7 +1,4 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-05T00:00:00+00:00
-//META: source_commit=5634a0ea1b
 //META: purpose=Verifies the `z`/`uz` integer-literal width suffix selects intptr_t/uintptr_t for hexadecimal literals, and that `-9223372036854775808z` is demoted from uintptr_t back to intptr_t.
 //META: intent=characterization
 //META: covers=source/slang/slang-parser.cpp

@@ -1,9 +1,5 @@
 //META: generated=true
-//META: model=claude-opus-5[1m]
-//META: generated_at=2026-08-04T00:00:00+00:00
-//META: source_commit=7e725f15572c6589ee6d738a8856fb3348f11617
 //META: doc_ref=docs/generated/design/ast-reference/declarations.md#aggtypedecl-structdecl-classdecl-enumdecl
-//META: doc_section_digest=e899cc0803999820cd90ccc66d71078646ccd75a709e1801316ef7df32b9d638
 //META: purpose=A StructDecl declares a value-type aggregate; assigning a struct copies it so the original is unchanged.
 //META: intent=functional
 //META: pipeline_stage=check
